@@ -4,9 +4,7 @@
       <div>
         <div class="flex items-center gap-2">
           <span class="inline-flex h-8 w-8 items-center justify-center rounded-md bg-brand-500 text-slate-900 shadow">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
-              <path d="M12 18a6 6 0 100-12 6 6 0 000 12z" />
-            </svg>
+            <span class="text-sm font-semibold leading-none">BMS</span>
           </span>
           <span class="text-base font-semibold tracking-tight">BigMikeSolutions</span>
         </div>
