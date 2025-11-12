@@ -147,7 +147,7 @@
 
           <a class="card flex items-center gap-4" href="https://www.unlockit.pl/" target="_blank" rel="noopener noreferrer">
             <div class="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-amber-100 text-amber-600" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path d="M17 11h-1V9a4 4 0 10-8 0v2H7a2 2 0 00-2 2v7a2 2 0 002 2h10a2 2 0 002-2v-7a2 2 0 00-2-2zm-6-2a2 2 0 114 0v2h-4V9z"/><path d="M8 9a1 1 0 10-2 0v1h2V9z" fill="none"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path d="M7 10V7a5 5 0 0110 0v1h-2V7a3 3 0 00-6 0v3H7z"/><path d="M5 11h14a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1v-7a1 1 0 011-1zm7 3a2 2 0 100 4 2 2 0 000-4z"/></svg>
             </div>
             <div>
               <h4 class="font-semibold">UnlockIT — E‑learning</h4>
