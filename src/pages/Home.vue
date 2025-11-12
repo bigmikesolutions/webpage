@@ -35,16 +35,16 @@
           </div>
           <dl class="mt-10 grid grid-cols-3 gap-6 text-center md:max-w-md">
             <div class="stat">
-              <dt>Projects</dt>
-              <dd>120+</dd>
+              <dt>{{ $t('stats.projects_label') }}</dt>
+              <dd>{{ $t('stats.projects_value') }}</dd>
             </div>
             <div class="stat">
-              <dt>Avg. uplift</dt>
-              <dd>32%</dd>
+              <dt>{{ $t('stats.uplift_label') }}</dt>
+              <dd>{{ $t('stats.uplift_value') }}</dd>
             </div>
             <div class="stat">
-              <dt>Years</dt>
-              <dd>8</dd>
+              <dt>{{ $t('stats.years_label') }}</dt>
+              <dd>{{ $t('stats.years_value') }}</dd>
             </div>
           </dl>
         </div>
