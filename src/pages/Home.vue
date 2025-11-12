@@ -202,10 +202,8 @@
 
       <!-- Products -->
       <div class="mt-12">
-        <h3 class="text-xl font-semibold text-slate-900">Products</h3>
-        <p class="mt-2 text-slate-600">
-          Places where I share content and teach — resources and platforms I maintain.
-        </p>
+        <h3 class="text-xl font-semibold text-slate-900">{{ $t('products.title') }}</h3>
+        <p class="mt-2 text-slate-600">{{ $t('products.description') }}</p>
         <div class="mt-6 grid gap-4 sm:grid-cols-2">
           <a
             class="card flex items-center gap-4"
