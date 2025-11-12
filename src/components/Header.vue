@@ -82,20 +82,10 @@
           <RouterLink to="/" class="nav-link" @click="open = false">{{
             t('header.about')
           }}</RouterLink>
-          <RouterLink to="/#services" class="nav-link" @click="open = false">{{
-            t('header.services')
-          }}</RouterLink>
-          <a
-            href="https://github.com/bigmikesolutions"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="nav-link"
-            @click="open = false"
-            >{{ t('header.github') }}</a
-          >
-          <RouterLink to="/contact" class="btn btn--sm" @click="open = false">{{
-            t('header.contact')
-          }}</RouterLink>
+          <RouterLink to="/#services" class="nav-link" @click="open = false">{{ t('header.services') }}</RouterLink>
+          <RouterLink to="/resume" class="nav-link" @click="open = false">{{ t('header.resume') }}</RouterLink>
+          <a href="https://github.com/bigmikesolutions" target="_blank" rel="noopener noreferrer" class="nav-link" @click="open = false">{{ t('header.github') }}</a>
+          <RouterLink to="/contact" class="btn btn--sm" @click="open = false">{{ t('header.contact') }}</RouterLink>
         </div>
       </div>
     </transition>
