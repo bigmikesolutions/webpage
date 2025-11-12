@@ -1,10 +1,8 @@
 <template>
   <main class="container mx-auto px-4 py-16">
     <div class="mx-auto max-w-2xl">
-      <h1 class="text-3xl font-bold tracking-tight text-slate-900">Start a project</h1>
-      <p class="mt-2 text-slate-600">
-        Tell me about your goals and timeline. I'll get back within 1–2 business days.
-      </p>
+      <h1 class="text-3xl font-bold tracking-tight text-slate-900">{{ $t('contact.title') }}</h1>
+      <p class="mt-2 text-slate-600">{{ $t('contact.description') }}</p>
 
       <form class="mt-8 space-y-4" @submit.prevent="onSubmit">
         <div>
@@ -47,11 +45,11 @@
             placeholder="What are we building?"
           />
         </div>
-        <button type="submit" class="btn">Send inquiry</button>
+        <button type="submit" class="btn">{{ $t('buttons.send') || 'Send inquiry' }}</button>
       </form>
 
       <p class="mt-10 text-sm text-slate-500">
-        Prefer email? Reach me at
+        {{ $t('contact.preferEmail') }}
         <a
           class="underline decoration-brand-400 underline-offset-2"
           href="mailto:hello@bigmikesolutions.com"
