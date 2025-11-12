@@ -87,12 +87,14 @@
             rel="noopener noreferrer"
             class="inline-flex items-center gap-3 rounded-lg border border-slate-200 p-3"
           >
-            <div
-              class="h-10 w-10 flex items-center justify-center rounded-md bg-white text-amber-500"
-            >
+            <div class="h-10 w-10 flex items-center justify-center rounded-md bg-white text-amber-500">
               <component :is="c.icon" class="h-6 w-6" />
             </div>
-            <div class="text-sm font-medium">{{ c.name }}</div>
+            <div>
+              <div class="text-sm font-medium">{{ c.name }}</div>
+              <div class="text-sm text-slate-600">{{ c.role }}</div>
+              <div class="text-xs text-slate-500">{{ c.years }}</div>
+            </div>
           </a>
         </div>
       </section>
