@@ -155,6 +155,11 @@ const messages = {
       role2_dates: '2016 – 2018',
       role2_description: 'Building scalable SPA applications and performance optimization.',
       education_1: 'M.Sc. in Computer Science, University X',
+      total_experience_big: '8+',
+      total_experience_label: 'Years of experience',
+      education_subtitle: 'My formal education and relevant qualifications.',
+      certificates_heading: 'Certificates',
+      certificates_subtitle: 'Selected certifications and trainings.'
     },
   },
 }
