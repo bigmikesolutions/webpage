@@ -304,6 +304,13 @@ techGroups.value.forEach((g: any) => (openGroups.value[g.id] = true))
 function toggleGroup(id: string) {
   openGroups.value[id] = !openGroups.value[id]
 }
+
+// main sections collapse state
+const openSections = ref({ education: true, techs: true, companies: true, projects: true, certificates: true })
+
+function toggleSection(id: string) {
+  openSections.value[id] = !openSections.value[id]
+}
 </script>
 
 <style scoped></style>
