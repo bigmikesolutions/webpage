@@ -1,8 +1,8 @@
 <template>
   <main class="container mx-auto px-4 py-16">
-    <div class="mx-auto max-w-3xl">
+    <div class="mx-auto max-w-4xl">
       <div class="flex items-center gap-6">
-        <img src="https://www.unlockit.pl/images/michal-wronski.jpg" alt="Michal Wronski" class="h-24 w-24 rounded-lg object-cover shadow" />
+        <img src="https://www.unlockit.pl/images/michal-wronski.jpg" alt="Michal Wronski" class="h-28 w-28 rounded-lg object-cover shadow" />
         <div>
           <h1 class="text-2xl font-bold">{{ $t('resume.name') }}</h1>
           <p class="mt-1 text-sm text-slate-600">{{ $t('resume.title') }}</p>
@@ -19,68 +19,159 @@
         </div>
       </div>
 
+      <!-- Techs -->
       <section class="mt-8">
-        <h2 class="text-xl font-semibold mb-2">{{ $t('resume.summary_heading') }}</h2>
-        <p class="text-slate-700">{{ $t('resume.summary') }}</p>
-      </section>
-
-      <section class="mt-6">
-        <h3 class="text-lg font-semibold">{{ $t('resume.experience_heading') }}</h3>
-        <ul class="mt-3 space-y-4">
-          <li v-for="(r, idx) in resumeItems" :key="idx" class="border-l-2 border-slate-200 pl-4">
-            <div class="flex items-baseline justify-between">
-              <div>
-                <div class="font-semibold">{{ r.title }}</div>
-                <div class="text-sm text-slate-600">{{ r.company }}</div>
-              </div>
-              <div class="text-sm text-slate-500">{{ r.dates }}</div>
+        <h2 class="text-xl font-semibold">{{ $t('resume.tech_heading') }}</h2>
+        <p class="text-sm text-slate-600 mt-1">{{ $t('resume.tech_subtitle') }}</p>
+        <div class="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <div v-for="tech in techs" :key="tech.id" class="flex items-center gap-3 rounded-lg border border-slate-200 p-3">
+            <div class="h-10 w-10 flex items-center justify-center rounded-md bg-white text-amber-500">
+              <component :is="tech.icon" class="h-6 w-6" />
             </div>
-            <p class="mt-2 text-slate-700">{{ r.description }}</p>
-          </li>
-        </ul>
-      </section>
-
-      <section class="mt-6">
-        <h3 class="text-lg font-semibold">{{ $t('resume.education_heading') }}</h3>
-        <ul class="mt-3 space-y-2 text-slate-700">
-          <li v-for="(e, i) in education" :key="i">{{ e }}</li>
-        </ul>
-      </section>
-
-      <section class="mt-6">
-        <h3 class="text-lg font-semibold">{{ $t('resume.skills_heading') }}</h3>
-        <div class="mt-3 flex flex-wrap gap-2">
-          <span v-for="(s, i) in skills" :key="i" class="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm">{{ s }}</span>
+            <div>
+              <div class="font-semibold">{{ tech.name }}</div>
+              <div class="text-sm text-slate-500">{{ tech.years }} {{ $t('resume.years') }}</div>
+            </div>
+          </div>
         </div>
       </section>
+
+      <!-- Companies -->
+      <section class="mt-8">
+        <h2 class="text-xl font-semibold">{{ $t('resume.companies_heading') }}</h2>
+        <p class="text-sm text-slate-600 mt-1">{{ $t('resume.companies_subtitle') }}</p>
+        <div class="mt-4 flex flex-wrap gap-4 items-center">
+          <a v-for="c in companies" :key="c.id" :href="c.url" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-lg border border-slate-200 p-3">
+            <div class="h-10 w-10 flex items-center justify-center rounded-md bg-white text-amber-500">
+              <component :is="c.icon" class="h-6 w-6" />
+            </div>
+            <div class="text-sm font-medium">{{ c.name }}</div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Projects timeline -->
+      <section class="mt-8">
+        <h2 class="text-xl font-semibold">{{ $t('resume.projects_heading') }}</h2>
+        <p class="text-sm text-slate-600 mt-1">{{ $t('resume.projects_subtitle') }}</p>
+
+        <div class="mt-6 space-y-6">
+          <div v-for="proj in projects" :key="proj.id" class="border-l-2 border-slate-200 pl-4">
+            <div class="flex items-baseline justify-between">
+              <div>
+                <div class="text-lg font-semibold">{{ proj.title }}</div>
+                <div class="text-sm text-slate-600">{{ proj.tech.join(' • ') }}</div>
+              </div>
+              <div class="text-sm text-slate-500">{{ proj.dates }}</div>
+            </div>
+            <p class="mt-2 text-slate-700">{{ proj.description }}</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span v-for="(r, idx) in proj.responsibilities" :key="idx" class="text-sm bg-slate-100 px-3 py-1 rounded-full">{{ r }}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   </main>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, h } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
-// Simple resume content derived from profile link. Adjust any values as desired.
-const resumeItems = ref([
-  {
-    title: t('resume.role1_title'),
-    company: t('resume.role1_company'),
-    dates: t('resume.role1_dates'),
-    description: t('resume.role1_description'),
-  },
-  {
-    title: t('resume.role2_title'),
-    company: t('resume.role2_company'),
-    dates: t('resume.role2_dates'),
-    description: t('resume.role2_description'),
-  },
+// Tech icons as inline components
+const IconVue = {
+  render() {
+    return h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 261 226', fill: 'currentColor' }, [
+      h('path', { d: 'M0 0h261v226H0z', fill: 'none' }),
+      h('path', { d: 'M130.5 0l-65 112.5L0 0h65L130.5 112.5 196 0h65L196 112.5z', fill: 'currentColor' })
+    ])
+  }
+}
+const IconTS = {
+  render() {
+    return h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+      h('rect', { x: '2', y: '2', width: '20', height: '20', rx: '2' }),
+      h('path', { d: 'M7 6h10v2H9v8H7V6z', fill: '#fff' })
+    ])
+  }
+}
+const IconTailwind = {
+  render() {
+    return h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+      h('path', { d: 'M12 5C9.8 5 8 6.5 7 8c3 0 3.8-2 5-2 1.3 0 2.3 1 3.8 1.6 1.5.6 2.6-.2 3.2 0-1.1-2.4-3.7-4-8-4z' })
+    ])
+  }
+}
+const IconAccessibility = {
+  render() {
+    return h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+      h('path', { d: 'M12 2a2 2 0 110 4 2 2 0 010-4zM7 8h10l-1 9H8L7 8z' })
+    ])
+  }
+}
+const IconPerformance = {
+  render() {
+    return h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+      h('path', { d: 'M12 3a9 9 0 100 18 9 9 0 000-18zm1 10l4-4' })
+    ])
+  }
+}
+const IconDesign = {
+  render() {
+    return h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+      h('path', { d: 'M3 3h18v4H3zM3 9h18v12H3z' })
+    ])
+  }
+}
+
+const Tech = (id: string, name: string, years: string, icon: any) => ({ id, name, years, icon })
+
+const techs = ref([
+  Tech('vue', 'Vue.js', '8+', IconVue),
+  Tech('ts', 'TypeScript', '6+', IconTS),
+  Tech('tailwind', 'Tailwind CSS', '5+', IconTailwind),
+  Tech('a11y', 'Accessibility', '6+', IconAccessibility),
+  Tech('perf', 'Performance', '6+', IconPerformance),
+  Tech('design', 'Design Systems', '5+', IconDesign),
 ])
 
-const education = ref([t('resume.education_1')])
-const skills = ref(["Vue.js", "TypeScript", "Tailwind CSS", "Accessibility", "Performance", "Design Systems"]) 
+const companies = ref([
+  { id: 'big', name: 'BigMikeSolutions', url: '/', icon: IconDesign },
+  { id: 'unlock', name: 'UnlockIT', url: 'https://www.unlockit.pl/', icon: IconAccessibility },
+  { id: 'github', name: 'GitHub', url: 'https://github.com/m-wrona', icon: IconTS },
+  { id: 'past', name: 'Past Company', url: '#', icon: IconTailwind },
+])
+
+const projects = ref([
+  {
+    id: 'proj1',
+    title: 'Marketing Platform Revamp',
+    dates: '2023',
+    tech: ['Vue.js', 'TypeScript', 'Tailwind', 'Supabase'],
+    description: 'Led frontend rebuild of a marketing platform improving performance and accessibility.',
+    responsibilities: ['Frontend architecture', 'Performance tuning', 'Accessibility audits'],
+  },
+  {
+    id: 'proj2',
+    title: 'E‑learning Platform',
+    dates: '2021 – 2022',
+    tech: ['Vue.js', 'Nuxt', 'Tailwind', 'Stripe'],
+    description: 'Built an e‑learning platform with secure payments and course management.',
+    responsibilities: ['Feature development', 'Payments integration', 'Testing & CI'],
+  },
+  {
+    id: 'proj3',
+    title: 'Design System & Component Library',
+    dates: '2019 – 2021',
+    tech: ['Vue.js', 'Storybook', 'TypeScript'],
+    description: 'Created a design system used across multiple products to ensure consistency.',
+    responsibilities: ['Design tokens', 'Component library', 'Documentation'],
+  },
+])
 </script>
 
 <style scoped>
