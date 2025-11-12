@@ -33,6 +33,7 @@
         <div class="container mx-auto px-4 py-3 flex flex-col gap-3">
           <RouterLink to="/" class="nav-link" @click="open = false">About</RouterLink>
           <RouterLink to="/#services" class="nav-link" @click="open = false">Services</RouterLink>
+          <a href="https://github.com/bigmikesolutions" target="_blank" rel="noopener noreferrer" class="nav-link" @click="open = false">GitHub</a>
           <RouterLink to="/contact" class="btn btn--sm" @click="open = false">Contact</RouterLink>
         </div>
       </div>
