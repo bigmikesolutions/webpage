@@ -29,9 +29,9 @@
     <transition name="fade">
       <div v-if="open" class="md:hidden border-t border-slate-200/60 bg-white">
         <div class="container mx-auto px-4 py-3 flex flex-col gap-3">
-          <RouterLink to="/" class="nav-link" @click.native="open = false">About</RouterLink>
-          <RouterLink to="/#services" class="nav-link" @click.native="open = false">Services</RouterLink>
-          <RouterLink to="/contact" class="btn btn--sm" @click.native="open = false">Contact</RouterLink>
+          <RouterLink to="/" class="nav-link" @click="open = false">About</RouterLink>
+          <RouterLink to="/#services" class="nav-link" @click="open = false">Services</RouterLink>
+          <RouterLink to="/contact" class="btn btn--sm" @click="open = false">Contact</RouterLink>
         </div>
       </div>
     </transition>
