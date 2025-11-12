@@ -93,14 +93,21 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 
 const open = ref(false)
+const { locale, t } = useI18n()
+
+function setLocale(l: string) {
+  locale.value = l
+}
 </script>
 
 <style scoped>
 .nav-link {
   @apply text-slate-700 hover:text-slate-900 transition-colors;
 }
+.lang-btn { @apply inline-flex h-8 w-8 items-center justify-center rounded-md border border-slate-200 bg-white text-sm font-medium; }
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.15s;
