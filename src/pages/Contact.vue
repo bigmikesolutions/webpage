@@ -30,7 +30,7 @@
         <button type="submit" class="btn">Send inquiry</button>
       </form>
 
-      <p class="mt-10 text-sm text-slate-500">Prefer email? Reach me at <a class="underline decoration-brand-400 underline-offset-2" href="mailto:hello@example.com">hello@example.com</a>.</p>
+      <p class="mt-10 text-sm text-slate-500">Prefer email? Reach me at <a class="underline decoration-brand-400 underline-offset-2" href="mailto:hello@bigmikesolutions.com">hello@bigmikesolutions.com</a>.</p>
     </div>
   </main>
 </template>
