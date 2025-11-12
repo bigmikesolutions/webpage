@@ -7,7 +7,7 @@ const messages = {
       badge: 'O mnie',
       heading: 'Projektuję i tworzę dopracowane aplikacje, które konwertują.',
       pitch:
-        'Jestem starszym frontend inżynierem i projektantem produktów specjalizującym się w szybkim, dostępnym i eleganckim doświadczeniu webowym. Od strategii i UX po nowoczesne stacki frontendowe — współpracuję z klientami by wdrażać z jakością i szybkością.',
+        'Jestem starszym frontend inżynierem i projektantem produktów specjalizującym się w szybkim, dostępnym i eleganckim doświadczeniu webowym. Od strategii i UX po nowoczesne stacki frontendowe ��� współpracuję z klientami by wdrażać z jakością i szybkością.',
       buttons: { work: 'Współpracuj ze mną', view: 'Zobacz usługi', github: 'GitHub' },
       github_user: 'm-wrona',
     },
@@ -44,7 +44,7 @@ const messages = {
     resume: { name: 'Michał Wroński', title: 'Senior Frontend Engineer & Product Designer', linkedin: 'https://www.linkedin.com/in/michal-wronski-b389a988/', summary_heading: 'Podsumowanie', summary: 'Starszy frontend inżynier i projektant produktów z doświadczeniem w tworzeniu skalowalnych aplikacji webowych, UX i wydajnych interfejsów. Specjalizuję się w Vue, TypeScript i Tailwind.', experience_heading: 'Doświadczenie', education_heading: 'Edukacja', skills_heading: 'Umiejętności', role1_title: 'Senior Frontend Engineer', role1_company: 'Freelance / Various', role1_dates: '2018 – obecnie', role1_description: 'Projektowanie i implementacja interfejsów użytkownika, systemów designu oraz migracje do nowoczesnych frameworków.', role2_title: 'Frontend Engineer', role2_company: 'Past Company', role2_dates: '2016 – 2018', role2_description: 'Budowa skalowalnych aplikacji SPA oraz optymalizacja wydajności.', education_1: 'M.Sc. in Computer Science, University X' },
   },
   en: {
-    header: { about: 'About', services: 'Services', github: 'GitHub', contact: 'Contact' },
+    header: { about: 'About', services: 'Services', resume: 'Resume', github: 'GitHub', contact: 'Contact' },
     about: {
       badge: 'About Me',
       heading: 'I design and build polished apps that convert.',
