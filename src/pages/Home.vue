@@ -122,6 +122,33 @@
           </ul>
         </article>
       </div>
+
+      <!-- Products -->
+      <div class="mt-12">
+        <h3 class="text-xl font-semibold text-slate-900">Products</h3>
+        <p class="mt-2 text-slate-600">Places where I share content and teach — resources and platforms I maintain.</p>
+        <div class="mt-6 grid gap-4 sm:grid-cols-2">
+          <a class="card flex items-center gap-4" href="https://www.youtube.com/@big-mike-labs" target="_blank" rel="noopener noreferrer">
+            <div class="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-red-100 text-red-600">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path d="M10 15l5-3-5-3v6z"/></svg>
+            </div>
+            <div>
+              <h4 class="font-semibold">Big Mike Labs — YouTube</h4>
+              <p class="mt-1 text-sm text-slate-600">Subscribe for tutorials, breakdowns, and project walkthroughs.</p>
+            </div>
+          </a>
+
+          <a class="card flex items-center gap-4" href="https://www.unlockit.pl/" target="_blank" rel="noopener noreferrer">
+            <div class="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-amber-100 text-amber-600">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path d="M12 2L4 6v6c0 5 3.8 9.6 8 10 4.2-.4 8-5 8-10V6l-8-4z"/></svg>
+            </div>
+            <div>
+              <h4 class="font-semibold">UnlockIT — E‑learning</h4>
+              <p class="mt-1 text-sm text-slate-600">My e-learning platform with courses, workshops, and premium content.</p>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- CTA -->
