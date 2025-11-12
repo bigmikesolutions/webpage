@@ -2,7 +2,13 @@ import { createI18n } from 'vue-i18n'
 
 const messages = {
   pl: {
-    header: { about: 'O mnie', services: 'Usługi', resume: 'CV', github: 'GitHub', contact: 'Kontakt' },
+    header: {
+      about: 'O mnie',
+      services: 'Usługi',
+      resume: 'CV',
+      github: 'GitHub',
+      contact: 'Kontakt',
+    },
     about: {
       badge: 'O mnie',
       heading: 'Projektuję i tworzę dopracowane aplikacje, które konwertują.',
@@ -46,7 +52,8 @@ const messages = {
       title: 'Senior Frontend Engineer & Product Designer',
       linkedin: 'https://www.linkedin.com/in/michal-wronski-b389a988/',
       summary_heading: 'Podsumowanie',
-      summary: 'Starszy frontend inżynier i projektant produktów z doświadczeniem w tworzeniu skalowalnych aplikacji webowych, UX i wydajnych interfejsów. Specjalizuję się w Vue, TypeScript i Tailwind.',
+      summary:
+        'Starszy frontend inżynier i projektant produktów z doświadczeniem w tworzeniu skalowalnych aplikacji webowych, UX i wydajnych interfejsów. Specjalizuję się w Vue, TypeScript i Tailwind.',
       experience_heading: 'Doświadczenie',
       education_heading: 'Edukacja',
       skills_heading: 'Umiejętności',
@@ -60,7 +67,8 @@ const messages = {
       role1_title: 'Senior Frontend Engineer',
       role1_company: 'Freelance / Various',
       role1_dates: '2018 – obecnie',
-      role1_description: 'Projektowanie i implementacja interfejsów użytkownika, systemów designu oraz migracje do nowoczesnych frameworków.',
+      role1_description:
+        'Projektowanie i implementacja interfejsów użytkownika, systemów designu oraz migracje do nowoczesnych frameworków.',
       role2_title: 'Frontend Engineer',
       role2_company: 'Past Company',
       role2_dates: '2016 – 2018',
@@ -69,7 +77,13 @@ const messages = {
     },
   },
   en: {
-    header: { about: 'About', services: 'Services', resume: 'Resume', github: 'GitHub', contact: 'Contact' },
+    header: {
+      about: 'About',
+      services: 'Services',
+      resume: 'Resume',
+      github: 'GitHub',
+      contact: 'Contact',
+    },
     about: {
       badge: 'About Me',
       heading: 'I design and build polished apps that convert.',
@@ -114,7 +128,8 @@ const messages = {
       title: 'Senior Frontend Engineer & Product Designer',
       linkedin: 'https://www.linkedin.com/in/michal-wronski-b389a988/',
       summary_heading: 'Summary',
-      summary: 'Senior frontend engineer and product designer experienced in building scalable web applications, UX and performant interfaces. Specializes in Vue, TypeScript and Tailwind.',
+      summary:
+        'Senior frontend engineer and product designer experienced in building scalable web applications, UX and performant interfaces. Specializes in Vue, TypeScript and Tailwind.',
       experience_heading: 'Experience',
       education_heading: 'Education',
       skills_heading: 'Skills',
@@ -128,7 +143,8 @@ const messages = {
       role1_title: 'Senior Frontend Engineer',
       role1_company: 'Freelance / Various',
       role1_dates: '2018 – Present',
-      role1_description: 'Designing and implementing user interfaces, design systems, and migrations to modern frameworks.',
+      role1_description:
+        'Designing and implementing user interfaces, design systems, and migrations to modern frameworks.',
       role2_title: 'Frontend Engineer',
       role2_company: 'Past Company',
       role2_dates: '2016 – 2018',
