@@ -16,6 +16,7 @@
           <li><RouterLink to="/" class="hover:text-slate-900 text-slate-700">About</RouterLink></li>
           <li><RouterLink to="/#services" class="hover:text-slate-900 text-slate-700">Services</RouterLink></li>
           <li><RouterLink to="/contact" class="hover:text-slate-900 text-slate-700">Contact</RouterLink></li>
+          <li><a href="https://github.com/bigmikesolutions" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 text-slate-700">GitHub</a></li>
         </ul>
       </div>
       <div>
