@@ -30,6 +30,7 @@ const messages = {
       github_user: 'm-wrona',
     },
     stats: { projects_label: 'PROJECTS', projects_value: '120+', uplift_label: 'AVG. UPLIFT', uplift_value: '32%', years_label: 'YEARS', years_value: '8' },
+    buttons: { send: 'Send inquiry' },
     services: { title: 'Services', description: 'Full-service product design and modern frontend engineering.' },
     products: { title: 'Products', description: 'Places where I share content and teach.', youtube_title: 'Big Mike Labs — YouTube', unlock_title: 'UnlockIT — E‑learning' },
     cta: { title: "Have a project? Let's make it shine.", subtitle: 'From MVPs to mature products, I partner with teams to deliver results with clarity and craft.', button: 'Start a project' },
