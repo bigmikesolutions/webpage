@@ -216,10 +216,10 @@ const techs = ref([
 ])
 
 const companies = ref([
-  { id: 'big', name: 'BigMikeSolutions', url: '/', icon: IconDesign },
-  { id: 'unlock', name: 'UnlockIT', url: 'https://www.unlockit.pl/', icon: IconAccessibility },
-  { id: 'github', name: 'GitHub', url: 'https://github.com/m-wrona', icon: IconTS },
-  { id: 'past', name: 'Past Company', url: '#', icon: IconTailwind },
+  { id: 'big', name: 'BigMikeSolutions', url: '/', icon: IconDesign, role: 'Founder / Lead', years: '2018 – Present' },
+  { id: 'unlock', name: 'UnlockIT', url: 'https://www.unlockit.pl/', icon: IconAccessibility, role: 'CTO / Lead Developer', years: '2021 – Present' },
+  { id: 'github', name: 'GitHub', url: 'https://github.com/m-wrona', icon: IconTS, role: 'Open-source contributor', years: '2016 – Present' },
+  { id: 'past', name: 'Past Company', url: '#', icon: IconTailwind, role: 'Frontend Engineer', years: '2016 – 2018' },
 ])
 
 const projects = ref([
