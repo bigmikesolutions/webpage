@@ -7,8 +7,13 @@
       ></div>
       <div class="container mx-auto grid px-4 py-20 md:grid-cols-2 md:items-center md:gap-12">
         <div>
-          <span class="inline-flex items-center gap-2 rounded-full bg-brand-200/70 px-3 py-1 text-xs font-medium text-slate-900 ring-1 ring-brand-300/60">{{ $t('about.badge') }}</span>
-          <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">{{ $t('about.heading') }}</h1>
+          <span
+            class="inline-flex items-center gap-2 rounded-full bg-brand-200/70 px-3 py-1 text-xs font-medium text-slate-900 ring-1 ring-brand-300/60"
+            >{{ $t('about.badge') }}</span
+          >
+          <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+            {{ $t('about.heading') }}
+          </h1>
           <p class="mt-4 text-lg text-slate-700">{{ $t('about.pitch') }}</p>
           <div class="mt-8 flex flex-wrap items-center gap-3">
             <RouterLink to="/contact" class="btn">Work with me</RouterLink>
@@ -70,10 +75,14 @@
     <section id="services" class="container mx-auto px-4 py-16">
       <div class="flex items-end justify-between">
         <div>
-          <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{{ $t('services.title') }}</h2>
+          <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+            {{ $t('services.title') }}
+          </h2>
           <p class="mt-2 max-w-2xl text-slate-600">{{ $t('services.description') }}</p>
         </div>
-        <RouterLink to="/contact" class="hidden md:inline-flex btn btn--ghost">{{ $t('cta.button') }}</RouterLink>
+        <RouterLink to="/contact" class="hidden md:inline-flex btn btn--ghost">{{
+          $t('cta.button')
+        }}</RouterLink>
       </div>
       <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <article class="card">

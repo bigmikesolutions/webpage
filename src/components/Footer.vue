@@ -18,15 +18,29 @@
       <div>
         <h4 class="font-semibold text-slate-900">{{ $t('footer.explore') }}</h4>
         <ul class="mt-3 space-y-2 text-sm">
-          <li><RouterLink to="/" class="hover:text-slate-900 text-slate-700">{{ $t('header.about') }}</RouterLink></li>
           <li>
-            <RouterLink to="/#services" class="hover:text-slate-900 text-slate-700">{{ $t('header.services') }}</RouterLink>
+            <RouterLink to="/" class="hover:text-slate-900 text-slate-700">{{
+              $t('header.about')
+            }}</RouterLink>
           </li>
           <li>
-            <RouterLink to="/contact" class="hover:text-slate-900 text-slate-700">{{ $t('header.contact') }}</RouterLink>
+            <RouterLink to="/#services" class="hover:text-slate-900 text-slate-700">{{
+              $t('header.services')
+            }}</RouterLink>
           </li>
           <li>
-            <a href="https://github.com/bigmikesolutions" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 text-slate-700">GitHub</a>
+            <RouterLink to="/contact" class="hover:text-slate-900 text-slate-700">{{
+              $t('header.contact')
+            }}</RouterLink>
+          </li>
+          <li>
+            <a
+              href="https://github.com/bigmikesolutions"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-slate-900 text-slate-700"
+              >GitHub</a
+            >
           </li>
         </ul>
       </div>
