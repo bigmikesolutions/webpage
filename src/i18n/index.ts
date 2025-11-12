@@ -78,7 +78,7 @@ const messages = {
       total_experience_label: 'Lata doświadczenia',
       education_subtitle: 'Moje wykształcenie i istotne kwalifikacje.',
       certificates_heading: 'Certyfikaty',
-      certificates_subtitle: 'Wybrane certyfikaty i szkolenia.'
+      certificates_subtitle: 'Wybrane certyfikaty i szkolenia.',
     },
   },
   en: {
@@ -159,7 +159,7 @@ const messages = {
       total_experience_label: 'Years of experience',
       education_subtitle: 'My formal education and relevant qualifications.',
       certificates_heading: 'Certificates',
-      certificates_subtitle: 'Selected certifications and trainings.'
+      certificates_subtitle: 'Selected certifications and trainings.',
     },
   },
 }
