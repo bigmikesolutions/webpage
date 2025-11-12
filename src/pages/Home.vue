@@ -254,7 +254,7 @@
               </svg>
             </div>
             <div>
-              <h4 class="font-semibold">UnlockIT — E‑learning</h4>
+              <h4 class="font-semibold">{{ $t('products.unlock_title') }}</h4>
               <p class="mt-1 text-sm text-slate-600">
                 My e-learning platform with courses, workshops, and premium content.
               </p>
