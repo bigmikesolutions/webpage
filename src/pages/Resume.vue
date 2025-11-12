@@ -20,8 +20,8 @@
 
         <!-- Big years of experience badge -->
         <div class="text-right">
-          <div class="text-4xl font-extrabold text-amber-600">{{ $t('resume.total_experience_big') }}</div>
-          <div class="text-sm text-slate-600">{{ $t('resume.total_experience_label') }}</div>
+          <div class="inline-block rounded-lg bg-amber-100 px-5 py-3 text-4xl font-extrabold text-amber-600 shadow-sm">{{ $t('resume.total_experience_big') }}</div>
+          <div class="text-sm text-slate-600 mt-1">{{ $t('resume.total_experience_label') }}</div>
         </div>
       </div>
 
