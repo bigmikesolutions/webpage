@@ -1,5 +1,5 @@
 {
-  "name": "fusion-vue-tailwind-starter",
+  "name": "yellowworks-site",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -14,10 +14,10 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "vue": "^3.5.17"
+    "vue": "^3.5.17",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
-
     "@tsconfig/node22": "^22.0.2",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^22.15.32",
