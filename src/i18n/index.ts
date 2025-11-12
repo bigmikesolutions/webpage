@@ -74,6 +74,11 @@ const messages = {
       role2_dates: '2016 – 2018',
       role2_description: 'Budowa skalowalnych aplikacji SPA oraz optymalizacja wydajności.',
       education_1: 'M.Sc. in Computer Science, University X',
+      total_experience_big: '8+',
+      total_experience_label: 'Lata doświadczenia',
+      education_subtitle: 'Moje wykształcenie i istotne kwalifikacje.',
+      certificates_heading: 'Certyfikaty',
+      certificates_subtitle: 'Wybrane certyfikaty i szkolenia.'
     },
   },
   en: {
