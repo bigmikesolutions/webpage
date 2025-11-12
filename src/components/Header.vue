@@ -7,7 +7,7 @@
             <path d="M12 18a6 6 0 100-12 6 6 0 000 12z" />
           </svg>
         </span>
-        <span class="text-base font-semibold tracking-tight">YellowWorks</span>
+        <span class="text-base font-semibold tracking-tight">BigMikeSolutions</span>
       </RouterLink>
 
       <nav class="hidden md:flex items-center gap-6 text-sm">
