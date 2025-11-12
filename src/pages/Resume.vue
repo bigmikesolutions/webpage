@@ -27,9 +27,12 @@
 
       <!-- Education (added before Techs) -->
       <section class="mt-8">
-        <h2 class="text-xl font-semibold">{{ $t('resume.education_heading') }}</h2>
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-semibold">{{ $t('resume.education_heading') }}</h2>
+          <button @click="toggleSection('education')" class="text-sm text-amber-600">{{ openSections.education ? 'Hide' : 'Show' }}</button>
+        </div>
         <p class="text-sm text-slate-600 mt-1">{{ $t('resume.education_subtitle') }}</p>
-        <div class="mt-4 space-y-4">
+        <div v-if="openSections.education" class="mt-4 space-y-4">
           <div v-for="(e, i) in education" :key="i" class="rounded-lg border border-slate-200 p-4">
             <div class="flex items-center justify-between">
               <div>
@@ -39,6 +42,20 @@
               <div class="text-sm text-slate-500">{{ e.years }}</div>
             </div>
             <p v-if="e.details" class="mt-2 text-slate-700">{{ e.details }}</p>
+
+            <!-- languages boxes -->
+            <div v-if="e.langs" class="mt-3 flex flex-wrap gap-3">
+              <div v-for="(l, idx) in e.langs" :key="idx" class="inline-flex items-center gap-3 rounded-lg border border-slate-200 p-3">
+                <div class="h-8 w-8 flex items-center justify-center rounded-md bg-white text-amber-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 14h-2v-2h2v2zm0-4h-2V6h2v6z"/></svg>
+                </div>
+                <div>
+                  <div class="font-medium">{{ l.name }}</div>
+                  <div class="text-xs text-slate-500">{{ l.level }}</div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
