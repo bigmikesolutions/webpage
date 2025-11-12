@@ -50,8 +50,11 @@
 
         <div class="mt-4 space-y-6">
           <div v-for="group in techGroups" :key="group.id">
-            <h3 class="text-sm font-semibold text-slate-700 mb-2">{{ group.name }}</h3>
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div class="flex items-center justify-between">
+              <h3 class="text-sm font-semibold text-slate-700 mb-2">{{ group.name }}</h3>
+              <button @click="toggleGroup(group.id)" class="text-sm text-amber-600">{{ openGroups[group.id] ? 'Hide' : 'Show' }}</button>
+            </div>
+            <div v-if="openGroups[group.id]" class="grid grid-cols-2 sm:grid-cols-3 gap-4">
               <div v-for="tech in group.items" :key="tech.id" class="flex items-center gap-3 rounded-lg border border-slate-200 p-3">
                 <div class="h-10 w-10 flex items-center justify-center rounded-md bg-white text-amber-500">
                   <component :is="tech.icon" class="h-6 w-6" />
