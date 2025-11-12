@@ -62,8 +62,10 @@
 
 <script setup lang="ts">
 import { reactive } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const form = reactive({ name: '', email: '', budget: '', details: '' })
+const { t } = useI18n()
 
 function onSubmit() {
   alert(`Thanks ${form.name}! Your inquiry has been received.`)
