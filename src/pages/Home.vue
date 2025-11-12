@@ -7,18 +7,9 @@
       ></div>
       <div class="container mx-auto grid px-4 py-20 md:grid-cols-2 md:items-center md:gap-12">
         <div>
-          <span
-            class="inline-flex items-center gap-2 rounded-full bg-brand-200/70 px-3 py-1 text-xs font-medium text-slate-900 ring-1 ring-brand-300/60"
-            >About Me</span
-          >
-          <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
-            I design and build polished apps that convert.
-          </h1>
-          <p class="mt-4 text-lg text-slate-700">
-            I'm a senior frontend engineer and product designer specializing in fast, accessible,
-            and elegant web experiences. From strategy and UX to modern frontend stacks, I partner
-            with clients to ship with quality and speed.
-          </p>
+          <span class="inline-flex items-center gap-2 rounded-full bg-brand-200/70 px-3 py-1 text-xs font-medium text-slate-900 ring-1 ring-brand-300/60">{{ $t('about.badge') }}</span>
+          <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">{{ $t('about.heading') }}</h1>
+          <p class="mt-4 text-lg text-slate-700">{{ $t('about.pitch') }}</p>
           <div class="mt-8 flex flex-wrap items-center gap-3">
             <RouterLink to="/contact" class="btn">Work with me</RouterLink>
             <RouterLink to="/#services" class="btn btn--ghost">View services</RouterLink>
