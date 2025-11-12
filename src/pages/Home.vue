@@ -271,12 +271,9 @@
           class="absolute inset-0 bg-[radial-gradient(60%_60%_at_100%_0%,theme(colors.brand.500/.25),transparent_60%)]"
         ></div>
         <div class="relative">
-          <h3 class="text-2xl font-bold text-white">Have a project? Let's make it shine.</h3>
-          <p class="mt-2 max-w-2xl text-slate-300">
-            From MVPs to mature products, I partner with teams to deliver results with clarity and
-            craft.
-          </p>
-          <RouterLink to="/contact" class="btn mt-6">Start a project</RouterLink>
+          <h3 class="text-2xl font-bold text-white">{{ $t('cta.title') }}</h3>
+          <p class="mt-2 max-w-2xl text-slate-300">{{ $t('cta.subtitle') }}</p>
+          <RouterLink to="/contact" class="btn mt-6">{{ $t('cta.button') }}</RouterLink>
         </div>
       </div>
     </section>
