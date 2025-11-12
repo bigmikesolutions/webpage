@@ -12,6 +12,7 @@ const messages = {
       github_user: 'm-wrona',
     },
     stats: { projects_label: 'PROJEKTY', projects_value: '120+', uplift_label: 'ŚR. WZROST', uplift_value: '32%', years_label: 'LATA', years_value: '8' },
+    buttons: { send: 'Wyślij zapytanie' },
     services: { title: 'Usługi', description: 'Kompleksowy design produktu i nowoczesne inżynieria frontendowa.' },
     products: { title: 'Produkty', description: 'Miejsca, gdzie dzielę się treściami i prowadzę szkolenia.', youtube_title: 'Big Mike Labs — YouTube', unlock_title: 'UnlockIT — E‑learning' },
     cta: { title: 'Masz projekt? Zróbmy go błyszczącym.', subtitle: 'Od MVP po dojrzałe produkty — współpracuję z zespołami, by dostarczać wartość.', button: 'Rozpocznij projekt' },
