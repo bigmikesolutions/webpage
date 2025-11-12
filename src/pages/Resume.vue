@@ -109,12 +109,32 @@
         </div>
       </section>
 
+      <!-- Certificates -->
+      <section class="mt-8">
+        <h2 class="text-xl font-semibold">{{ $t('resume.certificates_heading') }}</h2>
+        <p class="text-sm text-slate-600 mt-1">{{ $t('resume.certificates_subtitle') }}</p>
+        <div class="mt-4 grid gap-4 sm:grid-cols-2">
+          <div v-for="cert in certificates" :key="cert.id" class="rounded-lg border border-slate-200 p-4">
+            <div class="flex items-baseline justify-between">
+              <div>
+                <div class="font-semibold">{{ cert.title }}</div>
+                <div class="text-sm text-slate-600">{{ cert.issuer }}</div>
+              </div>
+              <div class="text-sm text-slate-500">{{ cert.year }}</div>
+            </div>
+            <div class="mt-2">
+              <a :href="cert.url" target="_blank" rel="noopener noreferrer" class="text-amber-600">View certificate</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   </main>
 </template>
 
 <script setup lang="ts">
-import { ref, h } from 'vue'
+import { ref, h, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
@@ -232,7 +252,7 @@ const techGroups = ref([
 
 // Education entries
 const education = ref([
-  { degree: 'M.Sc. in Computer Science', institution: 'University X', years: '2010 – 2015', details: 'Focus on software engineering and distributed systems.' },
+  { degree: 'M.Sc. in Computer Science', institution: 'University X', years: '2010 �� 2015', details: 'Focus on software engineering and distributed systems.' },
 ])
 
 const companies = ref([
