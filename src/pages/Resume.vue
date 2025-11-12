@@ -62,10 +62,13 @@
 
       <!-- Techs grouped -->
       <section class="mt-8">
-        <h2 class="text-xl font-semibold">{{ $t('resume.tech_heading') }}</h2>
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-semibold">{{ $t('resume.tech_heading') }}</h2>
+          <button @click="toggleSection('techs')" class="text-sm text-amber-600">{{ openSections.techs ? 'Hide' : 'Show' }}</button>
+        </div>
         <p class="text-sm text-slate-600 mt-1">{{ $t('resume.tech_subtitle') }}</p>
 
-        <div class="mt-4 space-y-6">
+        <div v-if="openSections.techs" class="mt-4 space-y-6">
           <div v-for="group in techGroups" :key="group.id">
             <div class="flex items-center justify-between">
               <h3 class="text-sm font-semibold text-slate-700 mb-2">{{ group.name }}</h3>
@@ -88,9 +91,12 @@
 
       <!-- Companies -->
       <section class="mt-8">
-        <h2 class="text-xl font-semibold">{{ $t('resume.companies_heading') }}</h2>
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-semibold">{{ $t('resume.companies_heading') }}</h2>
+          <button @click="toggleSection('companies')" class="text-sm text-amber-600">{{ openSections.companies ? 'Hide' : 'Show' }}</button>
+        </div>
         <p class="text-sm text-slate-600 mt-1">{{ $t('resume.companies_subtitle') }}</p>
-        <div class="mt-4 flex flex-wrap gap-4 items-center">
+        <div v-if="openSections.companies" class="mt-4 flex flex-wrap gap-4 items-center">
           <a v-for="c in companies" :key="c.id" :href="c.url" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-lg border border-slate-200 p-3">
             <div class="h-10 w-10 flex items-center justify-center rounded-md bg-white text-amber-500">
               <component :is="c.icon" class="h-6 w-6" />
@@ -106,10 +112,13 @@
 
       <!-- Projects timeline -->
       <section class="mt-8">
-        <h2 class="text-xl font-semibold">{{ $t('resume.projects_heading') }}</h2>
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-semibold">{{ $t('resume.projects_heading') }}</h2>
+          <button @click="toggleSection('projects')" class="text-sm text-amber-600">{{ openSections.projects ? 'Hide' : 'Show' }}</button>
+        </div>
         <p class="text-sm text-slate-600 mt-1">{{ $t('resume.projects_subtitle') }}</p>
 
-        <div class="mt-6 space-y-6">
+        <div v-if="openSections.projects" class="mt-6 space-y-6">
           <div v-for="proj in projects" :key="proj.id" class="border-l-2 border-slate-200 pl-4">
             <div class="flex items-baseline justify-between">
               <div>
@@ -128,9 +137,12 @@
 
       <!-- Certificates -->
       <section class="mt-8">
-        <h2 class="text-xl font-semibold">{{ $t('resume.certificates_heading') }}</h2>
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-semibold">{{ $t('resume.certificates_heading') }}</h2>
+          <button @click="toggleSection('certificates')" class="text-sm text-amber-600">{{ openSections.certificates ? 'Hide' : 'Show' }}</button>
+        </div>
         <p class="text-sm text-slate-600 mt-1">{{ $t('resume.certificates_subtitle') }}</p>
-        <div class="mt-4 grid gap-4 sm:grid-cols-2">
+        <div v-if="openSections.certificates" class="mt-4 grid gap-4 sm:grid-cols-2">
           <div v-for="cert in certificates" :key="cert.id" class="rounded-lg border border-slate-200 p-4">
             <div class="flex items-baseline justify-between">
               <div>
