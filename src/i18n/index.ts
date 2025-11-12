@@ -2,7 +2,7 @@ import { createI18n } from 'vue-i18n'
 
 const messages = {
   pl: {
-    header: { about: 'O mnie', services: 'Usługi', github: 'GitHub', contact: 'Kontakt' },
+    header: { about: 'O mnie', services: 'Usługi', resume: 'CV', github: 'GitHub', contact: 'Kontakt' },
     about: {
       badge: 'O mnie',
       heading: 'Projektuję i tworzę dopracowane aplikacje, które konwertują.',
