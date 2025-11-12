@@ -70,15 +70,10 @@
     <section id="services" class="container mx-auto px-4 py-16">
       <div class="flex items-end justify-between">
         <div>
-          <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">Services</h2>
-          <p class="mt-2 max-w-2xl text-slate-600">
-            Full-service product design and modern frontend engineering, inspired by the clarity and
-            polish of Builder.io.
-          </p>
+          <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{{ $t('services.title') }}</h2>
+          <p class="mt-2 max-w-2xl text-slate-600">{{ $t('services.description') }}</p>
         </div>
-        <RouterLink to="/contact" class="hidden md:inline-flex btn btn--ghost"
-          >Get a quote</RouterLink
-        >
+        <RouterLink to="/contact" class="hidden md:inline-flex btn btn--ghost">{{ $t('cta.button') }}</RouterLink>
       </div>
       <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <article class="card">
