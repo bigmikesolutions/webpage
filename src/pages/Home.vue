@@ -170,8 +170,8 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <style scoped>
-.stat dt { @apply text-xs text-slate-600; }
-.stat dd { @apply mt-1 text-xl font-semibold text-slate-900; }
+.stat dt { @apply text-xs uppercase text-slate-500 tracking-wider; }
+.stat dd { @apply mt-2 text-3xl md:text-4xl font-extrabold text-slate-900; }
 .card { @apply rounded-xl border border-slate-200 bg-white p-6 shadow-soft transition hover:shadow-lg; }
 .card h3 { @apply mt-3 text-lg font-semibold text-slate-900; }
 .card p { @apply mt-1 text-slate-600; }
