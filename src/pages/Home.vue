@@ -224,7 +224,7 @@
               </svg>
             </div>
             <div>
-              <h4 class="font-semibold">Big Mike Labs — YouTube</h4>
+              <h4 class="font-semibold">{{ $t('products.youtube_title') }}</h4>
               <p class="mt-1 text-sm text-slate-600">
                 Subscribe for tutorials, breakdowns, and project walkthroughs.
               </p>
