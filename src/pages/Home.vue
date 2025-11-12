@@ -29,9 +29,9 @@
         </div>
         <div class="mt-10 md:mt-0">
           <div class="relative mx-auto aspect-square max-w-sm rounded-2xl bg-gradient-to-tr from-brand-400 to-brand-200 p-1 shadow-soft">
-            <div class="h-full w-full rounded-2xl bg-white p-6">
-              <div class="flex h-full items-center justify-center">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' class='h-40 w-40 text-brand-500'><path fill='currentColor' d='M128 28a12 12 0 0 1 12 12v28a12 12 0 0 1-24 0V40a12 12 0 0 1 12-12Zm58.89 37.11a12 12 0 0 0-17 17l19.8 19.8a12 12 0 1 0 17-17ZM228 116h-28a12 12 0 0 0 0 24h28a12 12 0 0 0 0-24ZM70.11 65.11L50.3 84.91a12 12 0 1 0 17 17l19.8-19.8a12 12 0 1 0-17-17ZM40 116H12a12 12 0 0 0 0 24h28a12 12 0 0 0 0-24Zm128.24 46.55a44 44 0 1 0-80.48 0a60.08 60.08 0 0 0-34.08 25.3a12 12 0 0 0 20 13.2a36 36 0 0 1 62.5 0a12 12 0 0 0 20-13.2a60.08 60.08 0 0 0-34.06-25.3ZM196 152a12 12 0 0 0 12-12a68 68 0 0 0-136 0a12 12 0 0 0 24 0a44 44 0 0 1 88 0a12 12 0 0 0 12 12Z'/></svg>
+            <div class="h-full w-full rounded-2xl bg-white p-1">
+              <div class="overflow-hidden rounded-xl h-full">
+                <img src="https://www.unlockit.pl/images/michal-wronski.jpg" alt="Big Mike" class="h-full w-full object-cover" />
               </div>
             </div>
           </div>
