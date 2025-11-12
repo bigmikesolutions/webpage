@@ -16,6 +16,7 @@ const router = createRouter({
   routes: [
     { path: '/', name: 'Home', component: Home },
     { path: '/contact', name: 'Contact', component: Contact },
+    { path: '/resume', name: 'Resume', component: Resume },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],
   scrollBehavior,
