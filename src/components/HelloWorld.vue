@@ -3,6 +3,8 @@
 </template>
 
 <script setup lang="ts">
-interface Props { msg: string }
+interface Props {
+  msg: string
+}
 const props = defineProps<Props>()
 </script>
