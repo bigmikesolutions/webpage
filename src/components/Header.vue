@@ -15,6 +15,7 @@
       <nav class="hidden md:flex items-center gap-4 text-sm">
         <RouterLink to="/" class="nav-link">{{ t('header.about') }}</RouterLink>
         <RouterLink to="/#services" class="nav-link">{{ t('header.services') }}</RouterLink>
+        <RouterLink to="/resume" class="nav-link">{{ t('header.resume') }}</RouterLink>
         <a
           href="https://github.com/bigmikesolutions"
           target="_blank"
