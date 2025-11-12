@@ -268,6 +268,22 @@ const projects = ref([
     responsibilities: ['Design tokens', 'Component library', 'Documentation'],
   },
 ])
+
+// certificates
+const certificates = ref([
+  { id: 'cert1', title: 'Frontend Performance Optimization', issuer: 'Google', year: '2022', url: '#' },
+  { id: 'cert2', title: 'Accessibility Fundamentals', issuer: 'Deque University', year: '2021', url: '#' },
+])
+
+// collapsible groups state
+const openGroups = ref({})
+
+// initialize groups open by default
+techGroups.value.forEach((g: any) => (openGroups.value[g.id] = true))
+
+function toggleGroup(id: string) {
+  openGroups.value[id] = !openGroups.value[id]
+}
 </script>
 
 <style scoped></style>
