@@ -8,7 +8,7 @@
               <path d="M12 18a6 6 0 100-12 6 6 0 000 12z" />
             </svg>
           </span>
-          <span class="text-base font-semibold tracking-tight">YellowWorks</span>
+          <span class="text-base font-semibold tracking-tight">BigMikeSolutions</span>
         </div>
         <p class="mt-3 text-sm text-slate-600 max-w-sm">Independent designer and frontend engineer crafting fast, delightful web experiences with a bold yellow flair.</p>
       </div>
@@ -26,7 +26,7 @@
         <RouterLink to="/contact" class="btn mt-4">Start a project</RouterLink>
       </div>
     </div>
-    <div class="border-t border-slate-200/60 py-4 text-center text-xs text-slate-500">© {{ new Date().getFullYear() }} YellowWorks. All rights reserved.</div>
+    <div class="border-t border-slate-200/60 py-4 text-center text-xs text-slate-500">© {{ new Date().getFullYear() }} BigMikeSolutions. All rights reserved.</div>
   </footer>
 </template>
 
