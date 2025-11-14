@@ -38,5 +38,15 @@ export default defineConfig(({ command, mode }) => {
         '@': fileURLToPath(new URL('./src', import.meta.url))
       },
     },
+    server: {
+      // Ensure TypeScript files trigger HMR
+      watch: {
+        ignored: ['!**/src/**/*.ts', '!**/src/**/*.vue'],
+      },
+    },
+    optimizeDeps: {
+      // Ensure TypeScript config files are included in dependency optimization
+      include: ['src/config/**/*.ts'],
+    },
   }
 })

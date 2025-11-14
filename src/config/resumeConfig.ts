@@ -17,6 +17,19 @@ export const profileImage = {
 
 const Tech = (id: string, name: string, years: string, icon: any) => ({ id, name, years, icon })
 
+export const education = ref([
+  {
+    degree: 'M.Sc. in Computer Science',
+    institution: 'University X',
+    years: '2010 – 2015',
+    details: 'Focus on software engineering and distributed systems.',
+    langs: [
+      { name: 'Polish', level: 'Native' },
+      { name: 'English', level: 'Fluent' },
+    ],
+  },
+])
+
 export const techGroups = ref([
   {
     id: 'frontend',
@@ -58,18 +71,7 @@ export const techGroups = ref([
   },
 ])
 
-export const education = ref([
-  {
-    degree: 'M.Sc. in Computer Science',
-    institution: 'University X',
-    years: '2010 – 2015',
-    details: 'Focus on software engineering and distributed systems.',
-    langs: [
-      { name: 'Polish', level: 'Native' },
-      { name: 'English', level: 'Fluent' },
-    ],
-  },
-])
+
 
 export const recommendations = ref([
   {
