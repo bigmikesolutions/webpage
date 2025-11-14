@@ -8,8 +8,8 @@
   },
   "about": {
     "badge": "O mnie",
-    "heading": "Projektuję i tworzę dopracowane aplikacje, które konwertują.",
-    "pitch": "Jestem starszym frontend inżynierem i projektantem produktów specjalizującym się w szybkim, dostępnym i eleganckim doświadczeniu webowym. Od strategii i UX po nowoczesne stacki frontendowe — współpracuję z klientami by wdrażać z jakością i szybkością.",
+    "heading": "Pasja i pragmatyczność w tworzeniu oprogramowania",
+    "pitch": "Software developer z 15-letnim doświadczeniem w tworzeniu komercyjnych produktów i systemów z wykorzystaniem szerokiego zakresu technologii. Kładę nacisk na aspekty biznesowowe oraz jakość dostarczanych rozwiązań. Specjalizuje się w architekturze, projektowaniu oprogramowania, systemach reaktywnych oraz optymalizacji oprogramowania.",
     "buttons": {
       "work": "Współpracuj ze mną",
       "view": "Zobacz usługi",
@@ -18,34 +18,34 @@
     "github_user": "m-wrona"
   },
   "stats": {
-    "projects_label": "PROJEKTY",
-    "projects_value": "120+",
-    "uplift_label": "ŚR. WZROST",
-    "uplift_value": "32%",
-    "years_label": "LATA",
-    "years_value": "8"
+    "projects_label": "Projekty",
+    "projects_value": "25+",
+    "uplift_label": "Zadowolenie",
+    "uplift_value": "100%",
+    "years_label": "Lata",
+    "years_value": "15+"
   },
   "buttons": {
     "send": "Wyślij zapytanie"
   },
   "services": {
     "title": "Usługi",
-    "description": "Kompleksowy design produktu i nowoczesne inżynieria frontendowa."
+    "description": "Kompleksowe projektowanie i wdrożenie systemów."
   },
   "products": {
     "title": "Produkty",
-    "description": "Miejsca, gdzie dzielę się treściami i prowadzę szkolenia.",
+    "description": "Moje projekty i produkty, które tworzę dodatkowo w wolnym czasie.",
     "youtube_title": "Big Mike Labs — YouTube",
     "unlock_title": "UnlockIT — E‑learning"
   },
   "cta": {
-    "title": "Masz projekt? Zróbmy go błyszczącym.",
-    "subtitle": "Od MVP po dojrzałe produkty — współpracuję z zespołami, by dostarczać wartość.",
-    "button": "Rozpocznij projekt"
+    "title": "Jestem zainteresowany współpracą? Napisz!",
+    "subtitle": "Porozmawiajmy o Twoich potrzebach i możliwościach współpracy.",
+    "button": "Wyślij zapytanie"
   },
   "contact": {
-    "title": "Rozpocznij projekt",
-    "description": "Opowiedz o swoich celach i harmonogramie. Odpowiem w 1–2 dni robocze.",
+    "title": "Zapytanie",
+    "description": "Opowiedz o swoich potrzebach. Postaram sie odpowiedzieć w ciągu 1–2 dni roboczych.",
     "preferEmail": "Wolisz e‑mail? Napisz na"
   },
   "footer": {
