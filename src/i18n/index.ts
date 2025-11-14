@@ -138,6 +138,8 @@ const messages = {
       summary:
         'Senior frontend engineer and product designer experienced in building scalable web applications, UX and performant interfaces. Specializes in Vue, TypeScript and Tailwind.',
       experience_heading: 'Experience',
+      recommendations_heading: 'Recommendations',
+      recommendations_subtitle: 'Testimonials from colleagues and managers.',
       education_heading: 'Education',
       skills_heading: 'Skills',
       tech_heading: 'Technologies',
