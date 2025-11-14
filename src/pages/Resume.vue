@@ -5,7 +5,7 @@
         <img
           src="https://www.unlockit.pl/images/michal-wronski.jpg"
           alt="Michal Wronski"
-          class="h-28 w-28 rounded-lg object-cover shadow"
+          class="h-48 w-48 rounded-lg object-cover shadow"
         />
         <div class="flex-1">
           <h1 class="text-2xl font-bold">{{ $t('resume.name') }}</h1>
