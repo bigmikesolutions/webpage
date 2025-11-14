@@ -8,11 +8,10 @@
           >
             <span class="text-sm font-semibold leading-none">BMS</span>
           </span>
-          <span class="text-base font-semibold tracking-tight">BigMikeSolutions</span>
+          <span class="text-base font-semibold tracking-tight">{{ $t('footer.company_name') }}</span>
         </div>
         <p class="mt-3 text-sm text-slate-600 max-w-sm">
-          Independent designer and frontend engineer crafting fast, delightful web experiences with
-          a bold yellow flair.
+          {{ $t('footer.description') }}
         </p>
       </div>
       <div>
@@ -45,15 +44,15 @@
         </ul>
       </div>
       <div>
-        <h4 class="font-semibold text-slate-900">Contact</h4>
+        <h4 class="font-semibold text-slate-900">{{ $t('footer.contact') }}</h4>
         <p class="mt-3 text-sm text-slate-700">
-          Available for freelance and long-term engagements.
+          {{ $t('footer.available_text') }}
         </p>
-        <RouterLink to="/contact" class="btn mt-4">Start a project</RouterLink>
+        <RouterLink to="/contact" class="btn mt-4">{{ $t('footer.start') }}</RouterLink>
       </div>
     </div>
     <div class="border-t border-slate-200/60 py-4 text-center text-xs text-slate-500">
-      © {{ new Date().getFullYear() }} BigMikeSolutions. All rights reserved.
+      © {{ new Date().getFullYear() }} {{ $t('footer.company_name') }}. {{ $t('footer.copyright') }}
     </div>
   </footer>
 </template>

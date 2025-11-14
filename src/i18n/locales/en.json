@@ -85,7 +85,11 @@
   "footer": {
     "explore": "Explore",
     "contact": "Contact",
-    "start": "Start a project"
+    "start": "Start a project",
+    "company_name": "BigMikeSolutions",
+    "description": "Independent designer and frontend engineer crafting fast, delightful web experiences with a bold yellow flair.",
+    "available_text": "Available for freelance and long-term engagements.",
+    "copyright": "All rights reserved."
   },
   "resume": {
     "name": "Michał Wroński",

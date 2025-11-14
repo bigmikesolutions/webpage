@@ -83,17 +83,18 @@
     "preferEmail": "Wolisz e‑mail? Napisz na"
   },
   "footer": {
-    "explore": "Odkryj",
+    "explore": "Menu",
     "contact": "Kontakt",
-    "start": "Rozpocznij projekt"
+    "start": "Wyślij zapytanie",
+    "company_name": "BigMikeSolutions",
+    "description": "",
+    "available_text": "Masz pytania? Napisz!",
+    "copyright": "Wszelkie prawa zastrzeżone."
   },
   "resume": {
     "name": "Michał Wroński",
-    "title": "Senior Frontend Engineer & Product Designer",
+    "title": "Senior Backend Developer",
     "linkedin": "https://www.linkedin.com/in/michal-wronski-b389a988/",
-    "summary_heading": "Podsumowanie",
-    "summary": "Starszy frontend inżynier i projektant produktów z doświadczeniem w tworzeniu skalowalnych aplikacji webowych, UX i wydajnych interfejsów. Specjalizuję się w Vue, TypeScript i Tailwind.",
-    "experience_heading": "Doświadczenie",
     "recommendations_heading": "Rekomendacje",
     "recommendations_subtitle": "Opinie od kolegów i przełożonych.",
     "education_heading": "Edukacja",
