@@ -1,0 +1,89 @@
+{
+  "header": {
+    "about": "O mnie",
+    "services": "Usługi",
+    "resume": "CV",
+    "github": "GitHub",
+    "contact": "Kontakt"
+  },
+  "about": {
+    "badge": "O mnie",
+    "heading": "Projektuję i tworzę dopracowane aplikacje, które konwertują.",
+    "pitch": "Jestem starszym frontend inżynierem i projektantem produktów specjalizującym się w szybkim, dostępnym i eleganckim doświadczeniu webowym. Od strategii i UX po nowoczesne stacki frontendowe — współpracuję z klientami by wdrażać z jakością i szybkością.",
+    "buttons": {
+      "work": "Współpracuj ze mną",
+      "view": "Zobacz usługi",
+      "github": "GitHub"
+    },
+    "github_user": "m-wrona"
+  },
+  "stats": {
+    "projects_label": "PROJEKTY",
+    "projects_value": "120+",
+    "uplift_label": "ŚR. WZROST",
+    "uplift_value": "32%",
+    "years_label": "LATA",
+    "years_value": "8"
+  },
+  "buttons": {
+    "send": "Wyślij zapytanie"
+  },
+  "services": {
+    "title": "Usługi",
+    "description": "Kompleksowy design produktu i nowoczesne inżynieria frontendowa."
+  },
+  "products": {
+    "title": "Produkty",
+    "description": "Miejsca, gdzie dzielę się treściami i prowadzę szkolenia.",
+    "youtube_title": "Big Mike Labs — YouTube",
+    "unlock_title": "UnlockIT — E‑learning"
+  },
+  "cta": {
+    "title": "Masz projekt? Zróbmy go błyszczącym.",
+    "subtitle": "Od MVP po dojrzałe produkty — współpracuję z zespołami, by dostarczać wartość.",
+    "button": "Rozpocznij projekt"
+  },
+  "contact": {
+    "title": "Rozpocznij projekt",
+    "description": "Opowiedz o swoich celach i harmonogramie. Odpowiem w 1–2 dni robocze.",
+    "preferEmail": "Wolisz e‑mail? Napisz na"
+  },
+  "footer": {
+    "explore": "Odkryj",
+    "contact": "Kontakt",
+    "start": "Rozpocznij projekt"
+  },
+  "resume": {
+    "name": "Michał Wroński",
+    "title": "Senior Frontend Engineer & Product Designer",
+    "linkedin": "https://www.linkedin.com/in/michal-wronski-b389a988/",
+    "summary_heading": "Podsumowanie",
+    "summary": "Starszy frontend inżynier i projektant produktów z doświadczeniem w tworzeniu skalowalnych aplikacji webowych, UX i wydajnych interfejsów. Specjalizuję się w Vue, TypeScript i Tailwind.",
+    "experience_heading": "Doświadczenie",
+    "recommendations_heading": "Rekomendacje",
+    "recommendations_subtitle": "Opinie od kolegów i przełożonych.",
+    "education_heading": "Edukacja",
+    "skills_heading": "Umiejętności",
+    "tech_heading": "Technologie",
+    "tech_subtitle": "Technologie, których używam oraz lata doświadczenia z każdą z nich.",
+    "years": "lat doświadczenia",
+    "companies_heading": "Firmy",
+    "companies_subtitle": "Wybrane firmy i projekty, z którymi współpracowałem.",
+    "projects_heading": "Projekty",
+    "projects_subtitle": "Wybrane projekty z opisem technologii i odpowiedzialności.",
+    "role1_title": "Senior Frontend Engineer",
+    "role1_company": "Freelance / Various",
+    "role1_dates": "2018 – obecnie",
+    "role1_description": "Projektowanie i implementacja interfejsów użytkownika, systemów designu oraz migracje do nowoczesnych frameworków.",
+    "role2_title": "Frontend Engineer",
+    "role2_company": "Past Company",
+    "role2_dates": "2016 – 2018",
+    "role2_description": "Budowa skalowalnych aplikacji SPA oraz optymalizacja wydajności.",
+    "education_1": "M.Sc. in Computer Science, University X",
+    "total_experience_big": "8+",
+    "total_experience_label": "Lata doświadczenia",
+    "education_subtitle": "Moje wykształcenie i istotne kwalifikacje.",
+    "certificates_heading": "Certyfikaty",
+    "certificates_subtitle": "Wybrane certyfikaty i szkolenia."
+  }
+}
