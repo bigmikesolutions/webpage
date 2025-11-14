@@ -433,6 +433,19 @@ const education = ref([
   },
 ])
 
+const recommendations = ref([
+  {
+    name: 'Blazej Budzynski',
+    title: 'Software Engineer, Architect & Technical Leader',
+    text: 'I know Michal for years and I collaborated with him on multiple projects while working at NSN and REC and have been always amazed with his work ethics and design ideas. He is a strategic, creative thinker that brings true diversity and a wealth of problem solving know-how to every project he participates. He has a true gift for engaging clients and quickly ascertaining their expectations in order to surpass their needs based on his technical background and analytical abilities. Really, the student surpassed the master.',
+  },
+  {
+    name: 'Team Member',
+    title: 'Developer',
+    text: 'I really want to share my impression of the cooperation with Michal. We used to cooperate more than a year on one important development project across the globe. I was really surprised how Michal has clear customer understanding not only of the project. He has focused customer approach, self-management and always can see even troubles on the way as challenge which can be solved. Michal has great and unique technical knowledge. Thanks a lot! I have learnt from you a lot and was my pleasure to be with you in one team. Thanks!',
+  },
+])
+
 const companies = ref([
   {
     id: 'big',
