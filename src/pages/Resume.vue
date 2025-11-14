@@ -3,8 +3,8 @@
     <div class="mx-auto max-w-4xl">
       <div class="flex items-center gap-6">
         <img
-          src="https://www.unlockit.pl/images/michal-wronski.jpg"
-          alt="Michał Wroński"
+          :src="profileImage.src"
+          :alt="profileImage.alt"
           class="h-48 w-48 rounded-lg object-cover shadow"
         />
         <div class="flex-1">
@@ -283,265 +283,22 @@
 </template>
 
 <script setup lang="ts">
-import { ref, h, computed } from 'vue'
+import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import {
+  profileImage,
+  techGroups,
+  education,
+  recommendations,
+  companies,
+  projects,
+  certificates,
+} from '@/config/resumeConfig'
 
 const { t } = useI18n()
 
-// Tech icons as inline components
-const IconVue = {
-  render() {
-    return h(
-      'svg',
-      { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 261 226', fill: 'currentColor' },
-      [
-        h('path', { d: 'M0 0h261v226H0z', fill: 'none' }),
-        h('path', {
-          d: 'M130.5 0l-65 112.5L0 0h65L130.5 112.5 196 0h65L196 112.5z',
-          fill: 'currentColor',
-        }),
-      ],
-    )
-  },
-}
-const IconTS = {
-  render() {
-    return h(
-      'svg',
-      { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' },
-      [
-        h('rect', { x: '2', y: '2', width: '20', height: '20', rx: '2' }),
-        h('path', { d: 'M7 6h10v2H9v8H7V6z', fill: '#fff' }),
-      ],
-    )
-  },
-}
-const IconTailwind = {
-  render() {
-    return h(
-      'svg',
-      { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' },
-      [
-        h('path', {
-          d: 'M12 5C9.8 5 8 6.5 7 8c3 0 3.8-2 5-2 1.3 0 2.3 1 3.8 1.6 1.5.6 2.6-.2 3.2 0-1.1-2.4-3.7-4-8-4z',
-        }),
-      ],
-    )
-  },
-}
-const IconAccessibility = {
-  render() {
-    return h(
-      'svg',
-      { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' },
-      [h('path', { d: 'M12 2a2 2 0 110 4 2 2 0 010-4zM7 8h10l-1 9H8L7 8z' })],
-    )
-  },
-}
-const IconPerformance = {
-  render() {
-    return h(
-      'svg',
-      { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' },
-      [h('path', { d: 'M12 3a9 9 0 100 18 9 9 0 000-18zm1 10l4-4' })],
-    )
-  },
-}
-const IconDesign = {
-  render() {
-    return h(
-      'svg',
-      { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' },
-      [h('path', { d: 'M3 3h18v4H3zM3 9h18v12H3z' })],
-    )
-  },
-}
-// New icons
-const IconNode = {
-  render() {
-    return h(
-      'svg',
-      { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' },
-      [h('path', { d: 'M12 2l8 4v8l-8 4-8-4V6l8-4z' })],
-    )
-  },
-}
-const IconCloud = {
-  render() {
-    return h(
-      'svg',
-      { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' },
-      [h('path', { d: 'M20 17.5A4.5 4.5 0 0015.5 13H13a4 4 0 10-7.9 1.2A3.5 3.5 0 007.5 20H20' })],
-    )
-  },
-}
-const IconAndroid = {
-  render() {
-    return h(
-      'svg',
-      { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' },
-      [h('path', { d: 'M17 11v6h-2v-6h2zm-8 0v6H7v-6h2zM8 6l-1-2h10l-1 2H8zM5 11h14v7H5v-7z' })],
-    )
-  },
-}
-
-const Tech = (id: string, name: string, years: string, icon: any) => ({ id, name, years, icon })
-
-const techGroups = ref([
-  {
-    id: 'frontend',
-    name: 'Frontend',
-    items: [
-      Tech('vue', 'Vue.js', '8+', IconVue),
-      Tech('ts', 'TypeScript', '6+', IconTS),
-      Tech('tailwind', 'Tailwind CSS', '5+', IconTailwind),
-      Tech('design', 'Design Systems', '5+', IconDesign),
-    ],
-  },
-  {
-    id: 'backend',
-    name: 'Backend',
-    items: [
-      Tech('node', 'Node.js', '6+', IconNode),
-      Tech('supabase', 'Supabase', '3+', IconNode),
-      Tech('sql', 'Postgres', '5+', IconNode),
-    ],
-  },
-  {
-    id: 'devops',
-    name: 'DevOps',
-    items: [
-      Tech('docker', 'Docker', '4+', IconCloud),
-      Tech('k8s', 'Kubernetes', '2+', IconCloud),
-      Tech('ci', 'CI/CD', '5+', IconCloud),
-    ],
-  },
-  {
-    id: 'mobile',
-    name: 'Mobile',
-    items: [Tech('android', 'Android / Kotlin', '3+', IconAndroid)],
-  },
-  {
-    id: 'testing',
-    name: 'Testing & QA',
-    items: [Tech('vitest', 'Vitest / Jest', '4+', IconDesign)],
-  },
-])
-
-// Education entries
-const education = ref([
-  {
-    degree: 'M.Sc. in Computer Science',
-    institution: 'University X',
-    years: '2010 – 2015',
-    details: 'Focus on software engineering and distributed systems.',
-    langs: [
-      { name: 'Polish', level: 'Native' },
-      { name: 'English', level: 'Fluent' },
-    ],
-  },
-])
-
-const recommendations = ref([
-  {
-    name: 'Błazej Budzyński',
-    title: 'Software Architect & Technical Leader',
-    text: 'I know Michał for years and I collaborated with him on multiple projects while working at NSN and REC and have been always amazed with his work ethics and design ideas. He is a strategic, creative thinker that brings true diversity and a wealth of problem solving know-how to every project he participates. He has a true gift for engaging clients and quickly ascertaining their expectations in order to surpass their needs based on his technical background and analytical abilities. Really, the student surpassed the master.',
-    image:
-      'https://media.licdn.com/dms/image/v2/C4E03AQF3uB87qHou7g/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1531665346571?e=1764806400&v=beta&t=jxz5JbTOka1Mg8SfZ26wm6PR5H0BMfVZPoAdGRRm_P0',
-  },
-  {
-    name: 'Petra Crhák',
-    title: 'Project Manager',
-    text: 'I really want to share my impression of the cooperation with Michał. We used to cooperate more than a year on one important development project across the globe. I was really surprised how Michał has clear customer understanding not only of the project. He has focused customer approach, self-management and always can see even troubles on the way as challenge which can be solved. Michal has great and unique technical knowledge. Thanks a lot! I have learnt from you a lot and was my pleasure to be with you in one team. Thanks!',
-    image:
-      'https://media.licdn.com/dms/image/v2/D4E03AQEDbmRBw3qWAQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1721319094475?e=1764806400&v=beta&t=skZDqHhs83k_0ZlZwBPj-mglXS9k5C0XDNJ7-uSK7oU',
-  },
-])
-
-const companies = ref([
-  {
-    id: 'big',
-    name: 'BigMikeSolutions',
-    url: '/',
-    icon: IconDesign,
-    role: 'Founder / Lead',
-    years: '2018 – Present',
-  },
-  {
-    id: 'unlock',
-    name: 'UnlockIT',
-    url: 'https://www.unlockit.pl/',
-    icon: IconAccessibility,
-    role: 'CTO / Lead Developer',
-    years: '2021 – Present',
-  },
-  {
-    id: 'github',
-    name: 'GitHub',
-    url: 'https://github.com/m-wrona',
-    icon: IconTS,
-    role: 'Open-source contributor',
-    years: '2016 – Present',
-  },
-  {
-    id: 'past',
-    name: 'Past Company',
-    url: '#',
-    icon: IconTailwind,
-    role: 'Frontend Engineer',
-    years: '2016 – 2018',
-  },
-])
-
-const projects = ref([
-  {
-    id: 'proj1',
-    title: 'Marketing Platform Revamp',
-    dates: '2023',
-    tech: ['Vue.js', 'TypeScript', 'Tailwind', 'Supabase'],
-    description:
-      'Led frontend rebuild of a marketing platform improving performance and accessibility.',
-    responsibilities: ['Frontend architecture', 'Performance tuning', 'Accessibility audits'],
-  },
-  {
-    id: 'proj2',
-    title: 'E‑learning Platform',
-    dates: '2021 – 2022',
-    tech: ['Vue.js', 'Nuxt', 'Tailwind', 'Stripe'],
-    description: 'Built an e‑learning platform with secure payments and course management.',
-    responsibilities: ['Feature development', 'Payments integration', 'Testing & CI'],
-  },
-  {
-    id: 'proj3',
-    title: 'Design System & Component Library',
-    dates: '2019 – 2021',
-    tech: ['Vue.js', 'Storybook', 'TypeScript'],
-    description: 'Created a design system used across multiple products to ensure consistency.',
-    responsibilities: ['Design tokens', 'Component library', 'Documentation'],
-  },
-])
-
-// certificates
-const certificates = ref([
-  {
-    id: 'cert1',
-    title: 'Frontend Performance Optimization',
-    issuer: 'Google',
-    year: '2022',
-    url: '#',
-  },
-  {
-    id: 'cert2',
-    title: 'Accessibility Fundamentals',
-    issuer: 'Deque University',
-    year: '2021',
-    url: '#',
-  },
-])
-
 // collapsible groups state
-const openGroups = ref({})
+const openGroups = ref<Record<string, boolean>>({})
 
 // initialize groups open by default
 techGroups.value.forEach((g: any) => (openGroups.value[g.id] = true))
@@ -551,7 +308,7 @@ function toggleGroup(id: string) {
 }
 
 // main sections collapse state
-const openSections = ref({
+const openSections = ref<Record<string, boolean>>({
   recommendations: true,
   education: true,
   techs: true,
