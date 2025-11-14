@@ -80,7 +80,15 @@
   "contact": {
     "title": "Zapytanie",
     "description": "Opowiedz o swoich potrzebach. Postaram sie odpowiedzieć w ciągu 1–2 dni roboczych.",
-    "preferEmail": "Wolisz e‑mail? Napisz na"
+    "preferEmail": "Wolisz e‑mail? Napisz na",
+    "form": {
+      "name": "Imię",
+      "email": "E-mail",
+      "project_details": "Szczegóły",
+      "project_details_placeholder": "Parę słów o Twoich potrzebach."
+    },
+    "email": "contact@bigmikesolutions.com",
+    "success_message": "Dziękuję {name}! Twoje zapytanie zostało otrzymane."
   },
   "footer": {
     "explore": "Menu",

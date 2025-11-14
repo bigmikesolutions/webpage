@@ -80,7 +80,23 @@
   "contact": {
     "title": "Start a project",
     "description": "Tell me about your goals and timeline. I'll get back within 1–2 business days.",
-    "preferEmail": "Prefer email? Reach me at"
+    "preferEmail": "Prefer email? Reach me at",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "budget": "Budget",
+      "budget_select": "Select…",
+      "budget_options": {
+        "under_5k": "Under $5k",
+        "5k_15k": "$5k – $15k",
+        "15k_50k": "$15k – $50k",
+        "50k_plus": "$50k+"
+      },
+      "project_details": "Project details",
+      "project_details_placeholder": "What are we building?"
+    },
+    "email": "hello@bigmikesolutions.com",
+    "success_message": "Thanks {name}! Your inquiry has been received."
   },
   "footer": {
     "explore": "Explore",
