@@ -539,6 +539,7 @@ function toggleGroup(id: string) {
 
 // main sections collapse state
 const openSections = ref({
+  recommendations: true,
   education: true,
   techs: true,
   companies: true,
