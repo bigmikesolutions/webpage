@@ -438,11 +438,13 @@ const recommendations = ref([
     name: 'Blazej Budzynski',
     title: 'Software Engineer, Architect & Technical Leader',
     text: 'I know Michal for years and I collaborated with him on multiple projects while working at NSN and REC and have been always amazed with his work ethics and design ideas. He is a strategic, creative thinker that brings true diversity and a wealth of problem solving know-how to every project he participates. He has a true gift for engaging clients and quickly ascertaining their expectations in order to surpass their needs based on his technical background and analytical abilities. Really, the student surpassed the master.',
+    image: 'https://media.licdn.com/dms/image/v2/C4E03AQF3uB87qHou7g/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1531665346571?e=1764806400&v=beta&t=jxz5JbTOka1Mg8SfZ26wm6PR5H0BMfVZPoAdGRRm_P0',
   },
   {
     name: 'Team Member',
     title: 'Developer',
     text: 'I really want to share my impression of the cooperation with Michal. We used to cooperate more than a year on one important development project across the globe. I was really surprised how Michal has clear customer understanding not only of the project. He has focused customer approach, self-management and always can see even troubles on the way as challenge which can be solved. Michal has great and unique technical knowledge. Thanks a lot! I have learnt from you a lot and was my pleasure to be with you in one team. Thanks!',
+    image: 'https://media.licdn.com/dms/image/v2/D4E03AQEDbmRBw3qWAQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1721319094475?e=1764806400&v=beta&t=skZDqHhs83k_0ZlZwBPj-mglXS9k5C0XDNJ7-uSK7oU',
   },
 ])
 
