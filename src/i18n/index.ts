@@ -55,6 +55,8 @@ const messages = {
       summary:
         'Starszy frontend inżynier i projektant produktów z doświadczeniem w tworzeniu skalowalnych aplikacji webowych, UX i wydajnych interfejsów. Specjalizuję się w Vue, TypeScript i Tailwind.',
       experience_heading: 'Doświadczenie',
+      recommendations_heading: 'Rekomendacje',
+      recommendations_subtitle: 'Opinie od kolegów i przełożonych.',
       education_heading: 'Edukacja',
       skills_heading: 'Umiejętności',
       tech_heading: 'Technologie',
