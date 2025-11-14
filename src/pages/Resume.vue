@@ -70,18 +70,20 @@
           </button>
         </div>
         <p class="text-sm text-slate-600 mt-1">{{ $t('resume.education_subtitle') }}</p>
-        <div v-if="openSections.education" class="mt-4 space-y-4">
-          <div v-for="(e, i) in education" :key="i" class="rounded-lg border border-slate-200 p-4">
-            <div class="flex items-center justify-between">
-              <div>
-                <div class="font-semibold">{{ e.degree }}</div>
-                <div class="text-sm text-slate-600">{{ e.institution }}</div>
+        <div v-if="openSections.education" class="mt-4 space-y-6">
+          <div v-for="(e, i) in education" :key="i">
+            <div class="rounded-lg border border-slate-200 p-4">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="font-semibold">{{ e.degree }}</div>
+                  <div class="text-sm text-slate-600">{{ e.institution }}</div>
+                </div>
+                <div class="text-sm text-slate-500">{{ e.years }}</div>
               </div>
-              <div class="text-sm text-slate-500">{{ e.years }}</div>
+              <p v-if="e.details" class="mt-2 text-slate-700">{{ e.details }}</p>
             </div>
-            <p v-if="e.details" class="mt-2 text-slate-700">{{ e.details }}</p>
 
-            <!-- languages boxes -->
+            <!-- languages boxes - outside education entry -->
             <div v-if="e.langs" class="mt-3 flex flex-wrap gap-3">
               <div
                 v-for="(l, idx) in e.langs"
