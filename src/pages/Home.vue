@@ -87,6 +87,7 @@
       <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <article v-for="(service, index) in services" :key="index" class="card">
           <div class="card-icon">
+            <!-- Software Design (index 0) -->
             <svg
               v-if="index === 0"
               xmlns="http://www.w3.org/2000/svg"
@@ -94,10 +95,9 @@
               fill="currentColor"
               class="h-6 w-6"
             >
-              <path
-                d="M3 4.5A1.5 1.5 0 0 1 4.5 3h4.757a1.5 1.5 0 0 1 1.06.44l1.243 1.243c.28.28.662.439 1.06.439H19.5A1.5 1.5 0 0 1 21 6.622v12.878A1.5 1.5 0 0 1 19.5 21h-15A1.5 1.5 0 0 1 3 19.5z"
-              />
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
             </svg>
+            <!-- Backend Development (index 1) -->
             <svg
               v-else-if="index === 1"
               xmlns="http://www.w3.org/2000/svg"
@@ -105,10 +105,9 @@
               fill="currentColor"
               class="h-6 w-6"
             >
-              <path
-                d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v7.5A2.25 2.25 0 0 0 5.25 18h8.25m0-12H18a3 3 0 0 1 3 3v9m-7.5-12v12m0 0H5.25"
-              />
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 4v8h16V8H4zm2 2h12v4H6v-4z" />
             </svg>
+            <!-- Mobile Solutions (index 2) -->
             <svg
               v-else-if="index === 2"
               xmlns="http://www.w3.org/2000/svg"
@@ -116,8 +115,9 @@
               fill="currentColor"
               class="h-6 w-6"
             >
-              <path d="M4.5 6.75h15m-15 3.75h15m-15 3.75h15M4.5 18h15" />
+              <path d="M10.5 1.5H8a2 2 0 0 0-2 2v17a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-17a2 2 0 0 0-2-2h-2.5m0 0V0m0 1.5h3m-3 0H12m-1.5 18v-2h3v2" />
             </svg>
+            <!-- DevOps & SRE (index 3) -->
             <svg
               v-else-if="index === 3"
               xmlns="http://www.w3.org/2000/svg"
@@ -125,8 +125,9 @@
               fill="currentColor"
               class="h-6 w-6"
             >
-              <path d="M12 3v18m9-9H3" />
+              <path d="M20 17.5A4.5 4.5 0 0 0 15.5 13H13a4 4 0 1 0-7.9 1.2A3.5 3.5 0 0 0 7.5 20H20" />
             </svg>
+            <!-- AI (index 4) -->
             <svg
               v-else-if="index === 4"
               xmlns="http://www.w3.org/2000/svg"
@@ -134,12 +135,13 @@
               fill="currentColor"
               class="h-6 w-6"
             >
-              <path
-                d="M16.5 7.125V3.75m0 0h3.375M16.5 3.75l3.75 3.75M7.5 16.875v3.375m0 0H4.125M7.5 20.25l-3.75-3.75M3 12h18"
-              />
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
+              <circle cx="9" cy="8" r="1" />
+              <circle cx="15" cy="8" r="1" />
             </svg>
+            <!-- Production Maintenance (index 5) -->
             <svg
-              v-else
+              v-else-if="index === 5"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
@@ -148,6 +150,16 @@
               <path
                 d="M12 1.5 3 6v6c0 6.075 4.925 9.75 9 10.5 4.075-.75 9-4.425 9-10.5V6l-9-4.5Z"
               />
+            </svg>
+            <!-- Default icon -->
+            <svg
+              v-else
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="h-6 w-6"
+            >
+              <path d="M12 3v18m9-9H3" />
             </svg>
           </div>
           <h3>{{ service.title }}</h3>
