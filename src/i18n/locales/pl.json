@@ -30,13 +30,47 @@
   },
   "services": {
     "title": "Usługi",
-    "description": "Kompleksowe projektowanie i wdrożenie systemów."
+    "description": "Kompleksowe projektowanie i wdrożenie systemów.",
+    "items": [
+      {
+        "title": "Software Design",
+        "description": "Prowadzenie projektów od analizy wymagań po wdrożenia.",
+        "features": ["Architektura", "Prototypowanie", "Dokumentacja", "Wymagania biznesowe", "Analiza wymagań"]
+      },
+      {
+        "title": "Backend Development",
+        "description": "Tworzenie rozwiązań backendowych.",
+        "features": ["API", "Tworzenie nowych systemów", "Migracje", "Optymalizacja wydajności", "Ratowanie systemów w trudnych sytuacjach"]
+      },
+      {
+        "title": "Rozwiązania mobilne",
+        "description": "Aplikacje mobilne.",
+        "features": ["Android", "iOS", "Poprawianie jakości istniejących aplikacji"]
+      },
+      {
+        "title": "DevOps & SRE",
+        "description": "Wspieranie i rozwój infrastruktury u klienta.",
+        "features": ["Uwierzytelnianie & DB", "Płatności", "Monitorowanie"]
+      },
+      {
+        "title": "AI",
+        "description": "Wdrożenie AI w istniejących systemach.",
+        "features": ["Agentic AI", "Generative AI", "Fine-tuning AI"]
+      },
+      {
+        "title": "Utrzymanie produkcji",
+        "description": "Utrzymanie produkcji i opieka nad systemami.",
+        "features": ["PagerDuty", "Poprawianie błędów", "Monitorowanie", "Poprawianie wydajności"]
+      }
+    ]
   },
   "products": {
     "title": "Produkty",
     "description": "Moje projekty i produkty, które tworzę dodatkowo w wolnym czasie.",
     "youtube_title": "Big Mike Labs — YouTube",
-    "unlock_title": "UnlockIT — E‑learning"
+    "youtube_description": "Pragmatycznie o technologii, AI, programowaniu i innych ciekawostkach ze świata nauki.",
+    "unlock_title": "UnlockIT — E‑learning",
+    "unlock_description": "Platforma e-learningowa ze szkoleniami."
   },
   "cta": {
     "title": "Jestem zainteresowany współpracą? Napisz!",

@@ -30,13 +30,47 @@
   },
   "services": {
     "title": "Services",
-    "description": "Full-service product design and modern frontend engineering."
+    "description": "Full-service product design and modern frontend engineering.",
+    "items": [
+      {
+        "title": "Product UI/UX",
+        "description": "Research, flows, wireframes, and high-fidelity design systems that scale.",
+        "features": ["Design systems", "Prototyping", "Usability testing"]
+      },
+      {
+        "title": "Frontend Engineering",
+        "description": "Vue, TypeScript, and Tailwind engineering with clean, accessible code.",
+        "features": ["SPA & SSR", "Animations", "Testing"]
+      },
+      {
+        "title": "Performance & SEO",
+        "description": "Core Web Vitals, accessibility audits, and pragmatic performance wins.",
+        "features": ["PageSpeed 90+ targets", "Accessibility AA", "Analytics setup"]
+      },
+      {
+        "title": "Integrations",
+        "description": "Supabase, Stripe, Sentry, and Zapier workflows wired end-to-end.",
+        "features": ["Auth & DB", "Payments", "Monitoring"]
+      },
+      {
+        "title": "Brand & Visual",
+        "description": "Expressive visual systems, iconography, and on-brand microcopy.",
+        "features": ["Identity", "Illustrations", "Motion"]
+      },
+      {
+        "title": "Ongoing Support",
+        "description": "Roadmaps, maintenance, and quick iterations that keep you ahead.",
+        "features": ["Retainers", "Backlog grooming", "Roadmapping"]
+      }
+    ]
   },
   "products": {
     "title": "Products",
     "description": "Places where I share content and teach.",
     "youtube_title": "Big Mike Labs — YouTube",
-    "unlock_title": "UnlockIT — E‑learning"
+    "youtube_description": "Subscribe for tutorials, breakdowns, and project walkthroughs.",
+    "unlock_title": "UnlockIT — E‑learning",
+    "unlock_description": "My e-learning platform with courses, workshops, and premium content."
   },
   "cta": {
     "title": "Have a project? Let's make it shine.",

@@ -85,9 +85,10 @@
         }}</RouterLink>
       </div>
       <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <article class="card">
+        <article v-for="(service, index) in services" :key="index" class="card">
           <div class="card-icon">
             <svg
+              v-if="index === 0"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
@@ -97,18 +98,8 @@
                 d="M3 4.5A1.5 1.5 0 0 1 4.5 3h4.757a1.5 1.5 0 0 1 1.06.44l1.243 1.243c.28.28.662.439 1.06.439H19.5A1.5 1.5 0 0 1 21 6.622v12.878A1.5 1.5 0 0 1 19.5 21h-15A1.5 1.5 0 0 1 3 19.5z"
               />
             </svg>
-          </div>
-          <h3>Product UI/UX</h3>
-          <p>Research, flows, wireframes, and high-fidelity design systems that scale.</p>
-          <ul class="feature-list">
-            <li>Design systems</li>
-            <li>Prototyping</li>
-            <li>Usability testing</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="card-icon">
             <svg
+              v-else-if="index === 1"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
@@ -118,18 +109,8 @@
                 d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v7.5A2.25 2.25 0 0 0 5.25 18h8.25m0-12H18a3 3 0 0 1 3 3v9m-7.5-12v12m0 0H5.25"
               />
             </svg>
-          </div>
-          <h3>Frontend Engineering</h3>
-          <p>Vue, TypeScript, and Tailwind engineering with clean, accessible code.</p>
-          <ul class="feature-list">
-            <li>SPA & SSR</li>
-            <li>Animations</li>
-            <li>Testing</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="card-icon">
             <svg
+              v-else-if="index === 2"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
@@ -137,18 +118,8 @@
             >
               <path d="M4.5 6.75h15m-15 3.75h15m-15 3.75h15M4.5 18h15" />
             </svg>
-          </div>
-          <h3>Performance & SEO</h3>
-          <p>Core Web Vitals, accessibility audits, and pragmatic performance wins.</p>
-          <ul class="feature-list">
-            <li>PageSpeed 90+ targets</li>
-            <li>Accessibility AA</li>
-            <li>Analytics setup</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="card-icon">
             <svg
+              v-else-if="index === 3"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
@@ -156,18 +127,8 @@
             >
               <path d="M12 3v18m9-9H3" />
             </svg>
-          </div>
-          <h3>Integrations</h3>
-          <p>Supabase, Stripe, Sentry, and Zapier workflows wired end-to-end.</p>
-          <ul class="feature-list">
-            <li>Auth & DB</li>
-            <li>Payments</li>
-            <li>Monitoring</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="card-icon">
             <svg
+              v-else-if="index === 4"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
@@ -177,18 +138,8 @@
                 d="M16.5 7.125V3.75m0 0h3.375M16.5 3.75l3.75 3.75M7.5 16.875v3.375m0 0H4.125M7.5 20.25l-3.75-3.75M3 12h18"
               />
             </svg>
-          </div>
-          <h3>Brand & Visual</h3>
-          <p>Expressive visual systems, iconography, and on-brand microcopy.</p>
-          <ul class="feature-list">
-            <li>Identity</li>
-            <li>Illustrations</li>
-            <li>Motion</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="card-icon">
             <svg
+              v-else
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
@@ -199,12 +150,10 @@
               />
             </svg>
           </div>
-          <h3>Ongoing Support</h3>
-          <p>Roadmaps, maintenance, and quick iterations that keep you ahead.</p>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.description }}</p>
           <ul class="feature-list">
-            <li>Retainers</li>
-            <li>Backlog grooming</li>
-            <li>Roadmapping</li>
+            <li v-for="(feature, idx) in service.features" :key="idx">{{ feature }}</li>
           </ul>
         </article>
       </div>
@@ -235,7 +184,7 @@
             <div>
               <h4 class="font-semibold">{{ $t('products.youtube_title') }}</h4>
               <p class="mt-1 text-sm text-slate-600">
-                Subscribe for tutorials, breakdowns, and project walkthroughs.
+                {{ $t('products.youtube_description') }}
               </p>
             </div>
           </a>
@@ -265,7 +214,7 @@
             <div>
               <h4 class="font-semibold">{{ $t('products.unlock_title') }}</h4>
               <p class="mt-1 text-sm text-slate-600">
-                My e-learning platform with courses, workshops, and premium content.
+                {{ $t('products.unlock_description') }}
               </p>
             </div>
           </a>
@@ -290,7 +239,19 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router'
+
+const { tm } = useI18n()
+
+interface Service {
+  title: string
+  description: string
+  features: string[]
+}
+
+const services = computed<Service[]>(() => tm('services.items') as Service[])
 </script>
 
 <style scoped>
