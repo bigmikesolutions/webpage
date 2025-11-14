@@ -8,8 +8,8 @@
   },
   "about": {
     "badge": "About Me",
-    "heading": "I design and build polished apps that convert.",
-    "pitch": "I'm a senior frontend engineer and product designer specializing in fast, accessible, and elegant web experiences. From strategy and UX to modern frontend stacks, I partner with clients to ship with quality and speed.",
+    "heading": "Passion and pragmatism in software development",
+    "pitch": "Software developer with 15 years of experience in creating commercial products and systems using a wide range of technologies. I focus on business aspects and the quality of delivered solutions. Specializes in architecture, software design, reactive systems, and software optimization.",
     "buttons": {
       "work": "Work with me",
       "view": "View services",
@@ -18,113 +18,102 @@
     "github_user": "m-wrona"
   },
   "stats": {
-    "projects_label": "PROJECTS",
-    "projects_value": "120+",
-    "uplift_label": "AVG. UPLIFT",
-    "uplift_value": "32%",
-    "years_label": "YEARS",
-    "years_value": "8"
+    "projects_label": "Projects",
+    "projects_value": "25+",
+    "uplift_label": "Satisfaction",
+    "uplift_value": "100%",
+    "years_label": "Years",
+    "years_value": "15+"
   },
   "buttons": {
     "send": "Send inquiry"
   },
   "services": {
     "title": "Services",
-    "description": "Full-service product design and modern frontend engineering.",
+    "description": "Comprehensive system design and implementation.",
     "items": [
       {
-        "title": "Product UI/UX",
-        "description": "Research, flows, wireframes, and high-fidelity design systems that scale.",
-        "features": ["Design systems", "Prototyping", "Usability testing"]
+        "title": "Software Design",
+        "description": "Leading projects from requirements analysis to implementation.",
+        "features": ["Architecture", "Prototyping", "Documentation", "Business requirements", "Requirements analysis"]
       },
       {
-        "title": "Frontend Engineering",
-        "description": "Vue, TypeScript, and Tailwind engineering with clean, accessible code.",
-        "features": ["SPA & SSR", "Animations", "Testing"]
+        "title": "Backend Development",
+        "description": "Creating backend solutions.",
+        "features": ["API", "Building new systems", "Migrations", "Performance optimization", "Rescuing systems in difficult situations"]
       },
       {
-        "title": "Performance & SEO",
-        "description": "Core Web Vitals, accessibility audits, and pragmatic performance wins.",
-        "features": ["PageSpeed 90+ targets", "Accessibility AA", "Analytics setup"]
+        "title": "Mobile Solutions",
+        "description": "Mobile applications.",
+        "features": ["Android", "iOS", "Improving quality of existing applications"]
       },
       {
-        "title": "Integrations",
-        "description": "Supabase, Stripe, Sentry, and Zapier workflows wired end-to-end.",
-        "features": ["Auth & DB", "Payments", "Monitoring"]
+        "title": "DevOps & SRE",
+        "description": "Supporting and developing client infrastructure.",
+        "features": ["Authentication & DB", "Payments", "Monitoring"]
       },
       {
-        "title": "Brand & Visual",
-        "description": "Expressive visual systems, iconography, and on-brand microcopy.",
-        "features": ["Identity", "Illustrations", "Motion"]
+        "title": "AI",
+        "description": "AI implementation in existing systems.",
+        "features": ["Agentic AI", "Generative AI", "Fine-tuning AI"]
       },
       {
-        "title": "Ongoing Support",
-        "description": "Roadmaps, maintenance, and quick iterations that keep you ahead.",
-        "features": ["Retainers", "Backlog grooming", "Roadmapping"]
+        "title": "Production Maintenance",
+        "description": "Production maintenance and system care.",
+        "features": ["PagerDuty", "Bug fixing", "Monitoring", "Performance improvement"]
       }
     ]
   },
   "products": {
     "title": "Products",
-    "description": "Places where I share content and teach.",
+    "description": "My projects and products that I create additionally in my free time.",
     "youtube_title": "Big Mike Labs — YouTube",
-    "youtube_description": "Subscribe for tutorials, breakdowns, and project walkthroughs.",
+    "youtube_description": "Pragmatically about technology, AI, programming, and other curiosities from the world of science.",
     "unlock_title": "UnlockIT — E‑learning",
-    "unlock_description": "My e-learning platform with courses, workshops, and premium content."
+    "unlock_description": "E-learning platform with training courses."
   },
   "cta": {
-    "title": "Have a project? Let's make it shine.",
-    "subtitle": "From MVPs to mature products, I partner with teams to deliver results with clarity and craft.",
-    "button": "Start a project"
+    "title": "Interested in collaboration? Write!",
+    "subtitle": "Let's talk about your needs and collaboration opportunities.",
+    "button": "Send inquiry"
   },
   "contact": {
-    "title": "Start a project",
-    "description": "Tell me about your goals and timeline. I'll get back within 1–2 business days.",
-    "preferEmail": "Prefer email? Reach me at",
+    "title": "Inquiry",
+    "description": "Tell me about your needs. I'll try to respond within 1–2 business days.",
+    "preferEmail": "Prefer email? Write to",
     "form": {
       "name": "Name",
       "email": "Email",
-      "budget": "Budget",
-      "budget_select": "Select…",
-      "budget_options": {
-        "under_5k": "Under $5k",
-        "5k_15k": "$5k – $15k",
-        "15k_50k": "$15k – $50k",
-        "50k_plus": "$50k+"
-      },
-      "project_details": "Project details",
-      "project_details_placeholder": "What are we building?"
+      "project_details": "Details",
+      "project_details_placeholder": "A few words about your needs."
     },
-    "email": "hello@bigmikesolutions.com",
-    "success_message": "Thanks {name}! Your inquiry has been received."
+    "email": "contact@bigmikesolutions.com",
+    "success_message": "Thank you {name}! Your inquiry has been received."
   },
   "footer": {
-    "explore": "Explore",
+    "explore": "Menu",
     "contact": "Contact",
-    "start": "Start a project",
+    "start": "Send inquiry",
     "company_name": "BigMikeSolutions",
-    "description": "Independent designer and frontend engineer crafting fast, delightful web experiences with a bold yellow flair.",
-    "available_text": "Available for freelance and long-term engagements.",
+    "description": "",
+    "available_text": "Have questions? Write!",
     "copyright": "All rights reserved."
   },
   "resume": {
     "name": "Michał Wroński",
-    "title": "Senior Frontend Engineer & Product Designer",
+    "title": "Senior Backend Developer",
     "linkedin": "https://www.linkedin.com/in/michal-wronski-b389a988/",
-    "summary_heading": "Summary",
-    "summary": "Senior frontend engineer and product designer experienced in building scalable web applications, UX and performant interfaces. Specializes in Vue, TypeScript and Tailwind.",
-    "experience_heading": "Experience",
     "recommendations_heading": "Recommendations",
     "recommendations_subtitle": "Testimonials from colleagues and managers.",
     "education_heading": "Education",
     "skills_heading": "Skills",
     "tech_heading": "Technologies",
     "tech_subtitle": "Technologies I use and years of experience with each.",
-    "years": "years",
+    "years": "years of experience",
     "companies_heading": "Companies",
-    "companies_subtitle": "Selected companies and collaborations I worked with.",
+    "companies_subtitle": "Selected companies and projects I worked with.",
     "projects_heading": "Projects",
-    "projects_subtitle": "Selected projects with technologies used and responsibilities.",
+    "projects_subtitle": "Selected projects with technology descriptions and responsibilities.",
     "role1_title": "Senior Frontend Engineer",
     "role1_company": "Freelance / Various",
     "role1_dates": "2018 – Present",
