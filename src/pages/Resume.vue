@@ -61,6 +61,28 @@
         </div>
       </div>
 
+      <!-- Recommendations -->
+      <section class="mt-8">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-semibold">{{ $t('resume.recommendations_heading') }}</h2>
+          <button @click="toggleSection('recommendations')" class="text-sm text-amber-600">
+            {{ openSections.recommendations ? 'Hide' : 'Show' }}
+          </button>
+        </div>
+        <p class="text-sm text-slate-600 mt-1">{{ $t('resume.recommendations_subtitle') }}</p>
+        <div v-if="openSections.recommendations" class="mt-4 space-y-4">
+          <div v-for="(rec, i) in recommendations" :key="i" class="rounded-lg border border-slate-200 p-4">
+            <p class="text-slate-700 italic">{{ rec.text }}</p>
+            <div class="mt-3 flex items-center gap-3">
+              <div class="flex-1">
+                <div class="font-semibold text-sm">{{ rec.name }}</div>
+                <div class="text-xs text-slate-600">{{ rec.title }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Education (added before Techs) -->
       <section class="mt-8">
         <div class="flex items-center justify-between">
