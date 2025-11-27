@@ -72,6 +72,11 @@
     "unlock_title": "UnlockIT — E‑learning",
     "unlock_description": "Platforma e-learningowa ze szkoleniami."
   },
+  "news": {
+    "title": "Wiadomości",
+    "description": "Najnowsze treści wideo i artykuły.",
+    "latest_video": "Najnowsze wideo"
+  },
   "cta": {
     "title": "Jestem zainteresowany współpracą? Napisz!",
     "subtitle": "Porozmawiajmy o Twoich potrzebach i możliwościach współpracy.",
