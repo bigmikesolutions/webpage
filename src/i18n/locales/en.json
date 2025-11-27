@@ -75,7 +75,8 @@
   "news": {
     "title": "News",
     "description": "Latest video content and articles.",
-    "latest_video": "Latest video"
+    "latest_video": "Latest video",
+    "older_video": "Previous video"
   },
   "cta": {
     "title": "Interested in collaboration? Write!",
