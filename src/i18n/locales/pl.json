@@ -35,12 +35,24 @@
       {
         "title": "Software Design",
         "description": "Prowadzenie projektów od analizy wymagań po wdrożenia.",
-        "features": ["Architektura", "Prototypowanie", "Dokumentacja", "Wymagania biznesowe", "Analiza wymagań"]
+        "features": [
+          "Architektura",
+          "Prototypowanie",
+          "Dokumentacja",
+          "Wymagania biznesowe",
+          "Analiza wymagań"
+        ]
       },
       {
         "title": "Backend Development",
         "description": "Tworzenie rozwiązań backendowych.",
-        "features": ["API", "Tworzenie nowych systemów", "Migracje", "Optymalizacja wydajności", "Ratowanie systemów w trudnych sytuacjach"]
+        "features": [
+          "API",
+          "Tworzenie nowych systemów",
+          "Migracje",
+          "Optymalizacja wydajności",
+          "Ratowanie systemów w trudnych sytuacjach"
+        ]
       },
       {
         "title": "Rozwiązania mobilne",
@@ -71,6 +83,12 @@
     "youtube_description": "Pragmatycznie o technologii, AI, programowaniu i innych ciekawostkach ze świata nauki.",
     "unlock_title": "UnlockIT — E‑learning",
     "unlock_description": "Platforma e-learningowa ze szkoleniami."
+  },
+  "news": {
+    "title": "Wiadomości",
+    "description": "Najnowsze treści wideo i artykuły.",
+    "latest_video": "Najnowsze wideo",
+    "older_video": "Poprzednie wideo"
   },
   "cta": {
     "title": "Jestem zainteresowany współpracą? Napisz!",

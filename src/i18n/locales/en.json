@@ -35,12 +35,24 @@
       {
         "title": "Software Design",
         "description": "Leading projects from requirements analysis to implementation.",
-        "features": ["Architecture", "Prototyping", "Documentation", "Business requirements", "Requirements analysis"]
+        "features": [
+          "Architecture",
+          "Prototyping",
+          "Documentation",
+          "Business requirements",
+          "Requirements analysis"
+        ]
       },
       {
         "title": "Backend Development",
         "description": "Creating backend solutions.",
-        "features": ["API", "Building new systems", "Migrations", "Performance optimization", "Rescuing systems in difficult situations"]
+        "features": [
+          "API",
+          "Building new systems",
+          "Migrations",
+          "Performance optimization",
+          "Rescuing systems in difficult situations"
+        ]
       },
       {
         "title": "Mobile Solutions",
@@ -71,6 +83,12 @@
     "youtube_description": "Pragmatically about technology, AI, programming, and other curiosities from the world of science.",
     "unlock_title": "UnlockIT — E‑learning",
     "unlock_description": "E-learning platform with training courses."
+  },
+  "news": {
+    "title": "News",
+    "description": "Latest video content and articles.",
+    "latest_video": "Latest video",
+    "older_video": "Previous video"
   },
   "cta": {
     "title": "Interested in collaboration? Write!",
