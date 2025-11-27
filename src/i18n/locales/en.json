@@ -72,6 +72,11 @@
     "unlock_title": "UnlockIT — E‑learning",
     "unlock_description": "E-learning platform with training courses."
   },
+  "news": {
+    "title": "News",
+    "description": "Latest video content and articles.",
+    "latest_video": "Latest video"
+  },
   "cta": {
     "title": "Interested in collaboration? Write!",
     "subtitle": "Let's talk about your needs and collaboration opportunities.",
