@@ -15,7 +15,13 @@
       <nav class="hidden md:flex items-center gap-4 text-sm">
         <RouterLink to="/" class="nav-link">{{ t('header.about') }}</RouterLink>
         <RouterLink to="/#services" class="nav-link">{{ t('header.services') }}</RouterLink>
-        <RouterLink to="/resume" class="nav-link">{{ t('header.resume') }}</RouterLink>
+        <a
+          href="https://www.linkedin.com/in/michal-wronski-b389a988/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-link"
+          >{{ t('header.resume') }}</a
+        >
         <a
           href="https://github.com/bigmikesolutions"
           target="_blank"
@@ -85,9 +91,17 @@
           <RouterLink to="/#services" class="nav-link" @click="open = false">{{
             t('header.services')
           }}</RouterLink>
-          <RouterLink to="/resume" class="nav-link" @click="open = false">{{
+          <!-- <RouterLink to="/resume" class="nav-link" @click="open = false">{{
             t('header.resume')
-          }}</RouterLink>
+          }}</RouterLink> -->
+          <a
+            href="https://www.linkedin.com/in/michal-wronski-b389a988/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-link"
+            @click="open = false"
+            >{{ t('header.resume') }}</a
+          >
           <a
             href="https://github.com/bigmikesolutions"
             target="_blank"
