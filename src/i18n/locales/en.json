@@ -35,12 +35,24 @@
       {
         "title": "Software Design",
         "description": "Leading projects from requirements analysis to implementation.",
-        "features": ["Architecture", "Prototyping", "Documentation", "Business requirements", "Requirements analysis"]
+        "features": [
+          "Architecture",
+          "Prototyping",
+          "Documentation",
+          "Business requirements",
+          "Requirements analysis"
+        ]
       },
       {
         "title": "Backend Development",
         "description": "Creating backend solutions.",
-        "features": ["API", "Building new systems", "Migrations", "Performance optimization", "Rescuing systems in difficult situations"]
+        "features": [
+          "API",
+          "Building new systems",
+          "Migrations",
+          "Performance optimization",
+          "Rescuing systems in difficult situations"
+        ]
       },
       {
         "title": "Mobile Solutions",
