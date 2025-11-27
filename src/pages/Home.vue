@@ -259,7 +259,7 @@
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/zyOrLgHEE6I?start=14"
+              src="https://www.youtube.com/embed/zyOrLgHEE6I?start=0"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
@@ -267,7 +267,7 @@
             ></iframe>
           </div>
           <a
-            href="https://www.youtube.com/watch?v=zyOrLgHEE6I&t=14s"
+            href="https://www.youtube.com/watch?v=zyOrLgHEE6I&t=0s"
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn--ghost w-fit"
