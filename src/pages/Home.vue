@@ -242,57 +242,27 @@
         </h2>
         <p class="mt-2 max-w-2xl text-slate-600">{{ $t('news.description') }}</p>
       </div>
-      <div class="mt-8 grid gap-8 lg:grid-cols-2">
-        <div class="flex flex-col gap-4">
-          <h3 class="text-lg font-semibold text-slate-900">{{ $t('news.latest_video') }}</h3>
-          <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/zyOrLgHEE6I?start=14"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              class="border-0"
-            ></iframe>
-          </div>
-          <a
-            href="https://www.youtube.com/watch?v=zyOrLgHEE6I&t=14s"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn--ghost w-fit"
-          >
-            Watch on YouTube
-          </a>
+      <div class="mt-8 flex flex-col gap-4 max-w-2xl">
+        <h3 class="text-lg font-semibold text-slate-900">{{ $t('news.latest_video') }}</h3>
+        <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/zyOrLgHEE6I?start=14"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            class="border-0"
+          ></iframe>
         </div>
-        <div class="flex flex-col justify-center gap-4">
-          <div class="space-y-3">
-            <p class="text-slate-700">
-              Check out my latest video on Big Mike Labs YouTube channel where I share pragmatic insights about technology, AI, programming, and fascinating discoveries from the world of science.
-            </p>
-            <p class="text-slate-700">
-              Subscribe to stay updated with new content on web development, software engineering, and emerging technologies.
-            </p>
-          </div>
-          <a
-            href="https://www.youtube.com/@bigmikelabs"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex btn w-fit items-center gap-2"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="h-5 w-5"
-            >
-              <path
-                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-              />
-            </svg>
-            Subscribe on YouTube
-          </a>
-        </div>
+        <a
+          href="https://www.youtube.com/watch?v=zyOrLgHEE6I&t=14s"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn--ghost w-fit"
+        >
+          Watch on YouTube
+        </a>
       </div>
     </section>
 
