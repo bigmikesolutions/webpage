@@ -252,9 +252,23 @@
         </h2>
         <p class="mt-2 max-w-2xl text-slate-600">{{ $t('news.description') }}</p>
       </div>
+      
       <div class="mt-8 grid gap-12 md:grid-cols-2">
         <div class="flex flex-col gap-4">
-          <h3 class="text-lg font-semibold text-slate-900">{{ $t('news.latest_video') }}</h3>
+          <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/SOOdUbEYkKw"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="border-0"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
           <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
             <iframe
               width="100%"
@@ -266,17 +280,9 @@
               class="border-0"
             ></iframe>
           </div>
-          <a
-            href="https://www.youtube.com/watch?v=zyOrLgHEE6I&t=0s"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn--ghost w-fit"
-          >
-            Watch on YouTube
-          </a>
         </div>
+
         <div class="flex flex-col gap-4">
-          <h3 class="text-lg font-semibold text-slate-900">{{ $t('news.older_video') }}</h3>
           <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
             <iframe
               width="100%"
@@ -288,14 +294,6 @@
               class="border-0"
             ></iframe>
           </div>
-          <a
-            href="https://www.youtube.com/watch?v=-ffKVQzri-s"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn--ghost w-fit"
-          >
-            Watch on YouTube
-          </a>
         </div>
       </div>
     </section>
