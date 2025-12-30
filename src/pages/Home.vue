@@ -60,7 +60,7 @@
             <div class="h-full w-full rounded-2xl bg-white p-1">
               <div class="overflow-hidden rounded-xl h-full">
                 <img
-                  src="https://www.unlockit.pl/images/michal-wronski.jpg"
+                  src="/images/michal-wronski.jpg"
                   alt="Big Mike"
                   class="h-full w-full object-cover"
                 />
@@ -234,9 +234,9 @@
               </svg>
             </div>
             <div>
-              <h4 class="font-semibold">{{ $t('products.unlock_title') }}</h4>
+              <h4 class="font-semibold">{{ $t('products.bml_title') }}</h4>
               <p class="mt-1 text-sm text-slate-600">
-                {{ $t('products.unlock_description') }}
+                {{ $t('products.bml_description') }}
               </p>
             </div>
           </a>
