@@ -253,7 +253,7 @@
         <p class="mt-2 max-w-2xl text-slate-600">{{ $t('news.description') }}</p>
       </div>
       
-      <div class="mt-8 grid gap-12 md:grid-cols-2">
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <div class="flex flex-col gap-4">
           <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
             <iframe
