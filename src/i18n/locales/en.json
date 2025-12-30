@@ -90,6 +90,11 @@
     "latest_video": "Latest video",
     "older_video": "Previous video"
   },
+  "bigmikelabs": {
+    "title": "See more on BigMikeLabs",
+    "description": "Discover more content, projects, and educational resources on my platform.",
+    "link_text": "Visit bigmikelabs.pl"
+  },
   "cta": {
     "title": "Interested in collaboration? Write!",
     "subtitle": "Let's talk about your needs and collaboration opportunities.",

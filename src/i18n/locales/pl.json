@@ -90,6 +90,11 @@
     "latest_video": "Najnowsze wideo",
     "older_video": "Poprzednie wideo"
   },
+  "bigmikelabs": {
+    "title": "Zobacz więcej na BigMikeLabs",
+    "description": "Odkryj więcej treści, projektów i zasobów edukacyjnych na mojej platformie.",
+    "link_text": "Odwiedź bigmikelabs.pl"
+  },
   "cta": {
     "title": "Jestem zainteresowany współpracą? Napisz!",
     "subtitle": "Porozmawiajmy o Twoich potrzebach i możliwościach współpracy.",
