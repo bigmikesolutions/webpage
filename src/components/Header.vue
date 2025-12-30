@@ -40,7 +40,7 @@
           </svg>
           <span>{{ t('header.github') }}</span>
         </a>
-        <RouterLink to="/contact" class="btn btn--sm">{{ t('header.contact') }}</RouterLink>
+        <a href="mailto:contact@bigmikesolutions.pl" class="btn btn--sm">{{ t('header.contact') }}</a>
 
         <div class="flex items-center gap-2">
           <button class="lang-btn" @click="setLocale('pl')">PL</button>
@@ -110,9 +110,12 @@
             @click="open = false"
             >{{ t('header.github') }}</a
           >
-          <RouterLink to="/contact" class="btn btn--sm" @click="open = false">{{
-            t('header.contact')
-          }}</RouterLink>
+          <a
+            href="mailto:contact@bigmikesolutions.pl"
+            class="btn btn--sm"
+            @click="open = false"
+            >{{ t('header.contact') }}</a
+          >
         </div>
       </div>
     </transition>

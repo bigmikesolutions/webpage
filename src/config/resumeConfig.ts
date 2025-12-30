@@ -11,7 +11,7 @@ import {
 } from './resumeIcons'
 
 export const profileImage = {
-  src: 'https://www.unlockit.pl/images/michal-wronski.jpg',
+  src: '/images/michal-wronski.jpg',
   alt: 'Michał Wroński',
 }
 
@@ -98,14 +98,6 @@ export const companies = ref([
     icon: IconDesign,
     role: 'Founder / Lead',
     years: '2018 – Present',
-  },
-  {
-    id: 'unlock',
-    name: 'UnlockIT',
-    url: 'https://www.unlockit.pl/',
-    icon: IconAccessibility,
-    role: 'CTO / Lead Developer',
-    years: '2021 – Present',
   },
   {
     id: 'github',

@@ -16,7 +16,7 @@
           </h1>
           <p class="mt-4 text-lg text-slate-700">{{ $t('about.pitch') }}</p>
           <div class="mt-8 flex flex-wrap items-center gap-3">
-            <RouterLink to="/contact" class="btn">Work with me</RouterLink>
+            <a href="mailto:contact@bigmikesolutions.pl" class="btn">Work with me</a>
             <RouterLink to="/#services" class="btn btn--ghost">View services</RouterLink>
             <a
               href="https://github.com/m-wrona"
@@ -60,7 +60,7 @@
             <div class="h-full w-full rounded-2xl bg-white p-1">
               <div class="overflow-hidden rounded-xl h-full">
                 <img
-                  src="https://www.unlockit.pl/images/michal-wronski.jpg"
+                  src="/images/michal-wronski.jpg"
                   alt="Big Mike"
                   class="h-full w-full object-cover"
                 />
@@ -80,9 +80,11 @@
           </h2>
           <p class="mt-2 max-w-2xl text-slate-600">{{ $t('services.description') }}</p>
         </div>
-        <RouterLink to="/contact" class="hidden md:inline-flex btn btn--ghost">{{
-          $t('cta.button')
-        }}</RouterLink>
+        <a
+          href="mailto:contact@bigmikesolutions.pl"
+          class="hidden md:inline-flex btn btn--ghost"
+          >{{ $t('buttons.send') }}</a
+        >
       </div>
       <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <article v-for="(service, index) in services" :key="index" class="card">
@@ -213,7 +215,7 @@
 
           <a
             class="card flex items-center gap-4"
-            href="https://www.unlockit.pl/"
+            href="https://bigmikelabs.pl/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -234,9 +236,9 @@
               </svg>
             </div>
             <div>
-              <h4 class="font-semibold">{{ $t('products.unlock_title') }}</h4>
+              <h4 class="font-semibold">{{ $t('products.bml_title') }}</h4>
               <p class="mt-1 text-sm text-slate-600">
-                {{ $t('products.unlock_description') }}
+                {{ $t('products.bml_description') }}
               </p>
             </div>
           </a>
@@ -253,7 +255,7 @@
         <p class="mt-2 max-w-2xl text-slate-600">{{ $t('news.description') }}</p>
       </div>
       
-      <div class="mt-8 grid gap-12 md:grid-cols-2">
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <div class="flex flex-col gap-4">
           <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
             <iframe
@@ -296,21 +298,82 @@
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- CTA -->
-    <section class="container mx-auto px-4 pb-20">
-      <div class="relative overflow-hidden rounded-2xl bg-slate-900 p-8 md:p-12">
-        <div
-          class="absolute inset-0 bg-[radial-gradient(60%_60%_at_100%_0%,theme(colors.brand.500/.25),transparent_60%)]"
-        ></div>
-        <div class="relative">
-          <h3 class="text-2xl font-bold text-white">{{ $t('cta.title') }}</h3>
-          <p class="mt-2 max-w-2xl text-slate-300">{{ $t('cta.subtitle') }}</p>
-          <RouterLink to="/contact" class="btn mt-6">{{ $t('cta.button') }}</RouterLink>
-        </div>
+      <!-- BigMikeLabs Callout -->
+      <div class="mt-12">
+        <a
+          href="https://bigmikelabs.pl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative block overflow-hidden rounded-2xl bg-gradient-to-br from-brand-500 via-brand-600 to-brand-700 p-8 shadow-lg transition-all hover:shadow-xl md:p-12"
+        >
+          <div
+            class="absolute inset-0 bg-[radial-gradient(60%_60%_at_100%_0%,rgba(255,255,255,0.15),transparent_60%)]"
+          ></div>
+          <div class="relative flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
+            <div class="flex items-start gap-6">
+              <div
+                class="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm ring-2 ring-white/30"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-8 w-8 text-white"
+                >
+                  <path d="M9 2v6l-3 3v1a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V11l-3-3V2" />
+                  <path d="M9 2h6" />
+                  <path d="M12 11v4" />
+                  <path d="M8 15h8" />
+                  <path d="M10 19h4" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white">{{ $t('bigmikelabs.title') }}</h3>
+                <p class="mt-2 text-lg text-white/90">{{ $t('bigmikelabs.description') }}</p>
+                <div class="mt-4 inline-flex items-center gap-2 text-white/80 transition group-hover:text-white">
+                  <span class="font-medium">{{ $t('bigmikelabs.link_text') }}</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="h-5 w-5 transition-transform group-hover:translate-x-1"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="hidden shrink-0 md:block">
+              <div class="flex gap-2">
+                <div
+                  class="h-2 w-2 rounded-full bg-white/40 animate-pulse"
+                  style="animation-delay: 0s"
+                ></div>
+                <div
+                  class="h-2 w-2 rounded-full bg-white/60 animate-pulse"
+                  style="animation-delay: 0.2s"
+                ></div>
+                <div
+                  class="h-2 w-2 rounded-full bg-white/80 animate-pulse"
+                  style="animation-delay: 0.4s"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </a>
       </div>
     </section>
+
   </main>
 </template>
 

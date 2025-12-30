@@ -81,8 +81,8 @@
     "description": "Moje projekty i produkty, które tworzę dodatkowo w wolnym czasie.",
     "youtube_title": "Big Mike Labs — YouTube",
     "youtube_description": "Pragmatycznie o technologii, AI, programowaniu i innych ciekawostkach ze świata nauki.",
-    "unlock_title": "UnlockIT — E‑learning",
-    "unlock_description": "Platforma e-learningowa ze szkoleniami."
+    "bml_title": "BigMikeLabs — E‑learning",
+    "bml_description": "Platforma e-learningowa ze szkoleniami."
   },
   "news": {
     "title": "Wiadomości",
@@ -90,23 +90,10 @@
     "latest_video": "Najnowsze wideo",
     "older_video": "Poprzednie wideo"
   },
-  "cta": {
-    "title": "Jestem zainteresowany współpracą? Napisz!",
-    "subtitle": "Porozmawiajmy o Twoich potrzebach i możliwościach współpracy.",
-    "button": "Wyślij zapytanie"
-  },
-  "contact": {
-    "title": "Zapytanie",
-    "description": "Opowiedz o swoich potrzebach. Postaram sie odpowiedzieć w ciągu 1–2 dni roboczych.",
-    "preferEmail": "Wolisz e‑mail? Napisz na",
-    "form": {
-      "name": "Imię",
-      "email": "E-mail",
-      "project_details": "Szczegóły",
-      "project_details_placeholder": "Parę słów o Twoich potrzebach."
-    },
-    "email": "contact@bigmikesolutions.com",
-    "success_message": "Dziękuję {name}! Twoje zapytanie zostało otrzymane."
+  "bigmikelabs": {
+    "title": "Zobacz więcej na BigMikeLabs",
+    "description": "Odkryj więcej treści, projektów i zasobów edukacyjnych na mojej platformie.",
+    "link_text": "Odwiedź bigmikelabs.pl"
   },
   "footer": {
     "explore": "Menu",
