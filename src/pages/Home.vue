@@ -16,7 +16,7 @@
           </h1>
           <p class="mt-4 text-lg text-slate-700">{{ $t('about.pitch') }}</p>
           <div class="mt-8 flex flex-wrap items-center gap-3">
-            <RouterLink to="/contact" class="btn">Work with me</RouterLink>
+            <a href="mailto:contact@bigmikesolutions.pl" class="btn">Work with me</a>
             <RouterLink to="/#services" class="btn btn--ghost">View services</RouterLink>
             <a
               href="https://github.com/m-wrona"
@@ -80,9 +80,11 @@
           </h2>
           <p class="mt-2 max-w-2xl text-slate-600">{{ $t('services.description') }}</p>
         </div>
-        <RouterLink to="/contact" class="hidden md:inline-flex btn btn--ghost">{{
-          $t('cta.button')
-        }}</RouterLink>
+        <a
+          href="mailto:contact@bigmikesolutions.pl"
+          class="hidden md:inline-flex btn btn--ghost"
+          >{{ $t('buttons.send') }}</a
+        >
       </div>
       <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <article v-for="(service, index) in services" :key="index" class="card">
@@ -372,19 +374,6 @@
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="container mx-auto px-4 pb-20">
-      <div class="relative overflow-hidden rounded-2xl bg-slate-900 p-8 md:p-12">
-        <div
-          class="absolute inset-0 bg-[radial-gradient(60%_60%_at_100%_0%,theme(colors.brand.500/.25),transparent_60%)]"
-        ></div>
-        <div class="relative">
-          <h3 class="text-2xl font-bold text-white">{{ $t('cta.title') }}</h3>
-          <p class="mt-2 max-w-2xl text-slate-300">{{ $t('cta.subtitle') }}</p>
-          <RouterLink to="/contact" class="btn mt-6">{{ $t('cta.button') }}</RouterLink>
-        </div>
-      </div>
-    </section>
   </main>
 </template>
 

@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory, type RouterScrollBehavior } from 'vue-router'
 import Home from '../pages/Home.vue'
-import Contact from '../pages/Contact.vue'
 import Resume from '../pages/Resume.vue'
 
 const scrollBehavior: RouterScrollBehavior = (to, _from, savedPosition) => {
@@ -15,7 +14,6 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: '/', name: 'Home', component: Home },
-    { path: '/contact', name: 'Contact', component: Contact },
     { path: '/resume', name: 'Resume', component: Resume },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],

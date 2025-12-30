@@ -95,24 +95,6 @@
     "description": "Odkryj więcej treści, projektów i zasobów edukacyjnych na mojej platformie.",
     "link_text": "Odwiedź bigmikelabs.pl"
   },
-  "cta": {
-    "title": "Jestem zainteresowany współpracą? Napisz!",
-    "subtitle": "Porozmawiajmy o Twoich potrzebach i możliwościach współpracy.",
-    "button": "Wyślij zapytanie"
-  },
-  "contact": {
-    "title": "Zapytanie",
-    "description": "Opowiedz o swoich potrzebach. Postaram sie odpowiedzieć w ciągu 1–2 dni roboczych.",
-    "preferEmail": "Wolisz e‑mail? Napisz na",
-    "form": {
-      "name": "Imię",
-      "email": "E-mail",
-      "project_details": "Szczegóły",
-      "project_details_placeholder": "Parę słów o Twoich potrzebach."
-    },
-    "email": "contact@bigmikesolutions.com",
-    "success_message": "Dziękuję {name}! Twoje zapytanie zostało otrzymane."
-  },
   "footer": {
     "explore": "Menu",
     "contact": "Kontakt",

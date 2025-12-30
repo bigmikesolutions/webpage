@@ -28,9 +28,9 @@
             }}</RouterLink>
           </li>
           <li>
-            <RouterLink to="/contact" class="hover:text-slate-900 text-slate-700">{{
+            <a href="mailto:contact@bigmikesolutions.pl" class="hover:text-slate-900 text-slate-700">{{
               $t('header.contact')
-            }}</RouterLink>
+            }}</a>
           </li>
           <li>
             <a
@@ -48,7 +48,7 @@
         <p class="mt-3 text-sm text-slate-700">
           {{ $t('footer.available_text') }}
         </p>
-        <RouterLink to="/contact" class="btn mt-4">{{ $t('footer.start') }}</RouterLink>
+        <a href="mailto:contact@bigmikesolutions.pl" class="btn mt-4">{{ $t('footer.start') }}</a>
       </div>
     </div>
     <div class="border-t border-slate-200/60 py-4 text-center text-xs text-slate-500">
