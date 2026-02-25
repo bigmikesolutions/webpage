@@ -88,7 +88,9 @@
     "title": "News",
     "description": "Latest video content and articles.",
     "latest_video": "Latest video",
-    "older_video": "Previous video"
+    "older_video": "Previous video",
+    "articleLink": "Read article: gRPC takes load to beat HTTP/2",
+    "articleTitle": "gRPC takes load to beat HTTP/2"
   },
   "bigmikelabs": {
     "title": "See more on BigMikeLabs",
