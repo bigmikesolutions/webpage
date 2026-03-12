@@ -256,6 +256,20 @@
       </div>
       
       <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="flex flex-col gap-4">
+          <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/unz9yZUFAYU?start=0"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="border-0"
+            ></iframe>
+          </div>
+        </div>
+
         <!-- Article card (first in row) -->
         <a
           href="https://bigmikelabs.pl/articles/grpc-takes-load-to-beat-http2"
