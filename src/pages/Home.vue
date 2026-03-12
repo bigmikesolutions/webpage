@@ -298,6 +298,20 @@
             <iframe
               width="100%"
               height="100%"
+              src="https://www.youtube.com/embed/Ea5GGLnf-O8?start=0"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="border-0"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
+            <iframe
+              width="100%"
+              height="100%"
               src="https://www.youtube.com/embed/SOOdUbEYkKw"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
