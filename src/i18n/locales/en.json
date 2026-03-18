@@ -90,7 +90,9 @@
     "latest_video": "Latest video",
     "older_video": "Previous video",
     "articleLink": "Read article: gRPC takes load to beat HTTP/2",
-    "articleTitle": "gRPC takes load to beat HTTP/2"
+    "articleTitle": "gRPC takes load to beat HTTP/2",
+    "articleTitleEventLoops": "Event-Driven feedback loops: the silent scalability killer",
+    "articleTitleGrpcVsHttp2": "gRPC takes load to beat HTTP/2"
   },
   "bigmikelabs": {
     "title": "See more on BigMikeLabs",
