@@ -256,6 +256,29 @@
       </div>
       
       <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Article card: Event Loops -->
+        <a
+          href="https://bigmikelabs.pl/articles/event-loops-inc"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group block"
+        >
+          <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
+            <img
+              src="/images/event-loops.jpg"
+              alt=""
+              class="h-full w-full object-cover transition group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 pt-12"
+            >
+              <h3 class="text-sm font-semibold leading-tight text-white sm:text-base">
+                {{ $t('news.articleTitleEventLoops') }}
+              </h3>
+            </div>
+          </div>
+        </a>
+
         <div class="flex flex-col gap-4">
           <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
             <iframe
@@ -270,7 +293,7 @@
           </div>
         </div>
 
-        <!-- Article card (first in row) -->
+        <!-- Article card: gRPC takes load to beat HTTP/2 -->
         <a
           href="https://bigmikelabs.pl/articles/grpc-takes-load-to-beat-http2"
           target="_blank"
@@ -287,7 +310,7 @@
               class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 pt-12"
             >
               <h3 class="text-sm font-semibold leading-tight text-white sm:text-base">
-                {{ $t('news.articleTitle') }}
+                {{ $t('news.articleTitleGrpcVsHttp2') }}
               </h3>
             </div>
           </div>
