@@ -92,7 +92,8 @@
     "articleLink": "Czytaj artykuł: gRPC takes load to beat HTTP/2",
     "articleTitle": "gRPC potrzebuje ruchu, by pokazać swoją przewagę nad HTTP/2",
     "articleTitleEventLoops": "Event-Driven feedback loops: cichy zabójca skalowalności",
-    "articleTitleGrpcVsHttp2": "gRPC potrzebuje ruchu, by pokazać swoją przewagę nad HTTP/2"
+    "articleTitleGrpcVsHttp2": "gRPC potrzebuje ruchu, by pokazać swoją przewagę nad HTTP/2",
+    "articleTitleMath4Ai": "Mini-książka 'Matematyka dla AI & ML' już dostępna!"
   },
   "bigmikelabs": {
     "title": "Zobacz więcej na BigMikeLabs",
