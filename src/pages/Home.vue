@@ -249,6 +249,13 @@
     <!-- News / Latest Videos -->
     <section class="container mx-auto px-4 py-16">
      
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+          {{ $t('news.title') }}
+        </h2>
+        <p class="mt-2 max-w-2xl text-slate-600">{{ $t('news.description') }}</p>
+      </div>
+
       <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
         <!-- YT: Abraham Wald -->
