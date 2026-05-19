@@ -248,14 +248,24 @@
 
     <!-- News / Latest Videos -->
     <section class="container mx-auto px-4 py-16">
-      <div>
-        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-          {{ $t('news.title') }}
-        </h2>
-        <p class="mt-2 max-w-2xl text-slate-600">{{ $t('news.description') }}</p>
-      </div>
-      
+     
       <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+        <!-- YT: Abraham Wald -->
+        <div class="flex flex-col gap-4">
+          <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/7_CbSKbLJ7o?si=aVqUJXmUxNBBeZvO"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="border-0"
+            ></iframe>
+          </div>
+        </div>
+
         <!-- Publication: math4ai -->
         <a
           href="https://bigmikelabs.pl/resources/math-for-ai-ml"
