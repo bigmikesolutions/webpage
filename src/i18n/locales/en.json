@@ -93,7 +93,8 @@
     "articleTitle": "gRPC takes load to beat HTTP/2",
     "articleTitleEventLoops": "Event-Driven feedback loops: the silent scalability killer",
     "articleTitleGrpcVsHttp2": "gRPC takes load to beat HTTP/2",
-    "articleTitleMath4Ai": "Mini-book 'Math for AI & ML' is now available!"
+    "articleTitleMath4Ai": "Mini-book 'Math for AI & ML' is now available!",
+    "articleTitleChatEncVsIdentity": "Chat: encryption doesn't suffice — E2EE protects content, not identity"
   },
   "bigmikelabs": {
     "title": "See more on BigMikeLabs",

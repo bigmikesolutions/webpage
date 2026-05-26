@@ -93,7 +93,8 @@
     "articleTitle": "gRPC potrzebuje ruchu, by pokazać swoją przewagę nad HTTP/2",
     "articleTitleEventLoops": "Event-Driven feedback loops: cichy zabójca skalowalności",
     "articleTitleGrpcVsHttp2": "gRPC potrzebuje ruchu, by pokazać swoją przewagę nad HTTP/2",
-    "articleTitleMath4Ai": "Mini-książka 'Matematyka dla AI & ML' już dostępna!"
+    "articleTitleMath4Ai": "Mini-książka 'Matematyka dla AI & ML' już dostępna!",
+    "articleTitleChatEncVsIdentity": "Chat: szyfrowanie nie wystarcza — E2EE chroni treść, nie tożsamość"
   },
   "bigmikelabs": {
     "title": "Zobacz więcej na BigMikeLabs",
