@@ -84,7 +84,9 @@
     "bml_title": "BigMikeLabs — E‑learning",
     "bml_description": "E-learning platform with training courses.",
     "flex_top_bar_title": "Flex Top Bar",
-    "flex_top_bar_description": "WordPress plugin — announcement bar: countdown, timezone-aware scheduling, and more. Promotional campaigns and dynamic messaging have never been this easy."
+    "flex_top_bar_description": "WordPress plugin — announcement bar: countdown, timezone-aware scheduling, and more. Promotional campaigns and dynamic messaging have never been this easy.",
+    "sqlstream_title": "sqlstream",
+    "sqlstream_description": "Go library for processing SQL query results as a data stream. Process large datasets efficiently without loading everything into memory or using reflection."
   },
   "news": {
     "title": "News",

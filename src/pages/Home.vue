@@ -263,6 +263,27 @@
               </p>
             </div>
           </a>
+
+          <a
+            class="card flex items-center gap-4"
+            href="https://github.com/bigmikesolutions/sqlstream"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/images/sqlstream.png"
+              alt=""
+              class="h-12 w-12 shrink-0 rounded-lg object-cover"
+              width="48"
+              height="48"
+            />
+            <div>
+              <h4 class="font-semibold">{{ $t('products.sqlstream_title') }}</h4>
+              <p class="mt-1 text-sm text-slate-600">
+                {{ $t('products.sqlstream_description') }}
+              </p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
