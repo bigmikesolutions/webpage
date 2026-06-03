@@ -82,7 +82,11 @@
     "youtube_title": "Big Mike Labs — YouTube",
     "youtube_description": "Pragmatycznie o technologii, AI, programowaniu i innych ciekawostkach ze świata nauki.",
     "bml_title": "BigMikeLabs — E‑learning",
-    "bml_description": "Platforma e-learningowa ze szkoleniami."
+    "bml_description": "Platforma e-learningowa ze szkoleniami.",
+    "flex_top_bar_title": "Flex Top Bar",
+    "flex_top_bar_description": "Wtyczka WordPress — pasek ogłoszeń: licznik, harmonogram ze strefami czasowymi i więcej. Kampanie promocyjne i dynamiczne komunikaty nigdy nie były tak proste.",
+    "sqlstream_title": "sqlstream",
+    "sqlstream_description": "Biblioteka Go do przetwarzania wyników zapytań SQL w formie strumienia danych. Umożliwia wydajne przetwarzanie dużych zbiorów bez ładowania całości do pamięci i bez użycia refleksji."
   },
   "news": {
     "title": "Wiadomości",
