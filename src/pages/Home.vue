@@ -242,6 +242,27 @@
               </p>
             </div>
           </a>
+
+          <a
+            class="card flex items-center gap-4"
+            href="https://wordpress.org/plugins/flex-top-bar/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/images/flex-top-bar-icon.svg"
+              alt=""
+              class="h-12 w-12 shrink-0 rounded-lg"
+              width="48"
+              height="48"
+            />
+            <div>
+              <h4 class="font-semibold">{{ $t('products.flex_top_bar_title') }}</h4>
+              <p class="mt-1 text-sm text-slate-600">
+                {{ $t('products.flex_top_bar_description') }}
+              </p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
