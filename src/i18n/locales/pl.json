@@ -79,6 +79,8 @@
   "products": {
     "title": "Produkty",
     "description": "Moje projekty i produkty, które tworzę dodatkowo w wolnym czasie.",
+    "nextinlane_title": "NextInLane",
+    "nextinlane_description": "System do planowania remontów, który porządkuje decyzje, koszty i zależności między elementami projektu.",
     "youtube_title": "Big Mike Labs — YouTube",
     "youtube_description": "Pragmatycznie o technologii, AI, programowaniu i innych ciekawostkach ze świata nauki.",
     "bml_title": "BigMikeLabs — E‑learning",
