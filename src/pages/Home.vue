@@ -186,7 +186,33 @@
       <div class="mt-12">
         <h3 class="text-xl font-semibold text-slate-900">{{ $t('products.title') }}</h3>
         <p class="mt-2 text-slate-600">{{ $t('products.description') }}</p>
-        <div class="mt-6 grid gap-4 sm:grid-cols-2">
+
+        <a
+          class="card mt-6 flex items-center gap-4"
+          href="https://nextinlane.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            class="inline-flex h-12 w-28 shrink-0 items-center justify-center rounded-lg bg-black px-2"
+          >
+            <img
+              src="/images/nil-logo.png"
+              alt=""
+              class="h-7 w-auto object-contain"
+              width="96"
+              height="28"
+            />
+          </div>
+          <div>
+            <h4 class="font-semibold">{{ $t('products.nextinlane_title') }}</h4>
+            <p class="mt-1 text-sm text-slate-600">
+              {{ $t('products.nextinlane_description') }}
+            </p>
+          </div>
+        </a>
+
+        <div class="mt-4 grid gap-4 sm:grid-cols-2">
           <a
             class="card flex items-center gap-4"
             href="https://www.youtube.com/@big-mike-labs"
