@@ -315,8 +315,7 @@
     </section>
 
     <!-- News / Latest Videos -->
-    <section class="container mx-auto px-4 py-16">
-     
+    <section id="news" class="container mx-auto px-4 py-16">
       <div>
         <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
           {{ $t('news.title') }}
@@ -324,184 +323,40 @@
         <p class="mt-2 max-w-2xl text-slate-600">{{ $t('news.description') }}</p>
       </div>
 
-      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="mt-6">
+        <NewsFilter v-model="newsFilter" />
+      </div>
 
-        <!-- Article card: chat: enc vs identity -->
-        <a
-          href="https://bigmikelabs.pl/articles/chat-enc-identity"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="group block"
-        >
-          <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
-            <img
-              src="/images/chat_enc_identity.jpg"
-              alt=""
-              class="h-full w-full object-cover transition group-hover:scale-105"
-            />
-            <div
-              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 pt-12"
-            >
-              <h3 class="text-sm font-semibold leading-tight text-white sm:text-base">
-                {{ $t('news.articleTitleChatEncVsIdentity') }}
-              </h3>
-            </div>
-          </div>
-        </a>
+      <p v-if="homeNewsItems.length === 0" class="mt-8 text-slate-600">
+        {{ $t('news.emptyFilter') }}
+      </p>
 
-        <!-- YT: Abraham Wald -->
-        <div class="flex flex-col gap-4">
-          <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/7_CbSKbLJ7o?si=aVqUJXmUxNBBeZvO"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              class="border-0"
-            ></iframe>
-          </div>
-        </div>
+      <div v-else class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <NewsCard
+          v-for="item in homeNewsItems"
+          :key="item.id"
+          :item="item"
+          embed-youtube
+        />
+      </div>
 
-        <!-- Publication: math4ai -->
-        <a
-          href="https://bigmikelabs.pl/resources/math-for-ai-ml"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="group block"
-        >
-          <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
-            <img
-              src="/images/math4ai.jpg"
-              alt=""
-              class="h-full w-full object-cover transition group-hover:scale-105"
-            />
-            <div
-              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 pt-12"
-            >
-              <h3 class="text-sm font-semibold leading-tight text-white sm:text-base">
-                {{ $t('news.articleTitleMath4Ai') }}
-              </h3>
-            </div>
-          </div>
-        </a>
-
-        <!-- Article card: Event Loops -->
-        <a
-          href="https://bigmikelabs.pl/articles/event-loops-inc"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="group block"
-        >
-          <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
-            <img
-              src="/images/event-loops.jpg"
-              alt=""
-              class="h-full w-full object-cover transition group-hover:scale-105"
-            />
-            <div
-              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 pt-12"
-            >
-              <h3 class="text-sm font-semibold leading-tight text-white sm:text-base">
-                {{ $t('news.articleTitleEventLoops') }}
-              </h3>
-            </div>
-          </div>
-        </a>
-
-        <div class="flex flex-col gap-4">
-          <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/unz9yZUFAYU?start=0"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              class="border-0"
-            ></iframe>
-          </div>
-        </div>
-
-        <!-- Article card: gRPC takes load to beat HTTP/2 -->
-        <a
-          href="https://bigmikelabs.pl/articles/grpc-takes-load-to-beat-http2"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="group block"
-        >
-          <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
-            <img
-              src="/images/grpc-vs-http.jpg"
-              alt=""
-              class="h-full w-full object-cover transition group-hover:scale-105"
-            />
-            <div
-              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 pt-12"
-            >
-              <h3 class="text-sm font-semibold leading-tight text-white sm:text-base">
-                {{ $t('news.articleTitleGrpcVsHttp2') }}
-              </h3>
-            </div>
-          </div>
-        </a>
-
-        <div class="flex flex-col gap-4">
-          <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/Ea5GGLnf-O8?start=0"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              class="border-0"
-            ></iframe>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-4">
-          <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/SOOdUbEYkKw"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              class="border-0"
-            ></iframe>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-4">
-          <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/zyOrLgHEE6I?start=0"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              class="border-0"
-            ></iframe>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-4">
-          <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-soft">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/-ffKVQzri-s"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              class="border-0"
-            ></iframe>
-          </div>
-        </div>
+      <div v-if="homeNewsItems.length > 0" class="mt-10 flex justify-center">
+        <RouterLink :to="viewAllLink" class="btn inline-flex items-center gap-2">
+          {{ $t('news.viewAll') }}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-4 w-4"
+          >
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </RouterLink>
       </div>
 
       <!-- BigMikeLabs Callout -->
@@ -583,11 +438,26 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router'
+import { filterNews, newsItems, type NewsFilter as NewsFilterType } from '@/config/newsConfig'
+import NewsFilter from '@/components/news/NewsFilter.vue'
+import NewsCard from '@/components/news/NewsCard.vue'
 
 const { tm } = useI18n()
+
+const newsFilter = ref<NewsFilterType>('all')
+const HOME_NEWS_LIMIT = 6
+
+const homeNewsItems = computed(() =>
+  filterNews(newsItems, newsFilter.value).slice(0, HOME_NEWS_LIMIT),
+)
+
+const viewAllLink = computed(() => {
+  if (newsFilter.value === 'all') return '/news'
+  return { path: '/news', query: { type: newsFilter.value } }
+})
 
 interface Service {
   title: string
