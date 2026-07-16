@@ -17,13 +17,7 @@
         <RouterLink to="/#services" class="nav-link">{{ t('header.services') }}</RouterLink>
         <RouterLink to="/#products" class="nav-link">{{ t('header.products') }}</RouterLink>
         <RouterLink to="/#news" class="nav-link">{{ t('header.news') }}</RouterLink>
-        <a
-          href="https://www.linkedin.com/in/michal-wronski-b389a988/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="nav-link"
-          >{{ t('header.resume') }}</a
-        >
+        <RouterLink to="/resume" class="nav-link">{{ t('header.resume') }}</RouterLink>
         <a
           href="https://github.com/bigmikesolutions"
           target="_blank"
@@ -99,14 +93,9 @@
           <RouterLink to="/#news" class="nav-link" @click="open = false">{{
             t('header.news')
           }}</RouterLink>
-          <a
-            href="https://www.linkedin.com/in/michal-wronski-b389a988/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="nav-link"
-            @click="open = false"
-            >{{ t('header.resume') }}</a
-          >
+          <RouterLink to="/resume" class="nav-link" @click="open = false">{{
+            t('header.resume')
+          }}</RouterLink>
           <a
             href="https://github.com/bigmikesolutions"
             target="_blank"

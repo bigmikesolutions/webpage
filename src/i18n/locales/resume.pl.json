@@ -1,0 +1,94 @@
+{
+  "title": "CV",
+  "description": "Firmy, w których pracowałem — co dostarczyłem, jak to pomogło biznesowi oraz jaki stack był w użyciu.",
+  "experience": "Doświadczenie",
+  "techTitle": "Technologie",
+  "techDescription": "Podsumowanie technologii na podstawie stacków z firm. Czas liczony z okresów zatrudnienia (nakładające się role są scalane).",
+  "stack": "Stack",
+  "present": "obecnie",
+  "yearsLabel": "{n} lat",
+  "linkedin": "Profil LinkedIn",
+  "backHome": "Strona główna",
+  "companies": {
+    "bigmikeSolutions": {
+      "role": "Założyciel · kontraktor i konsultant",
+      "highlights": [
+        "Buduję własne produkty (NextInLane, sqlstream, Flex Top Bar) i platformę wiedzy BigMikeLabs.",
+        "Doradzam firmom w architekturze systemów, modernizacji i doborze technologii pod cele biznesowe.",
+        "Łączę perspektywę produktu z inżynierią — od wizji do działającego rozwiązania."
+      ]
+    },
+    "shellRecharge": {
+      "role": "Senior Software Engineer (Go)",
+      "highlights": [
+        "Projektowałem i wdrażałem backend CPO (OCPI, OCPP, BOCPP), wspierając operacje ładowania EV w skali międzynarodowej.",
+        "Dostarczałem GraphQL z federacją oraz usługi gRPC/REST, dzięki czemu zespoły produktowe szybciej integrowały nowe funkcje.",
+        "Utrzymywałem produkcję (PagerDuty on-call) i infrastrukturę (K8s, AWS, Terraform), ograniczając ryzyko przestojów krytycznych usług."
+      ]
+    },
+    "herolynx": {
+      "role": "Współzałożyciel · product factory",
+      "highlights": [
+        "Budowałem produkty mobile i backend od zera — od pomysłu, przez MVP, po sprzedaż.",
+        "Dobierałem stack (Go, Kotlin/Android, GCP, GraphQL), żeby szybko iterować przy ograniczonym zespole.",
+        "Zdobyłem doświadczenie produktowe: priorytetyzacja, time-to-market i decyzje techniczne pod wartość biznesową."
+      ]
+    },
+    "form3": {
+      "role": "Full Stack Engineer",
+      "highlights": [
+        "Rozwijałem systemy płatności UK (BACS i Faster Payments), krytyczne dla niezawodnego rozliczania transakcji.",
+        "Ulepszałem zarządzanie transakcjami między mikroserwisami oraz scenariusze odzyskiwania po awarii dla płatności, poleceń zapłaty i mandatów.",
+        "Wzmacniałem jakość kontraktów API (PACT) i obserwowalność (Prometheus, Grafana, Zipkin, ELK), co ułatwiało bezpieczne zmiany w płatniczym core."
+      ]
+    },
+    "huuugeGames": {
+      "role": "Full Stack Developer",
+      "highlights": [
+        "Budowałem backend mikroserwisowy (Scala/Akka, Go) dla platformy gier mobilnych o dużej skali użytkowników.",
+        "Brałem odpowiedzialność za DevOps/SRE oraz zarządzanie infrastrukturą AWS (koszty i zasoby).",
+        "Projektowałem rozwiązania pod dostępność i koszty w środowisku wysokiego ruchu."
+      ]
+    },
+    "siili": {
+      "role": "Senior Software Engineer",
+      "highlights": [
+        "Dostarczałem projekty full-stack dla klientów (JVM, Go, cloud), dobierając narzędzia do problemu biznesowego.",
+        "Budowałem mikroserwisy i infrastrukturę (Docker, Kubernetes, Kafka/NATS) na AWS i Azure.",
+        "Przyspieszałem delivery poprzez CI/CD (GitLab), IaC (Terraform) i automatyzację (Ansible/Chef)."
+      ]
+    },
+    "creditSuisse": {
+      "role": "RDS Development Lead (AVP)",
+      "highlights": [
+        "Prowadziłem zespół RDS (14 osób: Wrocław, Londyn, Bangalore) odpowiedzialny za krytyczny ETL do kalkulacji VaR.",
+        "Zarządzałem backlogiem, wymaganiami biznesowymi i komunikacją statusu z managementem.",
+        "Utrzymywałem jakość przez design techniczny, code review i coaching — system musiał wspierać decyzje ryzyka w banku."
+      ]
+    },
+    "recGlobal": {
+      "role": "Solutions Architect · Technical Leader · Scrum Master",
+      "highlights": [
+        "Łączyłem analizę biznesową, estymacje i projekt architektury z pracą developerską.",
+        "Budowałem i coachowałem zespół, podnosząc przewidywalność delivery.",
+        "Wdrażałem rozwiązania JVM oraz elementy cloud (AWS) pod realne potrzeby klientów."
+      ]
+    },
+    "capgemini": {
+      "role": "Software Engineer",
+      "highlights": [
+        "Rozwijałem Learning Management System (J2EE/Spring) — od analizy zgłoszeń klienta po wdrożenia.",
+        "Proponowałem rozwiązania architektoniczne w ograniczonym zakresie i wspierałem migracje danych.",
+        "Zapewniałem wsparcie produkcyjne podczas deployów, ograniczając ryzyko przerw w szkoleniach użytkowników."
+      ]
+    },
+    "nokia": {
+      "role": "Software Engineer",
+      "highlights": [
+        "Budowałem FatMT — narzędzie ETL do migracji subskrybentów między klastrami sieci operatora, z automatycznym fallbackiem.",
+        "System pluginów skrócił nakład projektu z ~2500 do ~200 godzin i umożliwił dopasowanie do klientów (m.in. Claro, Comcel, Zain, UMC).",
+        "Skupiłem się na walidacji i raportowaniu, żeby ograniczyć ryzyko utraty przychodów w noc migracji; wcześniej pracowałem też przy modułach BTS (C/C++)."
+      ]
+    }
+  }
+}
