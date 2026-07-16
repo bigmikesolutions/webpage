@@ -197,7 +197,7 @@
             class="inline-flex h-12 w-28 shrink-0 items-center justify-center rounded-lg bg-black px-2"
           >
             <img
-              src="/images/nil-logo.png"
+              src="/images/products/nil-logo.png"
               alt=""
               class="h-7 w-auto object-contain"
               width="96"
@@ -223,7 +223,7 @@
             rel="noopener noreferrer"
           >
             <img
-              src="/images/flex-top-bar-icon.svg"
+              src="/images/products/flex-top-bar-icon.svg"
               alt=""
               class="h-12 w-12 shrink-0 rounded-lg"
               width="48"
@@ -247,7 +247,7 @@
             rel="noopener noreferrer"
           >
             <img
-              src="/images/sqlstream.png"
+              src="/images/products/sqlstream.png"
               alt=""
               class="h-12 w-12 shrink-0 rounded-lg object-cover"
               width="48"

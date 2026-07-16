@@ -99,9 +99,6 @@
           <RouterLink to="/#news" class="nav-link" @click="open = false">{{
             t('header.news')
           }}</RouterLink>
-          <!-- <RouterLink to="/resume" class="nav-link" @click="open = false">{{
-            t('header.resume')
-          }}</RouterLink> -->
           <a
             href="https://www.linkedin.com/in/michal-wronski-b389a988/"
             target="_blank"
