@@ -24,8 +24,7 @@
     "projects_value": "25+",
     "uplift_label": "Satisfaction",
     "uplift_value": "100%",
-    "years_label": "Years",
-    "years_value": "15+"
+    "years_label": "Years"
   },
   "buttons": {
     "send": "Send inquiry"

@@ -64,7 +64,7 @@
             </div>
             <div class="stat">
               <dt>{{ $t('stats.years_label') }}</dt>
-              <dd>{{ $t('stats.years_value') }}</dd>
+              <dd>{{ yearsOfExperience }}</dd>
             </div>
           </dl>
         </div>
@@ -396,6 +396,7 @@ import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router'
 import { useMediaQuery } from '@/composables/useMediaQuery'
+import { useYearsOfExperience } from '@/composables/useYearsOfExperience'
 import {
   getHomeNewsGroups,
   newsItems,
@@ -412,6 +413,7 @@ const allNewsTypes: NewsType[] = ['article', 'youtube', 'publication']
 const selectedTypes = ref<NewsType[]>([...allNewsTypes])
 const countFilter = ref<NewsCountFilter>('auto')
 const isDesktop = useMediaQuery('(min-width: 768px)')
+const yearsOfExperience = useYearsOfExperience()
 
 const newsTypeHeadingKey: Record<NewsType, string> = {
   article: 'news.sectionArticle',

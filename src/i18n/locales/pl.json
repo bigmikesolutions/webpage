@@ -24,8 +24,7 @@
     "projects_value": "25+",
     "uplift_label": "Zadowolenie",
     "uplift_value": "100%",
-    "years_label": "Lata",
-    "years_value": "15+"
+    "years_label": "Lata"
   },
   "buttons": {
     "send": "Wyślij zapytanie"
