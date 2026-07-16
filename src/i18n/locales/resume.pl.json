@@ -8,9 +8,16 @@
   "educationLabel": "Edukacja",
   "languagesLabel": "Języki",
   "techTitle": "Technologie",
-  "techDescription": "Podsumowanie technologii na podstawie stacków z firm. Czas liczony z okresów zatrudnienia (nakładające się role są scalane).",
+  "techDescription": "Podsumowanie technologii na podstawie stacków z firm. Poziom znajomości wynika z sumy lat (nakładające się role są scalane).",
   "techFilterLabel": "Filtruj grupy technologii",
-  "techEmptyFilter": "Wybierz co najmniej jedną grupę, aby zobaczyć technologie.",
+  "techLevelFilterLabel": "Filtruj poziom znajomości",
+  "techEmptyFilter": "Wybierz co najmniej jedną grupę i poziom, aby zobaczyć technologie.",
+  "techYearsTotal": "Łącznie: {n} lat",
+  "techLevels": {
+    "1": "Podstawowa znajomość",
+    "2": "Praktyczne doświadczenie",
+    "3": "Zaawansowane doświadczenie"
+  },
   "publicationsTitle": "Publikacje",
   "publicationsDescription": "Minibooki, artykuły i materiały wideo — wybrane treści z BigMikeLabs.",
   "publicationsMore": "Pokazano {shown} z {total}. Pełna lista na BigMikeLabs i kanale YouTube.",

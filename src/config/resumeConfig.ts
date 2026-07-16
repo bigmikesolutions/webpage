@@ -23,6 +23,17 @@ export {
   techGroupOrder,
 }
 
+/** Proficiency dots: 1 = basic, 2 = practical, 3 = advanced */
+export type TechLevel = 1 | 2 | 3
+
+export const techLevelOrder: TechLevel[] = [1, 2, 3]
+
+export function techLevelFromYears(years: number): TechLevel {
+  if (years < 2) return 1
+  if (years <= 5) return 2
+  return 3
+}
+
 export interface TechSummaryItem {
   name: string
   group: TechGroup
@@ -30,6 +41,8 @@ export interface TechSummaryItem {
   months: number
   /** Floored years for display (min 1 if months > 0) */
   years: number
+  /** 1–3 proficiency level derived from years */
+  level: TechLevel
 }
 
 function parseYearMonth(value: YearMonth): { year: number; month: number } {
@@ -109,11 +122,12 @@ export function getTechSummary(companies?: ResumeCompany[]): TechSummaryItem[] {
     .map(([name, intervals]) => {
       const months = mergedMonths(intervals)
       const years = months > 0 ? Math.max(1, Math.floor(months / 12)) : 0
+      const level = techLevelFromYears(years)
       const gm = groupMonths.get(name) ?? {}
       const group =
         techGroupOrder.find((g) => (gm[g] ?? 0) === Math.max(...techGroupOrder.map((x) => gm[x] ?? 0))) ??
         'backend'
-      return { name, group, months, years }
+      return { name, group, months, years, level }
     })
     .filter((item) => item.months > 0)
     .sort((a, b) => b.months - a.months || a.name.localeCompare(b.name))
@@ -122,7 +136,10 @@ export function getTechSummary(companies?: ResumeCompany[]): TechSummaryItem[] {
 export function filterTechSummary(
   items: TechSummaryItem[],
   selectedGroups: TechGroup[],
+  selectedLevels: TechLevel[] = [...techLevelOrder],
 ): TechSummaryItem[] {
-  if (selectedGroups.length === 0) return []
-  return items.filter((item) => selectedGroups.includes(item.group))
+  if (selectedGroups.length === 0 || selectedLevels.length === 0) return []
+  return items.filter(
+    (item) => selectedGroups.includes(item.group) && selectedLevels.includes(item.level),
+  )
 }

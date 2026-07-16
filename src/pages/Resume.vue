@@ -191,11 +191,16 @@
 
     <ResumeCollapsibleSection id="tech" :title="$t('resume.techTitle')" muted>
       <p class="max-w-3xl text-slate-600">{{ $t('resume.techDescription') }}</p>
-      <div class="mt-6 no-print">
+      <div class="no-print mt-6 space-y-3">
         <TechGroupFilters
           v-model:selected-groups="selectedTechGroups"
           :ariaLabel="$t('resume.techFilterLabel')"
           :group-label="techGroupLabel"
+        />
+        <TechLevelFilters
+          v-model:selected-levels="selectedTechLevels"
+          :ariaLabel="$t('resume.techLevelFilterLabel')"
+          :level-label="techLevelLabel"
         />
       </div>
 
@@ -205,18 +210,13 @@
 
       <div v-else class="mt-8">
         <ul class="hidden gap-3 sm:grid sm:grid-cols-2 lg:grid-cols-3 print:grid">
-          <li
-            v-for="item in filteredTechSummary"
-            :key="item.name"
-            class="flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3"
-          >
-            <div class="min-w-0">
-              <span class="font-medium text-slate-900">{{ item.name }}</span>
-              <span class="mt-0.5 block text-xs text-slate-500">{{ techGroupLabel(item.group) }}</span>
-            </div>
-            <span class="shrink-0 text-sm text-slate-500">
-              {{ $t('resume.yearsLabel', { n: item.years }) }}
-            </span>
+          <li v-for="item in filteredTechSummary" :key="item.name">
+            <TechSummaryCard
+              :item="item"
+              :group-label="techGroupLabel(item.group)"
+              :level-label="techLevelLabel(item.level)"
+              :years-label="$t('resume.techYearsTotal', { n: item.years })"
+            />
           </li>
         </ul>
 
@@ -224,20 +224,13 @@
           <ResumeItemSlider :items="techPages" desktop-class="">
             <template #default="{ item: page }">
               <ul class="grid gap-3">
-                <li
-                  v-for="tech in page"
-                  :key="tech.name"
-                  class="flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3"
-                >
-                  <div class="min-w-0">
-                    <span class="font-medium text-slate-900">{{ tech.name }}</span>
-                    <span class="mt-0.5 block text-xs text-slate-500">{{
-                      techGroupLabel(tech.group)
-                    }}</span>
-                  </div>
-                  <span class="shrink-0 text-sm text-slate-500">
-                    {{ $t('resume.yearsLabel', { n: tech.years }) }}
-                  </span>
+                <li v-for="tech in page" :key="tech.name">
+                  <TechSummaryCard
+                    :item="tech"
+                    :group-label="techGroupLabel(tech.group)"
+                    :level-label="techLevelLabel(tech.level)"
+                    :years-label="$t('resume.techYearsTotal', { n: tech.years })"
+                  />
                 </li>
               </ul>
             </template>
@@ -306,6 +299,8 @@ import ResumeCompanyCard from '@/components/resume/ResumeCompanyCard.vue'
 import LanguageLevelRow from '@/components/resume/LanguageLevelRow.vue'
 import ResumeProgressNav from '@/components/resume/ResumeProgressNav.vue'
 import TechGroupFilters from '@/components/resume/TechGroupFilters.vue'
+import TechLevelFilters from '@/components/resume/TechLevelFilters.vue'
+import TechSummaryCard from '@/components/resume/TechSummaryCard.vue'
 import NewsListItem from '@/components/news/NewsListItem.vue'
 import { createResumePrintMode, resumePrintModeKey } from '@/composables/useResumePrint'
 import {
@@ -320,9 +315,11 @@ import {
   resumeInternships,
   resumeLanguages,
   techGroupOrder,
+  techLevelOrder,
   type ResumeCompany,
   type ResumeEducation,
   type TechGroup,
+  type TechLevel,
   type TechSummaryItem,
 } from '@/config/resumeConfig'
 
@@ -334,6 +331,7 @@ const printMode = createResumePrintMode()
 provide(resumePrintModeKey, printMode)
 
 const selectedTechGroups = ref<TechGroup[]>([...techGroupOrder])
+const selectedTechLevels = ref<TechLevel[]>([...techLevelOrder])
 
 const newsTypeHeadingKey: Record<NewsType, string> = {
   publication: 'resume.publicationsSectionMinibooks',
@@ -346,7 +344,7 @@ const resumeNewsGroups = computed(() => getResumeNewsGroups())
 const techSummary = computed(() => getTechSummary())
 
 const filteredTechSummary = computed(() =>
-  filterTechSummary(techSummary.value, selectedTechGroups.value),
+  filterTechSummary(techSummary.value, selectedTechGroups.value, selectedTechLevels.value),
 )
 
 const techPages = computed(() => {
@@ -360,6 +358,10 @@ const techPages = computed(() => {
 
 function techGroupLabel(group: TechGroup): string {
   return t(`resume.techGroups.${group}`)
+}
+
+function techLevelLabel(level: TechLevel): string {
+  return t(`resume.techLevels.${level}`)
 }
 
 function progressSectionLabel(id: string): string {
@@ -377,6 +379,7 @@ function progressSectionLabel(id: string): string {
 async function exportPdf() {
   const previousTitle = document.title
   const previousGroups = [...selectedTechGroups.value]
+  const previousLevels = [...selectedTechLevels.value]
   let cleaned = false
 
   const cleanup = () => {
@@ -385,10 +388,12 @@ async function exportPdf() {
     printMode.value = false
     document.title = previousTitle
     selectedTechGroups.value = previousGroups
+    selectedTechLevels.value = previousLevels
     window.removeEventListener('afterprint', cleanup)
   }
 
   selectedTechGroups.value = [...techGroupOrder]
+  selectedTechLevels.value = [...techLevelOrder]
   printMode.value = true
   document.title = t('resume.pdfTitle')
   await nextTick()

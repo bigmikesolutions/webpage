@@ -8,9 +8,16 @@
   "educationLabel": "Education",
   "languagesLabel": "Languages",
   "techTitle": "Technologies",
-  "techDescription": "Tech summary derived from company stacks. Duration is computed from employment periods (overlapping roles are merged).",
+  "techDescription": "Tech summary derived from company stacks. Proficiency level is based on total years (overlapping roles are merged).",
   "techFilterLabel": "Filter technology groups",
-  "techEmptyFilter": "Select at least one group to see technologies.",
+  "techLevelFilterLabel": "Filter proficiency level",
+  "techEmptyFilter": "Select at least one group and level to see technologies.",
+  "techYearsTotal": "Total: {n} yrs",
+  "techLevels": {
+    "1": "Basic familiarity",
+    "2": "Practical experience",
+    "3": "Advanced experience"
+  },
   "publicationsTitle": "Publications",
   "publicationsDescription": "Minibooks, articles, and videos — selected content from BigMikeLabs.",
   "publicationsMore": "Showing {shown} of {total}. See the full list on BigMikeLabs and YouTube.",
