@@ -2,6 +2,7 @@
   "title": "CV",
   "description": "Poznaj projekty i firmy, którym miałem okazję pomóc w realizacji ich celów technologicznych.",
   "experience": "Doświadczenie",
+  "internshipsTitle": "Praktyki",
   "general": "Ogólne",
   "educationLabel": "Edukacja",
   "languagesLabel": "Języki",
@@ -45,6 +46,32 @@
     "pl": "Polski",
     "en": "Angielski",
     "de": "Niemiecki"
+  },
+  "internships": {
+    "volvoIt2007": {
+      "role": "Praktykant (Student Intern)",
+      "highlights": [
+        "Rozwijałem i utrzymywałem usługi webowe w środowisku Volvo IT.",
+        "Pracowałem ze stackiem .NET (C#, ASP) oraz integracją danych (SSIS).",
+        "Używałem MS SQL Server i skryptów VB w codziennych zadaniach."
+      ],
+      "outcomes": [
+        "Wspierałem ciągłość utrzymania wewnętrznych usług webowych.",
+        "Poznałem praktyki delivery w dużym, międzynarodowym środowisku IT.",
+        "Zdobyłem pierwsze doświadczenie produkcyjne z .NET i SQL Server."
+      ]
+    },
+    "volvoIt2006": {
+      "role": "Praktykant (Student Intern)",
+      "highlights": [
+        "Rozwijałem i utrzymywałem usługi webowe podczas praktyk studenckich.",
+        "Pracowałem z .NET (C#, ASP) oraz MS SQL Server."
+      ],
+      "outcomes": [
+        "Wzmocniłem podstawy inżynierii oprogramowania w realnym projekcie.",
+        "Poznałem cykl utrzymania aplikacji webowych w organizacji enterprise."
+      ]
+    }
   },
   "companies": {
     "shellRecharge": {

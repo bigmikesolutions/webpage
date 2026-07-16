@@ -1,5 +1,6 @@
 import { resumeCompanies } from '@/config/resume/companies'
 import { resumeEducation } from '@/config/resume/education'
+import { resumeInternships } from '@/config/resume/internships'
 import { resumeLanguages } from '@/config/resume/languages'
 import type { ResumeEducation } from '@/config/resume/educationTypes'
 import type { ResumeLanguage } from '@/config/resume/languageTypes'
@@ -13,7 +14,14 @@ import {
 } from '@/config/resume/types'
 
 export type { ResumeCompany, ResumeEducation, ResumeLanguage, TechGroup, TechStack, YearMonth }
-export { resumeCompanies, resumeEducation, resumeLanguages, stackEntries, techGroupOrder }
+export {
+  resumeCompanies,
+  resumeEducation,
+  resumeInternships,
+  resumeLanguages,
+  stackEntries,
+  techGroupOrder,
+}
 
 export interface TechSummaryItem {
   name: string
@@ -74,11 +82,12 @@ function mergedMonths(intervals: [number, number][]): number {
  * Overlapping employment periods for the same tech are merged (no double-counting).
  * Group is chosen by the group with the most months for that tech.
  */
-export function getTechSummary(companies: ResumeCompany[] = resumeCompanies): TechSummaryItem[] {
+export function getTechSummary(companies?: ResumeCompany[]): TechSummaryItem[] {
+  const source = companies ?? [...resumeCompanies, ...resumeInternships]
   const byTech = new Map<string, [number, number][]>()
   const groupMonths = new Map<string, Partial<Record<TechGroup, number>>>()
 
-  for (const company of companies) {
+  for (const company of source) {
     if (company.countInTechSummary === false) continue
     const interval = companyInterval(company)
     const monthsInRole = interval[1] - interval[0]

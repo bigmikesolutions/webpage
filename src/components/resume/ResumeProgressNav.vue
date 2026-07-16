@@ -54,6 +54,12 @@ const markers = computed<ProgressMarker[]>(() => {
     },
     ...yearMarkers,
     {
+      id: 'internships',
+      label: props.sectionLabel('internships'),
+      targetId: 'internships',
+      kind: 'section',
+    },
+    {
       id: 'tech',
       label: props.sectionLabel('tech'),
       targetId: 'tech',

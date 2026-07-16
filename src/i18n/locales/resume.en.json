@@ -2,6 +2,7 @@
   "title": "Resume",
   "description": "Projects and companies I helped achieve their technology goals.",
   "experience": "Experience",
+  "internshipsTitle": "Internships",
   "general": "General",
   "educationLabel": "Education",
   "languagesLabel": "Languages",
@@ -45,6 +46,32 @@
     "pl": "Polish",
     "en": "English",
     "de": "German"
+  },
+  "internships": {
+    "volvoIt2007": {
+      "role": "Student Intern",
+      "highlights": [
+        "Developed and maintained web services in the Volvo IT environment.",
+        "Worked with the .NET stack (C#, ASP) and data integration (SSIS).",
+        "Used MS SQL Server and VB scripts in day-to-day tasks."
+      ],
+      "outcomes": [
+        "Helped keep internal web services running smoothly.",
+        "Learned delivery practices in a large, international IT organization.",
+        "Gained first production experience with .NET and SQL Server."
+      ]
+    },
+    "volvoIt2006": {
+      "role": "Student Intern",
+      "highlights": [
+        "Developed and maintained web services during a student internship.",
+        "Worked with .NET (C#, ASP) and MS SQL Server."
+      ],
+      "outcomes": [
+        "Strengthened software engineering basics on a real project.",
+        "Learned the maintenance cycle of web applications in an enterprise setting."
+      ]
+    }
   },
   "companies": {
     "shellRecharge": {

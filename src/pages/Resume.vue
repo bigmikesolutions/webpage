@@ -146,6 +146,31 @@
       </ResumeItemSlider>
     </ResumeCollapsibleSection>
 
+    <ResumeCollapsibleSection
+      id="internships"
+      :title="$t('resume.internshipsTitle')"
+      class="border-t border-slate-200"
+    >
+      <ResumeItemSlider :items="resumeInternships" desktop-class="space-y-10">
+        <template #default="{ item: internship, index }">
+          <div :id="`internship-${internship.id}`" class="scroll-mt-24">
+            <ResumeCompanyCard
+              :company="internship"
+              :period="formatCompanyPeriod(internship)"
+              :role="$t(`resume.internships.${internship.i18nKey}.role`)"
+              :highlights="internshipHighlights(internship.i18nKey)"
+              :outcomes="internshipOutcomes(internship.i18nKey)"
+              :highlights-label="$t('resume.highlightsLabel')"
+              :outcomes-label="$t('resume.outcomesLabel')"
+              :stack-label="$t('resume.stack')"
+              :group-label="techGroupLabel"
+              :divided="index > 0"
+            />
+          </div>
+        </template>
+      </ResumeItemSlider>
+    </ResumeCollapsibleSection>
+
     <ResumeCollapsibleSection id="tech" :title="$t('resume.techTitle')" muted>
       <p class="max-w-3xl text-slate-600">{{ $t('resume.techDescription') }}</p>
       <div class="mt-6 no-print">
@@ -274,6 +299,7 @@ import {
   getTechSummary,
   resumeCompanies,
   resumeEducation,
+  resumeInternships,
   resumeLanguages,
   techGroupOrder,
   type ResumeCompany,
@@ -299,7 +325,7 @@ const newsTypeHeadingKey: Record<NewsType, string> = {
 
 const resumeNewsGroups = computed(() => getResumeNewsGroups())
 
-const techSummary = computed(() => getTechSummary(resumeCompanies))
+const techSummary = computed(() => getTechSummary())
 
 const filteredTechSummary = computed(() =>
   filterTechSummary(techSummary.value, selectedTechGroups.value),
@@ -323,6 +349,7 @@ function progressSectionLabel(id: string): string {
     nav: 'resume.progressNav',
     general: 'resume.general',
     experience: 'resume.experience',
+    internships: 'resume.internshipsTitle',
     tech: 'resume.techTitle',
     publications: 'resume.publicationsTitle',
   }
@@ -352,22 +379,42 @@ async function exportPdf() {
   window.print()
   // Fallback when afterprint is delayed / missing
   window.setTimeout(cleanup, 2000)
-}type CompanyCopy = { highlights?: string[]; outcomes?: string[] }
+}
 
-function companyCopy(i18nKey: string): CompanyCopy {
+type CompanyCopy = { highlights?: string[]; outcomes?: string[] }
+
+function localeResumeBlock(
+  block: 'companies' | 'internships',
+  i18nKey: string,
+): CompanyCopy {
   const localeMessages = messages.value[locale.value] as
-    | { resume?: { companies?: Record<string, CompanyCopy> } }
+    | {
+        resume?: {
+          companies?: Record<string, CompanyCopy>
+          internships?: Record<string, CompanyCopy>
+        }
+      }
     | undefined
-  return localeMessages?.resume?.companies?.[i18nKey] ?? {}
+  return localeMessages?.resume?.[block]?.[i18nKey] ?? {}
 }
 
 function companyHighlights(i18nKey: string): string[] {
-  const highlights = companyCopy(i18nKey).highlights
+  const highlights = localeResumeBlock('companies', i18nKey).highlights
   return Array.isArray(highlights) ? highlights : []
 }
 
 function companyOutcomes(i18nKey: string): string[] {
-  const outcomes = companyCopy(i18nKey).outcomes
+  const outcomes = localeResumeBlock('companies', i18nKey).outcomes
+  return Array.isArray(outcomes) ? outcomes : []
+}
+
+function internshipHighlights(i18nKey: string): string[] {
+  const highlights = localeResumeBlock('internships', i18nKey).highlights
+  return Array.isArray(highlights) ? highlights : []
+}
+
+function internshipOutcomes(i18nKey: string): string[] {
+  const outcomes = localeResumeBlock('internships', i18nKey).outcomes
   return Array.isArray(outcomes) ? outcomes : []
 }
 
