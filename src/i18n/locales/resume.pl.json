@@ -83,9 +83,9 @@
         "Wspierałem migrację odpowiedzialności i danych do modelu single source of truth, ograniczając ryzyko niespójności w systemie."
       ],
       "outcomes": [
-        "Ujednoliciłem dostęp do danych, zwiększając spójność i przewidywalność działania systemu.",
-        "Przygotowałem elastyczną warstwę API, która uprościła rozwój nowych integracji.",
-        "Wsparłem budowę skalowalnej platformy gotowej na dalszy wzrost ekosystemu EV."
+        "Uprościłem dostęp do danych dla zespołów produktowych poprzez spójną warstwę API.",
+        "Skróciłem czas rozwoju nowych integracji dzięki elastycznej architekturze API.",
+        "Przygotowałem fundament pod dalszy rozwój platformy obsługującej ekosystem EV."
       ]
     },
     "herolynx": {
@@ -97,7 +97,7 @@
       "outcomes": [
         "Stworzyłem i wdrożyłem platformę AR Flashbulb wspierającą proces sprzedaży.",
         "Zaprojektowałem i uruchomiłem Elepantry — platformę integrującą wielu dostawców usług chmurowych w jednym miejscu.",
-        "Przeszedłem pełną drogę od pomysłu i budowy produktów do sprzedaży współtworzonej firmy."
+        "Zdobyłem doświadczenie w budowaniu produktów od koncepcji, przez rozwój, po komercjalizację."
       ]
     },
     "form3": {
@@ -108,9 +108,9 @@
         "Projektowałem mechanizmy failure recovery zwiększające niezawodność przetwarzania płatności."
       ],
       "outcomes": [
-        "Wspierałem niezawodne rozliczanie płatności krytycznych dla klientów Form3.",
-        "Ograniczyłem ryzyko blokowania płatności oraz wpływ awarii na działanie platformy.",
-        "Poprawiłem stabilność platformy, zmniejszając ryzyko wystąpienia incydentów produkcyjnych."
+        "Wsparłem utrzymanie ciągłości przetwarzania płatności krytycznych dla klientów Form3.",
+        "Ograniczyłem wpływ awarii poprzez lepszą obsługę scenariuszy recovery i monitorowanie systemu.",
+        "Ułatwiłem bezpieczny rozwój platformy płatniczej dzięki większej obserwowalności i stabilności."
       ]
     },
     "huuugeGames": {
@@ -122,7 +122,7 @@
       ],
       "outcomes": [
         "Dostarczyłem skalowalną platformę umożliwiającą szybkie tworzenie i uruchamianie kolejnych gier.",
-        "Zmniejszyłem koszty infrastruktury poprzez świadome decyzje architektoniczne i optymalizację zasobów.",
+        "Optymalizowałem wykorzystanie infrastruktury, wspierając efektywny rozwój platformy.",
         "Przyspieszyłem rozwój nowych funkcji i eksperymentów produktowych dzięki wspólnym komponentom platformy."
       ]
     },
@@ -160,7 +160,7 @@
       "outcomes": [
         "Zwiększyłem przewidywalność realizacji projektów poprzez lepsze podejście do estymacji i zarządzania zakresem.",
         "Przeprowadziłem migracje systemów ze starszych technologii do nowoczesnego stacku.",
-        "Otrzymywałem pozytywne uznanie klientów za wkład w realizację projektów i dostarczaną wartość."
+        "Budowałem długoterminowe relacje z klientami poprzez skuteczną współpracę techniczno-biznesową."
       ]
     },
     "capgemini": {
@@ -171,9 +171,8 @@
         "Odpowiadałem za migracje danych oraz bezpieczne wdrażanie zmian na środowiska produkcyjne."
       ],
       "outcomes": [
-        "Dostarczałem funkcjonalności odpowiadające potrzebom klienta i użytkowników systemu szkoleniowego.",
-        "Zapewniałem stabilność wdrożeń poprzez kontrolowane migracje i procesy release.",
-        "Zdobyłem doświadczenie w pracy z dużym systemem biznesowym oraz procesem dostarczania oprogramowania."
+        "Dostarczałem funkcjonalności dla systemu LMS wykorzystywanego przez klienta.",
+        "Zapewniłem bezpieczne wdrażanie zmian poprzez kontrolowane migracje danych i release'y."
       ]
     },
     "nokia": {
