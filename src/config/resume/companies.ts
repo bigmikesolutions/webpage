@@ -9,7 +9,7 @@ export const resumeCompanies: ResumeCompany[] = [
     id: 'shell-recharge',
     i18nKey: 'shellRecharge',
     name: 'Shell Recharge',
-    url: 'https://www.shell.com/shellrecharge',
+    url: 'https://www.shell.com',
     start: '2021-05',
     end: '2025-05',
     stack: {
@@ -31,7 +31,6 @@ export const resumeCompanies: ResumeCompany[] = [
     id: 'herolynx',
     i18nKey: 'herolynx',
     name: 'HeroLynx',
-    url: 'https://herolynx.com',
     start: '2015-01',
     end: '2021-11',
     stack: {
