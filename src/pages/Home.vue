@@ -205,7 +205,10 @@
             />
           </div>
           <div>
-            <h4 class="font-semibold">{{ $t('products.nextinlane_title') }}</h4>
+            <div class="flex flex-wrap items-center gap-2">
+              <h4 class="font-semibold">{{ $t('products.nextinlane_title') }}</h4>
+              <span class="product-tag">{{ $t('products.tag_product') }}</span>
+            </div>
             <p class="mt-1 text-sm text-slate-600">
               {{ $t('products.nextinlane_description') }}
             </p>
@@ -213,62 +216,6 @@
         </a>
 
         <div class="mt-4 grid gap-4 sm:grid-cols-2">
-          <a
-            class="card flex items-center gap-4"
-            href="https://www.youtube.com/@big-mike-labs"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div
-              class="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-red-100 text-red-600"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="h-6 w-6"
-              >
-                <path d="M10 15l5-3-5-3v6z" />
-              </svg>
-            </div>
-            <div>
-              <h4 class="font-semibold">{{ $t('products.youtube_title') }}</h4>
-              <p class="mt-1 text-sm text-slate-600">
-                {{ $t('products.youtube_description') }}
-              </p>
-            </div>
-          </a>
-
-          <a
-            class="card flex items-center gap-4"
-            href="https://bigmikelabs.pl/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div
-              class="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-amber-100 text-amber-600"
-              aria-hidden="true"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="h-6 w-6"
-              >
-                <path d="M7 10V7a5 5 0 0110 0v1h-2V7a3 3 0 00-6 0v3H7z" />
-                <path
-                  d="M5 11h14a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1v-7a1 1 0 011-1zm7 3a2 2 0 100 4 2 2 0 000-4z"
-                />
-              </svg>
-            </div>
-            <div>
-              <h4 class="font-semibold">{{ $t('products.bml_title') }}</h4>
-              <p class="mt-1 text-sm text-slate-600">
-                {{ $t('products.bml_description') }}
-              </p>
-            </div>
-          </a>
-
           <a
             class="card flex items-center gap-4"
             href="https://wordpress.org/plugins/flex-top-bar/"
@@ -283,7 +230,10 @@
               height="48"
             />
             <div>
-              <h4 class="font-semibold">{{ $t('products.flex_top_bar_title') }}</h4>
+              <div class="flex flex-wrap items-center gap-2">
+                <h4 class="font-semibold">{{ $t('products.flex_top_bar_title') }}</h4>
+                <span class="product-tag">{{ $t('products.tag_plugin') }}</span>
+              </div>
               <p class="mt-1 text-sm text-slate-600">
                 {{ $t('products.flex_top_bar_description') }}
               </p>
@@ -304,7 +254,10 @@
               height="48"
             />
             <div>
-              <h4 class="font-semibold">{{ $t('products.sqlstream_title') }}</h4>
+              <div class="flex flex-wrap items-center gap-2">
+                <h4 class="font-semibold">{{ $t('products.sqlstream_title') }}</h4>
+                <span class="product-tag">{{ $t('products.tag_lib') }}</span>
+              </div>
               <p class="mt-1 text-sm text-slate-600">
                 {{ $t('products.sqlstream_description') }}
               </p>
@@ -489,5 +442,8 @@ const services = computed<Service[]>(() => tm('services.items') as Service[])
 }
 .feature-list {
   @apply mt-4 list-disc space-y-1 pl-5 text-sm text-slate-600;
+}
+.product-tag {
+  @apply inline-flex rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700 ring-1 ring-slate-200;
 }
 </style>
