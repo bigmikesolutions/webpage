@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted, ref } from 'vue'
+import { computed, nextTick, onMounted, onUnmounted, ref } from 'vue'
 import { resumeCompanies, resumeInternships } from '@/config/resumeConfig'
 
 export interface ProgressMarker {
@@ -93,7 +93,8 @@ function scrollToMarker(marker: ProgressMarker) {
 
 function updateFromScroll() {
   const headerOffset = 100
-  const probe = window.scrollY + headerOffset + window.innerHeight * 0.2
+  // Probe near the top of the viewport so we track the section in view, not mid-page content.
+  const probe = window.scrollY + headerOffset
 
   let current = markers.value[0]?.id ?? 'general'
 
@@ -113,15 +114,38 @@ function updateFromScroll() {
   progress.value = idx >= 0 ? idx / last : 0
 }
 
-onMounted(() => {
-  updateFromScroll()
+let resizeObserver: ResizeObserver | null = null
+let rafId = 0
+
+function scheduleUpdate() {
+  cancelAnimationFrame(rafId)
+  rafId = requestAnimationFrame(updateFromScroll)
+}
+
+onMounted(async () => {
+  // Client nav from a scrolled page can leave a high scrollY briefly; start at top.
+  window.scrollTo(0, 0)
+  activeId.value = 'general'
+  progress.value = 0
+
+  await nextTick()
+  scheduleUpdate()
+  // Second frame: layout/images may still settle after first paint.
+  requestAnimationFrame(() => scheduleUpdate())
+
   window.addEventListener('scroll', updateFromScroll, { passive: true })
   window.addEventListener('resize', updateFromScroll)
+
+  resizeObserver = new ResizeObserver(scheduleUpdate)
+  resizeObserver.observe(document.documentElement)
 })
 
 onUnmounted(() => {
+  cancelAnimationFrame(rafId)
   window.removeEventListener('scroll', updateFromScroll)
   window.removeEventListener('resize', updateFromScroll)
+  resizeObserver?.disconnect()
+  resizeObserver = null
 })
 </script>
 
