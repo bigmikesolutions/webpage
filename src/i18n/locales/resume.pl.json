@@ -1,6 +1,6 @@
 {
   "title": "CV",
-  "description": "Firmy, w których pracowałem — co dostarczyłem, jak to pomogło biznesowi oraz jaki stack był w użyciu.",
+  "description": "Poznaj projekty i firmy, którym miałem okazję pomóc w realizacji ich celów technologicznych.",
   "experience": "Doświadczenie",
   "techTitle": "Technologie",
   "techDescription": "Podsumowanie technologii na podstawie stacków z firm. Czas liczony z okresów zatrudnienia (nakładające się role są scalane).",
@@ -10,14 +10,6 @@
   "linkedin": "Profil LinkedIn",
   "backHome": "Strona główna",
   "companies": {
-    "bigmikeSolutions": {
-      "role": "Założyciel · kontraktor i konsultant",
-      "highlights": [
-        "Buduję własne produkty (NextInLane, sqlstream, Flex Top Bar) i platformę wiedzy BigMikeLabs.",
-        "Doradzam firmom w architekturze systemów, modernizacji i doborze technologii pod cele biznesowe.",
-        "Łączę perspektywę produktu z inżynierią — od wizji do działającego rozwiązania."
-      ]
-    },
     "shellRecharge": {
       "role": "Senior Software Engineer (Go)",
       "highlights": [

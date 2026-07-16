@@ -8,18 +8,37 @@
         <RouterLink to="/" class="text-sm text-slate-600 hover:text-slate-900">
           ← {{ $t('resume.backHome') }}
         </RouterLink>
-        <h1 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-          {{ $t('resume.title') }}
-        </h1>
-        <p class="mt-3 max-w-3xl text-lg text-slate-700">{{ $t('resume.description') }}</p>
-        <a
-          href="https://www.linkedin.com/in/michal-wronski-b389a988/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn--ghost mt-6 inline-flex"
+        <div
+          class="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6"
         >
-          {{ $t('resume.linkedin') }}
-        </a>
+          <div class="flex min-w-0 flex-col gap-2 sm:flex-row sm:items-baseline sm:gap-4">
+            <h1 class="shrink-0 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+              {{ $t('resume.title') }}
+            </h1>
+            <p class="text-lg text-slate-700">
+              {{ $t('resume.description') }}
+            </p>
+          </div>
+          <a
+            href="https://www.linkedin.com/in/michal-wronski-b389a988/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--ghost inline-flex shrink-0 items-center gap-2 self-start sm:self-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="h-4 w-4"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+            {{ $t('resume.linkedin') }}
+          </a>
+        </div>
       </div>
     </section>
 

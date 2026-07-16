@@ -6,33 +6,6 @@ import type { ResumeCompany } from './types'
  */
 export const resumeCompanies: ResumeCompany[] = [
   {
-    id: 'bigmike-solutions',
-    i18nKey: 'bigmikeSolutions',
-    name: 'BigMikeSolutions',
-    url: 'https://bigmikesolutions.pl',
-    start: '2014-05',
-    countInTechSummary: false,
-    tech: [
-      'Go',
-      'Java',
-      'Kotlin',
-      'TypeScript',
-      'React',
-      'PostgreSQL',
-      'AWS',
-      'GCP',
-      'Azure',
-      'Kubernetes',
-      'Terraform',
-      'GraphQL',
-      'gRPC',
-      'REST',
-      'Docker',
-      'GitLab CI',
-      'GitHub Actions',
-    ],
-  },
-  {
     id: 'shell-recharge',
     i18nKey: 'shellRecharge',
     name: 'Shell Recharge',

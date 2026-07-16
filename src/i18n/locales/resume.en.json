@@ -10,14 +10,6 @@
   "linkedin": "LinkedIn profile",
   "backHome": "Home",
   "companies": {
-    "bigmikeSolutions": {
-      "role": "Founder · contractor & consultant",
-      "highlights": [
-        "I build my own products (NextInLane, sqlstream, Flex Top Bar) and the BigMikeLabs knowledge platform.",
-        "I advise companies on system architecture, modernization, and technology choices aligned with business goals.",
-        "I combine product thinking with engineering — from vision to a working solution."
-      ]
-    },
     "shellRecharge": {
       "role": "Senior Software Engineer (Go)",
       "highlights": [
