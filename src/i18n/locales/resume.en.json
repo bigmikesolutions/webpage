@@ -7,6 +7,14 @@
   "languagesLabel": "Languages",
   "techTitle": "Technologies",
   "techDescription": "Tech summary derived from company stacks. Duration is computed from employment periods (overlapping roles are merged).",
+  "techFilterLabel": "Filter technology groups",
+  "techEmptyFilter": "Select at least one group to see technologies.",
+  "techGroups": {
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "devops": "DevOps / Infra",
+    "mobile": "Mobile"
+  },
   "stack": "Stack",
   "highlightsLabel": "What I did",
   "outcomesLabel": "What I achieved",

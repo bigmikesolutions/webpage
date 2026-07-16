@@ -7,6 +7,14 @@
   "languagesLabel": "Języki",
   "techTitle": "Technologie",
   "techDescription": "Podsumowanie technologii na podstawie stacków z firm. Czas liczony z okresów zatrudnienia (nakładające się role są scalane).",
+  "techFilterLabel": "Filtruj grupy technologii",
+  "techEmptyFilter": "Wybierz co najmniej jedną grupę, aby zobaczyć technologie.",
+  "techGroups": {
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "devops": "DevOps / Infra",
+    "mobile": "Mobile"
+  },
   "stack": "Stack",
   "highlightsLabel": "Co robiłem",
   "outcomesLabel": "Co udało mi się osiągnąć",

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ResumeCompany } from '@/config/resumeConfig'
+import { stackEntries, type ResumeCompany, type TechGroup } from '@/config/resumeConfig'
 
 defineProps<{
   company: ResumeCompany
@@ -10,6 +10,7 @@ defineProps<{
   highlightsLabel: string
   outcomesLabel: string
   stackLabel: string
+  groupLabel: (group: TechGroup) => string
   /** Show top divider (desktop list between items) */
   divided?: boolean
 }>()
@@ -89,19 +90,24 @@ defineProps<{
         </ul>
       </div>
 
-      <div class="mt-5">
+      <div v-if="stackEntries(company.stack).length" class="mt-5">
         <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-500">
           {{ stackLabel }}
         </h4>
-        <ul class="mt-2 flex flex-wrap gap-2">
-          <li
-            v-for="tech in company.tech"
-            :key="tech"
-            class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 ring-1 ring-slate-200"
-          >
-            {{ tech }}
-          </li>
-        </ul>
+        <div class="mt-3 space-y-3">
+          <div v-for="entry in stackEntries(company.stack)" :key="entry.group">
+            <p class="text-xs font-medium text-slate-500">{{ groupLabel(entry.group) }}</p>
+            <ul class="mt-1.5 flex flex-wrap gap-2">
+              <li
+                v-for="tech in entry.items"
+                :key="tech"
+                class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 ring-1 ring-slate-200"
+              >
+                {{ tech }}
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </article>
   </div>

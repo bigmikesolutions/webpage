@@ -111,6 +111,7 @@
             :highlights-label="$t('resume.highlightsLabel')"
             :outcomes-label="$t('resume.outcomesLabel')"
             :stack-label="$t('resume.stack')"
+            :group-label="techGroupLabel"
             :divided="index > 0"
           />
         </template>
@@ -119,22 +120,35 @@
 
     <ResumeCollapsibleSection id="tech" :title="$t('resume.techTitle')" muted>
       <p class="max-w-3xl text-slate-600">{{ $t('resume.techDescription') }}</p>
-      <div class="mt-8">
-        <!-- Desktop: full grid -->
+      <div class="mt-6">
+        <TechGroupFilters
+          v-model:selected-groups="selectedTechGroups"
+          :ariaLabel="$t('resume.techFilterLabel')"
+          :group-label="techGroupLabel"
+        />
+      </div>
+
+      <p v-if="filteredTechSummary.length === 0" class="mt-8 text-slate-600">
+        {{ $t('resume.techEmptyFilter') }}
+      </p>
+
+      <div v-else class="mt-8">
         <ul class="hidden gap-3 sm:grid sm:grid-cols-2 lg:grid-cols-3">
           <li
-            v-for="item in techSummary"
+            v-for="item in filteredTechSummary"
             :key="item.name"
             class="flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3"
           >
-            <span class="font-medium text-slate-900">{{ item.name }}</span>
+            <div class="min-w-0">
+              <span class="font-medium text-slate-900">{{ item.name }}</span>
+              <span class="mt-0.5 block text-xs text-slate-500">{{ techGroupLabel(item.group) }}</span>
+            </div>
             <span class="shrink-0 text-sm text-slate-500">
               {{ $t('resume.yearsLabel', { n: item.years }) }}
             </span>
           </li>
         </ul>
 
-        <!-- Mobile: paged slider -->
         <div class="sm:hidden">
           <ResumeItemSlider :items="techPages" desktop-class="">
             <template #default="{ item: page }">
@@ -144,7 +158,12 @@
                   :key="tech.name"
                   class="flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3"
                 >
-                  <span class="font-medium text-slate-900">{{ tech.name }}</span>
+                  <div class="min-w-0">
+                    <span class="font-medium text-slate-900">{{ tech.name }}</span>
+                    <span class="mt-0.5 block text-xs text-slate-500">{{
+                      techGroupLabel(tech.group)
+                    }}</span>
+                  </div>
                   <span class="shrink-0 text-sm text-slate-500">
                     {{ $t('resume.yearsLabel', { n: tech.years }) }}
                   </span>
@@ -159,20 +178,24 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import ResumeCollapsibleSection from '@/components/resume/ResumeCollapsibleSection.vue'
 import ResumeItemSlider from '@/components/resume/ResumeItemSlider.vue'
 import ResumeCompanyCard from '@/components/resume/ResumeCompanyCard.vue'
 import LanguageLevelRow from '@/components/resume/LanguageLevelRow.vue'
+import TechGroupFilters from '@/components/resume/TechGroupFilters.vue'
 import {
+  filterTechSummary,
   getTechSummary,
   resumeCompanies,
   resumeEducation,
   resumeLanguages,
+  techGroupOrder,
   type ResumeCompany,
   type ResumeEducation,
+  type TechGroup,
   type TechSummaryItem,
 } from '@/config/resumeConfig'
 
@@ -180,17 +203,26 @@ const TECH_PAGE_SIZE = 6
 
 const { t, locale, messages } = useI18n()
 
+const selectedTechGroups = ref<TechGroup[]>([...techGroupOrder])
+
 const techSummary = computed(() => getTechSummary(resumeCompanies))
+
+const filteredTechSummary = computed(() =>
+  filterTechSummary(techSummary.value, selectedTechGroups.value),
+)
 
 const techPages = computed(() => {
   const pages: TechSummaryItem[][] = []
-  const items = techSummary.value
+  const items = filteredTechSummary.value
   for (let i = 0; i < items.length; i += TECH_PAGE_SIZE) {
     pages.push(items.slice(i, i + TECH_PAGE_SIZE))
   }
   return pages
 })
 
+function techGroupLabel(group: TechGroup): string {
+  return t(`resume.techGroups.${group}`)
+}
 type CompanyCopy = { highlights?: string[]; outcomes?: string[] }
 
 function companyCopy(i18nKey: string): CompanyCopy {

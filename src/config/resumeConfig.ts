@@ -3,13 +3,21 @@ import { resumeEducation } from '@/config/resume/education'
 import { resumeLanguages } from '@/config/resume/languages'
 import type { ResumeEducation } from '@/config/resume/educationTypes'
 import type { ResumeLanguage } from '@/config/resume/languageTypes'
-import type { ResumeCompany, YearMonth } from '@/config/resume/types'
+import {
+  stackEntries,
+  techGroupOrder,
+  type ResumeCompany,
+  type TechGroup,
+  type TechStack,
+  type YearMonth,
+} from '@/config/resume/types'
 
-export type { ResumeCompany, ResumeEducation, ResumeLanguage, YearMonth }
-export { resumeCompanies, resumeEducation, resumeLanguages }
+export type { ResumeCompany, ResumeEducation, ResumeLanguage, TechGroup, TechStack, YearMonth }
+export { resumeCompanies, resumeEducation, resumeLanguages, stackEntries, techGroupOrder }
 
 export interface TechSummaryItem {
   name: string
+  group: TechGroup
   /** Merged exclusive months of use across companies */
   months: number
   /** Floored years for display (min 1 if months > 0) */
@@ -64,17 +72,27 @@ function mergedMonths(intervals: [number, number][]): number {
 /**
  * Builds a tech summary from company stacks.
  * Overlapping employment periods for the same tech are merged (no double-counting).
+ * Group is chosen by the group with the most months for that tech.
  */
 export function getTechSummary(companies: ResumeCompany[] = resumeCompanies): TechSummaryItem[] {
   const byTech = new Map<string, [number, number][]>()
+  const groupMonths = new Map<string, Partial<Record<TechGroup, number>>>()
 
   for (const company of companies) {
     if (company.countInTechSummary === false) continue
     const interval = companyInterval(company)
-    for (const tech of company.tech) {
-      const list = byTech.get(tech) ?? []
-      list.push(interval)
-      byTech.set(tech, list)
+    const monthsInRole = interval[1] - interval[0]
+
+    for (const { group, items } of stackEntries(company.stack)) {
+      for (const tech of items) {
+        const list = byTech.get(tech) ?? []
+        list.push(interval)
+        byTech.set(tech, list)
+
+        const gm = groupMonths.get(tech) ?? {}
+        gm[group] = (gm[group] ?? 0) + monthsInRole
+        groupMonths.set(tech, gm)
+      }
     }
   }
 
@@ -82,8 +100,20 @@ export function getTechSummary(companies: ResumeCompany[] = resumeCompanies): Te
     .map(([name, intervals]) => {
       const months = mergedMonths(intervals)
       const years = months > 0 ? Math.max(1, Math.floor(months / 12)) : 0
-      return { name, months, years }
+      const gm = groupMonths.get(name) ?? {}
+      const group =
+        techGroupOrder.find((g) => (gm[g] ?? 0) === Math.max(...techGroupOrder.map((x) => gm[x] ?? 0))) ??
+        'backend'
+      return { name, group, months, years }
     })
     .filter((item) => item.months > 0)
     .sort((a, b) => b.months - a.months || a.name.localeCompare(b.name))
+}
+
+export function filterTechSummary(
+  items: TechSummaryItem[],
+  selectedGroups: TechGroup[],
+): TechSummaryItem[] {
+  if (selectedGroups.length === 0) return []
+  return items.filter((item) => selectedGroups.includes(item.group))
 }
