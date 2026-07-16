@@ -13,7 +13,7 @@ const filled = languageLevelFilled(props.level)
 </script>
 
 <template>
-  <div class="flex flex-wrap items-center gap-3 sm:gap-4">
+  <div class="grid grid-cols-[2.25rem_minmax(0,1fr)_2rem_auto] items-center gap-x-3 sm:gap-x-4">
     <span
       class="inline-flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full ring-1 ring-slate-200"
       aria-hidden="true"
@@ -46,19 +46,15 @@ const filled = languageLevelFilled(props.level)
       </svg>
     </span>
 
-    <div class="min-w-0 flex-1">
-      <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
-        <span class="font-medium text-slate-900">{{ name }}</span>
-        <span class="text-sm font-semibold tabular-nums text-slate-600">{{ level }}</span>
-        <span class="inline-flex items-center gap-1.5" role="img" :aria-label="level">
-          <span
-            v-for="i in total"
-            :key="i"
-            class="h-2 w-2 rounded-full"
-            :class="i <= filled ? 'bg-brand-500' : 'bg-slate-200'"
-          ></span>
-        </span>
-      </div>
-    </div>
+    <span class="min-w-0 font-medium text-slate-900">{{ name }}</span>
+    <span class="text-right text-sm font-semibold tabular-nums text-slate-600">{{ level }}</span>
+    <span class="inline-flex items-center gap-1.5" role="img" :aria-label="level">
+      <span
+        v-for="i in total"
+        :key="i"
+        class="h-2 w-2 rounded-full"
+        :class="i <= filled ? 'bg-brand-500' : 'bg-slate-200'"
+      ></span>
+    </span>
   </div>
 </template>

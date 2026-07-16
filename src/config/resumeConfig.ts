@@ -130,7 +130,9 @@ export function getTechSummary(companies?: ResumeCompany[]): TechSummaryItem[] {
       return { name, group, months, years, level }
     })
     .filter((item) => item.months > 0)
-    .sort((a, b) => b.months - a.months || a.name.localeCompare(b.name))
+    .sort(
+      (a, b) => b.level - a.level || b.months - a.months || a.name.localeCompare(b.name),
+    )
 }
 
 export function filterTechSummary(
