@@ -42,19 +42,50 @@
       </div>
     </section>
 
-    <section id="experience" class="container mx-auto px-4 py-14">
-      <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-        {{ $t('resume.experience') }}
-      </h2>
+    <ResumeCollapsibleSection id="education" :title="$t('resume.education')">
+      <ol class="space-y-8">
+        <li
+          v-for="item in resumeEducation"
+          :key="item.id"
+          class="grid gap-4 lg:grid-cols-[minmax(0,14rem)_minmax(0,1fr)]"
+        >
+          <div class="text-sm text-slate-500 lg:pt-1">
+            <time>{{ formatEducationPeriod(item) }}</time>
+          </div>
+          <article>
+            <h3 class="text-xl font-semibold text-slate-900">
+              {{ $t(`resume.educationItems.${item.i18nKey}.degree`) }}
+            </h3>
+            <p class="mt-1 text-slate-600">
+              <a
+                v-if="item.url"
+                :href="item.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-brand-800"
+              >
+                {{ $t(`resume.educationItems.${item.i18nKey}.school`) }}
+              </a>
+              <span v-else>{{ $t(`resume.educationItems.${item.i18nKey}.school`) }}</span>
+            </p>
+          </article>
+        </li>
+      </ol>
+    </ResumeCollapsibleSection>
 
-      <ol class="mt-10 space-y-10">
+    <ResumeCollapsibleSection
+      id="experience"
+      :title="$t('resume.experience')"
+      class="border-t border-slate-200"
+    >
+      <ol class="space-y-10">
         <li
           v-for="company in resumeCompanies"
           :key="company.id"
           class="grid gap-6 border-t border-slate-200 pt-10 first:border-t-0 first:pt-0 lg:grid-cols-[minmax(0,14rem)_minmax(0,1fr)]"
         >
           <div class="text-sm text-slate-500 lg:pt-1">
-            <time>{{ formatPeriod(company) }}</time>
+            <time>{{ formatCompanyPeriod(company) }}</time>
           </div>
 
           <article>
@@ -139,29 +170,23 @@
           </article>
         </li>
       </ol>
-    </section>
+    </ResumeCollapsibleSection>
 
-    <section id="tech" class="border-t border-slate-200 bg-slate-50">
-      <div class="container mx-auto px-4 py-14">
-        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-          {{ $t('resume.techTitle') }}
-        </h2>
-        <p class="mt-2 max-w-3xl text-slate-600">{{ $t('resume.techDescription') }}</p>
-
-        <ul class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          <li
-            v-for="item in techSummary"
-            :key="item.name"
-            class="flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3"
-          >
-            <span class="font-medium text-slate-900">{{ item.name }}</span>
-            <span class="shrink-0 text-sm text-slate-500">
-              {{ $t('resume.yearsLabel', { n: item.years }) }}
-            </span>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <ResumeCollapsibleSection id="tech" :title="$t('resume.techTitle')" muted>
+      <p class="max-w-3xl text-slate-600">{{ $t('resume.techDescription') }}</p>
+      <ul class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <li
+          v-for="item in techSummary"
+          :key="item.name"
+          class="flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3"
+        >
+          <span class="font-medium text-slate-900">{{ item.name }}</span>
+          <span class="shrink-0 text-sm text-slate-500">
+            {{ $t('resume.yearsLabel', { n: item.years }) }}
+          </span>
+        </li>
+      </ul>
+    </ResumeCollapsibleSection>
   </main>
 </template>
 
@@ -169,10 +194,13 @@
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import ResumeCollapsibleSection from '@/components/resume/ResumeCollapsibleSection.vue'
 import {
   getTechSummary,
   resumeCompanies,
+  resumeEducation,
   type ResumeCompany,
+  type ResumeEducation,
 } from '@/config/resumeConfig'
 
 const { t, locale, messages } = useI18n()
@@ -198,15 +226,22 @@ function companyOutcomes(i18nKey: string): string[] {
   return Array.isArray(outcomes) ? outcomes : []
 }
 
-function formatMonth(ym: string): string {
-  const [year, month] = ym.split('-').map(Number)
+function formatDateLabel(value: string): string {
+  if (/^\d{4}$/.test(value)) return value
+  const [year, month] = value.split('-').map(Number)
   const date = new Date(year, month - 1, 1)
   return new Intl.DateTimeFormat(locale.value, { month: 'short', year: 'numeric' }).format(date)
 }
 
-function formatPeriod(company: ResumeCompany): string {
-  const start = formatMonth(company.start)
-  const end = company.end ? formatMonth(company.end) : t('resume.present')
+function formatCompanyPeriod(company: ResumeCompany): string {
+  const start = formatDateLabel(company.start)
+  const end = company.end ? formatDateLabel(company.end) : t('resume.present')
+  return `${start} – ${end}`
+}
+
+function formatEducationPeriod(item: ResumeEducation): string {
+  const start = formatDateLabel(item.start)
+  const end = item.end ? formatDateLabel(item.end) : t('resume.present')
   return `${start} – ${end}`
 }
 </script>

@@ -2,6 +2,7 @@
   "title": "Resume",
   "description": "Projects and companies I helped achieve their technology goals.",
   "experience": "Experience",
+  "education": "Education",
   "techTitle": "Technologies",
   "techDescription": "Tech summary derived from company stacks. Duration is computed from employment periods (overlapping roles are merged).",
   "stack": "Stack",
@@ -11,6 +12,12 @@
   "yearsLabel": "{n} yrs",
   "linkedin": "LinkedIn profile",
   "backHome": "Home",
+  "educationItems": {
+    "pwrMsc": {
+      "degree": "Master of Science (MSc), Computer Science",
+      "school": "Wrocław University of Science and Technology"
+    }
+  },
   "companies": {
     "shellRecharge": {
       "role": "Senior Software Engineer (Go)",

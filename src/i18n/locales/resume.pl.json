@@ -2,6 +2,7 @@
   "title": "CV",
   "description": "Poznaj projekty i firmy, którym miałem okazję pomóc w realizacji ich celów technologicznych.",
   "experience": "Doświadczenie",
+  "education": "Edukacja",
   "techTitle": "Technologie",
   "techDescription": "Podsumowanie technologii na podstawie stacków z firm. Czas liczony z okresów zatrudnienia (nakładające się role są scalane).",
   "stack": "Stack",
@@ -11,6 +12,12 @@
   "yearsLabel": "{n} lat",
   "linkedin": "Profil LinkedIn",
   "backHome": "Strona główna",
+  "educationItems": {
+    "pwrMsc": {
+      "degree": "Magister (MSc), Informatyka",
+      "school": "Politechnika Wrocławska"
+    }
+  },
   "companies": {
     "shellRecharge": {
       "role": "Senior Software Engineer (Go)",

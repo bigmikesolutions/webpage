@@ -1,8 +1,10 @@
 import { resumeCompanies } from '@/config/resume/companies'
+import { resumeEducation } from '@/config/resume/education'
+import type { ResumeEducation } from '@/config/resume/educationTypes'
 import type { ResumeCompany, YearMonth } from '@/config/resume/types'
 
-export type { ResumeCompany, YearMonth }
-export { resumeCompanies }
+export type { ResumeCompany, ResumeEducation, YearMonth }
+export { resumeCompanies, resumeEducation }
 
 export interface TechSummaryItem {
   name: string
