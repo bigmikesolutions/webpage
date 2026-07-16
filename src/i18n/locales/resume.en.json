@@ -61,23 +61,23 @@
       "highlights": [
         "Developed and maintained web services in the Volvo IT environment.",
         "Worked with the .NET stack (C#, ASP) and data integration (SSIS).",
-        "Used MS SQL Server and VB scripts in day-to-day tasks."
+        "Supported work with MS SQL Server and task automation through VB scripts."
       ],
       "outcomes": [
-        "Helped keep internal web services running smoothly.",
-        "Learned delivery practices in a large, international IT organization.",
-        "Gained first production experience with .NET and SQL Server."
+        "Helped develop and maintain internal applications used across the organization.",
+        "Gained experience working with IT processes in a large enterprise organization.",
+        "Learned the application lifecycle — from development changes through to production releases."
       ]
     },
     "volvoIt2006": {
       "role": "Student Intern",
       "highlights": [
-        "Developed and maintained web services during a student internship.",
-        "Worked with .NET (C#, ASP) and MS SQL Server."
+        "Developed web services in the Volvo IT environment.",
+        "Worked with .NET technologies (C#, ASP) and MS SQL Server."
       ],
       "outcomes": [
-        "Strengthened software engineering basics on a real project.",
-        "Learned the maintenance cycle of web applications in an enterprise organization."
+        "Gained first experience building software for an enterprise environment.",
+        "Learned practices for working with existing business systems."
       ]
     }
   },

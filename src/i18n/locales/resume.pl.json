@@ -61,23 +61,23 @@
       "highlights": [
         "Rozwijałem i utrzymywałem usługi webowe w środowisku Volvo IT.",
         "Pracowałem ze stackiem .NET (C#, ASP) oraz integracją danych (SSIS).",
-        "Używałem MS SQL Server i skryptów VB w codziennych zadaniach."
+        "Wspierałem pracę z MS SQL Server oraz automatyzacją zadań poprzez skrypty VB."
       ],
       "outcomes": [
-        "Wspierałem ciągłość utrzymania wewnętrznych usług webowych.",
-        "Poznałem praktyki delivery w dużym, międzynarodowym środowisku IT.",
-        "Zdobyłem pierwsze doświadczenie produkcyjne z .NET i SQL Server."
+        "Wsparłem rozwój i utrzymanie wewnętrznych aplikacji wykorzystywanych w organizacji.",
+        "Zdobyłem doświadczenie w pracy z procesami IT dużej organizacji enterprise.",
+        "Poznałem cykl życia aplikacji — od zmian rozwojowych po wdrożenia produkcyjne."
       ]
     },
     "volvoIt2006": {
       "role": "Praktykant (Student Intern)",
       "highlights": [
-        "Rozwijałem i utrzymywałem usługi webowe podczas praktyk studenckich.",
-        "Pracowałem z .NET (C#, ASP) oraz MS SQL Server."
+        "Rozwijałem usługi webowe w środowisku Volvo IT.",
+        "Pracowałem z technologiami .NET (C#, ASP) oraz MS SQL Server."
       ],
       "outcomes": [
-        "Wzmocniłem podstawy inżynierii oprogramowania w realnym projekcie.",
-        "Poznałem cykl utrzymania aplikacji webowych w organizacji enterprise."
+        "Zdobyłem pierwsze doświadczenie w tworzeniu oprogramowania dla środowiska enterprise.",
+        "Poznałem praktyki pracy z istniejącymi systemami biznesowymi."
       ]
     }
   },
