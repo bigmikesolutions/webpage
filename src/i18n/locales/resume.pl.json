@@ -103,27 +103,27 @@
     "form3": {
       "role": "Full Stack Engineer",
       "highlights": [
-        "Rozwijałem systemy płatności UK: BACS (batch) i Faster Payments (real-time).",
-        "Ulepszałem zarządzanie transakcjami między mikroserwisami oraz scenariusze recovery.",
-        "Wprowadzałem kontrakty API (PACT) i obserwowalność (Prometheus, Grafana, Zipkin, ELK)."
+        "Rozwijałem platformę płatności obsługującą brytyjskie systemy BACS i Faster Payments.",
+        "Projektowałem rozwiązania zwiększające niezawodność przetwarzania transakcji oraz odporność na awarie.",
+        "Projektowałem mechanizmy failure recovery zwiększające niezawodność przetwarzania płatności."
       ],
       "outcomes": [
         "Wspierałem niezawodne rozliczanie płatności krytycznych dla klientów Form3.",
-        "Zmniejszyłem ryzyko utraty lub niespójności transakcji przy awariach.",
-        "Ułatwiłem bezpieczne zmiany w płatniczym core dzięki lepszej jakości kontraktów i monitoringu."
+        "Ograniczyłem ryzyko blokowania płatności oraz wpływ awarii na działanie platformy.",
+        "Poprawiłem stabilność platformy, zmniejszając ryzyko wystąpienia incydentów produkcyjnych."
       ]
     },
     "huuugeGames": {
       "role": "Full Stack Developer",
       "highlights": [
-        "Budowałem backend mikroserwisowy (Scala/Akka, Go) dla platformy gier mobilnych.",
-        "Brałem odpowiedzialność za DevOps/SRE oraz zarządzanie infrastrukturą AWS.",
-        "Projektowałem rozwiązania pod dostępność i koszty w środowisku wysokiego ruchu."
+        "Zaprojektowałem i zbudowałem od podstaw centralną platformę gamingową stanowiącą fundament dla wielu gier.",
+        "Wprowadziłem system transmisji wideo dla hostów przed rozpoczęciem gry (HLS).",
+        "Rozwijałem mechanizmy wykrywania i ograniczania nadużyć (anti-cheating)."
       ],
       "outcomes": [
-        "Utrzymałem skalowalny backend przy dużej skali użytkowników.",
-        "Poprawiłem kontrolę kosztów i zasobów AWS.",
-        "Zwiększyłem odporność usług na szczyty obciążenia."
+        "Dostarczyłem skalowalną platformę umożliwiającą szybkie tworzenie i uruchamianie kolejnych gier.",
+        "Zmniejszyłem koszty infrastruktury poprzez świadome decyzje architektoniczne i optymalizację zasobów.",
+        "Przyspieszyłem rozwój nowych funkcji i eksperymentów produktowych dzięki wspólnym komponentom platformy."
       ]
     },
     "siili": {
