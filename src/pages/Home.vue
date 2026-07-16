@@ -398,8 +398,13 @@
       </div>
 
       <div v-if="homeNewsGroups.length > 0" class="mt-10 flex justify-center">
-        <RouterLink :to="viewAllLink" class="btn inline-flex items-center gap-2">
-          {{ $t('news.viewAll') }}
+        <a
+          href="https://bigmikelabs.pl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn inline-flex items-center gap-2"
+        >
+          {{ $t('news.visitLabs') }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -413,7 +418,7 @@
             <path d="M5 12h14" />
             <path d="m12 5 7 7-7 7" />
           </svg>
-        </RouterLink>
+        </a>
       </div>
     </section>
 
@@ -453,13 +458,6 @@ const limitPerType = computed(() => resolveHomeNewsLimit(countFilter.value, isDe
 const homeNewsGroups = computed(() =>
   getHomeNewsGroups(newsItems, selectedTypes.value, limitPerType.value),
 )
-
-const viewAllLink = computed(() => {
-  if (selectedTypes.value.length === 1) {
-    return { path: '/news', query: { type: selectedTypes.value[0] } }
-  }
-  return '/news'
-})
 
 interface Service {
   title: string

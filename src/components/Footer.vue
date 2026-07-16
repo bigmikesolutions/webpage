@@ -28,7 +28,7 @@
             }}</RouterLink>
           </li>
           <li>
-            <RouterLink to="/news" class="hover:text-slate-900 text-slate-700">{{
+            <RouterLink to="/#news" class="hover:text-slate-900 text-slate-700">{{
               $t('news.title')
             }}</RouterLink>
           </li>
