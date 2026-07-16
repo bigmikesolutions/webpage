@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from 'vue'
-import { resumeCompanies } from '@/config/resumeConfig'
+import { resumeCompanies, resumeInternships } from '@/config/resumeConfig'
 
 export interface ProgressMarker {
   id: string
   label: string
+  /** Optional secondary label (e.g. start year) */
+  meta?: string
   /** DOM target to scroll to */
   targetId: string
-  kind: 'section' | 'year'
+  kind: 'section' | 'company'
 }
 
 const props = defineProps<{
@@ -20,23 +22,21 @@ const open = ref(true)
 const activeId = ref('general')
 const progress = ref(0)
 
-/** Unique start years, newest first (matches experience list order feel). */
-const experienceYears = computed(() => {
-  const years = resumeCompanies.map((c) => Number(c.start.slice(0, 4)))
-  const unique = [...new Set(years)].sort((a, b) => b - a)
-  const currentYear = new Date().getFullYear()
-  if (!unique.includes(currentYear)) {
-    unique.unshift(currentYear)
-  }
-  return unique
-})
-
 const markers = computed<ProgressMarker[]>(() => {
-  const yearMarkers: ProgressMarker[] = experienceYears.value.map((year) => ({
-    id: `year-${year}`,
-    label: String(year),
-    targetId: targetForYear(year),
-    kind: 'year' as const,
+  const companyMarkers: ProgressMarker[] = resumeCompanies.map((company) => ({
+    id: `company-${company.id}`,
+    label: company.name,
+    meta: company.start.slice(0, 4),
+    targetId: `company-${company.id}`,
+    kind: 'company' as const,
+  }))
+
+  const internshipMarkers: ProgressMarker[] = resumeInternships.map((internship) => ({
+    id: `internship-${internship.id}`,
+    label: internship.name,
+    meta: internship.start.slice(0, 4),
+    targetId: `internship-${internship.id}`,
+    kind: 'company' as const,
   }))
 
   return [
@@ -52,13 +52,14 @@ const markers = computed<ProgressMarker[]>(() => {
       targetId: 'experience',
       kind: 'section',
     },
-    ...yearMarkers,
+    ...companyMarkers,
     {
       id: 'internships',
       label: props.sectionLabel('internships'),
       targetId: 'internships',
       kind: 'section',
     },
+    ...internshipMarkers,
     {
       id: 'tech',
       label: props.sectionLabel('tech'),
@@ -73,12 +74,6 @@ const markers = computed<ProgressMarker[]>(() => {
     },
   ]
 })
-
-function targetForYear(year: number): string {
-  if (year === new Date().getFullYear()) return 'experience'
-  const company = resumeCompanies.find((c) => Number(c.start.slice(0, 4)) === year)
-  return company ? `company-${company.id}` : 'experience'
-}
 
 const activeIndex = computed(() => {
   const idx = markers.value.findIndex((m) => m.id === activeId.value)
@@ -132,7 +127,6 @@ onUnmounted(() => {
 
 <template>
   <div class="pointer-events-none fixed inset-0 z-40 hidden lg:block print:hidden">
-    <!-- Collapsed: reopen chip -->
     <button
       v-if="!open"
       type="button"
@@ -153,10 +147,7 @@ onUnmounted(() => {
       >
         <path d="m15 18-6-6 6-6" />
       </svg>
-      <span
-        class="h-16 w-1 overflow-hidden rounded-full bg-slate-200"
-        aria-hidden="true"
-      >
+      <span class="h-16 w-1 overflow-hidden rounded-full bg-slate-200" aria-hidden="true">
         <span
           class="block w-full rounded-full bg-brand-500"
           :style="{ height: `${progress * 100}%` }"
@@ -164,10 +155,9 @@ onUnmounted(() => {
       </span>
     </button>
 
-    <!-- Expanded overlay panel -->
     <aside
       v-show="open"
-      class="pointer-events-auto absolute right-4 top-1/2 w-40 -translate-y-1/2 rounded-xl border border-slate-200/80 bg-white/95 p-3 shadow-xl backdrop-blur-md xl:right-6 xl:w-44"
+      class="pointer-events-auto absolute right-4 top-1/2 max-h-[80vh] w-52 -translate-y-1/2 overflow-y-auto rounded-xl border border-slate-200/80 bg-white/95 p-3 shadow-xl backdrop-blur-md xl:right-6 xl:w-56"
       role="dialog"
       :aria-label="sectionLabel('nav')"
     >
@@ -213,12 +203,12 @@ onUnmounted(() => {
           <li v-for="(marker, index) in markers" :key="marker.id">
             <button
               type="button"
-              class="group flex w-full items-center gap-2.5 text-left"
-              :class="marker.kind === 'year' ? 'pl-0.5' : ''"
+              class="group flex w-full items-start gap-2.5 text-left"
+              :class="marker.kind === 'company' ? 'pl-0.5' : ''"
               @click="scrollToMarker(marker)"
             >
               <span
-                class="relative z-10 shrink-0 rounded-full border-2 transition"
+                class="relative z-10 mt-0.5 shrink-0 rounded-full border-2 transition"
                 :class="[
                   marker.kind === 'section' ? 'h-3.5 w-3.5' : 'h-2.5 w-2.5',
                   isReached(index)
@@ -227,20 +217,28 @@ onUnmounted(() => {
                   activeId === marker.id ? 'ring-2 ring-brand-300 ring-offset-1' : '',
                 ]"
               />
-              <span
-                class="leading-tight transition"
-                :class="[
-                  marker.kind === 'section'
-                    ? 'text-xs font-semibold uppercase tracking-wide'
-                    : 'text-[11px] font-medium tabular-nums',
-                  activeId === marker.id
-                    ? 'text-slate-900'
-                    : isReached(index)
-                      ? 'text-slate-600'
-                      : 'text-slate-400 group-hover:text-slate-600',
-                ]"
-              >
-                {{ marker.label }}
+              <span class="min-w-0 leading-tight">
+                <span
+                  class="block transition"
+                  :class="[
+                    marker.kind === 'section'
+                      ? 'text-xs font-semibold uppercase tracking-wide'
+                      : 'truncate text-[11px] font-medium',
+                    activeId === marker.id
+                      ? 'text-slate-900'
+                      : isReached(index)
+                        ? 'text-slate-600'
+                        : 'text-slate-400 group-hover:text-slate-600',
+                  ]"
+                >
+                  {{ marker.label }}
+                </span>
+                <span
+                  v-if="marker.meta"
+                  class="mt-0.5 block text-[10px] tabular-nums text-slate-400"
+                >
+                  {{ marker.meta }}
+                </span>
               </span>
             </button>
           </li>
