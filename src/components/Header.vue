@@ -15,6 +15,7 @@
       <nav class="hidden md:flex items-center gap-4 text-sm">
         <RouterLink to="/" class="nav-link">{{ t('header.about') }}</RouterLink>
         <RouterLink to="/#services" class="nav-link">{{ t('header.services') }}</RouterLink>
+        <RouterLink to="/#news" class="nav-link">{{ t('header.news') }}</RouterLink>
         <a
           href="https://www.linkedin.com/in/michal-wronski-b389a988/"
           target="_blank"
@@ -90,6 +91,9 @@
           }}</RouterLink>
           <RouterLink to="/#services" class="nav-link" @click="open = false">{{
             t('header.services')
+          }}</RouterLink>
+          <RouterLink to="/#news" class="nav-link" @click="open = false">{{
+            t('header.news')
           }}</RouterLink>
           <!-- <RouterLink to="/resume" class="nav-link" @click="open = false">{{
             t('header.resume')

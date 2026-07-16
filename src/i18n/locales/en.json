@@ -2,6 +2,7 @@
   "header": {
     "about": "About",
     "services": "Services",
+    "news": "News",
     "resume": "Resume",
     "github": "GitHub",
     "contact": "Contact"
@@ -102,6 +103,9 @@
     "filterArticle": "Articles",
     "filterYoutube": "YouTube",
     "filterPublication": "Publications",
+    "sectionArticle": "Articles",
+    "sectionYoutube": "YouTube",
+    "sectionPublication": "Publications",
     "typeArticle": "Article",
     "typeYoutube": "YouTube",
     "typePublication": "Publication",
@@ -109,18 +113,23 @@
     "openLink": "Open",
     "latest_video": "Latest video",
     "older_video": "Previous video",
-    "articleLink": "Read article: gRPC takes load to beat HTTP/2",
-    "articleTitle": "gRPC takes load to beat HTTP/2",
-    "articleTitleEventLoops": "Event-Driven feedback loops: the silent scalability killer",
-    "articleTitleGrpcVsHttp2": "gRPC takes load to beat HTTP/2",
-    "articleTitleMath4Ai": "Mini-book 'Math for AI & ML' is now available!",
-    "articleTitleChatEncVsIdentity": "Chat: encryption doesn't suffice — E2EE protects content, not identity",
-    "videoTitleAbrahamWald": "What do you reinforce to save the bombers?",
-    "videoTitleAppleM": "Why Apple M processors are so fast",
-    "videoTitleAiText": "How AI understands text",
-    "videoTitleAiRevolution": "The AI revolution is here. Do you really need to fear for your job?",
-    "videoTitleAppleMie": "Apple Memory Integrity Enforcement (MIE): How iPhone protects memory from attacks",
-    "videoTitleJddK8s": "JDD 2017: Modern DevOps with Kubernetes (Michał Wroński)"
+    "articles": {
+      "chatEncIdentity": "Chat: encryption doesn't suffice — E2EE protects content, not identity",
+      "eventLoops": "Event-Driven feedback loops: the silent scalability killer",
+      "grpcVsHttp2": "gRPC takes load to beat HTTP/2"
+    },
+    "youtube": {
+      "abrahamWald": "What do you reinforce to save the bombers?",
+      "appleM": "Why Apple M processors are so fast",
+      "aiText": "How AI understands text",
+      "aiRevolution": "The AI revolution is here. Do you really need to fear for your job?",
+      "appleMie": "Apple Memory Integrity Enforcement (MIE): How iPhone protects memory from attacks",
+      "jddK8s": "JDD 2017: Modern DevOps with Kubernetes (Michał Wroński)"
+    },
+    "publications": {
+      "howToTameAi": "How to Tame AI? From Your First Prompt to Conscious AI Use",
+      "math4Ai": "Math for AI & ML"
+    }
   },
   "bigmikelabs": {
     "title": "See more on BigMikeLabs",

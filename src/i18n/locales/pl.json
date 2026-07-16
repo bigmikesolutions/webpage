@@ -2,6 +2,7 @@
   "header": {
     "about": "O mnie",
     "services": "Usługi",
+    "news": "Wiadomości",
     "resume": "CV",
     "github": "GitHub",
     "contact": "Kontakt"
@@ -102,6 +103,9 @@
     "filterArticle": "Artykuły",
     "filterYoutube": "YouTube",
     "filterPublication": "Publikacje",
+    "sectionArticle": "Artykuły",
+    "sectionYoutube": "YouTube",
+    "sectionPublication": "Publikacje",
     "typeArticle": "Artykuł",
     "typeYoutube": "YouTube",
     "typePublication": "Publikacja",
@@ -109,18 +113,23 @@
     "openLink": "Otwórz",
     "latest_video": "Najnowsze wideo",
     "older_video": "Poprzednie wideo",
-    "articleLink": "Czytaj artykuł: gRPC takes load to beat HTTP/2",
-    "articleTitle": "gRPC potrzebuje ruchu, by pokazać swoją przewagę nad HTTP/2",
-    "articleTitleEventLoops": "Event-Driven feedback loops: cichy zabójca skalowalności",
-    "articleTitleGrpcVsHttp2": "gRPC potrzebuje ruchu, by pokazać swoją przewagę nad HTTP/2",
-    "articleTitleMath4Ai": "Mini-książka „Matematyka dla AI & ML” już dostępna!",
-    "articleTitleChatEncVsIdentity": "Chat: szyfrowanie nie wystarcza — E2EE chroni treść, nie tożsamość",
-    "videoTitleAbrahamWald": "Co wzmacniasz, żeby uratować bombowce?",
-    "videoTitleAppleM": "Dlaczego procesory Apple M są tak szybkie?",
-    "videoTitleAiText": "Jak AI rozumie tekst?",
-    "videoTitleAiRevolution": "Rewolucja AI już trwa. Czy naprawdę musisz bać się o pracę?",
-    "videoTitleAppleMie": "Apple Memory Integrity Enforcement (MIE): Jak iPhone chroni pamięć przed atakami",
-    "videoTitleJddK8s": "JDD 2017: Modern DevOps with Kubernetes (Michał Wroński)"
+    "articles": {
+      "chatEncIdentity": "Chat: szyfrowanie nie wystarcza — E2EE chroni treść, nie tożsamość",
+      "eventLoops": "Event-Driven feedback loops: cichy zabójca skalowalności",
+      "grpcVsHttp2": "gRPC potrzebuje ruchu, by pokazać swoją przewagę nad HTTP/2"
+    },
+    "youtube": {
+      "abrahamWald": "Co wzmacniasz, żeby uratować bombowce?",
+      "appleM": "Dlaczego procesory Apple M są tak szybkie?",
+      "aiText": "Jak AI rozumie tekst?",
+      "aiRevolution": "Rewolucja AI już trwa. Czy naprawdę musisz bać się o pracę?",
+      "appleMie": "Apple Memory Integrity Enforcement (MIE): Jak iPhone chroni pamięć przed atakami",
+      "jddK8s": "JDD 2017: Modern DevOps with Kubernetes (Michał Wroński)"
+    },
+    "publications": {
+      "howToTameAi": "Jak okiełznać AI? Od pierwszego promptu do świadomego użytkownika AI",
+      "math4Ai": "Matematyka dla AI & ML"
+    }
   },
   "bigmikelabs": {
     "title": "Zobacz więcej na BigMikeLabs",

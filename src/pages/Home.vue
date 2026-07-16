@@ -327,20 +327,27 @@
         <NewsFilter v-model="newsFilter" />
       </div>
 
-      <p v-if="homeNewsItems.length === 0" class="mt-8 text-slate-600">
+      <p v-if="homeNewsGroups.length === 0" class="mt-8 text-slate-600">
         {{ $t('news.emptyFilter') }}
       </p>
 
-      <div v-else class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <NewsCard
-          v-for="item in homeNewsItems"
-          :key="item.id"
-          :item="item"
-          embed-youtube
-        />
+      <div v-else class="mt-8 space-y-12">
+        <div v-for="group in homeNewsGroups" :key="group.type">
+          <h3 class="text-lg font-semibold text-slate-900 sm:text-xl">
+            {{ $t(newsTypeHeadingKey[group.type]) }}
+          </h3>
+          <div class="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <NewsCard
+              v-for="item in group.items"
+              :key="item.id"
+              :item="item"
+              embed-youtube
+            />
+          </div>
+        </div>
       </div>
 
-      <div v-if="homeNewsItems.length > 0" class="mt-10 flex justify-center">
+      <div v-if="homeNewsGroups.length > 0" class="mt-10 flex justify-center">
         <RouterLink :to="viewAllLink" class="btn inline-flex items-center gap-2">
           {{ $t('news.viewAll') }}
           <svg
@@ -441,17 +448,28 @@
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router'
-import { filterNews, newsItems, type NewsFilter as NewsFilterType } from '@/config/newsConfig'
+import {
+  getHomeNewsGroups,
+  newsItems,
+  type NewsFilter as NewsFilterType,
+  type NewsType,
+} from '@/config/newsConfig'
 import NewsFilter from '@/components/news/NewsFilter.vue'
 import NewsCard from '@/components/news/NewsCard.vue'
 
 const { tm } = useI18n()
 
 const newsFilter = ref<NewsFilterType>('all')
-const HOME_NEWS_LIMIT = 6
+const HOME_NEWS_LIMIT_PER_TYPE = 3
 
-const homeNewsItems = computed(() =>
-  filterNews(newsItems, newsFilter.value).slice(0, HOME_NEWS_LIMIT),
+const newsTypeHeadingKey: Record<NewsType, string> = {
+  article: 'news.sectionArticle',
+  youtube: 'news.sectionYoutube',
+  publication: 'news.sectionPublication',
+}
+
+const homeNewsGroups = computed(() =>
+  getHomeNewsGroups(newsItems, newsFilter.value, HOME_NEWS_LIMIT_PER_TYPE),
 )
 
 const viewAllLink = computed(() => {
