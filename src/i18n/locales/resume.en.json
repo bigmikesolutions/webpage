@@ -1,6 +1,6 @@
 {
   "title": "Resume",
-  "description": "Projects and companies I helped achieve their technology goals.",
+  "description": "Discover the projects and companies I helped achieve their technology goals.",
   "experience": "Experience",
   "internshipsTitle": "Internships",
   "general": "General",
@@ -8,7 +8,7 @@
   "educationLabel": "Education",
   "languagesLabel": "Languages",
   "techTitle": "Technologies",
-  "techDescription": "Tech summary derived from company stacks. Proficiency level is based on total years (overlapping roles are merged).",
+  "techDescription": "Tech summary based on company stacks. Proficiency level is derived from total years (overlapping roles are merged).",
   "techFilterLabel": "Filter technology groups",
   "techLevelFilterLabel": "Filter proficiency level",
   "techEmptyFilter": "Select at least one group and level to see technologies.",
@@ -77,7 +77,7 @@
       ],
       "outcomes": [
         "Strengthened software engineering basics on a real project.",
-        "Learned the maintenance cycle of web applications in an enterprise setting."
+        "Learned the maintenance cycle of web applications in an enterprise organization."
       ]
     }
   },
@@ -85,118 +85,114 @@
     "shellRecharge": {
       "role": "Senior Software Engineer (Go)",
       "highlights": [
-        "Designed and shipped CPO backend solutions (OCPI, OCPP, BOCPP protocols).",
-        "Built federated GraphQL APIs plus gRPC and REST services.",
-        "Owned production reliability (PagerDuty on-call) and infrastructure (Kubernetes, AWS, Terraform)."
+        "Designed and developed backend systems for an EV charging infrastructure operator, supporting CPO integrations via OCPI, OCPP, and BOCPP protocols.",
+        "Rebuilt the API layer (GraphQL Federation, gRPC, REST), enabling flexible data access and faster product feature development.",
+        "Supported migration of responsibilities and data to a single source of truth model, reducing inconsistency risk across the system."
       ],
       "outcomes": [
-        "Enabled stable international EV charging operations.",
-        "Helped product teams integrate new features faster through consistent APIs.",
-        "Reduced downtime risk for critical CPO services."
+        "Simplified data access for product teams through a consistent API layer.",
+        "Shortened time to deliver new integrations thanks to a flexible API architecture.",
+        "Laid the foundation for further growth of a platform serving the EV ecosystem."
       ]
     },
     "herolynx": {
       "role": "Co-founder · product factory",
       "highlights": [
-        "Built mobile and backend products from scratch — from idea and MVP through to selling.",
-        "Chose a lean stack (Go, Kotlin/Android, GCP, GraphQL) for fast iteration with a small team.",
-        "Combined product and engineering ownership: prioritization and technical decisions."
+        "Building our own products and services.",
+        "Gaining experience through practice and experimentation."
       ],
       "outcomes": [
-        "Shipped products to market with limited team resources.",
-        "Shortened time-to-market through deliberate technical trade-offs.",
-        "Built product judgment that carried into later engineering roles."
+        "Built and launched the AR Flashbulb platform supporting the sales process.",
+        "Designed and launched Elepantry — a platform integrating multiple cloud service providers in one place.",
+        "Gained experience building products from concept through development to commercialization."
       ]
     },
     "form3": {
       "role": "Full Stack Engineer",
       "highlights": [
-        "Developed UK payments systems: BACS (batch) and Faster Payments (real-time).",
-        "Improved distributed transaction management and failure-recovery scenarios.",
-        "Introduced API contract testing (PACT) and observability (Prometheus, Grafana, Zipkin, ELK)."
+        "Developed a payments platform handling UK BACS and Faster Payments systems.",
+        "Designed solutions that improved transaction processing reliability and failure resilience.",
+        "Designed failure-recovery mechanisms that increased payment processing reliability."
       ],
       "outcomes": [
-        "Supported reliable settlement of payments critical to Form3 customers.",
-        "Reduced risk of lost or inconsistent transactions during failures.",
-        "Made safer change possible in payment core systems through stronger contracts and monitoring."
+        "Helped maintain continuity of payment processing critical to Form3 customers.",
+        "Reduced the impact of failures through better recovery handling and system monitoring.",
+        "Made safer evolution of the payments platform possible through greater observability and stability."
       ]
     },
     "huuugeGames": {
       "role": "Full Stack Developer",
       "highlights": [
-        "Built microservice backends (Scala/Akka, Go) for a mobile gaming platform.",
-        "Owned DevOps/SRE responsibilities and AWS infrastructure management.",
-        "Designed for availability and cost efficiency under high traffic."
+        "Designed and built from scratch a central gaming platform that became the foundation for multiple games.",
+        "Introduced a video streaming system for hosts before gameplay started (HLS).",
+        "Developed abuse detection and prevention mechanisms (anti-cheating)."
       ],
       "outcomes": [
-        "Kept the backend scalable at significant user volume.",
-        "Improved AWS cost and resource control.",
-        "Increased service resilience during traffic peaks."
+        "Delivered a scalable platform enabling fast creation and launch of subsequent games.",
+        "Optimized infrastructure usage, supporting efficient platform growth.",
+        "Accelerated development of new features and product experiments through shared platform components."
       ]
     },
     "siili": {
       "role": "Senior Software Engineer",
       "highlights": [
-        "Delivered full-stack client projects (JVM, Go, cloud).",
-        "Built microservices and infrastructure (Docker, Kubernetes, Kafka/NATS) on AWS and Azure.",
-        "Introduced CI/CD (GitLab), IaC (Terraform), and automation (Ansible/Chef)."
+        "Delivered software solutions for clients using JVM, Go, and cloud technologies.",
+        "Designed and developed distributed systems based on microservices, asynchronous communication, and the cloud (AWS, Azure).",
+        "Automated software delivery through CI/CD, Infrastructure as Code, and automation tooling."
       ],
       "outcomes": [
-        "Shipped solutions matched to real client business problems.",
-        "Accelerated feature delivery through mature infrastructure and pipelines.",
-        "Standardized how systems were built and released across projects."
+        "Designed and deployed one of the first serverless systems for monitoring elevator operations and detecting situations requiring intervention.",
+        "Built a package-flow management system in a logistics environment, including notification handling mechanisms."
       ]
     },
     "creditSuisse": {
       "role": "RDS Development Lead (AVP)",
       "highlights": [
-        "Led the RDS team (14 people across Wrocław, London, Bangalore).",
-        "Managed backlog, business requirements, and status communication with management.",
-        "Owned technical design, code reviews, and team coaching."
+        "Led the RDS team (14 people: Wrocław, London, Bangalore).",
+        "Managed the backlog, business requirements, and communication with management.",
+        "Owned technical design, code reviews, and team skill development.",
+        "Maintained continuity of a critical ETL process supporting VaR calculation and bank risk-related decisions."
       ],
       "outcomes": [
-        "Maintained continuity of a business-critical ETL system for VaR calculations.",
-        "Improved delivery predictability in a distributed team.",
-        "Raised change quality in a system that supported bank risk decisions."
+        "Gained experience working in a global financial organization and with the requirements placed on risk management systems."
       ]
     },
     "recGlobal": {
       "role": "Solutions Architect · Technical Leader · Scrum Master",
       "highlights": [
-        "Combined business analysis, estimates, and architecture design with hands-on development.",
-        "Built and coached the engineering team.",
-        "Shipped JVM solutions and cloud components (AWS)."
+        "Translated client business needs into technical solutions, estimates, and system architecture.",
+        "Combined solution design with estimation, planning, and delivery of fixed-price projects.",
+        "Built and grew engineering teams, supporting them in technical decision-making."
       ],
       "outcomes": [
-        "Improved delivery predictability and collaboration with business stakeholders.",
-        "Delivered solutions aligned with real client needs.",
-        "Strengthened team capability through mentoring and shared design."
+        "Improved project delivery predictability through better estimation and scope management.",
+        "Migrated systems from legacy technologies to a modern stack.",
+        "Built long-term client relationships through effective technical and business collaboration."
       ]
     },
     "capgemini": {
       "role": "Software Engineer",
       "highlights": [
-        "Developed a Learning Management System (J2EE/Spring) — from analysing requests through to releases.",
-        "Proposed architecture approaches in scoped areas.",
-        "Supported data migrations and production deploys."
+        "Developed a Learning Management System (J2EE/Spring) — from requirements and ticket analysis through to production releases.",
+        "Supported technical solution design and decisions about system evolution.",
+        "Owned data migrations and safe deployment of changes to production environments."
       ],
       "outcomes": [
-        "Delivered changes aligned with customer learning-platform needs.",
-        "Reduced risk of LMS downtime during releases.",
-        "Enabled safer data migrations across successive releases."
+        "Delivered features for an LMS used by the client.",
+        "Ensured safe change deployment through controlled data migrations and releases."
       ]
     },
     "nokia": {
       "role": "Software Engineer",
       "highlights": [
-        "Built FatMT — an ETL tool for subscriber migration between operator network clusters.",
-        "Designed a plugin system and automated migration fallback.",
-        "Earlier developed BTS modules (Performance Management, Climate Control) in C/C++."
+        "Owned subscriber migration between operator network clusters.",
+        "Designed and built FatMT — an ETL tool automating subscriber data migration.",
+        "Developed BTS modules (Performance Management, Climate Control) in C/C++."
       ],
       "outcomes": [
-        "Cut migration project effort from ~2500 to ~200 hours through plugins.",
-        "Enabled customer-specific adaptations (e.g. Claro, Comcel, Zain, UMC).",
-        "Reduced revenue-loss risk on migration night via validation and reporting."
+        "Cut migration delivery time from about 2500 to about 200 hours.",
+        "Enabled adapting the tool to different operators’ needs (e.g. Claro, Comcel, Zain, UMC).",
+        "Reduced revenue-loss risk during migration through automatic validation and reporting."
       ]
     }
   }
