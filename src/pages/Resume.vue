@@ -69,7 +69,23 @@
     </section>
 
     <ResumeCollapsibleSection id="general" :title="$t('resume.general')">
-      <div class="grid gap-10 lg:grid-cols-2 lg:gap-12">
+      <div class="grid gap-10 lg:grid-cols-[minmax(0,11rem)_minmax(0,1fr)_minmax(0,1fr)] lg:items-start lg:gap-12">
+        <div class="mx-auto w-40 sm:w-44 lg:mx-0 lg:w-full">
+          <div
+            class="relative aspect-square rounded-2xl bg-gradient-to-tr from-brand-400 to-brand-200 p-1 shadow-soft"
+          >
+            <div class="h-full w-full rounded-2xl bg-white p-1">
+              <div class="h-full overflow-hidden rounded-xl">
+                <img
+                  src="/images/michal-wronski.jpg"
+                  :alt="$t('resume.photoAlt')"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div>
           <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-500">
             {{ $t('resume.educationLabel') }}
