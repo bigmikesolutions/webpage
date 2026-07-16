@@ -87,8 +87,8 @@
     "sqlstream_description": "Biblioteka Go do przetwarzania wyników zapytań SQL w formie strumienia danych. Umożliwia wydajne przetwarzanie dużych zbiorów bez ładowania całości do pamięci i bez użycia refleksji."
   },
   "news": {
-    "title": "Labs",
-    "description": "Najnowsze artykuły, filmy i publikacje z BigMikeLabs.",
+    "title": "BigMikeLabs",
+    "description": "Dzielę się wiedzą i doświadczeniem, pomagając lepiej rozumieć i wykorzystywać nowe technologie.",
     "visitLabs": "BigMikeLabs",
     "visitYoutube": "YouTube",
     "allTitle": "Labs — wszystkie",

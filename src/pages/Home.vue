@@ -287,7 +287,7 @@
           <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
             {{ $t('news.title') }}
           </h2>
-          <p class="mt-2 max-w-2xl text-slate-600">{{ $t('news.description') }}</p>
+          <p class="mt-2 max-w-4xl text-slate-600">{{ $t('news.description') }}</p>
         </div>
         <div class="flex flex-wrap gap-3">
           <a
