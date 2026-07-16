@@ -78,7 +78,7 @@
           <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
             {{ $t('services.title') }}
           </h2>
-          <p class="mt-2 max-w-2xl text-slate-600">{{ $t('services.description') }}</p>
+          <p class="mt-2 max-w-4xl text-slate-600">{{ $t('services.description') }}</p>
         </div>
         <a
           href="mailto:contact@bigmikesolutions.pl"
@@ -86,98 +86,111 @@
           >{{ $t('buttons.send') }}</a
         >
       </div>
-      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <article v-for="(service, index) in services" :key="index" class="card">
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <article v-for="(service, index) in services" :key="index" class="card card--service">
           <div class="card-icon">
-            <!-- Software Design (index 0) -->
             <svg
               v-if="index === 0"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="currentColor"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
               class="h-6 w-6"
             >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
-              />
+              <circle cx="12" cy="12" r="8" />
+              <path d="m14.5 9.5-5 5" />
+              <path d="M9.5 9.5h5v5" />
             </svg>
-            <!-- Backend Development (index 1) -->
             <svg
               v-else-if="index === 1"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="currentColor"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
               class="h-6 w-6"
             >
-              <path
-                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 4v8h16V8H4zm2 2h12v4H6v-4z"
-              />
+              <rect x="3" y="4" width="18" height="6" rx="2" />
+              <rect x="3" y="14" width="18" height="6" rx="2" />
+              <path d="M7 7h.01" />
+              <path d="M7 17h.01" />
             </svg>
-            <!-- Mobile Solutions (index 2) -->
             <svg
               v-else-if="index === 2"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="currentColor"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
               class="h-6 w-6"
             >
-              <path
-                d="M10.5 1.5H8a2 2 0 0 0-2 2v17a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-17a2 2 0 0 0-2-2h-2.5m0 0V0m0 1.5h3m-3 0H12m-1.5 18v-2h3v2"
-              />
+              <path d="M16 18a4 4 0 0 0-8 0" />
+              <circle cx="12" cy="11" r="3" />
+              <path d="M7 6a8 8 0 0 1 10 0" />
             </svg>
-            <!-- DevOps & SRE (index 3) -->
             <svg
               v-else-if="index === 3"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="currentColor"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
               class="h-6 w-6"
             >
-              <path
-                d="M20 17.5A4.5 4.5 0 0 0 15.5 13H13a4 4 0 1 0-7.9 1.2A3.5 3.5 0 0 0 7.5 20H20"
-              />
+              <path d="M12 3v4" />
+              <path d="M12 17v4" />
+              <path d="m7.5 7.5 2.5 2.5" />
+              <path d="m14 14 2.5 2.5" />
+              <path d="M3 12h4" />
+              <path d="M17 12h4" />
+              <path d="m7.5 16.5 2.5-2.5" />
+              <path d="m14 10 2.5-2.5" />
+              <circle cx="12" cy="12" r="3" />
             </svg>
-            <!-- AI (index 4) -->
-            <svg
-              v-else-if="index === 4"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="h-6 w-6"
-            >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
-              />
-              <circle cx="9" cy="8" r="1" />
-              <circle cx="15" cy="8" r="1" />
-            </svg>
-            <!-- Production Maintenance (index 5) -->
-            <svg
-              v-else-if="index === 5"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="h-6 w-6"
-            >
-              <path
-                d="M12 1.5 3 6v6c0 6.075 4.925 9.75 9 10.5 4.075-.75 9-4.425 9-10.5V6l-9-4.5Z"
-              />
-            </svg>
-            <!-- Default icon -->
             <svg
               v-else
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="currentColor"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
               class="h-6 w-6"
             >
-              <path d="M12 3v18m9-9H3" />
+              <path d="m9 12 2 2 4-4" />
+              <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9" />
             </svg>
           </div>
           <h3>{{ service.title }}</h3>
           <p>{{ service.description }}</p>
           <ul class="feature-list">
-            <li v-for="(feature, idx) in service.features" :key="idx">{{ feature }}</li>
+            <li v-for="(feature, idx) in service.features" :key="idx" class="feature-item">
+              <span class="feature-check" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-3.5 w-3.5"
+                >
+                  <path d="m5 12 4 4L19 6" />
+                </svg>
+              </span>
+              <span>{{ feature }}</span>
+            </li>
           </ul>
         </article>
       </div>
@@ -431,17 +444,26 @@ const services = computed<Service[]>(() => tm('services.items') as Service[])
 .card {
   @apply rounded-xl border border-slate-200 bg-white p-6 shadow-soft transition hover:shadow-lg;
 }
+.card--service {
+  @apply p-5;
+}
 .card h3 {
-  @apply mt-3 text-lg font-semibold text-slate-900;
+  @apply mt-3 text-base font-semibold text-slate-900;
 }
 .card p {
-  @apply mt-1 text-slate-600;
+  @apply mt-1 text-sm text-slate-600;
 }
 .card-icon {
   @apply inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-100 text-brand-700;
 }
 .feature-list {
-  @apply mt-4 list-disc space-y-1 pl-5 text-sm text-slate-600;
+  @apply mt-4 space-y-2 text-sm text-slate-600;
+}
+.feature-item {
+  @apply flex items-start gap-2;
+}
+.feature-check {
+  @apply mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-700;
 }
 .product-tag {
   @apply inline-flex rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700 ring-1 ring-slate-200;

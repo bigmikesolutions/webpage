@@ -31,66 +31,45 @@
     "send": "Wyślij zapytanie"
   },
   "services": {
-    "title": "Usługi",
-    "description": "Projektowanie i wdrożenie systemów w czasach AI to coś więcej.",
+    "title": "Jak mogę pomóc",
+    "description": "W czasach AI sama technologia nie wystarczy. Największą wartość daje połączenie doświadczenia technicznego, zrozumienia biznesu oraz umiejętności pracy z ludźmi.",
     "items": [
       {
-        "title": "Software Design",
-        "description": "Prowadzenie projektów od analizy wymagań po wdrożenia.",
+        "title": "Od wizji do rozwiązania",
+        "description": "Pomagam przełożyć cele biznesowe na konkretne rozwiązania technologiczne.",
         "features": [
-          "Architektura",
-          "Prototypowanie",
-          "Dokumentacja",
-          "Wymagania biznesowe",
-          "Analiza wymagań"
+          "Analiza problemów",
+          "Projektowanie architektury",
+          "Dobór właściwego podejścia"
         ]
       },
       {
-        "title": "Backend Development",
-        "description": "Tworzenie rozwiązań backendowych.",
+        "title": "Systemy gotowe na wyzwania",
+        "description": "Projektuję systemy, które muszą działać niezawodnie pod obciążeniem i rozwijać się wraz z biznesem.",
         "features": [
-          "API",
-          "Tworzenie nowych systemów",
-          "Migracje",
-          "Optymalizacja wydajności",
-          "Ratowanie systemów w trudnych sytuacjach"
+          "Systemy wysokiej dostępności",
+          "Odporność i skalowalność",
+          "Modernizacja istniejących systemów"
         ]
       },
       {
-        "title": "Rozwiązania mobilne",
-        "description": "Aplikacje mobilne.",
+        "title": "Technologia i ludzie",
+        "description": "Pomagam zespołom skuteczniej współpracować, podejmować lepsze decyzje i realizować ambitne cele technologiczne.",
         "features": [
-          "Android",
-          "iOS",
-          "Poprawianie jakości istniejących aplikacji"
+          "Komunikacja biznes - technologia",
+          "Rozwój zespołów",
+          "Mentoring i coaching",
+          "Weryfikacja kompetencji"
         ]
       },
       {
-        "title": "DevOps & SRE",
-        "description": "Wspieranie i rozwój infrastruktury u klienta.",
+        "title": "AI jako narzędzie rozwoju",
+        "description": "Pomagam znaleźć miejsca, w których AI może realnie zwiększyć wartość produktu i efektywność organizacji.",
         "features": [
-          "Uwierzytelnianie & DB",
-          "Płatności",
-          "Monitorowanie"
-        ]
-      },
-      {
-        "title": "AI",
-        "description": "Wdrożenie AI w istniejących systemach.",
-        "features": [
-          "Agentic AI",
-          "Generative AI",
-          "Fine-tuning AI"
-        ]
-      },
-      {
-        "title": "Utrzymanie produkcji",
-        "description": "Utrzymanie produkcji i opieka nad systemami.",
-        "features": [
-          "PagerDuty",
-          "Poprawianie błędów",
-          "Monitorowanie",
-          "Poprawianie wydajności"
+          "Integracja AI z produktami i systemami",
+          "Automatyzacja procesów",
+          "AI wspierające zespoły",
+          "Agenci AI i inteligentna automatyzacja"
         ]
       }
     ]

@@ -10,8 +10,8 @@
   },
   "about": {
     "badge": "About Me",
-    "heading": "Passion and pragmatism in software development",
-    "pitch": "Software developer with 15 years of experience in creating commercial products and systems using a wide range of technologies. I focus on business aspects and the quality of delivered solutions. Specializes in architecture, software design, reactive systems, and software optimization.",
+    "heading": "System design. Turning vision into solutions. Delivering value.",
+    "pitch": "Building systems has always been more than technology alone. What matters most is the product, its business value, and solutions that address real user needs. In the age of AI, this approach matters even more. See how I can help you achieve your goals.",
     "buttons": {
       "work": "Work with me",
       "view": "View services",
@@ -31,50 +31,46 @@
     "send": "Send inquiry"
   },
   "services": {
-    "title": "Services",
-    "description": "Comprehensive system design and implementation.",
+    "title": "How I Can Help",
+    "description": "In the age of AI, technology alone is not enough. The greatest value comes from combining technical experience, business understanding, and the ability to work with people.",
     "items": [
       {
-        "title": "Software Design",
-        "description": "Leading projects from requirements analysis to implementation.",
+        "title": "From Vision to Solution",
+        "description": "I help translate business goals into concrete technology solutions.",
         "features": [
-          "Architecture",
-          "Prototyping",
-          "Documentation",
-          "Business requirements",
-          "Requirements analysis"
+          "Problem analysis",
+          "Architecture design",
+          "Choosing the right approach"
         ]
       },
       {
-        "title": "Backend Development",
-        "description": "Creating backend solutions.",
+        "title": "Systems Built for Challenges",
+        "description": "I design systems that must run reliably under load and grow with the business.",
         "features": [
-          "API",
-          "Building new systems",
-          "Migrations",
-          "Performance optimization",
-          "Rescuing systems in difficult situations"
+          "High-availability systems",
+          "Resilience and scalability",
+          "Modernizing existing systems"
         ]
       },
       {
-        "title": "Mobile Solutions",
-        "description": "Mobile applications.",
-        "features": ["Android", "iOS", "Improving quality of existing applications"]
+        "title": "Technology and People",
+        "description": "I help teams collaborate more effectively, make better decisions, and deliver ambitious technology goals.",
+        "features": [
+          "Business–technology communication",
+          "Team development",
+          "Mentoring and coaching",
+          "Competency assessment"
+        ]
       },
       {
-        "title": "DevOps & SRE",
-        "description": "Supporting and developing client infrastructure.",
-        "features": ["Authentication & DB", "Payments", "Monitoring"]
-      },
-      {
-        "title": "AI",
-        "description": "AI implementation in existing systems.",
-        "features": ["Agentic AI", "Generative AI", "Fine-tuning AI"]
-      },
-      {
-        "title": "Production Maintenance",
-        "description": "Production maintenance and system care.",
-        "features": ["PagerDuty", "Bug fixing", "Monitoring", "Performance improvement"]
+        "title": "AI as a Growth Tool",
+        "description": "I help find places where AI can genuinely increase product value and organizational efficiency.",
+        "features": [
+          "AI integration with products and systems",
+          "Process automation",
+          "AI supporting teams",
+          "AI agents and intelligent automation"
+        ]
       }
     ]
   },
