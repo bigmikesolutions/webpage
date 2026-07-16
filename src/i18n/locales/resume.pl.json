@@ -5,6 +5,8 @@
   "techTitle": "Technologie",
   "techDescription": "Podsumowanie technologii na podstawie stacków z firm. Czas liczony z okresów zatrudnienia (nakładające się role są scalane).",
   "stack": "Stack",
+  "highlightsLabel": "Co robiłem",
+  "outcomesLabel": "Co udało mi się osiągnąć",
   "present": "obecnie",
   "yearsLabel": "{n} lat",
   "linkedin": "Profil LinkedIn",
@@ -13,73 +15,118 @@
     "shellRecharge": {
       "role": "Senior Software Engineer (Go)",
       "highlights": [
-        "Projektowałem i wdrażałem backend CPO (OCPI, OCPP, BOCPP), wspierając operacje ładowania EV w skali międzynarodowej.",
-        "Dostarczałem GraphQL z federacją oraz usługi gRPC/REST, dzięki czemu zespoły produktowe szybciej integrowały nowe funkcje.",
-        "Utrzymywałem produkcję (PagerDuty on-call) i infrastrukturę (K8s, AWS, Terraform), ograniczając ryzyko przestojów krytycznych usług."
+        "Projektowałem i wdrażałem backend dla Charge Point Operator (protokoły OCPI, OCPP, BOCPP).",
+        "Budowałem API GraphQL z federacją oraz usługi gRPC i REST.",
+        "Utrzymywałem produkcję (PagerDuty on-call) oraz infrastrukturę (Kubernetes, AWS, Terraform)."
+      ],
+      "outcomes": [
+        "Umożliwiłem stabilne operacje ładowania EV w skali międzynarodowej.",
+        "Przyspieszyłem integrację nowych funkcji przez zespoły produktowe dzięki spójnym API.",
+        "Ograniczyłem ryzyko przestojów krytycznych usług CPO."
       ]
     },
     "herolynx": {
       "role": "Współzałożyciel · product factory",
       "highlights": [
         "Budowałem produkty mobile i backend od zera — od pomysłu, przez MVP, po sprzedaż.",
-        "Dobierałem stack (Go, Kotlin/Android, GCP, GraphQL), żeby szybko iterować przy ograniczonym zespole.",
-        "Zdobyłem doświadczenie produktowe: priorytetyzacja, time-to-market i decyzje techniczne pod wartość biznesową."
+        "Dobierałem stack (Go, Kotlin/Android, GCP, GraphQL) pod szybkie iteracje w małym zespole.",
+        "Łączyłem rolę produktową z engineeringiem: priorytetyzacja i decyzje techniczne."
+      ],
+      "outcomes": [
+        "Wypuściłem produkty na rynek przy ograniczonych zasobach zespołu.",
+        "Skróciłem time-to-market dzięki lean stackowi i świadomym kompromisom technicznym.",
+        "Zdobyłem praktykę produktową przekładającą się na lepsze decyzje w kolejnych rolach."
       ]
     },
     "form3": {
       "role": "Full Stack Engineer",
       "highlights": [
-        "Rozwijałem systemy płatności UK (BACS i Faster Payments), krytyczne dla niezawodnego rozliczania transakcji.",
-        "Ulepszałem zarządzanie transakcjami między mikroserwisami oraz scenariusze odzyskiwania po awarii dla płatności, poleceń zapłaty i mandatów.",
-        "Wzmacniałem jakość kontraktów API (PACT) i obserwowalność (Prometheus, Grafana, Zipkin, ELK), co ułatwiało bezpieczne zmiany w płatniczym core."
+        "Rozwijałem systemy płatności UK: BACS (batch) i Faster Payments (real-time).",
+        "Ulepszałem zarządzanie transakcjami między mikroserwisami oraz scenariusze recovery.",
+        "Wprowadzałem kontrakty API (PACT) i obserwowalność (Prometheus, Grafana, Zipkin, ELK)."
+      ],
+      "outcomes": [
+        "Wspierałem niezawodne rozliczanie płatności krytycznych dla klientów Form3.",
+        "Zmniejszyłem ryzyko utraty lub niespójności transakcji przy awariach.",
+        "Ułatwiłem bezpieczne zmiany w płatniczym core dzięki lepszej jakości kontraktów i monitoringu."
       ]
     },
     "huuugeGames": {
       "role": "Full Stack Developer",
       "highlights": [
-        "Budowałem backend mikroserwisowy (Scala/Akka, Go) dla platformy gier mobilnych o dużej skali użytkowników.",
-        "Brałem odpowiedzialność za DevOps/SRE oraz zarządzanie infrastrukturą AWS (koszty i zasoby).",
+        "Budowałem backend mikroserwisowy (Scala/Akka, Go) dla platformy gier mobilnych.",
+        "Brałem odpowiedzialność za DevOps/SRE oraz zarządzanie infrastrukturą AWS.",
         "Projektowałem rozwiązania pod dostępność i koszty w środowisku wysokiego ruchu."
+      ],
+      "outcomes": [
+        "Utrzymałem skalowalny backend przy dużej skali użytkowników.",
+        "Poprawiłem kontrolę kosztów i zasobów AWS.",
+        "Zwiększyłem odporność usług na szczyty obciążenia."
       ]
     },
     "siili": {
       "role": "Senior Software Engineer",
       "highlights": [
-        "Dostarczałem projekty full-stack dla klientów (JVM, Go, cloud), dobierając narzędzia do problemu biznesowego.",
+        "Dostarczałem projekty full-stack dla klientów (JVM, Go, cloud).",
         "Budowałem mikroserwisy i infrastrukturę (Docker, Kubernetes, Kafka/NATS) na AWS i Azure.",
-        "Przyspieszałem delivery poprzez CI/CD (GitLab), IaC (Terraform) i automatyzację (Ansible/Chef)."
+        "Wdrażałem CI/CD (GitLab), IaC (Terraform) oraz automatyzację (Ansible/Chef)."
+      ],
+      "outcomes": [
+        "Dostarczałem rozwiązania dopasowane do realnych problemów biznesowych klientów.",
+        "Przyspieszyłem delivery kolejnych funkcji dzięki dojrzałej infrastrukturze i pipeline’om.",
+        "Ujednoliciłem sposób budowania i wdrażania systemów w projektach."
       ]
     },
     "creditSuisse": {
       "role": "RDS Development Lead (AVP)",
       "highlights": [
-        "Prowadziłem zespół RDS (14 osób: Wrocław, Londyn, Bangalore) odpowiedzialny za krytyczny ETL do kalkulacji VaR.",
+        "Prowadziłem zespół RDS (14 osób: Wrocław, Londyn, Bangalore).",
         "Zarządzałem backlogiem, wymaganiami biznesowymi i komunikacją statusu z managementem.",
-        "Utrzymywałem jakość przez design techniczny, code review i coaching — system musiał wspierać decyzje ryzyka w banku."
+        "Odpowiadałem za design techniczny, code review i coaching zespołu."
+      ],
+      "outcomes": [
+        "Utrzymałem ciągłość krytycznego ETL do kalkulacji VaR wspierającego decyzje ryzyka w banku.",
+        "Poprawiłem przewidywalność delivery w rozproszonym zespole.",
+        "Podniosłem jakość zmian w systemie biznesowo krytycznym."
       ]
     },
     "recGlobal": {
       "role": "Solutions Architect · Technical Leader · Scrum Master",
       "highlights": [
         "Łączyłem analizę biznesową, estymacje i projekt architektury z pracą developerską.",
-        "Budowałem i coachowałem zespół, podnosząc przewidywalność delivery.",
-        "Wdrażałem rozwiązania JVM oraz elementy cloud (AWS) pod realne potrzeby klientów."
+        "Budowałem i coachowałem zespół developerski.",
+        "Wdrażałem rozwiązania JVM oraz elementy cloud (AWS)."
+      ],
+      "outcomes": [
+        "Podniosłem przewidywalność delivery i jakość współpracy z biznesem.",
+        "Dostarczyłem rozwiązania odpowiadające realnym potrzebom klientów.",
+        "Wzmocniłem kompetencje zespołu poprzez mentoring i wspólny design."
       ]
     },
     "capgemini": {
       "role": "Software Engineer",
       "highlights": [
-        "Rozwijałem Learning Management System (J2EE/Spring) — od analizy zgłoszeń klienta po wdrożenia.",
-        "Proponowałem rozwiązania architektoniczne w ograniczonym zakresie i wspierałem migracje danych.",
-        "Zapewniałem wsparcie produkcyjne podczas deployów, ograniczając ryzyko przerw w szkoleniach użytkowników."
+        "Rozwijałem Learning Management System (J2EE/Spring) — od analizy zgłoszeń po wdrożenia.",
+        "Proponowałem rozwiązania architektoniczne w ograniczonym zakresie.",
+        "Wspierałem migracje danych i deploye produkcyjne."
+      ],
+      "outcomes": [
+        "Dostarczałem zmiany zgodne z potrzebami klienta szkoleniowego.",
+        "Ograniczyłem ryzyko przerw w dostępności LMS podczas wdrożeń.",
+        "Ułatwiłem bezpieczne migracje danych przy kolejnych release’ach."
       ]
     },
     "nokia": {
       "role": "Software Engineer",
       "highlights": [
-        "Budowałem FatMT — narzędzie ETL do migracji subskrybentów między klastrami sieci operatora, z automatycznym fallbackiem.",
-        "System pluginów skrócił nakład projektu z ~2500 do ~200 godzin i umożliwił dopasowanie do klientów (m.in. Claro, Comcel, Zain, UMC).",
-        "Skupiłem się na walidacji i raportowaniu, żeby ograniczyć ryzyko utraty przychodów w noc migracji; wcześniej pracowałem też przy modułach BTS (C/C++)."
+        "Budowałem FatMT — narzędzie ETL do migracji subskrybentów między klastrami sieci operatora.",
+        "Projektowałem system pluginów oraz automatyczny fallback migracji.",
+        "Wcześniej rozwijałem moduły BTS (Performance Management, Climate Control) w C/C++."
+      ],
+      "outcomes": [
+        "Skróciłem nakład projektu migracyjnego z ~2500 do ~200 godzin dzięki pluginom.",
+        "Umożliwiłem dopasowanie narzędzia do klientów (m.in. Claro, Comcel, Zain, UMC).",
+        "Ograniczyłem ryzyko utraty przychodów w noc migracji przez walidację i raportowanie."
       ]
     }
   }

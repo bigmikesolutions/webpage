@@ -74,19 +74,53 @@
               <p class="text-slate-600">{{ $t(`resume.companies.${company.i18nKey}.role`) }}</p>
             </div>
 
-            <ul class="mt-4 space-y-2.5">
-              <li
-                v-for="(highlight, index) in companyHighlights(company.i18nKey)"
-                :key="index"
-                class="flex items-start gap-2.5 text-slate-700"
-              >
-                <span
-                  class="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500"
-                  aria-hidden="true"
-                ></span>
-                <span>{{ highlight }}</span>
-              </li>
-            </ul>
+            <div v-if="companyHighlights(company.i18nKey).length" class="mt-5">
+              <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                {{ $t('resume.highlightsLabel') }}
+              </h4>
+              <ul class="mt-2.5 space-y-2.5">
+                <li
+                  v-for="(highlight, index) in companyHighlights(company.i18nKey)"
+                  :key="`h-${index}`"
+                  class="flex items-start gap-2.5 text-slate-700"
+                >
+                  <span
+                    class="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500"
+                    aria-hidden="true"
+                  ></span>
+                  <span>{{ highlight }}</span>
+                </li>
+              </ul>
+            </div>
+
+            <div v-if="companyOutcomes(company.i18nKey).length" class="mt-5">
+              <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                {{ $t('resume.outcomesLabel') }}
+              </h4>
+              <ul class="mt-2.5 space-y-2.5">
+                <li
+                  v-for="(outcome, index) in companyOutcomes(company.i18nKey)"
+                  :key="`o-${index}`"
+                  class="flex items-start gap-2.5 text-slate-700"
+                >
+                  <span class="outcome-check" aria-hidden="true">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-3 w-3"
+                    >
+                      <path d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span>{{ outcome }}</span>
+                </li>
+              </ul>
+            </div>
 
             <div class="mt-5">
               <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-500">
@@ -145,12 +179,23 @@ const { t, locale, messages } = useI18n()
 
 const techSummary = computed(() => getTechSummary(resumeCompanies))
 
-function companyHighlights(i18nKey: string): string[] {
+type CompanyCopy = { highlights?: string[]; outcomes?: string[] }
+
+function companyCopy(i18nKey: string): CompanyCopy {
   const localeMessages = messages.value[locale.value] as
-    | { resume?: { companies?: Record<string, { highlights?: string[] }> } }
+    | { resume?: { companies?: Record<string, CompanyCopy> } }
     | undefined
-  const highlights = localeMessages?.resume?.companies?.[i18nKey]?.highlights
+  return localeMessages?.resume?.companies?.[i18nKey] ?? {}
+}
+
+function companyHighlights(i18nKey: string): string[] {
+  const highlights = companyCopy(i18nKey).highlights
   return Array.isArray(highlights) ? highlights : []
+}
+
+function companyOutcomes(i18nKey: string): string[] {
+  const outcomes = companyCopy(i18nKey).outcomes
+  return Array.isArray(outcomes) ? outcomes : []
 }
 
 function formatMonth(ym: string): string {
@@ -165,3 +210,9 @@ function formatPeriod(company: ResumeCompany): string {
   return `${start} – ${end}`
 }
 </script>
+
+<style scoped>
+.outcome-check {
+  @apply mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-700;
+}
+</style>

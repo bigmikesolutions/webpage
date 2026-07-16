@@ -1,10 +1,12 @@
 {
   "title": "Resume",
-  "description": "Companies I've worked with — what I delivered, how it helped the business, and which stack was in use.",
+  "description": "Projects and companies I helped achieve their technology goals.",
   "experience": "Experience",
   "techTitle": "Technologies",
   "techDescription": "Tech summary derived from company stacks. Duration is computed from employment periods (overlapping roles are merged).",
   "stack": "Stack",
+  "highlightsLabel": "What I did",
+  "outcomesLabel": "What I achieved",
   "present": "present",
   "yearsLabel": "{n} yrs",
   "linkedin": "LinkedIn profile",
@@ -13,73 +15,118 @@
     "shellRecharge": {
       "role": "Senior Software Engineer (Go)",
       "highlights": [
-        "Designed and shipped CPO backend solutions (OCPI, OCPP, BOCPP), supporting international EV charging operations.",
-        "Delivered federated GraphQL plus gRPC/REST services so product teams could integrate new features faster.",
-        "Owned production reliability (PagerDuty on-call) and infrastructure (K8s, AWS, Terraform), reducing downtime risk for critical services."
+        "Designed and shipped CPO backend solutions (OCPI, OCPP, BOCPP protocols).",
+        "Built federated GraphQL APIs plus gRPC and REST services.",
+        "Owned production reliability (PagerDuty on-call) and infrastructure (Kubernetes, AWS, Terraform)."
+      ],
+      "outcomes": [
+        "Enabled stable international EV charging operations.",
+        "Helped product teams integrate new features faster through consistent APIs.",
+        "Reduced downtime risk for critical CPO services."
       ]
     },
     "herolynx": {
       "role": "Co-founder · product factory",
       "highlights": [
         "Built mobile and backend products from scratch — from idea and MVP through to selling.",
-        "Chose a lean stack (Go, Kotlin/Android, GCP, GraphQL) to iterate quickly with a small team.",
-        "Gained hands-on product experience: prioritization, time-to-market, and tech decisions driven by business value."
+        "Chose a lean stack (Go, Kotlin/Android, GCP, GraphQL) for fast iteration with a small team.",
+        "Combined product and engineering ownership: prioritization and technical decisions."
+      ],
+      "outcomes": [
+        "Shipped products to market with limited team resources.",
+        "Shortened time-to-market through deliberate technical trade-offs.",
+        "Built product judgment that carried into later engineering roles."
       ]
     },
     "form3": {
       "role": "Full Stack Engineer",
       "highlights": [
-        "Built UK payments systems (BACS and Faster Payments), critical for reliable transaction settlement.",
-        "Improved distributed payment transaction management and failure-recovery scenarios for payments, direct debits, and mandates.",
-        "Strengthened API contract quality (PACT) and observability (Prometheus, Grafana, Zipkin, ELK), enabling safer change in payment core systems."
+        "Developed UK payments systems: BACS (batch) and Faster Payments (real-time).",
+        "Improved distributed transaction management and failure-recovery scenarios.",
+        "Introduced API contract testing (PACT) and observability (Prometheus, Grafana, Zipkin, ELK)."
+      ],
+      "outcomes": [
+        "Supported reliable settlement of payments critical to Form3 customers.",
+        "Reduced risk of lost or inconsistent transactions during failures.",
+        "Made safer change possible in payment core systems through stronger contracts and monitoring."
       ]
     },
     "huuugeGames": {
       "role": "Full Stack Developer",
       "highlights": [
-        "Built microservice backends (Scala/Akka, Go) for a mobile gaming platform at significant user scale.",
-        "Owned DevOps/SRE responsibilities and AWS infrastructure management (resources and cost planning).",
-        "Designed for availability and cost efficiency in a high-traffic environment."
+        "Built microservice backends (Scala/Akka, Go) for a mobile gaming platform.",
+        "Owned DevOps/SRE responsibilities and AWS infrastructure management.",
+        "Designed for availability and cost efficiency under high traffic."
+      ],
+      "outcomes": [
+        "Kept the backend scalable at significant user volume.",
+        "Improved AWS cost and resource control.",
+        "Increased service resilience during traffic peaks."
       ]
     },
     "siili": {
       "role": "Senior Software Engineer",
       "highlights": [
-        "Delivered full-stack client projects (JVM, Go, cloud), choosing tools to fit the business problem.",
+        "Delivered full-stack client projects (JVM, Go, cloud).",
         "Built microservices and infrastructure (Docker, Kubernetes, Kafka/NATS) on AWS and Azure.",
-        "Accelerated delivery with CI/CD (GitLab), IaC (Terraform), and automation (Ansible/Chef)."
+        "Introduced CI/CD (GitLab), IaC (Terraform), and automation (Ansible/Chef)."
+      ],
+      "outcomes": [
+        "Shipped solutions matched to real client business problems.",
+        "Accelerated feature delivery through mature infrastructure and pipelines.",
+        "Standardized how systems were built and released across projects."
       ]
     },
     "creditSuisse": {
       "role": "RDS Development Lead (AVP)",
       "highlights": [
-        "Led the RDS team (14 people across Wrocław, London, Bangalore) owning a business-critical ETL system for VaR calculations.",
+        "Led the RDS team (14 people across Wrocław, London, Bangalore).",
         "Managed backlog, business requirements, and status communication with management.",
-        "Protected quality through technical design, code reviews, and coaching — the system had to support bank risk decisions."
+        "Owned technical design, code reviews, and team coaching."
+      ],
+      "outcomes": [
+        "Maintained continuity of a business-critical ETL system for VaR calculations.",
+        "Improved delivery predictability in a distributed team.",
+        "Raised change quality in a system that supported bank risk decisions."
       ]
     },
     "recGlobal": {
       "role": "Solutions Architect · Technical Leader · Scrum Master",
       "highlights": [
         "Combined business analysis, estimates, and architecture design with hands-on development.",
-        "Built and coached the team, improving delivery predictability.",
-        "Shipped JVM solutions and cloud components (AWS) against real client needs."
+        "Built and coached the engineering team.",
+        "Shipped JVM solutions and cloud components (AWS)."
+      ],
+      "outcomes": [
+        "Improved delivery predictability and collaboration with business stakeholders.",
+        "Delivered solutions aligned with real client needs.",
+        "Strengthened team capability through mentoring and shared design."
       ]
     },
     "capgemini": {
       "role": "Software Engineer",
       "highlights": [
-        "Developed a Learning Management System (J2EE/Spring) — from analysing customer requests through to releases.",
-        "Proposed architecture approaches in scoped areas and supported data migrations.",
-        "Provided production support during deploys, reducing risk of learning-service disruption."
+        "Developed a Learning Management System (J2EE/Spring) — from analysing requests through to releases.",
+        "Proposed architecture approaches in scoped areas.",
+        "Supported data migrations and production deploys."
+      ],
+      "outcomes": [
+        "Delivered changes aligned with customer learning-platform needs.",
+        "Reduced risk of LMS downtime during releases.",
+        "Enabled safer data migrations across successive releases."
       ]
     },
     "nokia": {
       "role": "Software Engineer",
       "highlights": [
-        "Built FatMT — an ETL tool for subscriber migration between operator network clusters, with automated fallback.",
-        "A plugin system cut project effort from ~2500 to ~200 hours and enabled customer-specific adaptations (e.g. Claro, Comcel, Zain, UMC).",
-        "Focused on validation and reporting to reduce revenue-loss risk on migration night; earlier also worked on BTS modules (C/C++)."
+        "Built FatMT — an ETL tool for subscriber migration between operator network clusters.",
+        "Designed a plugin system and automated migration fallback.",
+        "Earlier developed BTS modules (Performance Management, Climate Control) in C/C++."
+      ],
+      "outcomes": [
+        "Cut migration project effort from ~2500 to ~200 hours through plugins.",
+        "Enabled customer-specific adaptations (e.g. Claro, Comcel, Zain, UMC).",
+        "Reduced revenue-loss risk on migration night via validation and reporting."
       ]
     }
   }
