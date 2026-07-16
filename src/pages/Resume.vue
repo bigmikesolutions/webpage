@@ -194,6 +194,54 @@
         </div>
       </div>
     </ResumeCollapsibleSection>
+
+    <ResumeCollapsibleSection
+      id="publications"
+      :title="$t('resume.publicationsTitle')"
+      class="border-t border-slate-200"
+    >
+      <p class="max-w-3xl text-slate-600">{{ $t('resume.publicationsDescription') }}</p>
+
+      <div class="mt-8 space-y-10">
+        <div v-for="group in resumeNewsGroups" :key="group.type">
+          <h3 class="text-lg font-semibold text-slate-900">
+            {{ $t(newsTypeHeadingKey[group.type]) }}
+          </h3>
+          <ul class="mt-4 space-y-3">
+            <li v-for="item in group.items" :key="item.id">
+              <NewsListItem :item="item" />
+            </li>
+          </ul>
+          <p v-if="group.hasMore" class="mt-3 text-sm text-slate-500">
+            {{
+              $t('resume.publicationsMore', {
+                shown: group.items.length,
+                total: group.total,
+              })
+            }}
+          </p>
+        </div>
+      </div>
+
+      <div class="no-print mt-8 flex flex-wrap gap-3">
+        <a
+          href="https://bigmikelabs.pl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn--ghost inline-flex items-center gap-2"
+        >
+          {{ $t('resume.publicationsVisitLabs') }}
+        </a>
+        <a
+          href="https://www.youtube.com/@big-mike-labs"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn--ghost inline-flex items-center gap-2"
+        >
+          {{ $t('resume.publicationsVisitYoutube') }}
+        </a>
+      </div>
+    </ResumeCollapsibleSection>
   </main>
 </template>
 
@@ -206,7 +254,12 @@ import ResumeItemSlider from '@/components/resume/ResumeItemSlider.vue'
 import ResumeCompanyCard from '@/components/resume/ResumeCompanyCard.vue'
 import LanguageLevelRow from '@/components/resume/LanguageLevelRow.vue'
 import TechGroupFilters from '@/components/resume/TechGroupFilters.vue'
+import NewsListItem from '@/components/news/NewsListItem.vue'
 import { createResumePrintMode, resumePrintModeKey } from '@/composables/useResumePrint'
+import {
+  getResumeNewsGroups,
+  type NewsType,
+} from '@/config/newsConfig'
 import {
   filterTechSummary,
   getTechSummary,
@@ -228,6 +281,14 @@ const printMode = createResumePrintMode()
 provide(resumePrintModeKey, printMode)
 
 const selectedTechGroups = ref<TechGroup[]>([...techGroupOrder])
+
+const newsTypeHeadingKey: Record<NewsType, string> = {
+  publication: 'resume.publicationsSectionMinibooks',
+  article: 'resume.publicationsSectionArticles',
+  youtube: 'resume.publicationsSectionYoutube',
+}
+
+const resumeNewsGroups = computed(() => getResumeNewsGroups())
 
 const techSummary = computed(() => getTechSummary(resumeCompanies))
 

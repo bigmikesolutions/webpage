@@ -42,6 +42,35 @@ export interface NewsGroup {
 
 const newsTypeOrder: NewsType[] = ['article', 'youtube', 'publication']
 
+/** Order on resume: minibooks → articles → YouTube */
+const resumeNewsTypeOrder: NewsType[] = ['publication', 'article', 'youtube']
+
+export const RESUME_NEWS_LIMIT = 10
+
+export interface ResumeNewsGroup {
+  type: NewsType
+  items: NewsItem[]
+  total: number
+  hasMore: boolean
+}
+
+export function getResumeNewsGroups(
+  items: NewsItem[] = newsItems,
+  limit: number = RESUME_NEWS_LIMIT,
+): ResumeNewsGroup[] {
+  return resumeNewsTypeOrder
+    .map((type) => {
+      const all = filterNews(items, type)
+      return {
+        type,
+        items: all.slice(0, limit),
+        total: all.length,
+        hasMore: all.length > limit,
+      }
+    })
+    .filter((group) => group.total > 0)
+}
+
 export function getHomeNewsGroups(
   items: NewsItem[],
   selectedTypes: NewsType[],
