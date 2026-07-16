@@ -129,66 +129,64 @@
     "siili": {
       "role": "Senior Software Engineer",
       "highlights": [
-        "Dostarczałem projekty full-stack dla klientów (JVM, Go, cloud).",
-        "Budowałem mikroserwisy i infrastrukturę (Docker, Kubernetes, Kafka/NATS) na AWS i Azure.",
-        "Wdrażałem CI/CD (GitLab), IaC (Terraform) oraz automatyzację (Ansible/Chef)."
+        "Dostarczałem rozwiązania software'owe dla klientów z wykorzystaniem JVM, Go oraz technologii cloud.",
+        "Projektowałem i rozwijałem systemy rozproszone oparte o mikroserwisy, komunikację asynchroniczną oraz chmurę (AWS, Azure).",
+        "Automatyzowałem procesy dostarczania oprogramowania poprzez CI/CD, Infrastructure as Code i narzędzia automatyzacji."
       ],
       "outcomes": [
-        "Dostarczałem rozwiązania dopasowane do realnych problemów biznesowych klientów.",
-        "Przyspieszyłem delivery kolejnych funkcji dzięki dojrzałej infrastrukturze i pipeline’om.",
-        "Ujednoliciłem sposób budowania i wdrażania systemów w projektach."
+        "Zaprojektowałem i wdrożyłem jeden z pierwszych systemów serverless do monitorowania pracy wind oraz wykrywania sytuacji wymagających interwencji.",
+        "Stworzyłem system zarządzania przepływem paczek w środowisku logistycznym wraz z mechanizmami obsługi powiadomień."
       ]
     },
     "creditSuisse": {
       "role": "RDS Development Lead (AVP)",
       "highlights": [
         "Prowadziłem zespół RDS (14 osób: Wrocław, Londyn, Bangalore).",
-        "Zarządzałem backlogiem, wymaganiami biznesowymi i komunikacją statusu z managementem.",
-        "Odpowiadałem za design techniczny, code review i coaching zespołu."
+        "Zarządzałem backlogiem, wymaganiami biznesowymi oraz komunikacją z managementem.",
+        "Odpowiadałem za design techniczny, code review i rozwój kompetencji zespołu.",
+        "Utrzymałem ciągłość krytycznego procesu ETL wspierającego kalkulację VaR i decyzje związane z ryzykiem bankowym."
       ],
       "outcomes": [
-        "Utrzymałem ciągłość krytycznego ETL do kalkulacji VaR wspierającego decyzje ryzyka w banku.",
-        "Poprawiłem przewidywalność delivery w rozproszonym zespole.",
-        "Podniosłem jakość zmian w systemie biznesowo krytycznym."
+        "Poznałem środowisko pracy w globalnej organizacji finansowej oraz wymagania stawiane systemom risk management."
       ]
     },
     "recGlobal": {
       "role": "Solutions Architect · Technical Leader · Scrum Master",
       "highlights": [
-        "Łączyłem analizę biznesową, estymacje i projekt architektury z pracą developerską.",
-        "Budowałem i coachowałem zespół developerski.",
-        "Wdrażałem rozwiązania JVM oraz elementy cloud (AWS)."
+        "Przekładałem potrzeby biznesowe klientów na rozwiązania techniczne, estymacje i architekturę systemów.",
+        "Łączyłem projektowanie rozwiązań z estymacją, planowaniem i realizacją projektów w modelu fixed price.",
+        "Budowałem oraz rozwijałem zespoły developerskie, wspierając je w podejmowaniu decyzji technicznych."
       ],
       "outcomes": [
-        "Podniosłem przewidywalność delivery i jakość współpracy z biznesem.",
-        "Dostarczyłem rozwiązania odpowiadające realnym potrzebom klientów.",
-        "Wzmocniłem kompetencje zespołu poprzez mentoring i wspólny design."
+        "Zwiększyłem przewidywalność realizacji projektów poprzez lepsze podejście do estymacji i zarządzania zakresem.",
+        "Przeprowadziłem migracje systemów ze starszych technologii do nowoczesnego stacku.",
+        "Otrzymywałem pozytywne uznanie klientów za wkład w realizację projektów i dostarczaną wartość."
       ]
     },
     "capgemini": {
       "role": "Software Engineer",
       "highlights": [
-        "Rozwijałem Learning Management System (J2EE/Spring) — od analizy zgłoszeń po wdrożenia.",
-        "Proponowałem rozwiązania architektoniczne w ograniczonym zakresie.",
-        "Wspierałem migracje danych i deploye produkcyjne."
+        "Rozwijałem Learning Management System (J2EE/Spring) — od analizy wymagań i zgłoszeń po wdrożenia produkcyjne.",
+        "Wspierałem projektowanie rozwiązań technicznych oraz podejmowanie decyzji dotyczących rozwoju systemu.",
+        "Odpowiadałem za migracje danych oraz bezpieczne wdrażanie zmian na środowiska produkcyjne."
       ],
       "outcomes": [
-        "Dostarczałem zmiany zgodne z potrzebami klienta szkoleniowego.",
-        "Ograniczyłem ryzyko przerw w dostępności LMS podczas wdrożeń.",
-        "Ułatwiłem bezpieczne migracje danych przy kolejnych release’ach."
+        "Dostarczałem funkcjonalności odpowiadające potrzebom klienta i użytkowników systemu szkoleniowego.",
+        "Zapewniałem stabilność wdrożeń poprzez kontrolowane migracje i procesy release.",
+        "Zdobyłem doświadczenie w pracy z dużym systemem biznesowym oraz procesem dostarczania oprogramowania."
       ]
     },
     "nokia": {
       "role": "Software Engineer",
       "highlights": [
-        "Budowałem FatMT — narzędzie ETL do migracji subskrybentów między klastrami sieci operatora.",
-        "Projektowałem system pluginów oraz automatyczny fallback migracji.",
-        "Wcześniej rozwijałem moduły BTS (Performance Management, Climate Control) w C/C++."
+        "Odpowiadałem za migrację subskrybentów pomiędzy klastrami sieci operatora.",
+        "Zaprojektowałem i stworzyłem FatMT — narzędzie ETL automatyzujące migrację danych abonentów.",
+        "Rozwijałem moduły BTS (Performance Management, Climate Control) w C/C++."
       ],
       "outcomes": [
-        "Skróciłem nakład projektu migracyjnego z ~2500 do ~200 godzin dzięki pluginom.",
-        "Umożliwiłem dopasowanie narzędzia do klientów (m.in. Claro, Comcel, Zain, UMC).",
-        "Ograniczyłem ryzyko utraty przychodów w noc migracji przez walidację i raportowanie."
+        "Skróciłem czas realizacji migracji z około 2500 do około 200 godzin.",
+        "Umożliwiłem dostosowanie narzędzia do potrzeb różnych operatorów (m.in. Claro, Comcel, Zain, UMC).",
+        "Ograniczyłem ryzyko utraty przychodów podczas migracji dzięki automatycznej walidacji i raportowaniu."
       ]
     }
   }
