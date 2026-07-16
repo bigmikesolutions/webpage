@@ -42,35 +42,57 @@
       </div>
     </section>
 
-    <ResumeCollapsibleSection id="education" :title="$t('resume.education')">
-      <ol class="space-y-8">
-        <li
-          v-for="item in resumeEducation"
-          :key="item.id"
-          class="grid gap-4 lg:grid-cols-[minmax(0,14rem)_minmax(0,1fr)]"
-        >
-          <div class="text-sm text-slate-500 lg:pt-1">
-            <time>{{ formatEducationPeriod(item) }}</time>
-          </div>
-          <article>
-            <h3 class="text-xl font-semibold text-slate-900">
-              {{ $t(`resume.educationItems.${item.i18nKey}.degree`) }}
-            </h3>
-            <p class="mt-1 text-slate-600">
-              <a
-                v-if="item.url"
-                :href="item.url"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="hover:text-brand-800"
-              >
-                {{ $t(`resume.educationItems.${item.i18nKey}.school`) }}
-              </a>
-              <span v-else>{{ $t(`resume.educationItems.${item.i18nKey}.school`) }}</span>
-            </p>
-          </article>
-        </li>
-      </ol>
+    <ResumeCollapsibleSection id="general" :title="$t('resume.general')">
+      <div class="grid gap-10 lg:grid-cols-2 lg:gap-12">
+        <div>
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-500">
+            {{ $t('resume.educationLabel') }}
+          </h3>
+          <ol class="mt-4 space-y-6">
+            <li
+              v-for="item in resumeEducation"
+              :key="item.id"
+              class="grid gap-2 sm:grid-cols-[minmax(0,7rem)_minmax(0,1fr)] sm:gap-4"
+            >
+              <div class="text-sm text-slate-500 sm:pt-1">
+                <time>{{ formatEducationPeriod(item) }}</time>
+              </div>
+              <article>
+                <h4 class="text-lg font-semibold text-slate-900">
+                  {{ $t(`resume.educationItems.${item.i18nKey}.degree`) }}
+                </h4>
+                <p class="mt-1 text-slate-600">
+                  <a
+                    v-if="item.url"
+                    :href="item.url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hover:text-brand-800"
+                  >
+                    {{ $t(`resume.educationItems.${item.i18nKey}.school`) }}
+                  </a>
+                  <span v-else>{{ $t(`resume.educationItems.${item.i18nKey}.school`) }}</span>
+                </p>
+              </article>
+            </li>
+          </ol>
+        </div>
+
+        <div>
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-500">
+            {{ $t('resume.languagesLabel') }}
+          </h3>
+          <ul class="mt-4 space-y-4">
+            <li v-for="lang in resumeLanguages" :key="lang.id">
+              <LanguageLevelRow
+                :flag="lang.flag"
+                :name="$t(`resume.languages.${lang.i18nKey}`)"
+                :level="lang.level"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
     </ResumeCollapsibleSection>
 
     <ResumeCollapsibleSection
@@ -195,10 +217,12 @@ import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import ResumeCollapsibleSection from '@/components/resume/ResumeCollapsibleSection.vue'
+import LanguageLevelRow from '@/components/resume/LanguageLevelRow.vue'
 import {
   getTechSummary,
   resumeCompanies,
   resumeEducation,
+  resumeLanguages,
   type ResumeCompany,
   type ResumeEducation,
 } from '@/config/resumeConfig'
