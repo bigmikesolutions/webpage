@@ -370,7 +370,11 @@
       </div>
 
       <div class="mt-6">
-        <NewsFilter v-model="newsFilter" />
+        <NewsHomeFilters
+          v-model:selected-types="selectedTypes"
+          v-model:count-filter="countFilter"
+          :is-desktop="isDesktop"
+        />
       </div>
 
       <p v-if="homeNewsGroups.length === 0" class="mt-8 text-slate-600">
@@ -420,19 +424,23 @@
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router'
+import { useMediaQuery } from '@/composables/useMediaQuery'
 import {
   getHomeNewsGroups,
   newsItems,
-  type NewsFilter as NewsFilterType,
+  resolveHomeNewsLimit,
+  type NewsCountFilter,
   type NewsType,
 } from '@/config/newsConfig'
-import NewsFilter from '@/components/news/NewsFilter.vue'
+import NewsHomeFilters from '@/components/news/NewsHomeFilters.vue'
 import NewsCard from '@/components/news/NewsCard.vue'
 
 const { tm } = useI18n()
 
-const newsFilter = ref<NewsFilterType>('all')
-const HOME_NEWS_LIMIT_PER_TYPE = 3
+const allNewsTypes: NewsType[] = ['article', 'youtube', 'publication']
+const selectedTypes = ref<NewsType[]>([...allNewsTypes])
+const countFilter = ref<NewsCountFilter>('auto')
+const isDesktop = useMediaQuery('(min-width: 768px)')
 
 const newsTypeHeadingKey: Record<NewsType, string> = {
   article: 'news.sectionArticle',
@@ -440,13 +448,17 @@ const newsTypeHeadingKey: Record<NewsType, string> = {
   publication: 'news.sectionPublication',
 }
 
+const limitPerType = computed(() => resolveHomeNewsLimit(countFilter.value, isDesktop.value))
+
 const homeNewsGroups = computed(() =>
-  getHomeNewsGroups(newsItems, newsFilter.value, HOME_NEWS_LIMIT_PER_TYPE),
+  getHomeNewsGroups(newsItems, selectedTypes.value, limitPerType.value),
 )
 
 const viewAllLink = computed(() => {
-  if (newsFilter.value === 'all') return '/news'
-  return { path: '/news', query: { type: newsFilter.value } }
+  if (selectedTypes.value.length === 1) {
+    return { path: '/news', query: { type: selectedTypes.value[0] } }
+  }
+  return '/news'
 })
 
 interface Service {

@@ -6,6 +6,8 @@ export type NewsType = 'article' | 'youtube' | 'publication'
 
 export type NewsFilter = 'all' | NewsType
 
+export type NewsCountFilter = 'auto' | 1 | 3 | 5
+
 export interface NewsItem {
   id: string
   type: NewsType
@@ -42,19 +44,19 @@ const newsTypeOrder: NewsType[] = ['article', 'youtube', 'publication']
 
 export function getHomeNewsGroups(
   items: NewsItem[],
-  filter: NewsFilter,
-  limitPerType = 3,
+  selectedTypes: NewsType[],
+  limitPerType: number,
 ): NewsGroup[] {
-  if (filter === 'all') {
-    return newsTypeOrder
-      .map((type) => ({
-        type,
-        items: filterNews(items, type).slice(0, limitPerType),
-      }))
-      .filter((group) => group.items.length > 0)
-  }
+  return newsTypeOrder
+    .filter((type) => selectedTypes.includes(type))
+    .map((type) => ({
+      type,
+      items: filterNews(items, type).slice(0, limitPerType),
+    }))
+    .filter((group) => group.items.length > 0)
+}
 
-  const filtered = filterNews(items, filter).slice(0, limitPerType)
-  if (filtered.length === 0) return []
-  return [{ type: filter, items: filtered }]
+export function resolveHomeNewsLimit(countFilter: NewsCountFilter, isDesktop: boolean): number {
+  if (countFilter === 'auto') return isDesktop ? 3 : 1
+  return countFilter
 }
