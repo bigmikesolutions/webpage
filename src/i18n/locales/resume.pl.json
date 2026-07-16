@@ -1,0 +1,199 @@
+{
+  "title": "CV",
+  "description": "Poznaj projekty i firmy, którym miałem okazję pomóc w realizacji ich celów technologicznych.",
+  "experience": "Doświadczenie",
+  "internshipsTitle": "Praktyki",
+  "general": "Ogólne",
+  "photoAlt": "Michał Wroński",
+  "educationLabel": "Edukacja",
+  "languagesLabel": "Języki",
+  "techTitle": "Technologie",
+  "techDescription": "Podsumowanie technologii na podstawie stacków z firm. Poziom znajomości wynika z sumy lat (nakładające się role są scalane).",
+  "techFilterLabel": "Filtruj grupy technologii",
+  "techLevelFilterLabel": "Filtruj poziom znajomości",
+  "techEmptyFilter": "Wybierz co najmniej jedną grupę i poziom, aby zobaczyć technologie.",
+  "techYearsTotal": "Łącznie: {n} lat",
+  "techLevels": {
+    "1": "Podstawowa znajomość",
+    "2": "Praktyczne doświadczenie",
+    "3": "Zaawansowane doświadczenie"
+  },
+  "publicationsTitle": "Publikacje",
+  "publicationsDescription": "Minibooki, artykuły i materiały wideo — wybrane treści z BigMikeLabs.",
+  "publicationsMore": "Pokazano {shown} z {total}. Pełna lista na BigMikeLabs i kanale YouTube.",
+  "publicationsVisitLabs": "BigMikeLabs",
+  "publicationsVisitYoutube": "YouTube",
+  "publicationsSectionMinibooks": "Minibooki",
+  "publicationsSectionArticles": "Artykuły",
+  "publicationsSectionYoutube": "YouTube",
+  "techGroups": {
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "devops": "DevOps / Infra",
+    "mobile": "Mobile"
+  },
+  "stack": "Stack",
+  "highlightsLabel": "Co robiłem",
+  "outcomesLabel": "Co udało mi się osiągnąć",
+  "present": "obecnie",
+  "yearsLabel": "{n} lat",
+  "linkedin": "Profil LinkedIn",
+  "exportPdf": "Eksportuj PDF",
+  "pdfTitle": "Michal Wronski — CV",
+  "progressNav": "CV",
+  "progressHide": "Ukryj nawigację",
+  "progressShow": "Pokaż nawigację",
+  "backHome": "Strona główna",
+  "educationItems": {
+    "pwrMsc": {
+      "degree": "Magister (MSc), Informatyka",
+      "school": "Politechnika Wrocławska"
+    }
+  },
+  "languages": {
+    "pl": "Polski",
+    "en": "Angielski",
+    "de": "Niemiecki"
+  },
+  "internships": {
+    "volvoIt2007": {
+      "role": "Praktykant (Student Intern)",
+      "highlights": [
+        "Rozwijałem i utrzymywałem usługi webowe w środowisku Volvo IT.",
+        "Pracowałem ze stackiem .NET (C#, ASP) oraz integracją danych (SSIS).",
+        "Wspierałem pracę z MS SQL Server oraz automatyzacją zadań poprzez skrypty VB."
+      ],
+      "outcomes": [
+        "Wsparłem rozwój i utrzymanie wewnętrznych aplikacji wykorzystywanych w organizacji.",
+        "Zdobyłem doświadczenie w pracy z procesami IT dużej organizacji enterprise.",
+        "Poznałem cykl życia aplikacji — od zmian rozwojowych po wdrożenia produkcyjne."
+      ]
+    },
+    "volvoIt2006": {
+      "role": "Praktykant (Student Intern)",
+      "highlights": [
+        "Rozwijałem usługi webowe w środowisku Volvo IT.",
+        "Pracowałem z technologiami .NET (C#, ASP) oraz MS SQL Server."
+      ],
+      "outcomes": [
+        "Zdobyłem pierwsze doświadczenie w tworzeniu oprogramowania dla środowiska enterprise.",
+        "Poznałem praktyki pracy z istniejącymi systemami biznesowymi."
+      ]
+    }
+  },
+  "companies": {
+    "shellRecharge": {
+      "role": "Senior Software Engineer (Go)",
+      "highlights": [
+        "Projektowałem i rozwijałem systemy backendowe dla operatora infrastruktury ładowania EV, wspierające integracje CPO poprzez protokoły OCPI, OCPP i BOCPP.",
+        "Przebudowałem warstwę API (GraphQL Federation, gRPC, REST), umożliwiając elastyczny dostęp do danych oraz szybszy rozwój funkcji produktowych.",
+        "Wspierałem migrację odpowiedzialności i danych do modelu single source of truth, ograniczając ryzyko niespójności w systemie."
+      ],
+      "outcomes": [
+        "Uprościłem dostęp do danych dla zespołów produktowych poprzez spójną warstwę API.",
+        "Skróciłem czas rozwoju nowych integracji dzięki elastycznej architekturze API.",
+        "Przygotowałem fundament pod dalszy rozwój platformy obsługującej ekosystem EV."
+      ]
+    },
+    "herolynx": {
+      "role": "Współzałożyciel · product factory",
+      "highlights": [
+        "Tworzenie własnych produktów i usług.",
+        "Zdobywanie doświadczenia poprzez praktykę i eksperymentowanie."
+      ],
+      "outcomes": [
+        "Stworzyłem i wdrożyłem platformę AR Flashbulb wspierającą proces sprzedaży.",
+        "Zaprojektowałem i uruchomiłem Elepantry — platformę integrującą wielu dostawców usług chmurowych w jednym miejscu.",
+        "Zdobyłem doświadczenie w budowaniu produktów od koncepcji, przez rozwój, po komercjalizację."
+      ]
+    },
+    "form3": {
+      "role": "Full Stack Engineer",
+      "highlights": [
+        "Rozwijałem platformę płatności obsługującą brytyjskie systemy BACS i Faster Payments.",
+        "Projektowałem rozwiązania zwiększające niezawodność przetwarzania transakcji oraz odporność na awarie.",
+        "Projektowałem mechanizmy failure recovery zwiększające niezawodność przetwarzania płatności."
+      ],
+      "outcomes": [
+        "Wsparłem utrzymanie ciągłości przetwarzania płatności krytycznych dla klientów Form3.",
+        "Ograniczyłem wpływ awarii poprzez lepszą obsługę scenariuszy recovery i monitorowanie systemu.",
+        "Ułatwiłem bezpieczny rozwój platformy płatniczej dzięki większej obserwowalności i stabilności."
+      ]
+    },
+    "huuugeGames": {
+      "role": "Full Stack Developer",
+      "highlights": [
+        "Zaprojektowałem i zbudowałem od podstaw centralną platformę gamingową stanowiącą fundament dla wielu gier.",
+        "Wprowadziłem system transmisji wideo dla hostów przed rozpoczęciem gry (HLS).",
+        "Rozwijałem mechanizmy wykrywania i ograniczania nadużyć (anti-cheating)."
+      ],
+      "outcomes": [
+        "Dostarczyłem skalowalną platformę umożliwiającą szybkie tworzenie i uruchamianie kolejnych gier.",
+        "Optymalizowałem wykorzystanie infrastruktury, wspierając efektywny rozwój platformy.",
+        "Przyspieszyłem rozwój nowych funkcji i eksperymentów produktowych dzięki wspólnym komponentom platformy."
+      ]
+    },
+    "siili": {
+      "role": "Senior Software Engineer",
+      "highlights": [
+        "Dostarczałem rozwiązania software'owe dla klientów z wykorzystaniem JVM, Go oraz technologii cloud.",
+        "Projektowałem i rozwijałem systemy rozproszone oparte o mikroserwisy, komunikację asynchroniczną oraz chmurę (AWS, Azure).",
+        "Automatyzowałem procesy dostarczania oprogramowania poprzez CI/CD, Infrastructure as Code i narzędzia automatyzacji."
+      ],
+      "outcomes": [
+        "Zaprojektowałem i wdrożyłem jeden z pierwszych systemów serverless do monitorowania pracy wind oraz wykrywania sytuacji wymagających interwencji.",
+        "Stworzyłem system zarządzania przepływem paczek w środowisku logistycznym wraz z mechanizmami obsługi powiadomień."
+      ]
+    },
+    "creditSuisse": {
+      "role": "RDS Development Lead (AVP)",
+      "highlights": [
+        "Prowadziłem zespół RDS (14 osób: Wrocław, Londyn, Bangalore).",
+        "Zarządzałem backlogiem, wymaganiami biznesowymi oraz komunikacją z managementem.",
+        "Odpowiadałem za design techniczny, code review i rozwój kompetencji zespołu.",
+        "Utrzymałem ciągłość krytycznego procesu ETL wspierającego kalkulację VaR i decyzje związane z ryzykiem bankowym."
+      ],
+      "outcomes": [
+        "Poznałem środowisko pracy w globalnej organizacji finansowej oraz wymagania stawiane systemom risk management."
+      ]
+    },
+    "recGlobal": {
+      "role": "Solutions Architect · Technical Leader · Scrum Master",
+      "highlights": [
+        "Przekładałem potrzeby biznesowe klientów na rozwiązania techniczne, estymacje i architekturę systemów.",
+        "Łączyłem projektowanie rozwiązań z estymacją, planowaniem i realizacją projektów w modelu fixed price.",
+        "Budowałem oraz rozwijałem zespoły developerskie, wspierając je w podejmowaniu decyzji technicznych."
+      ],
+      "outcomes": [
+        "Zwiększyłem przewidywalność realizacji projektów poprzez lepsze podejście do estymacji i zarządzania zakresem.",
+        "Przeprowadziłem migracje systemów ze starszych technologii do nowoczesnego stacku.",
+        "Budowałem długoterminowe relacje z klientami poprzez skuteczną współpracę techniczno-biznesową."
+      ]
+    },
+    "capgemini": {
+      "role": "Software Engineer",
+      "highlights": [
+        "Rozwijałem Learning Management System (J2EE/Spring) — od analizy wymagań i zgłoszeń po wdrożenia produkcyjne.",
+        "Wspierałem projektowanie rozwiązań technicznych oraz podejmowanie decyzji dotyczących rozwoju systemu.",
+        "Odpowiadałem za migracje danych oraz bezpieczne wdrażanie zmian na środowiska produkcyjne."
+      ],
+      "outcomes": [
+        "Dostarczałem funkcjonalności dla systemu LMS wykorzystywanego przez klienta.",
+        "Zapewniłem bezpieczne wdrażanie zmian poprzez kontrolowane migracje danych i release'y."
+      ]
+    },
+    "nokia": {
+      "role": "Software Engineer",
+      "highlights": [
+        "Odpowiadałem za migrację subskrybentów pomiędzy klastrami sieci operatora.",
+        "Zaprojektowałem i stworzyłem FatMT — narzędzie ETL automatyzujące migrację danych abonentów.",
+        "Rozwijałem moduły BTS (Performance Management, Climate Control) w C/C++."
+      ],
+      "outcomes": [
+        "Skróciłem czas realizacji migracji z około 2500 do około 200 godzin.",
+        "Umożliwiłem dostosowanie narzędzia do potrzeb różnych operatorów (m.in. Claro, Comcel, Zain, UMC).",
+        "Ograniczyłem ryzyko utraty przychodów podczas migracji dzięki automatycznej walidacji i raportowaniu."
+      ]
+    }
+  }
+}

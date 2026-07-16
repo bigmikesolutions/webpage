@@ -1,0 +1,199 @@
+{
+  "title": "Resume",
+  "description": "Discover the projects and companies I helped achieve their technology goals.",
+  "experience": "Experience",
+  "internshipsTitle": "Internships",
+  "general": "General",
+  "photoAlt": "Michał Wroński",
+  "educationLabel": "Education",
+  "languagesLabel": "Languages",
+  "techTitle": "Technologies",
+  "techDescription": "Tech summary based on company stacks. Proficiency level is derived from total years (overlapping roles are merged).",
+  "techFilterLabel": "Filter technology groups",
+  "techLevelFilterLabel": "Filter proficiency level",
+  "techEmptyFilter": "Select at least one group and level to see technologies.",
+  "techYearsTotal": "Total: {n} yrs",
+  "techLevels": {
+    "1": "Basic familiarity",
+    "2": "Practical experience",
+    "3": "Advanced experience"
+  },
+  "publicationsTitle": "Publications",
+  "publicationsDescription": "Minibooks, articles, and videos — selected content from BigMikeLabs.",
+  "publicationsMore": "Showing {shown} of {total}. See the full list on BigMikeLabs and YouTube.",
+  "publicationsVisitLabs": "BigMikeLabs",
+  "publicationsVisitYoutube": "YouTube",
+  "publicationsSectionMinibooks": "Minibooks",
+  "publicationsSectionArticles": "Articles",
+  "publicationsSectionYoutube": "YouTube",
+  "techGroups": {
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "devops": "DevOps / Infra",
+    "mobile": "Mobile"
+  },
+  "stack": "Stack",
+  "highlightsLabel": "What I did",
+  "outcomesLabel": "What I achieved",
+  "present": "present",
+  "yearsLabel": "{n} yrs",
+  "linkedin": "LinkedIn profile",
+  "exportPdf": "Export PDF",
+  "pdfTitle": "Michal Wronski — Resume",
+  "progressNav": "Resume",
+  "progressHide": "Hide navigation",
+  "progressShow": "Show navigation",
+  "backHome": "Home",
+  "educationItems": {
+    "pwrMsc": {
+      "degree": "Master of Science (MSc), Computer Science",
+      "school": "Wrocław University of Science and Technology"
+    }
+  },
+  "languages": {
+    "pl": "Polish",
+    "en": "English",
+    "de": "German"
+  },
+  "internships": {
+    "volvoIt2007": {
+      "role": "Student Intern",
+      "highlights": [
+        "Developed and maintained web services in the Volvo IT environment.",
+        "Worked with the .NET stack (C#, ASP) and data integration (SSIS).",
+        "Supported work with MS SQL Server and task automation through VB scripts."
+      ],
+      "outcomes": [
+        "Helped develop and maintain internal applications used across the organization.",
+        "Gained experience working with IT processes in a large enterprise organization.",
+        "Learned the application lifecycle — from development changes through to production releases."
+      ]
+    },
+    "volvoIt2006": {
+      "role": "Student Intern",
+      "highlights": [
+        "Developed web services in the Volvo IT environment.",
+        "Worked with .NET technologies (C#, ASP) and MS SQL Server."
+      ],
+      "outcomes": [
+        "Gained first experience building software for an enterprise environment.",
+        "Learned practices for working with existing business systems."
+      ]
+    }
+  },
+  "companies": {
+    "shellRecharge": {
+      "role": "Senior Software Engineer (Go)",
+      "highlights": [
+        "Designed and developed backend systems for an EV charging infrastructure operator, supporting CPO integrations via OCPI, OCPP, and BOCPP protocols.",
+        "Rebuilt the API layer (GraphQL Federation, gRPC, REST), enabling flexible data access and faster product feature development.",
+        "Supported migration of responsibilities and data to a single source of truth model, reducing inconsistency risk across the system."
+      ],
+      "outcomes": [
+        "Simplified data access for product teams through a consistent API layer.",
+        "Shortened time to deliver new integrations thanks to a flexible API architecture.",
+        "Laid the foundation for further growth of a platform serving the EV ecosystem."
+      ]
+    },
+    "herolynx": {
+      "role": "Co-founder · product factory",
+      "highlights": [
+        "Building our own products and services.",
+        "Gaining experience through practice and experimentation."
+      ],
+      "outcomes": [
+        "Built and launched the AR Flashbulb platform supporting the sales process.",
+        "Designed and launched Elepantry — a platform integrating multiple cloud service providers in one place.",
+        "Gained experience building products from concept through development to commercialization."
+      ]
+    },
+    "form3": {
+      "role": "Full Stack Engineer",
+      "highlights": [
+        "Developed a payments platform handling UK BACS and Faster Payments systems.",
+        "Designed solutions that improved transaction processing reliability and failure resilience.",
+        "Designed failure-recovery mechanisms that increased payment processing reliability."
+      ],
+      "outcomes": [
+        "Helped maintain continuity of payment processing critical to Form3 customers.",
+        "Reduced the impact of failures through better recovery handling and system monitoring.",
+        "Made safer evolution of the payments platform possible through greater observability and stability."
+      ]
+    },
+    "huuugeGames": {
+      "role": "Full Stack Developer",
+      "highlights": [
+        "Designed and built from scratch a central gaming platform that became the foundation for multiple games.",
+        "Introduced a video streaming system for hosts before gameplay started (HLS).",
+        "Developed abuse detection and prevention mechanisms (anti-cheating)."
+      ],
+      "outcomes": [
+        "Delivered a scalable platform enabling fast creation and launch of subsequent games.",
+        "Optimized infrastructure usage, supporting efficient platform growth.",
+        "Accelerated development of new features and product experiments through shared platform components."
+      ]
+    },
+    "siili": {
+      "role": "Senior Software Engineer",
+      "highlights": [
+        "Delivered software solutions for clients using JVM, Go, and cloud technologies.",
+        "Designed and developed distributed systems based on microservices, asynchronous communication, and the cloud (AWS, Azure).",
+        "Automated software delivery through CI/CD, Infrastructure as Code, and automation tooling."
+      ],
+      "outcomes": [
+        "Designed and deployed one of the first serverless systems for monitoring elevator operations and detecting situations requiring intervention.",
+        "Built a package-flow management system in a logistics environment, including notification handling mechanisms."
+      ]
+    },
+    "creditSuisse": {
+      "role": "RDS Development Lead (AVP)",
+      "highlights": [
+        "Led the RDS team (14 people: Wrocław, London, Bangalore).",
+        "Managed the backlog, business requirements, and communication with management.",
+        "Owned technical design, code reviews, and team skill development.",
+        "Maintained continuity of a critical ETL process supporting VaR calculation and bank risk-related decisions."
+      ],
+      "outcomes": [
+        "Gained experience working in a global financial organization and with the requirements placed on risk management systems."
+      ]
+    },
+    "recGlobal": {
+      "role": "Solutions Architect · Technical Leader · Scrum Master",
+      "highlights": [
+        "Translated client business needs into technical solutions, estimates, and system architecture.",
+        "Combined solution design with estimation, planning, and delivery of fixed-price projects.",
+        "Built and grew engineering teams, supporting them in technical decision-making."
+      ],
+      "outcomes": [
+        "Improved project delivery predictability through better estimation and scope management.",
+        "Migrated systems from legacy technologies to a modern stack.",
+        "Built long-term client relationships through effective technical and business collaboration."
+      ]
+    },
+    "capgemini": {
+      "role": "Software Engineer",
+      "highlights": [
+        "Developed a Learning Management System (J2EE/Spring) — from requirements and ticket analysis through to production releases.",
+        "Supported technical solution design and decisions about system evolution.",
+        "Owned data migrations and safe deployment of changes to production environments."
+      ],
+      "outcomes": [
+        "Delivered features for an LMS used by the client.",
+        "Ensured safe change deployment through controlled data migrations and releases."
+      ]
+    },
+    "nokia": {
+      "role": "Software Engineer",
+      "highlights": [
+        "Owned subscriber migration between operator network clusters.",
+        "Designed and built FatMT — an ETL tool automating subscriber data migration.",
+        "Developed BTS modules (Performance Management, Climate Control) in C/C++."
+      ],
+      "outcomes": [
+        "Cut migration delivery time from about 2500 to about 200 hours.",
+        "Enabled adapting the tool to different operators’ needs (e.g. Claro, Comcel, Zain, UMC).",
+        "Reduced revenue-loss risk during migration through automatic validation and reporting."
+      ]
+    }
+  }
+}
