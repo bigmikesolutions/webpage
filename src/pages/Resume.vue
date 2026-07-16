@@ -69,13 +69,15 @@
     </section>
 
     <ResumeCollapsibleSection id="general" :title="$t('resume.general')">
-      <div class="grid gap-10 lg:grid-cols-[minmax(0,11rem)_minmax(0,1fr)_minmax(0,1fr)] lg:items-start lg:gap-12">
-        <div class="mx-auto w-40 sm:w-44 lg:mx-0 lg:w-full">
+      <div
+        class="grid grid-cols-[5.5rem_minmax(0,1fr)] items-start gap-4 sm:grid-cols-[7rem_minmax(0,1fr)] sm:gap-6 lg:grid-cols-[minmax(0,11rem)_minmax(0,1fr)_minmax(0,1fr)] lg:gap-12"
+      >
+        <div class="w-full">
           <div
-            class="relative aspect-square rounded-2xl bg-gradient-to-tr from-brand-400 to-brand-200 p-1 shadow-soft"
+            class="relative aspect-square rounded-xl bg-gradient-to-tr from-brand-400 to-brand-200 p-0.5 shadow-soft sm:rounded-2xl sm:p-1"
           >
-            <div class="h-full w-full rounded-2xl bg-white p-1">
-              <div class="h-full overflow-hidden rounded-xl">
+            <div class="h-full w-full rounded-[0.625rem] bg-white p-0.5 sm:rounded-2xl sm:p-1">
+              <div class="h-full overflow-hidden rounded-lg sm:rounded-xl">
                 <img
                   src="/images/michal-wronski.jpg"
                   :alt="$t('resume.photoAlt')"
@@ -86,7 +88,22 @@
           </div>
         </div>
 
-        <div>
+        <div class="min-w-0 lg:col-start-3 lg:row-start-1">
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-500">
+            {{ $t('resume.languagesLabel') }}
+          </h3>
+          <ul class="mt-3 space-y-3 sm:mt-4 sm:space-y-4">
+            <li v-for="lang in resumeLanguages" :key="lang.id">
+              <LanguageLevelRow
+                :flag="lang.flag"
+                :name="$t(`resume.languages.${lang.i18nKey}`)"
+                :level="lang.level"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-span-2 lg:col-span-1 lg:col-start-2 lg:row-start-1">
           <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-500">
             {{ $t('resume.educationLabel') }}
           </h3>
@@ -118,21 +135,6 @@
               </article>
             </li>
           </ol>
-        </div>
-
-        <div>
-          <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-500">
-            {{ $t('resume.languagesLabel') }}
-          </h3>
-          <ul class="mt-4 space-y-4">
-            <li v-for="lang in resumeLanguages" :key="lang.id">
-              <LanguageLevelRow
-                :flag="lang.flag"
-                :name="$t(`resume.languages.${lang.i18nKey}`)"
-                :level="lang.level"
-              />
-            </li>
-          </ul>
         </div>
       </div>
     </ResumeCollapsibleSection>
