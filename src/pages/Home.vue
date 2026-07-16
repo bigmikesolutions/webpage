@@ -183,7 +183,7 @@
       </div>
 
       <!-- Products -->
-      <div class="mt-12">
+      <div id="products" class="mt-12">
         <h3 class="text-xl font-semibold text-slate-900">{{ $t('products.title') }}</h3>
         <p class="mt-2 text-slate-600">{{ $t('products.description') }}</p>
 
