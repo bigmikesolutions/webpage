@@ -11,7 +11,7 @@
             class="inline-flex items-center gap-2 rounded-full bg-brand-200/70 px-3 py-1 text-xs font-medium text-slate-900 ring-1 ring-brand-300/60"
             >{{ $t('about.badge') }}</span
           >
-          <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+          <h1 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
             {{ $t('about.heading') }}
           </h1>
           <p class="mt-4 text-lg text-slate-700">{{ $t('about.pitch') }}</p>
@@ -38,20 +38,6 @@
               <span>GitHub</span>
             </a>
           </div>
-          <dl class="mt-10 grid grid-cols-3 gap-6 text-center md:max-w-md">
-            <div class="stat">
-              <dt>{{ $t('stats.projects_label') }}</dt>
-              <dd>{{ $t('stats.projects_value') }}</dd>
-            </div>
-            <div class="stat">
-              <dt>{{ $t('stats.uplift_label') }}</dt>
-              <dd>{{ $t('stats.uplift_value') }}</dd>
-            </div>
-            <div class="stat">
-              <dt>{{ $t('stats.years_label') }}</dt>
-              <dd>{{ $t('stats.years_value') }}</dd>
-            </div>
-          </dl>
         </div>
         <div class="mt-10 md:mt-0">
           <div
@@ -67,6 +53,20 @@
               </div>
             </div>
           </div>
+          <dl class="mx-auto mt-8 grid max-w-sm grid-cols-3 gap-6 text-center">
+            <div class="stat">
+              <dt>{{ $t('stats.projects_label') }}</dt>
+              <dd>{{ $t('stats.projects_value') }}</dd>
+            </div>
+            <div class="stat">
+              <dt>{{ $t('stats.uplift_label') }}</dt>
+              <dd>{{ $t('stats.uplift_value') }}</dd>
+            </div>
+            <div class="stat">
+              <dt>{{ $t('stats.years_label') }}</dt>
+              <dd>{{ $t('stats.years_value') }}</dd>
+            </div>
+          </dl>
         </div>
       </div>
     </section>

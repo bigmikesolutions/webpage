@@ -10,8 +10,8 @@
   },
   "about": {
     "badge": "O mnie",
-    "heading": "Pasja i pragmatyczność w tworzeniu oprogramowania",
-    "pitch": "Software developer z 15-letnim doświadczeniem w tworzeniu komercyjnych produktów i systemów z wykorzystaniem szerokiego zakresu technologii. Kładę nacisk na aspekty biznesowowe oraz jakość dostarczanych rozwiązań. Specjalizuje się w architekturze, projektowaniu oprogramowania, systemach reaktywnych oraz optymalizacji oprogramowania.",
+    "heading": "Projektowanie systemów. Przekładanie wizji na rozwiązania. Dostarczanie wartości.",
+    "pitch": "Tworzenie systemów zawsze było czymś więcej niż tylko technologią. Najważniejszy jest produkt, jego wartość biznesowa oraz rozwiązania odpowiadające na realne potrzeby użytkowników. W czasach AI to podejście zyskało jeszcze większe znaczenie. Sprawdź, jak mogę pomóc w realizacji Twoich celów.",
     "buttons": {
       "work": "Współpracuj ze mną",
       "view": "Zobacz usługi",
@@ -32,7 +32,7 @@
   },
   "services": {
     "title": "Usługi",
-    "description": "Kompleksowe projektowanie i wdrożenie systemów.",
+    "description": "Projektowanie i wdrożenie systemów w czasach AI to coś więcej.",
     "items": [
       {
         "title": "Software Design",
@@ -59,22 +59,39 @@
       {
         "title": "Rozwiązania mobilne",
         "description": "Aplikacje mobilne.",
-        "features": ["Android", "iOS", "Poprawianie jakości istniejących aplikacji"]
+        "features": [
+          "Android",
+          "iOS",
+          "Poprawianie jakości istniejących aplikacji"
+        ]
       },
       {
         "title": "DevOps & SRE",
         "description": "Wspieranie i rozwój infrastruktury u klienta.",
-        "features": ["Uwierzytelnianie & DB", "Płatności", "Monitorowanie"]
+        "features": [
+          "Uwierzytelnianie & DB",
+          "Płatności",
+          "Monitorowanie"
+        ]
       },
       {
         "title": "AI",
         "description": "Wdrożenie AI w istniejących systemach.",
-        "features": ["Agentic AI", "Generative AI", "Fine-tuning AI"]
+        "features": [
+          "Agentic AI",
+          "Generative AI",
+          "Fine-tuning AI"
+        ]
       },
       {
         "title": "Utrzymanie produkcji",
         "description": "Utrzymanie produkcji i opieka nad systemami.",
-        "features": ["PagerDuty", "Poprawianie błędów", "Monitorowanie", "Poprawianie wydajności"]
+        "features": [
+          "PagerDuty",
+          "Poprawianie błędów",
+          "Monitorowanie",
+          "Poprawianie wydajności"
+        ]
       }
     ]
   },

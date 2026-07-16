@@ -1,0 +1,2 @@
+
+"pitch": "Tworzenie systemów zawsze było dla mnie czymś więcej niż tylko technologią. Najważniejszy jest produkt, jego wartość biznesowa oraz rozwiązanie realnych problemów użytkowników. Przez ponad 15 lat pomagam budować i rozwijać systemy, w których architektura, jakość i niezawodność mają kluczowe znaczenie. W czasach AI to podejście zyskało jeszcze większe znaczenie — technologia jest narzędziem, a nie celem samym w sobie. Przekonaj się, jak mogę pomóc Twojemu projektowi."
