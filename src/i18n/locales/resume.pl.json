@@ -78,14 +78,14 @@
     "shellRecharge": {
       "role": "Senior Software Engineer (Go)",
       "highlights": [
-        "Projektowałem i wdrażałem backend dla Charge Point Operator (protokoły OCPI, OCPP, BOCPP).",
-        "Budowałem API GraphQL z federacją oraz usługi gRPC i REST.",
-        "Utrzymywałem produkcję (PagerDuty on-call) oraz infrastrukturę (Kubernetes, AWS, Terraform)."
+        "Projektowałem i rozwijałem systemy backendowe dla operatora infrastruktury ładowania EV, wspierające integracje CPO poprzez protokoły OCPI, OCPP i BOCPP.",
+        "Przebudowałem warstwę API (GraphQL Federation, gRPC, REST), umożliwiając elastyczny dostęp do danych oraz szybszy rozwój funkcji produktowych.",
+        "Wspierałem migrację odpowiedzialności i danych do modelu single source of truth, ograniczając ryzyko niespójności w systemie."
       ],
       "outcomes": [
-        "Umożliwiłem stabilne operacje ładowania EV w skali międzynarodowej.",
-        "Przyspieszyłem integrację nowych funkcji przez zespoły produktowe dzięki spójnym API.",
-        "Ograniczyłem ryzyko przestojów krytycznych usług CPO."
+        "Ujednoliciłem dostęp do danych, zwiększając spójność i przewidywalność działania systemu.",
+        "Przygotowałem elastyczną warstwę API, która uprościła rozwój nowych integracji.",
+        "Wsparłem budowę skalowalnej platformy gotowej na dalszy wzrost ekosystemu EV."
       ]
     },
     "herolynx": {
