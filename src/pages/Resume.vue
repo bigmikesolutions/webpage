@@ -100,114 +100,60 @@
       :title="$t('resume.experience')"
       class="border-t border-slate-200"
     >
-      <ol class="space-y-10">
-        <li
-          v-for="company in resumeCompanies"
-          :key="company.id"
-          class="grid gap-6 border-t border-slate-200 pt-10 first:border-t-0 first:pt-0 lg:grid-cols-[minmax(0,14rem)_minmax(0,1fr)]"
-        >
-          <div class="text-sm text-slate-500 lg:pt-1">
-            <time>{{ formatCompanyPeriod(company) }}</time>
-          </div>
-
-          <article>
-            <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-              <h3 class="text-xl font-semibold text-slate-900">
-                <a
-                  v-if="company.url"
-                  :href="company.url"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="hover:text-brand-800"
-                >
-                  {{ company.name }}
-                </a>
-                <span v-else>{{ company.name }}</span>
-              </h3>
-              <p class="text-slate-600">{{ $t(`resume.companies.${company.i18nKey}.role`) }}</p>
-            </div>
-
-            <div v-if="companyHighlights(company.i18nKey).length" class="mt-5">
-              <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-500">
-                {{ $t('resume.highlightsLabel') }}
-              </h4>
-              <ul class="mt-2.5 space-y-2.5">
-                <li
-                  v-for="(highlight, index) in companyHighlights(company.i18nKey)"
-                  :key="`h-${index}`"
-                  class="flex items-start gap-2.5 text-slate-700"
-                >
-                  <span
-                    class="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500"
-                    aria-hidden="true"
-                  ></span>
-                  <span>{{ highlight }}</span>
-                </li>
-              </ul>
-            </div>
-
-            <div v-if="companyOutcomes(company.i18nKey).length" class="mt-5">
-              <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-500">
-                {{ $t('resume.outcomesLabel') }}
-              </h4>
-              <ul class="mt-2.5 space-y-2.5">
-                <li
-                  v-for="(outcome, index) in companyOutcomes(company.i18nKey)"
-                  :key="`o-${index}`"
-                  class="flex items-start gap-2.5 text-slate-700"
-                >
-                  <span class="outcome-check" aria-hidden="true">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="h-3 w-3"
-                    >
-                      <path d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <span>{{ outcome }}</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="mt-5">
-              <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-500">
-                {{ $t('resume.stack') }}
-              </h4>
-              <ul class="mt-2 flex flex-wrap gap-2">
-                <li
-                  v-for="tech in company.tech"
-                  :key="tech"
-                  class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 ring-1 ring-slate-200"
-                >
-                  {{ tech }}
-                </li>
-              </ul>
-            </div>
-          </article>
-        </li>
-      </ol>
+      <ResumeItemSlider :items="resumeCompanies" desktop-class="space-y-10">
+        <template #default="{ item: company, index }">
+          <ResumeCompanyCard
+            :company="company"
+            :period="formatCompanyPeriod(company)"
+            :role="$t(`resume.companies.${company.i18nKey}.role`)"
+            :highlights="companyHighlights(company.i18nKey)"
+            :outcomes="companyOutcomes(company.i18nKey)"
+            :highlights-label="$t('resume.highlightsLabel')"
+            :outcomes-label="$t('resume.outcomesLabel')"
+            :stack-label="$t('resume.stack')"
+            :divided="index > 0"
+          />
+        </template>
+      </ResumeItemSlider>
     </ResumeCollapsibleSection>
 
     <ResumeCollapsibleSection id="tech" :title="$t('resume.techTitle')" muted>
       <p class="max-w-3xl text-slate-600">{{ $t('resume.techDescription') }}</p>
-      <ul class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        <li
-          v-for="item in techSummary"
-          :key="item.name"
-          class="flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3"
-        >
-          <span class="font-medium text-slate-900">{{ item.name }}</span>
-          <span class="shrink-0 text-sm text-slate-500">
-            {{ $t('resume.yearsLabel', { n: item.years }) }}
-          </span>
-        </li>
-      </ul>
+      <div class="mt-8">
+        <!-- Desktop: full grid -->
+        <ul class="hidden gap-3 sm:grid sm:grid-cols-2 lg:grid-cols-3">
+          <li
+            v-for="item in techSummary"
+            :key="item.name"
+            class="flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3"
+          >
+            <span class="font-medium text-slate-900">{{ item.name }}</span>
+            <span class="shrink-0 text-sm text-slate-500">
+              {{ $t('resume.yearsLabel', { n: item.years }) }}
+            </span>
+          </li>
+        </ul>
+
+        <!-- Mobile: paged slider -->
+        <div class="sm:hidden">
+          <ResumeItemSlider :items="techPages" desktop-class="">
+            <template #default="{ item: page }">
+              <ul class="grid gap-3">
+                <li
+                  v-for="tech in page"
+                  :key="tech.name"
+                  class="flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3"
+                >
+                  <span class="font-medium text-slate-900">{{ tech.name }}</span>
+                  <span class="shrink-0 text-sm text-slate-500">
+                    {{ $t('resume.yearsLabel', { n: tech.years }) }}
+                  </span>
+                </li>
+              </ul>
+            </template>
+          </ResumeItemSlider>
+        </div>
+      </div>
     </ResumeCollapsibleSection>
   </main>
 </template>
@@ -217,6 +163,8 @@ import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import ResumeCollapsibleSection from '@/components/resume/ResumeCollapsibleSection.vue'
+import ResumeItemSlider from '@/components/resume/ResumeItemSlider.vue'
+import ResumeCompanyCard from '@/components/resume/ResumeCompanyCard.vue'
 import LanguageLevelRow from '@/components/resume/LanguageLevelRow.vue'
 import {
   getTechSummary,
@@ -225,11 +173,23 @@ import {
   resumeLanguages,
   type ResumeCompany,
   type ResumeEducation,
+  type TechSummaryItem,
 } from '@/config/resumeConfig'
+
+const TECH_PAGE_SIZE = 6
 
 const { t, locale, messages } = useI18n()
 
 const techSummary = computed(() => getTechSummary(resumeCompanies))
+
+const techPages = computed(() => {
+  const pages: TechSummaryItem[][] = []
+  const items = techSummary.value
+  for (let i = 0; i < items.length; i += TECH_PAGE_SIZE) {
+    pages.push(items.slice(i, i + TECH_PAGE_SIZE))
+  }
+  return pages
+})
 
 type CompanyCopy = { highlights?: string[]; outcomes?: string[] }
 
@@ -269,9 +229,3 @@ function formatEducationPeriod(item: ResumeEducation): string {
   return `${start} – ${end}`
 }
 </script>
-
-<style scoped>
-.outcome-check {
-  @apply mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-700;
-}
-</style>
