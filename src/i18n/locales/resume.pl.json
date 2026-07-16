@@ -31,6 +31,9 @@
   "linkedin": "Profil LinkedIn",
   "exportPdf": "Eksportuj PDF",
   "pdfTitle": "Michal Wronski — CV",
+  "progressNav": "Nawigacja CV",
+  "progressHide": "Ukryj nawigację",
+  "progressShow": "Pokaż nawigację",
   "backHome": "Strona główna",
   "educationItems": {
     "pwrMsc": {

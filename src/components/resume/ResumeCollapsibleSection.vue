@@ -28,6 +28,7 @@ function toggle() {
 <template>
   <section
     :id="id"
+    class="scroll-mt-24"
     :class="muted ? 'border-t border-slate-200 bg-slate-50' : ''"
   >
     <div class="container mx-auto px-4 py-14 print:px-0 print:py-6">

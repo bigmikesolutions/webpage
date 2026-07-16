@@ -1,5 +1,11 @@
 <template>
   <main>
+    <ResumeProgressNav
+      :section-label="progressSectionLabel"
+      :hide-label="$t('resume.progressHide')"
+      :show-label="$t('resume.progressShow')"
+    />
+
     <section class="relative overflow-hidden bg-gradient-to-b from-brand-100 via-brand-50 to-white">
       <div
         class="absolute inset-x-0 -top-24 -z-10 h-56 bg-[radial-gradient(50%_50%_at_50%_0%,theme(colors.brand.300/.45),transparent_70%)]"
@@ -122,18 +128,20 @@
     >
       <ResumeItemSlider :items="resumeCompanies" desktop-class="space-y-10">
         <template #default="{ item: company, index }">
-          <ResumeCompanyCard
-            :company="company"
-            :period="formatCompanyPeriod(company)"
-            :role="$t(`resume.companies.${company.i18nKey}.role`)"
-            :highlights="companyHighlights(company.i18nKey)"
-            :outcomes="companyOutcomes(company.i18nKey)"
-            :highlights-label="$t('resume.highlightsLabel')"
-            :outcomes-label="$t('resume.outcomesLabel')"
-            :stack-label="$t('resume.stack')"
-            :group-label="techGroupLabel"
-            :divided="index > 0"
-          />
+          <div :id="`company-${company.id}`" class="scroll-mt-24">
+            <ResumeCompanyCard
+              :company="company"
+              :period="formatCompanyPeriod(company)"
+              :role="$t(`resume.companies.${company.i18nKey}.role`)"
+              :highlights="companyHighlights(company.i18nKey)"
+              :outcomes="companyOutcomes(company.i18nKey)"
+              :highlights-label="$t('resume.highlightsLabel')"
+              :outcomes-label="$t('resume.outcomesLabel')"
+              :stack-label="$t('resume.stack')"
+              :group-label="techGroupLabel"
+              :divided="index > 0"
+            />
+          </div>
         </template>
       </ResumeItemSlider>
     </ResumeCollapsibleSection>
@@ -253,6 +261,7 @@ import ResumeCollapsibleSection from '@/components/resume/ResumeCollapsibleSecti
 import ResumeItemSlider from '@/components/resume/ResumeItemSlider.vue'
 import ResumeCompanyCard from '@/components/resume/ResumeCompanyCard.vue'
 import LanguageLevelRow from '@/components/resume/LanguageLevelRow.vue'
+import ResumeProgressNav from '@/components/resume/ResumeProgressNav.vue'
 import TechGroupFilters from '@/components/resume/TechGroupFilters.vue'
 import NewsListItem from '@/components/news/NewsListItem.vue'
 import { createResumePrintMode, resumePrintModeKey } from '@/composables/useResumePrint'
@@ -307,6 +316,17 @@ const techPages = computed(() => {
 
 function techGroupLabel(group: TechGroup): string {
   return t(`resume.techGroups.${group}`)
+}
+
+function progressSectionLabel(id: string): string {
+  const keys: Record<string, string> = {
+    nav: 'resume.progressNav',
+    general: 'resume.general',
+    experience: 'resume.experience',
+    tech: 'resume.techTitle',
+    publications: 'resume.publicationsTitle',
+  }
+  return t(keys[id] ?? id)
 }
 
 async function exportPdf() {
