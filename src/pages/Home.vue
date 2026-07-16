@@ -314,13 +314,59 @@
       </div>
     </section>
 
-    <!-- News / Latest Videos -->
+    <!-- Labs -->
     <section id="news" class="container mx-auto px-4 py-16">
-      <div>
-        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-          {{ $t('news.title') }}
-        </h2>
-        <p class="mt-2 max-w-2xl text-slate-600">{{ $t('news.description') }}</p>
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+            {{ $t('news.title') }}
+          </h2>
+          <p class="mt-2 max-w-2xl text-slate-600">{{ $t('news.description') }}</p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href="https://bigmikelabs.pl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--ghost inline-flex items-center gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-4 w-4"
+            >
+              <path d="M9 2v6l-3 3v1a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V11l-3-3V2" />
+              <path d="M9 2h6" />
+              <path d="M12 11v4" />
+              <path d="M8 15h8" />
+              <path d="M10 19h4" />
+            </svg>
+            {{ $t('news.visitLabs') }}
+          </a>
+          <a
+            href="https://www.youtube.com/@big-mike-labs"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--ghost inline-flex items-center gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="h-4 w-4"
+              fill="currentColor"
+            >
+              <path
+                d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8zM9.8 15.5V8.5l6.2 3.5-6.2 3.5z"
+              />
+            </svg>
+            {{ $t('news.visitYoutube') }}
+          </a>
+        </div>
       </div>
 
       <div class="mt-6">
@@ -364,80 +410,6 @@
             <path d="m12 5 7 7-7 7" />
           </svg>
         </RouterLink>
-      </div>
-
-      <!-- BigMikeLabs Callout -->
-      <div class="mt-12">
-        <a
-          href="https://bigmikelabs.pl"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="group relative block overflow-hidden rounded-2xl bg-gradient-to-br from-brand-500 via-brand-600 to-brand-700 p-8 shadow-lg transition-all hover:shadow-xl md:p-12"
-        >
-          <div
-            class="absolute inset-0 bg-[radial-gradient(60%_60%_at_100%_0%,rgba(255,255,255,0.15),transparent_60%)]"
-          ></div>
-          <div class="relative flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
-            <div class="flex items-start gap-6">
-              <div
-                class="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm ring-2 ring-white/30"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="h-8 w-8 text-white"
-                >
-                  <path d="M9 2v6l-3 3v1a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V11l-3-3V2" />
-                  <path d="M9 2h6" />
-                  <path d="M12 11v4" />
-                  <path d="M8 15h8" />
-                  <path d="M10 19h4" />
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-2xl font-bold text-white">{{ $t('bigmikelabs.title') }}</h3>
-                <p class="mt-2 text-lg text-white/90">{{ $t('bigmikelabs.description') }}</p>
-                <div class="mt-4 inline-flex items-center gap-2 text-white/80 transition group-hover:text-white">
-                  <span class="font-medium">{{ $t('bigmikelabs.link_text') }}</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="h-5 w-5 transition-transform group-hover:translate-x-1"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="hidden shrink-0 md:block">
-              <div class="flex gap-2">
-                <div
-                  class="h-2 w-2 rounded-full bg-white/40 animate-pulse"
-                  style="animation-delay: 0s"
-                ></div>
-                <div
-                  class="h-2 w-2 rounded-full bg-white/60 animate-pulse"
-                  style="animation-delay: 0.2s"
-                ></div>
-                <div
-                  class="h-2 w-2 rounded-full bg-white/80 animate-pulse"
-                  style="animation-delay: 0.4s"
-                ></div>
-              </div>
-            </div>
-          </div>
-        </a>
       </div>
     </section>
 

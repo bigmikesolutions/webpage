@@ -2,7 +2,7 @@
   "header": {
     "about": "O mnie",
     "services": "Usługi",
-    "news": "Wiadomości",
+    "news": "Labs",
     "resume": "CV",
     "github": "GitHub",
     "contact": "Kontakt"
@@ -92,10 +92,12 @@
     "sqlstream_description": "Biblioteka Go do przetwarzania wyników zapytań SQL w formie strumienia danych. Umożliwia wydajne przetwarzanie dużych zbiorów bez ładowania całości do pamięci i bez użycia refleksji."
   },
   "news": {
-    "title": "Wiadomości",
-    "description": "Najnowsze artykuły, filmy i publikacje.",
-    "allTitle": "Wszystkie wiadomości",
-    "allDescription": "Pełna lista artykułów, filmów YouTube i publikacji.",
+    "title": "Labs",
+    "description": "Najnowsze artykuły, filmy i publikacje z BigMikeLabs.",
+    "visitLabs": "BigMikeLabs",
+    "visitYoutube": "YouTube",
+    "allTitle": "Labs — wszystkie",
+    "allDescription": "Pełna lista artykułów, filmów YouTube i publikacji z BigMikeLabs.",
     "viewAll": "Zobacz wszystkie",
     "backToHome": "Powrót do strony głównej",
     "filterLabel": "Filtruj wiadomości",

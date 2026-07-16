@@ -2,7 +2,7 @@
   "header": {
     "about": "About",
     "services": "Services",
-    "news": "News",
+    "news": "Labs",
     "resume": "Resume",
     "github": "GitHub",
     "contact": "Contact"
@@ -92,10 +92,12 @@
     "sqlstream_description": "Go library for processing SQL query results as a data stream. Process large datasets efficiently without loading everything into memory or using reflection."
   },
   "news": {
-    "title": "News",
-    "description": "Latest articles, videos, and publications.",
-    "allTitle": "All news",
-    "allDescription": "Full list of articles, YouTube videos, and publications.",
+    "title": "Labs",
+    "description": "Latest articles, videos, and publications from BigMikeLabs.",
+    "visitLabs": "BigMikeLabs",
+    "visitYoutube": "YouTube",
+    "allTitle": "Labs — all",
+    "allDescription": "Full list of articles, YouTube videos, and publications from BigMikeLabs.",
     "viewAll": "View all",
     "backToHome": "Back to home",
     "filterLabel": "Filter news",
