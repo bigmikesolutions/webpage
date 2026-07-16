@@ -121,6 +121,10 @@
             @click="open = false"
             >{{ t('header.contact') }}</a
           >
+          <div class="flex items-center gap-2 pt-1">
+            <button class="lang-btn" @click="setLocale('pl')">PL</button>
+            <button class="lang-btn" @click="setLocale('en')">EN</button>
+          </div>
         </div>
       </div>
     </transition>
@@ -137,6 +141,7 @@ const { locale, t } = useI18n()
 
 function setLocale(l: string) {
   locale.value = l
+  localStorage.setItem('locale', l)
 }
 </script>
 
