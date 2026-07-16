@@ -15,6 +15,8 @@
       <nav class="hidden md:flex items-center gap-4 text-sm">
         <RouterLink to="/" class="nav-link">{{ t('header.about') }}</RouterLink>
         <RouterLink to="/#services" class="nav-link">{{ t('header.services') }}</RouterLink>
+        <RouterLink to="/#products" class="nav-link">{{ t('header.products') }}</RouterLink>
+        <RouterLink to="/#news" class="nav-link">{{ t('header.news') }}</RouterLink>
         <a
           href="https://www.linkedin.com/in/michal-wronski-b389a988/"
           target="_blank"
@@ -91,9 +93,12 @@
           <RouterLink to="/#services" class="nav-link" @click="open = false">{{
             t('header.services')
           }}</RouterLink>
-          <!-- <RouterLink to="/resume" class="nav-link" @click="open = false">{{
-            t('header.resume')
-          }}</RouterLink> -->
+          <RouterLink to="/#products" class="nav-link" @click="open = false">{{
+            t('header.products')
+          }}</RouterLink>
+          <RouterLink to="/#news" class="nav-link" @click="open = false">{{
+            t('header.news')
+          }}</RouterLink>
           <a
             href="https://www.linkedin.com/in/michal-wronski-b389a988/"
             target="_blank"
@@ -116,6 +121,10 @@
             @click="open = false"
             >{{ t('header.contact') }}</a
           >
+          <div class="flex items-center gap-2 pt-1">
+            <button class="lang-btn" @click="setLocale('pl')">PL</button>
+            <button class="lang-btn" @click="setLocale('en')">EN</button>
+          </div>
         </div>
       </div>
     </transition>
@@ -132,6 +141,7 @@ const { locale, t } = useI18n()
 
 function setLocale(l: string) {
   locale.value = l
+  localStorage.setItem('locale', l)
 }
 </script>
 

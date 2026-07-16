@@ -28,6 +28,11 @@
             }}</RouterLink>
           </li>
           <li>
+            <RouterLink to="/#news" class="hover:text-slate-900 text-slate-700">{{
+              $t('news.title')
+            }}</RouterLink>
+          </li>
+          <li>
             <a href="mailto:contact@bigmikesolutions.pl" class="hover:text-slate-900 text-slate-700">{{
               $t('header.contact')
             }}</a>

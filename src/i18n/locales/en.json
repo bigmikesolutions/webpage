@@ -2,14 +2,16 @@
   "header": {
     "about": "About",
     "services": "Services",
+    "products": "Products",
+    "news": "Labs",
     "resume": "Resume",
     "github": "GitHub",
     "contact": "Contact"
   },
   "about": {
     "badge": "About Me",
-    "heading": "Passion and pragmatism in software development",
-    "pitch": "Software developer with 15 years of experience in creating commercial products and systems using a wide range of technologies. I focus on business aspects and the quality of delivered solutions. Specializes in architecture, software design, reactive systems, and software optimization.",
+    "heading": "System design. Turning vision into solutions. Delivering value.",
+    "pitch": "Building systems has always been more than technology alone. What matters most is the product, its business value, and solutions that address real user needs. In the age of AI, this approach matters even more. See how I can help you achieve your goals.",
     "buttons": {
       "work": "Work with me",
       "view": "View services",
@@ -22,85 +24,114 @@
     "projects_value": "25+",
     "uplift_label": "Satisfaction",
     "uplift_value": "100%",
-    "years_label": "Years",
-    "years_value": "15+"
+    "years_label": "Years"
   },
   "buttons": {
     "send": "Send inquiry"
   },
   "services": {
-    "title": "Services",
-    "description": "Comprehensive system design and implementation.",
+    "title": "How I Can Help",
+    "description": "In the age of AI, technology alone is not enough. The greatest value comes from combining technical experience, business understanding, and the ability to work with people.",
     "items": [
       {
-        "title": "Software Design",
-        "description": "Leading projects from requirements analysis to implementation.",
+        "title": "From Vision to Solution",
+        "description": "I help translate business goals into concrete technology solutions.",
         "features": [
-          "Architecture",
-          "Prototyping",
-          "Documentation",
-          "Business requirements",
-          "Requirements analysis"
+          "Problem analysis",
+          "Architecture design",
+          "Choosing the right approach"
         ]
       },
       {
-        "title": "Backend Development",
-        "description": "Creating backend solutions.",
+        "title": "Systems Built for Challenges",
+        "description": "I design systems that must run reliably under load and grow with the business.",
         "features": [
-          "API",
-          "Building new systems",
-          "Migrations",
-          "Performance optimization",
-          "Rescuing systems in difficult situations"
+          "High-availability systems",
+          "Resilience and scalability",
+          "Modernizing existing systems"
         ]
       },
       {
-        "title": "Mobile Solutions",
-        "description": "Mobile applications.",
-        "features": ["Android", "iOS", "Improving quality of existing applications"]
+        "title": "Technology and People",
+        "description": "I help teams collaborate more effectively, make better decisions, and deliver ambitious technology goals.",
+        "features": [
+          "Business–technology communication",
+          "Team development",
+          "Mentoring and coaching",
+          "Competency assessment"
+        ]
       },
       {
-        "title": "DevOps & SRE",
-        "description": "Supporting and developing client infrastructure.",
-        "features": ["Authentication & DB", "Payments", "Monitoring"]
-      },
-      {
-        "title": "AI",
-        "description": "AI implementation in existing systems.",
-        "features": ["Agentic AI", "Generative AI", "Fine-tuning AI"]
-      },
-      {
-        "title": "Production Maintenance",
-        "description": "Production maintenance and system care.",
-        "features": ["PagerDuty", "Bug fixing", "Monitoring", "Performance improvement"]
+        "title": "AI as a Growth Tool",
+        "description": "I help find places where AI can genuinely increase product value and organizational efficiency.",
+        "features": [
+          "AI integration with products and systems",
+          "Process automation",
+          "AI supporting teams",
+          "AI agents and intelligent automation"
+        ]
       }
     ]
   },
   "products": {
     "title": "Products",
     "description": "My projects and products that I create additionally in my free time.",
+    "tag_product": "Product",
+    "tag_plugin": "Plugin",
+    "tag_lib": "Lib",
     "nextinlane_title": "NextInLane",
     "nextinlane_description": "System for planning renovations, which organizes decisions, costs and dependencies between project elements.",
-    "youtube_title": "Big Mike Labs — YouTube",
-    "youtube_description": "Pragmatically about technology, AI, programming, and other curiosities from the world of science.",
-    "bml_title": "BigMikeLabs — E‑learning",
-    "bml_description": "E-learning platform with training courses.",
     "flex_top_bar_title": "Flex Top Bar",
     "flex_top_bar_description": "WordPress plugin — announcement bar: countdown, timezone-aware scheduling, and more. Promotional campaigns and dynamic messaging have never been this easy.",
     "sqlstream_title": "sqlstream",
     "sqlstream_description": "Go library for processing SQL query results as a data stream. Process large datasets efficiently without loading everything into memory or using reflection."
   },
   "news": {
-    "title": "News",
-    "description": "Latest video content and articles.",
+    "title": "Labs",
+    "description": "Latest articles, videos, and publications from BigMikeLabs.",
+    "visitLabs": "BigMikeLabs",
+    "visitYoutube": "YouTube",
+    "allTitle": "Labs — all",
+    "allDescription": "Full list of articles, YouTube videos, and publications from BigMikeLabs.",
+    "viewAll": "View all",
+    "backToHome": "Back to home",
+    "filterLabel": "Filter news",
+    "filterTypeLabel": "Content type",
+    "filterCountLabel": "How many latest",
+    "filterCount1": "1",
+    "filterCount3": "3",
+    "filterCount5": "5",
+    "filterAll": "All",
+    "filterArticle": "Articles",
+    "filterYoutube": "YouTube",
+    "filterPublication": "Publications",
+    "sectionArticle": "Articles",
+    "sectionYoutube": "YouTube",
+    "sectionPublication": "Publications",
+    "typeArticle": "Article",
+    "typeYoutube": "YouTube",
+    "typePublication": "Publication",
+    "emptyFilter": "No items in this category.",
+    "openLink": "Open",
     "latest_video": "Latest video",
     "older_video": "Previous video",
-    "articleLink": "Read article: gRPC takes load to beat HTTP/2",
-    "articleTitle": "gRPC takes load to beat HTTP/2",
-    "articleTitleEventLoops": "Event-Driven feedback loops: the silent scalability killer",
-    "articleTitleGrpcVsHttp2": "gRPC takes load to beat HTTP/2",
-    "articleTitleMath4Ai": "Mini-book 'Math for AI & ML' is now available!",
-    "articleTitleChatEncVsIdentity": "Chat: encryption doesn't suffice — E2EE protects content, not identity"
+    "articles": {
+      "chatEncIdentity": "Chat: encryption doesn't suffice — E2EE protects content, not identity",
+      "eventLoops": "Event-Driven feedback loops: the silent scalability killer",
+      "grpcVsHttp2": "gRPC takes load to beat HTTP/2"
+    },
+    "youtube": {
+      "abrahamWald": "What do you reinforce to save the bombers?",
+      "appleM": "Why Apple M processors are so fast",
+      "aiText": "How AI understands text",
+      "aiRevolution": "The AI revolution is here. Do you really need to fear for your job?",
+      "appleMie": "Apple Memory Integrity Enforcement (MIE): How iPhone protects memory from attacks",
+      "jddK8s": "JDD 2017: Modern DevOps with Kubernetes (Michał Wroński)"
+    },
+    "publications": {
+      "howToTameAi": "How to Tame AI? From Your First Prompt to Conscious AI Use",
+      "math4Ai": "Math for AI & ML"
+    }
   },
   "bigmikelabs": {
     "title": "See more on BigMikeLabs",
@@ -115,35 +146,5 @@
     "description": "",
     "available_text": "Have questions? Write!",
     "copyright": "All rights reserved."
-  },
-  "resume": {
-    "name": "Michał Wroński",
-    "title": "Senior Backend Developer",
-    "linkedin": "https://www.linkedin.com/in/michal-wronski-b389a988/",
-    "recommendations_heading": "Recommendations",
-    "recommendations_subtitle": "Testimonials from colleagues and managers.",
-    "education_heading": "Education",
-    "skills_heading": "Skills",
-    "tech_heading": "Technologies",
-    "tech_subtitle": "Technologies I use and years of experience with each.",
-    "years": "years of experience",
-    "companies_heading": "Companies",
-    "companies_subtitle": "Selected companies and projects I worked with.",
-    "projects_heading": "Projects",
-    "projects_subtitle": "Selected projects with technology descriptions and responsibilities.",
-    "role1_title": "Senior Frontend Engineer",
-    "role1_company": "Freelance / Various",
-    "role1_dates": "2018 – Present",
-    "role1_description": "Designing and implementing user interfaces, design systems, and migrations to modern frameworks.",
-    "role2_title": "Frontend Engineer",
-    "role2_company": "Past Company",
-    "role2_dates": "2016 – 2018",
-    "role2_description": "Building scalable SPA applications and performance optimization.",
-    "education_1": "M.Sc. in Computer Science, University X",
-    "total_experience_big": "8+",
-    "total_experience_label": "Years of experience",
-    "education_subtitle": "My formal education and relevant qualifications.",
-    "certificates_heading": "Certificates",
-    "certificates_subtitle": "Selected certifications and trainings."
   }
 }
