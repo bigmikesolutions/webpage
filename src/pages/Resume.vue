@@ -5,7 +5,7 @@
         class="absolute inset-x-0 -top-24 -z-10 h-56 bg-[radial-gradient(50%_50%_at_50%_0%,theme(colors.brand.300/.45),transparent_70%)]"
       ></div>
       <div class="container mx-auto px-4 py-14 md:py-16">
-        <RouterLink to="/" class="text-sm text-slate-600 hover:text-slate-900">
+        <RouterLink to="/" class="no-print text-sm text-slate-600 hover:text-slate-900">
           ← {{ $t('resume.backHome') }}
         </RouterLink>
         <div
@@ -19,25 +19,45 @@
               {{ $t('resume.description') }}
             </p>
           </div>
-          <a
-            href="https://www.linkedin.com/in/michal-wronski-b389a988/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn--ghost inline-flex shrink-0 items-center gap-2 self-start sm:self-center"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              class="h-4 w-4"
-              fill="currentColor"
-              aria-hidden="true"
+          <div class="no-print flex flex-wrap items-center gap-3 self-start sm:self-center">
+            <button type="button" class="btn btn--ghost inline-flex items-center gap-2" @click="exportPdf">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-4 w-4"
+                aria-hidden="true"
+              >
+                <path d="M6 9V2h12v7" />
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+                <path d="M6 14h12v8H6z" />
+              </svg>
+              {{ $t('resume.exportPdf') }}
+            </button>
+            <a
+              href="https://www.linkedin.com/in/michal-wronski-b389a988/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--ghost inline-flex items-center gap-2"
             >
-              <path
-                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-              />
-            </svg>
-            {{ $t('resume.linkedin') }}
-          </a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="h-4 w-4"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+              {{ $t('resume.linkedin') }}
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -120,7 +140,7 @@
 
     <ResumeCollapsibleSection id="tech" :title="$t('resume.techTitle')" muted>
       <p class="max-w-3xl text-slate-600">{{ $t('resume.techDescription') }}</p>
-      <div class="mt-6">
+      <div class="mt-6 no-print">
         <TechGroupFilters
           v-model:selected-groups="selectedTechGroups"
           :ariaLabel="$t('resume.techFilterLabel')"
@@ -128,12 +148,12 @@
         />
       </div>
 
-      <p v-if="filteredTechSummary.length === 0" class="mt-8 text-slate-600">
+      <p v-if="filteredTechSummary.length === 0" class="mt-8 text-slate-600 no-print">
         {{ $t('resume.techEmptyFilter') }}
       </p>
 
       <div v-else class="mt-8">
-        <ul class="hidden gap-3 sm:grid sm:grid-cols-2 lg:grid-cols-3">
+        <ul class="hidden gap-3 sm:grid sm:grid-cols-2 lg:grid-cols-3 print:grid">
           <li
             v-for="item in filteredTechSummary"
             :key="item.name"
@@ -149,7 +169,7 @@
           </li>
         </ul>
 
-        <div class="sm:hidden">
+        <div class="sm:hidden print:hidden">
           <ResumeItemSlider :items="techPages" desktop-class="">
             <template #default="{ item: page }">
               <ul class="grid gap-3">
@@ -178,7 +198,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, nextTick, provide, ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import ResumeCollapsibleSection from '@/components/resume/ResumeCollapsibleSection.vue'
@@ -186,6 +206,7 @@ import ResumeItemSlider from '@/components/resume/ResumeItemSlider.vue'
 import ResumeCompanyCard from '@/components/resume/ResumeCompanyCard.vue'
 import LanguageLevelRow from '@/components/resume/LanguageLevelRow.vue'
 import TechGroupFilters from '@/components/resume/TechGroupFilters.vue'
+import { createResumePrintMode, resumePrintModeKey } from '@/composables/useResumePrint'
 import {
   filterTechSummary,
   getTechSummary,
@@ -202,6 +223,9 @@ import {
 const TECH_PAGE_SIZE = 6
 
 const { t, locale, messages } = useI18n()
+
+const printMode = createResumePrintMode()
+provide(resumePrintModeKey, printMode)
 
 const selectedTechGroups = ref<TechGroup[]>([...techGroupOrder])
 
@@ -223,7 +247,31 @@ const techPages = computed(() => {
 function techGroupLabel(group: TechGroup): string {
   return t(`resume.techGroups.${group}`)
 }
-type CompanyCopy = { highlights?: string[]; outcomes?: string[] }
+
+async function exportPdf() {
+  const previousTitle = document.title
+  const previousGroups = [...selectedTechGroups.value]
+  let cleaned = false
+
+  const cleanup = () => {
+    if (cleaned) return
+    cleaned = true
+    printMode.value = false
+    document.title = previousTitle
+    selectedTechGroups.value = previousGroups
+    window.removeEventListener('afterprint', cleanup)
+  }
+
+  selectedTechGroups.value = [...techGroupOrder]
+  printMode.value = true
+  document.title = t('resume.pdfTitle')
+  await nextTick()
+
+  window.addEventListener('afterprint', cleanup)
+  window.print()
+  // Fallback when afterprint is delayed / missing
+  window.setTimeout(cleanup, 2000)
+}type CompanyCopy = { highlights?: string[]; outcomes?: string[] }
 
 function companyCopy(i18nKey: string): CompanyCopy {
   const localeMessages = messages.value[locale.value] as

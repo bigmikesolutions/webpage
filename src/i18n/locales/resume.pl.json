@@ -21,6 +21,8 @@
   "present": "obecnie",
   "yearsLabel": "{n} lat",
   "linkedin": "Profil LinkedIn",
+  "exportPdf": "Eksportuj PDF",
+  "pdfTitle": "Michal Wronski — CV",
   "backHome": "Strona główna",
   "educationItems": {
     "pwrMsc": {

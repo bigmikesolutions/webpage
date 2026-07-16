@@ -1,6 +1,7 @@
 <script setup lang="ts" generic="T">
-import { computed, ref, watch } from 'vue'
+import { computed, inject, ref, watch } from 'vue'
 import { useMediaQuery } from '@/composables/useMediaQuery'
+import { resumePrintModeKey } from '@/composables/useResumePrint'
 
 const props = withDefaults(
   defineProps<{
@@ -17,6 +18,8 @@ const props = withDefaults(
 )
 
 const isDesktop = useMediaQuery(props.breakpoint)
+const printMode = inject(resumePrintModeKey, ref(false))
+const showAll = computed(() => isDesktop.value || printMode.value)
 const index = ref(0)
 
 watch(
@@ -42,8 +45,8 @@ function next() {
 <template>
   <div>
     <div
-      v-if="!isDesktop && total > 1"
-      class="mb-4 flex items-center justify-between gap-3"
+      v-if="!showAll && total > 1"
+      class="mb-4 flex items-center justify-between gap-3 print:hidden"
     >
       <button
         type="button"
@@ -70,7 +73,7 @@ function next() {
         <span class="text-sm tabular-nums text-slate-600">
           {{ index + 1 }} / {{ total }}
         </span>
-        <span class="hidden xs:inline-flex items-center gap-1 sm:inline-flex">
+        <span class="inline-flex items-center gap-1">
           <button
             v-for="i in total"
             :key="i"
@@ -105,9 +108,9 @@ function next() {
       </button>
     </div>
 
-    <div :class="isDesktop ? desktopClass : undefined">
+    <div :class="showAll ? desktopClass : undefined">
       <template v-for="(item, i) in items" :key="i">
-        <div v-show="isDesktop || i === index">
+        <div v-show="showAll || i === index">
           <slot :item="item" :index="i" />
         </div>
       </template>

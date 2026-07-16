@@ -21,6 +21,8 @@
   "present": "present",
   "yearsLabel": "{n} yrs",
   "linkedin": "LinkedIn profile",
+  "exportPdf": "Export PDF",
+  "pdfTitle": "Michal Wronski — Resume",
   "backHome": "Home",
   "educationItems": {
     "pwrMsc": {
