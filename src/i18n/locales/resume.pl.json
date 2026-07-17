@@ -185,9 +185,9 @@
         "Rozwijałem moduły BTS (Performance Management, Climate Control) w C/C++."
       ],
       "outcomes": [
-        "Skróciłem czas realizacji migracji z około 2500 do około 200 godzin.",
-        "Umożliwiłem dostosowanie narzędzia do potrzeb różnych operatorów (m.in. Claro, Comcel, Zain, UMC).",
-        "Ograniczyłem ryzyko utraty przychodów podczas migracji dzięki automatycznej walidacji i raportowaniu."
+        "Skróciłem czas procesu migracji z około 2500 do około 200 godzin dzięki automatyzacji i walidacji danych.",
+        "Stworzyłem rozwiązanie wielokrotnego użytku, które można było dostosować do potrzeb różnych operatorów (m.in. Claro, Comcel, Zain, UMC).",
+        "Zmniejszyłem ryzyko błędów podczas migracji poprzez automatyczną walidację, raportowanie i kontrolę poprawności danych."
       ]
     }
   }
