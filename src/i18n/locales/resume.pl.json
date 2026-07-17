@@ -76,14 +76,15 @@
     "shellRecharge": {
       "role": "Senior Software Engineer (Go)",
       "highlights": [
-        "Projektowałem i rozwijałem systemy backendowe dla operatora infrastruktury ładowania EV, wspierające integracje CPO poprzez protokoły OCPI, OCPP i BOCPP.",
-        "Przebudowałem warstwę API (GraphQL Federation, gRPC, REST), umożliwiając elastyczny dostęp do danych oraz szybszy rozwój funkcji produktowych.",
-        "Wspierałem migrację odpowiedzialności i danych do modelu single source of truth, ograniczając ryzyko niespójności w systemie."
+        "Implementowałem serwisy backendowe wspierające operacje Charging Point Operator (CPO).",
+        "Implementowałem proxy umożliwiające uniwersalny dostęp do danych, ukrywając złożoność protokołów BOCPP, OCPI i OCPP.",
+        "Przebudowałem warstwę API (GraphQL Federation, gRPC, REST), umożliwiając elastyczny i szybszy dostęp do danych.",
+        "Wspierałem migrację odpowiedzialności i danych do modelu Single Source of Truth, ograniczając ryzyko niespójności w systemie."
       ],
       "outcomes": [
-        "Uprościłem dostęp do danych dla zespołów produktowych poprzez spójną warstwę API.",
-        "Skróciłem czas rozwoju nowych integracji dzięki elastycznej architekturze API.",
-        "Przygotowałem fundament pod dalszy rozwój platformy obsługującej ekosystem EV."
+        "Uprościłem dostęp do całej platformy poprzez spójną warstwę API niezależną od źródła danych.",
+        "Umożliwiłem dostęp do danych w czasie rzeczywistym dla usług i integracji.",
+        "Zapoczątkowałem wykorzystanie Golanga w organizacji, wspierając jego wdrożenie oraz rozwój kompetencji zespołów."
       ]
     },
     "herolynx": {
