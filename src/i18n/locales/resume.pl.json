@@ -119,12 +119,14 @@
       "highlights": [
         "Zaprojektowałem i zbudowałem od podstaw centralną platformę gamingową stanowiącą fundament dla wielu gier.",
         "Wprowadziłem system transmisji wideo dla hostów przed rozpoczęciem gry (HLS).",
-        "Rozwijałem mechanizmy wykrywania i ograniczania nadużyć (anti-cheating)."
+        "Rozwijałem mechanizmy wykrywania nadużyć, zarządzania pokojami gry oraz dobierania graczy.",
+        "Pracowałem nad skalowalnością serwerów gier w architekturze P2P."
       ],
       "outcomes": [
         "Dostarczyłem skalowalną platformę umożliwiającą szybkie tworzenie i uruchamianie kolejnych gier.",
-        "Optymalizowałem wykorzystanie infrastruktury, wspierając efektywny rozwój platformy.",
-        "Przyspieszyłem rozwój nowych funkcji i eksperymentów produktowych dzięki wspólnym komponentom platformy."
+        "Umożliwiłem tworzenie nowych formatów gier opartych o model rozrywki z prowadzącym hostem.",
+        "Przyspieszyłem rozwój nowych funkcji i eksperymentów produktowych dzięki wspólnym komponentom platformy.",
+        "Optymalizowałem wykorzystanie infrastruktury, wspierając efektywny rozwój platformy."
       ]
     },
     "siili": {
