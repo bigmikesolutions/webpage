@@ -10,7 +10,7 @@
   "techTitle": "Technologie",
   "techDescription": "Podsumowanie technologii na podstawie stacków z firm. Lata doświadczenia wynikają z sumy lat (nakładające się role są scalane).",
   "techFeaturedTitle": "Wybrane technologie",
-  "techOthersTitle": "Pozostałe / others",
+  "techOthersTitle": "Pozostałe",
   "techFilterLabel": "Filtruj grupy technologii",
   "techLevelFilterLabel": "Filtruj lata doświadczenia",
   "techEmptyFilter": "Wybierz co najmniej jedną grupę i zakres lat doświadczenia, aby zobaczyć technologie.",
