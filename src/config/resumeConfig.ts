@@ -23,7 +23,7 @@ export {
   techGroupOrder,
 }
 
-/** Proficiency dots: 1 = basic, 2 = practical, 3 = advanced */
+/** Experience ranges: 1 = <2y, 2 = 2-5y, 3 = >5y */
 export type TechLevel = 1 | 2 | 3
 
 export const techLevelOrder: TechLevel[] = [1, 2, 3]
@@ -41,7 +41,7 @@ export interface TechSummaryItem {
   months: number
   /** Floored years for display (min 1 if months > 0) */
   years: number
-  /** 1–3 proficiency level derived from years */
+  /** 1–3 experience bucket derived from years */
   level: TechLevel
 }
 
@@ -130,9 +130,7 @@ export function getTechSummary(companies?: ResumeCompany[]): TechSummaryItem[] {
       return { name, group, months, years, level }
     })
     .filter((item) => item.months > 0)
-    .sort(
-      (a, b) => b.level - a.level || b.months - a.months || a.name.localeCompare(b.name),
-    )
+    .sort((a, b) => b.months - a.months || b.years - a.years || a.name.localeCompare(b.name))
 }
 
 export function filterTechSummary(

@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
 import type { TechSummaryItem } from '@/config/resumeConfig'
-import TechLevelDots from '@/components/resume/TechLevelDots.vue'
 
 const props = defineProps<{
   item: TechSummaryItem
   groupLabel: string
-  levelLabel: string
   yearsLabel: string
 }>()
 
@@ -51,7 +49,9 @@ onUnmounted(() => {
         <span class="font-medium text-slate-900">{{ item.name }}</span>
         <span class="mt-0.5 block text-xs text-slate-500">{{ groupLabel }}</span>
       </div>
-      <TechLevelDots :level="item.level" />
+      <span class="shrink-0 text-sm font-semibold tabular-nums text-slate-700">
+        {{ yearsLabel }}
+      </span>
     </button>
 
     <div
@@ -62,10 +62,6 @@ onUnmounted(() => {
     >
       <p class="text-sm font-semibold text-slate-900">{{ item.name }}</p>
       <p class="mt-1 text-xs text-slate-500">{{ groupLabel }}</p>
-      <div class="mt-3 flex items-center gap-2">
-        <TechLevelDots :level="item.level" />
-        <span class="text-sm text-slate-700">{{ levelLabel }}</span>
-      </div>
       <p class="mt-3 text-sm text-slate-600">
         {{ yearsLabel }}
       </p>

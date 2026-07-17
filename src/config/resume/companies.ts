@@ -120,7 +120,7 @@ export const resumeCompanies: ResumeCompany[] = [
     start: '2010-09',
     end: '2011-11',
     stack: {
-      frontend: ['JavaScript'],
+      frontend: ['JavaScript', 'GWT'],
       backend: ['Java', 'Spring', 'Hibernate', 'Oracle', 'PL/SQL', 'Maven', 'Weblogic'],
     },
   },

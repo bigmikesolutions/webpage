@@ -18,7 +18,7 @@ const props = defineProps<{
   showLabel: string
 }>()
 
-const open = ref(true)
+const open = ref(false)
 const activeId = ref('general')
 const progress = ref(0)
 

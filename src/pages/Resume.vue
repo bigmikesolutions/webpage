@@ -214,7 +214,6 @@
             <TechSummaryCard
               :item="item"
               :group-label="techGroupLabel(item.group)"
-              :level-label="techLevelLabel(item.level)"
               :years-label="$t('resume.techYearsTotal', { n: item.years })"
             />
           </li>
@@ -228,7 +227,6 @@
                   <TechSummaryCard
                     :item="tech"
                     :group-label="techGroupLabel(tech.group)"
-                    :level-label="techLevelLabel(tech.level)"
                     :years-label="$t('resume.techYearsTotal', { n: tech.years })"
                   />
                 </li>
@@ -331,7 +329,7 @@ const printMode = createResumePrintMode()
 provide(resumePrintModeKey, printMode)
 
 const selectedTechGroups = ref<TechGroup[]>([...techGroupOrder])
-const selectedTechLevels = ref<TechLevel[]>([...techLevelOrder])
+const selectedTechLevels = ref<TechLevel[]>([3])
 
 const newsTypeHeadingKey: Record<NewsType, string> = {
   publication: 'resume.publicationsSectionMinibooks',
