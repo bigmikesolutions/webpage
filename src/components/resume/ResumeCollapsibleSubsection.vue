@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, inject, ref } from 'vue'
 import { resumePrintModeKey } from '@/composables/useResumePrint'
+import ResumeSectionToggle from '@/components/resume/ResumeSectionToggle.vue'
 
 const props = withDefaults(
   defineProps<{
@@ -25,29 +26,19 @@ function toggle() {
   <div>
     <button
       type="button"
-      class="flex w-full items-center justify-between gap-4 text-left print:pointer-events-none"
+      class="flex w-full items-center justify-between gap-4 text-left transition print:pointer-events-none"
+      :class="
+        isOpen
+          ? 'py-1'
+          : 'rounded-lg border border-dashed border-brand-300 bg-brand-50/70 px-3 py-2.5 hover:border-brand-400 hover:bg-brand-50'
+      "
       :aria-expanded="isOpen"
       @click="toggle"
     >
-      <h3 class="text-lg font-semibold text-slate-900">{{ title }}</h3>
-      <span
-        class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-white text-slate-600 shadow-sm print:hidden"
-        aria-hidden="true"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="h-4 w-4 transition-transform duration-200"
-          :class="isOpen ? 'rotate-180' : ''"
-        >
-          <path d="m6 9 6 6 6-6" />
-        </svg>
-      </span>
+      <h3 class="text-lg font-semibold" :class="isOpen ? 'text-slate-900' : 'text-brand-900'">
+        {{ title }}
+      </h3>
+      <ResumeSectionToggle :is-open="isOpen" size="sm" />
     </button>
 
     <div v-show="isOpen" class="mt-4 print:mt-2">

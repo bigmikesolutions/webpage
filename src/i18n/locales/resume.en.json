@@ -45,6 +45,8 @@
   "progressNav": "Resume",
   "progressHide": "Hide navigation",
   "progressShow": "Show navigation",
+  "sectionExpand": "Expand",
+  "sectionCollapse": "Collapse",
   "backHome": "Home page",
   "educationItems": {
     "pwrMsc": {
