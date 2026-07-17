@@ -161,21 +161,20 @@
         "Budowałem oraz rozwijałem zespoły developerskie, wspierając je w podejmowaniu decyzji technicznych."
       ],
       "outcomes": [
-        "Zwiększyłem przewidywalność realizacji projektów poprzez lepsze podejście do estymacji i zarządzania zakresem.",
+        "Zmniejszyłem ryzyko realizacji projektów fixed price poprzez dokładniejsze estymacje, planowanie zakresu i wczesne identyfikowanie problemów.",
         "Przeprowadziłem migracje systemów ze starszych technologii do nowoczesnego stacku.",
-        "Budowałem długoterminowe relacje z klientami poprzez skuteczną współpracę techniczno-biznesową."
+        "Otrzymałem pozytywny feedback i wyróżnienia od klientów za wkład w realizację projektów."
       ]
     },
     "capgemini": {
       "role": "Software Engineer",
       "highlights": [
         "Rozwijałem Learning Management System (J2EE/Spring) — od analizy wymagań i zgłoszeń po wdrożenia produkcyjne.",
-        "Wspierałem projektowanie rozwiązań technicznych oraz podejmowanie decyzji dotyczących rozwoju systemu.",
         "Odpowiadałem za migracje danych oraz bezpieczne wdrażanie zmian na środowiska produkcyjne."
       ],
       "outcomes": [
-        "Dostarczałem funkcjonalności dla systemu LMS wykorzystywanego przez klienta.",
-        "Zapewniłem bezpieczne wdrażanie zmian poprzez kontrolowane migracje danych i release'y."
+        "Poprawiłem spójność danych w LMS poprzez usprawnienie procesów migracji, obsługi zmian i ujednolicenie logiki biznesowej.",
+        "Zmniejszyłem liczbę zgłoszeń użytkowników o około 30% poprzez poprawę stabilności i jakości systemu."
       ]
     },
     "nokia": {
