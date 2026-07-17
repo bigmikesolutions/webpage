@@ -132,13 +132,13 @@
     "siili": {
       "role": "Senior Software Engineer",
       "highlights": [
-        "Dostarczałem rozwiązania software'owe dla klientów z wykorzystaniem JVM, Go oraz technologii cloud.",
-        "Projektowałem i rozwijałem systemy rozproszone oparte o mikroserwisy, komunikację asynchroniczną oraz chmurę (AWS, Azure).",
+        "Dostarczałem rozwiązania software'owe dla klientów z wykorzystaniem JVM, Go oraz technologii cloud (AWS, Azure).",
+        "Projektowałem i rozwijałem systemy rozproszone oparte o mikroserwisy, komunikację asynchroniczną oraz architekturę cloud-native.",
         "Automatyzowałem procesy dostarczania oprogramowania poprzez CI/CD, Infrastructure as Code i narzędzia automatyzacji."
       ],
       "outcomes": [
-        "Zaprojektowałem i wdrożyłem jeden z pierwszych systemów serverless do monitorowania pracy wind oraz wykrywania sytuacji wymagających interwencji.",
-        "Stworzyłem system zarządzania przepływem paczek w środowisku logistycznym wraz z mechanizmami obsługi powiadomień."
+        "Zaprojektowałem i wdrożyłem jeden z pierwszych systemów serverless w organizacji, wykorzystując wczesne podejście cloud-native do monitorowania pracy wind i wykrywania sytuacji wymagających interwencji.",
+        "Dostarczyłem system zarządzania przepływem paczek i komunikacją w środowisku logistycznym."
       ]
     },
     "creditSuisse": {
