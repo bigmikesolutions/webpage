@@ -284,11 +284,13 @@
       <p class="max-w-3xl text-slate-600">{{ $t('resume.publicationsDescription') }}</p>
 
       <div class="mt-8 space-y-10">
-        <div v-for="group in resumeNewsGroups" :key="group.type">
-          <h3 class="text-lg font-semibold text-slate-900">
-            {{ $t(newsTypeHeadingKey[group.type]) }}
-          </h3>
-          <ul class="mt-4 space-y-3">
+        <ResumeCollapsibleSubsection
+          v-for="group in resumeNewsGroups"
+          :key="group.type"
+          :title="$t(newsTypeHeadingKey[group.type])"
+          :default-open="group.type !== 'youtube'"
+        >
+          <ul class="space-y-3">
             <li v-for="item in group.items" :key="item.id">
               <NewsListItem :item="item" />
             </li>
@@ -301,7 +303,7 @@
               })
             }}
           </p>
-        </div>
+        </ResumeCollapsibleSubsection>
       </div>
 
       <div class="no-print mt-8 flex flex-wrap gap-3">
@@ -331,6 +333,7 @@ import { computed, nextTick, provide, ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import ResumeCollapsibleSection from '@/components/resume/ResumeCollapsibleSection.vue'
+import ResumeCollapsibleSubsection from '@/components/resume/ResumeCollapsibleSubsection.vue'
 import ResumeItemSlider from '@/components/resume/ResumeItemSlider.vue'
 import ResumeCompanyCard from '@/components/resume/ResumeCompanyCard.vue'
 import LanguageLevelRow from '@/components/resume/LanguageLevelRow.vue'
