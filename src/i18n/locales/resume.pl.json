@@ -96,20 +96,22 @@
       "outcomes": [
         "Stworzyłem i wdrożyłem platformę AR Flashbulb wspierającą proces sprzedaży.",
         "Zaprojektowałem i uruchomiłem Elepantry — platformę integrującą wielu dostawców usług chmurowych w jednym miejscu.",
-        "Zdobyłem doświadczenie w budowaniu produktów od koncepcji, przez rozwój, po komercjalizację."
+        "Doprowadziłem do sprzedaży firmy, zdobywając praktyczne doświadczenie w budowaniu produktów od koncepcji po komercjalizację."
       ]
     },
     "form3": {
       "role": "Full Stack Engineer",
       "highlights": [
         "Rozwijałem platformę płatności obsługującą brytyjskie systemy BACS i Faster Payments.",
-        "Projektowałem rozwiązania zwiększające niezawodność przetwarzania transakcji oraz odporność na awarie.",
-        "Projektowałem mechanizmy failure recovery zwiększające niezawodność przetwarzania płatności."
+        "Projektowałem i implementowałem mechanizmy failure recovery dla procesów przetwarzania transakcji.",
+        "Rozwijałem rozwiązania wspierające monitorowanie i obserwowalność systemu.",
+        "Tworzyłem narzędzia CLI wspierające pracę zespołów developerskich i operacyjnych."
       ],
       "outcomes": [
-        "Wsparłem utrzymanie ciągłości przetwarzania płatności krytycznych dla klientów Form3.",
-        "Ograniczyłem wpływ awarii poprzez lepszą obsługę scenariuszy recovery i monitorowanie systemu.",
-        "Ułatwiłem bezpieczny rozwój platformy płatniczej dzięki większej obserwowalności i stabilności."
+        "Zwiększyłem odporność platformy na awarie, wspierając ciągłość przetwarzania płatności.",
+        "Usprawniłem komunikację pomiędzy mikroserwisami, zwiększając przewidywalność przepływu transakcji.",
+        "Przyczyniłem się do wdrożenia Kubernetes i Cilium, wspierając rozwój nowoczesnej infrastruktury platformy.",
+        "Ułatwiłem pracę zespołów poprzez automatyzację powtarzalnych operacji developerskich i operacyjnych."
       ]
     },
     "huuugeGames": {
