@@ -62,11 +62,6 @@
         "Rozwijałem i utrzymywałem usługi webowe w środowisku Volvo IT.",
         "Pracowałem ze stackiem .NET (C#, ASP) oraz integracją danych (SSIS).",
         "Wspierałem pracę z MS SQL Server oraz automatyzacją zadań poprzez skrypty VB."
-      ],
-      "outcomes": [
-        "Wsparłem rozwój i utrzymanie wewnętrznych aplikacji wykorzystywanych w organizacji.",
-        "Zdobyłem doświadczenie w pracy z procesami IT dużej organizacji enterprise.",
-        "Poznałem cykl życia aplikacji — od zmian rozwojowych po wdrożenia produkcyjne."
       ]
     },
     "volvoIt2006": {
@@ -74,10 +69,6 @@
       "highlights": [
         "Rozwijałem usługi webowe w środowisku Volvo IT.",
         "Pracowałem z technologiami .NET (C#, ASP) oraz MS SQL Server."
-      ],
-      "outcomes": [
-        "Zdobyłem pierwsze doświadczenie w tworzeniu oprogramowania dla środowiska enterprise.",
-        "Poznałem praktyki pracy z istniejącymi systemami biznesowymi."
       ]
     }
   },
