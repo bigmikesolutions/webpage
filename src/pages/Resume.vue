@@ -191,26 +191,13 @@
 
     <ResumeCollapsibleSection id="tech" :title="$t('resume.techTitle')" muted>
       <p class="max-w-3xl text-slate-600">{{ $t('resume.techDescription') }}</p>
-      <div class="no-print mt-6 space-y-3">
-        <TechGroupFilters
-          v-model:selected-groups="selectedTechGroups"
-          :ariaLabel="$t('resume.techFilterLabel')"
-          :group-label="techGroupLabel"
-        />
-        <TechLevelFilters
-          v-model:selected-levels="selectedTechLevels"
-          :ariaLabel="$t('resume.techLevelFilterLabel')"
-          :level-label="techLevelLabel"
-        />
-      </div>
 
-      <p v-if="filteredTechSummary.length === 0" class="mt-8 text-slate-600 no-print">
-        {{ $t('resume.techEmptyFilter') }}
-      </p>
-
-      <div v-else class="mt-8">
-        <ul class="hidden gap-3 sm:grid sm:grid-cols-2 lg:grid-cols-3 print:grid">
-          <li v-for="item in filteredTechSummary" :key="item.name">
+      <div class="mt-8">
+        <h3 class="text-lg font-semibold text-slate-900">
+          {{ $t('resume.techFeaturedTitle') }}
+        </h3>
+        <ul class="mt-4 hidden gap-3 sm:grid sm:grid-cols-2 lg:grid-cols-3 print:grid">
+          <li v-for="item in featuredTechSummary" :key="item.name">
             <TechSummaryCard
               :item="item"
               :group-label="techGroupLabel(item.group)"
@@ -219,8 +206,8 @@
           </li>
         </ul>
 
-        <div class="sm:hidden print:hidden">
-          <ResumeItemSlider :items="techPages" desktop-class="">
+        <div class="mt-4 sm:hidden print:hidden">
+          <ResumeItemSlider :items="featuredTechPages" desktop-class="">
             <template #default="{ item: page }">
               <ul class="grid gap-3">
                 <li v-for="tech in page" :key="tech.name">
@@ -235,6 +222,58 @@
           </ResumeItemSlider>
         </div>
       </div>
+
+      <ResumeCollapsibleSection
+        id="tech-others"
+        :title="$t('resume.techOthersTitle')"
+        :default-open="false"
+        class="mt-10 border-t border-slate-200"
+      >
+        <div class="no-print space-y-3">
+          <TechGroupFilters
+            v-model:selected-groups="selectedTechGroups"
+            :ariaLabel="$t('resume.techFilterLabel')"
+            :group-label="techGroupLabel"
+          />
+          <TechLevelFilters
+            v-model:selected-levels="selectedTechLevels"
+            :ariaLabel="$t('resume.techLevelFilterLabel')"
+            :level-label="techLevelLabel"
+          />
+        </div>
+
+        <p v-if="filteredOtherTechSummary.length === 0" class="mt-8 text-slate-600 no-print">
+          {{ $t('resume.techEmptyFilter') }}
+        </p>
+
+        <div v-else class="mt-8">
+          <ul class="hidden gap-3 sm:grid sm:grid-cols-2 lg:grid-cols-3 print:grid">
+            <li v-for="item in filteredOtherTechSummary" :key="item.name">
+              <TechSummaryCard
+                :item="item"
+                :group-label="techGroupLabel(item.group)"
+                :years-label="$t('resume.techYearsTotal', { n: item.years })"
+              />
+            </li>
+          </ul>
+
+          <div class="sm:hidden print:hidden">
+            <ResumeItemSlider :items="otherTechPages" desktop-class="">
+              <template #default="{ item: page }">
+                <ul class="grid gap-3">
+                  <li v-for="tech in page" :key="tech.name">
+                    <TechSummaryCard
+                      :item="tech"
+                      :group-label="techGroupLabel(tech.group)"
+                      :years-label="$t('resume.techYearsTotal', { n: tech.years })"
+                    />
+                  </li>
+                </ul>
+              </template>
+            </ResumeItemSlider>
+          </div>
+        </div>
+      </ResumeCollapsibleSection>
     </ResumeCollapsibleSection>
 
     <ResumeCollapsibleSection
@@ -301,6 +340,7 @@ import TechLevelFilters from '@/components/resume/TechLevelFilters.vue'
 import TechSummaryCard from '@/components/resume/TechSummaryCard.vue'
 import NewsListItem from '@/components/news/NewsListItem.vue'
 import { createResumePrintMode, resumePrintModeKey } from '@/composables/useResumePrint'
+import { featuredTechNames } from '@/config/resume/companies'
 import {
   getResumeNewsGroups,
   type NewsType,
@@ -341,13 +381,30 @@ const resumeNewsGroups = computed(() => getResumeNewsGroups())
 
 const techSummary = computed(() => getTechSummary())
 
-const filteredTechSummary = computed(() =>
-  filterTechSummary(techSummary.value, selectedTechGroups.value, selectedTechLevels.value),
+const featuredTechSummary = computed(() =>
+  techSummary.value.filter((item) => featuredTechNames.has(item.name)),
 )
 
-const techPages = computed(() => {
+const otherTechSummary = computed(() =>
+  techSummary.value.filter((item) => !featuredTechNames.has(item.name)),
+)
+
+const filteredOtherTechSummary = computed(() =>
+  filterTechSummary(otherTechSummary.value, selectedTechGroups.value, selectedTechLevels.value),
+)
+
+const featuredTechPages = computed(() => {
   const pages: TechSummaryItem[][] = []
-  const items = filteredTechSummary.value
+  const items = featuredTechSummary.value
+  for (let i = 0; i < items.length; i += TECH_PAGE_SIZE) {
+    pages.push(items.slice(i, i + TECH_PAGE_SIZE))
+  }
+  return pages
+})
+
+const otherTechPages = computed(() => {
+  const pages: TechSummaryItem[][] = []
+  const items = filteredOtherTechSummary.value
   for (let i = 0; i < items.length; i += TECH_PAGE_SIZE) {
     pages.push(items.slice(i, i + TECH_PAGE_SIZE))
   }

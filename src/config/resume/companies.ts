@@ -4,6 +4,20 @@ import type { ResumeCompany } from './types'
  * Employment / company history (newest first).
  * Localized role, summary and impact bullets live in i18n under `resume.companies.<i18nKey>`.
  */
+export const featuredTechNames = new Set([
+  'Go',
+  'Terraform',
+  'Java',
+  'GCP',
+  'Azure',
+  'AWS',
+  'Kubernetes',
+  'Kafka',
+  'Event Sourcing',
+  'PostgreSQL',
+  'Android',
+])
+
 export const resumeCompanies: ResumeCompany[] = [
   {
     id: 'shell-recharge',

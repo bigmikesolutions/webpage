@@ -9,6 +9,8 @@
   "languagesLabel": "Languages",
   "techTitle": "Technologies",
   "techDescription": "Technology summary based on company stacks. Years of experience are derived from the total number of years (overlapping roles are merged).",
+  "techFeaturedTitle": "Featured technologies",
+  "techOthersTitle": "Others",
   "techFilterLabel": "Filter technology groups",
   "techLevelFilterLabel": "Filter years of experience",
   "techEmptyFilter": "Select at least one group and experience range to see technologies.",
