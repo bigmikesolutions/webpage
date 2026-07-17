@@ -167,6 +167,7 @@
     <ResumeCollapsibleSection
       id="internships"
       :title="$t('resume.internshipsTitle')"
+      :default-open="false"
       class="border-t border-slate-200"
     >
       <ResumeItemSlider :items="resumeInternships" desktop-class="space-y-10">
