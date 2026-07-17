@@ -344,6 +344,7 @@ import TechLevelFilters from '@/components/resume/TechLevelFilters.vue'
 import TechSummaryCard from '@/components/resume/TechSummaryCard.vue'
 import NewsListItem from '@/components/news/NewsListItem.vue'
 import { createResumePrintMode, resumePrintModeKey } from '@/composables/useResumePrint'
+import { createResumeSectionController, resumeSectionsKey } from '@/composables/useResumeSections'
 import { featuredTechNames } from '@/config/resume/companies'
 import {
   getResumeNewsGroups,
@@ -370,7 +371,9 @@ const TECH_PAGE_SIZE = 6
 const { t, locale, messages } = useI18n()
 
 const printMode = createResumePrintMode()
+const sectionController = createResumeSectionController()
 provide(resumePrintModeKey, printMode)
+provide(resumeSectionsKey, sectionController)
 
 const selectedTechGroups = ref<TechGroup[]>([...techGroupOrder])
 const selectedTechLevels = ref<TechLevel[]>([3])

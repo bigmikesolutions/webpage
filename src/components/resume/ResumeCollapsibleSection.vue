@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { computed, inject, ref } from 'vue'
+import { computed, inject, onMounted, onUnmounted, ref } from 'vue'
 import { resumePrintModeKey } from '@/composables/useResumePrint'
+import { resumeSectionsKey } from '@/composables/useResumeSections'
 import ResumeSectionToggle from '@/components/resume/ResumeSectionToggle.vue'
 
 const props = withDefaults(
@@ -19,11 +20,26 @@ const props = withDefaults(
 
 const open = ref(props.defaultOpen)
 const printMode = inject(resumePrintModeKey, ref(false))
+const sections = inject(resumeSectionsKey, null)
 const isOpen = computed(() => open.value || printMode.value)
+
+function expand() {
+  open.value = true
+  sections?.notifyLayoutChange()
+}
 
 function toggle() {
   open.value = !open.value
+  sections?.notifyLayoutChange()
 }
+
+onMounted(() => {
+  sections?.register(props.id, expand)
+})
+
+onUnmounted(() => {
+  sections?.unregister(props.id)
+})
 </script>
 
 <template>
