@@ -4,6 +4,20 @@ import type { ResumeCompany } from './types'
  * Employment / company history (newest first).
  * Localized role, summary and impact bullets live in i18n under `resume.companies.<i18nKey>`.
  */
+export const featuredTechNames = new Set([
+  'Go',
+  'Terraform',
+  'Java',
+  'GCP',
+  'Azure',
+  'AWS',
+  'Kubernetes',
+  'Kafka',
+  'Event Sourcing',
+  'PostgreSQL',
+  'Android',
+])
+
 export const resumeCompanies: ResumeCompany[] = [
   {
     id: 'shell-recharge',
@@ -23,6 +37,7 @@ export const resumeCompanies: ResumeCompany[] = [
         'gRPC',
         'REST',
         'Node.js',
+        'Event Sourcing',
       ],
       devops: ['Docker', 'Kubernetes', 'AWS', 'Terraform', 'GitLab CI', 'Vault', 'Python'],
     },
@@ -62,6 +77,7 @@ export const resumeCompanies: ResumeCompany[] = [
         'Prometheus',
         'Grafana',
         'ELK',
+        'Event Sourcing',
       ],
     },
   },
@@ -85,7 +101,7 @@ export const resumeCompanies: ResumeCompany[] = [
     start: '2014-04',
     end: '2017-06',
     stack: {
-      backend: ['Java', 'Spring', 'Scala', 'Akka', 'Kotlin', 'Go', 'PostgreSQL', 'NATS', 'Kafka'],
+      backend: ['Java', 'Spring', 'Scala', 'Akka', 'Kotlin', 'Go', 'PostgreSQL', 'NATS', 'Kafka', 'Event Sourcing'],
       devops: ['Docker', 'Kubernetes', 'Terraform', 'GitLab CI', 'Ansible', 'AWS', 'Azure'],
       mobile: ['Android'],
     },
@@ -120,7 +136,7 @@ export const resumeCompanies: ResumeCompany[] = [
     start: '2010-09',
     end: '2011-11',
     stack: {
-      frontend: ['JavaScript'],
+      frontend: ['JavaScript', 'GWT'],
       backend: ['Java', 'Spring', 'Hibernate', 'Oracle', 'PL/SQL', 'Maven', 'Weblogic'],
     },
   },

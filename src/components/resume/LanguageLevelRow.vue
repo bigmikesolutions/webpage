@@ -1,19 +1,15 @@
 <script setup lang="ts">
 import type { LanguageFlag, LanguageLevel } from '@/config/resume/languageTypes'
-import { languageLevelFilled, languageLevelTotal } from '@/config/resume/languageTypes'
 
 const props = defineProps<{
   flag: LanguageFlag
   name: string
   level: LanguageLevel
 }>()
-
-const total = languageLevelTotal()
-const filled = languageLevelFilled(props.level)
 </script>
 
 <template>
-  <div class="grid grid-cols-[2.25rem_minmax(0,1fr)_2rem_auto] items-center gap-x-3 sm:gap-x-4">
+  <div class="grid grid-cols-[2.25rem_minmax(0,1fr)_auto] items-center gap-x-3 sm:gap-x-4">
     <span
       class="inline-flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full ring-1 ring-slate-200"
       aria-hidden="true"
@@ -48,13 +44,5 @@ const filled = languageLevelFilled(props.level)
 
     <span class="min-w-0 font-medium text-slate-900">{{ name }}</span>
     <span class="text-right text-sm font-semibold tabular-nums text-slate-600">{{ level }}</span>
-    <span class="inline-flex items-center gap-1.5" role="img" :aria-label="level">
-      <span
-        v-for="i in total"
-        :key="i"
-        class="h-2 w-2 rounded-full"
-        :class="i <= filled ? 'bg-brand-500' : 'bg-slate-200'"
-      ></span>
-    </span>
   </div>
 </template>

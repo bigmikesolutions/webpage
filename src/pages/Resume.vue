@@ -167,6 +167,7 @@
     <ResumeCollapsibleSection
       id="internships"
       :title="$t('resume.internshipsTitle')"
+      :default-open="false"
       class="border-t border-slate-200"
     >
       <ResumeItemSlider :items="resumeInternships" desktop-class="space-y-10">
@@ -191,44 +192,29 @@
 
     <ResumeCollapsibleSection id="tech" :title="$t('resume.techTitle')" muted>
       <p class="max-w-3xl text-slate-600">{{ $t('resume.techDescription') }}</p>
-      <div class="no-print mt-6 space-y-3">
-        <TechGroupFilters
-          v-model:selected-groups="selectedTechGroups"
-          :ariaLabel="$t('resume.techFilterLabel')"
-          :group-label="techGroupLabel"
-        />
-        <TechLevelFilters
-          v-model:selected-levels="selectedTechLevels"
-          :ariaLabel="$t('resume.techLevelFilterLabel')"
-          :level-label="techLevelLabel"
-        />
-      </div>
 
-      <p v-if="filteredTechSummary.length === 0" class="mt-8 text-slate-600 no-print">
-        {{ $t('resume.techEmptyFilter') }}
-      </p>
-
-      <div v-else class="mt-8">
-        <ul class="hidden gap-3 sm:grid sm:grid-cols-2 lg:grid-cols-3 print:grid">
-          <li v-for="item in filteredTechSummary" :key="item.name">
+      <div class="mt-8">
+        <h3 class="text-lg font-semibold text-slate-900">
+          {{ $t('resume.techFeaturedTitle') }}
+        </h3>
+        <ul class="mt-4 hidden gap-3 sm:grid sm:grid-cols-2 lg:grid-cols-3 print:grid">
+          <li v-for="item in featuredTechSummary" :key="item.name">
             <TechSummaryCard
               :item="item"
               :group-label="techGroupLabel(item.group)"
-              :level-label="techLevelLabel(item.level)"
               :years-label="$t('resume.techYearsTotal', { n: item.years })"
             />
           </li>
         </ul>
 
-        <div class="sm:hidden print:hidden">
-          <ResumeItemSlider :items="techPages" desktop-class="">
+        <div class="mt-4 sm:hidden print:hidden">
+          <ResumeItemSlider :items="featuredTechPages" desktop-class="">
             <template #default="{ item: page }">
               <ul class="grid gap-3">
                 <li v-for="tech in page" :key="tech.name">
                   <TechSummaryCard
                     :item="tech"
                     :group-label="techGroupLabel(tech.group)"
-                    :level-label="techLevelLabel(tech.level)"
                     :years-label="$t('resume.techYearsTotal', { n: tech.years })"
                   />
                 </li>
@@ -237,6 +223,58 @@
           </ResumeItemSlider>
         </div>
       </div>
+
+      <ResumeCollapsibleSection
+        id="tech-others"
+        :title="$t('resume.techOthersTitle')"
+        :default-open="false"
+        class="mt-10 border-t border-slate-200"
+      >
+        <div class="no-print space-y-3">
+          <TechGroupFilters
+            v-model:selected-groups="selectedTechGroups"
+            :ariaLabel="$t('resume.techFilterLabel')"
+            :group-label="techGroupLabel"
+          />
+          <TechLevelFilters
+            v-model:selected-levels="selectedTechLevels"
+            :ariaLabel="$t('resume.techLevelFilterLabel')"
+            :level-label="techLevelLabel"
+          />
+        </div>
+
+        <p v-if="filteredOtherTechSummary.length === 0" class="mt-8 text-slate-600 no-print">
+          {{ $t('resume.techEmptyFilter') }}
+        </p>
+
+        <div v-else class="mt-8">
+          <ul class="hidden gap-3 sm:grid sm:grid-cols-2 lg:grid-cols-3 print:grid">
+            <li v-for="item in filteredOtherTechSummary" :key="item.name">
+              <TechSummaryCard
+                :item="item"
+                :group-label="techGroupLabel(item.group)"
+                :years-label="$t('resume.techYearsTotal', { n: item.years })"
+              />
+            </li>
+          </ul>
+
+          <div class="sm:hidden print:hidden">
+            <ResumeItemSlider :items="otherTechPages" desktop-class="">
+              <template #default="{ item: page }">
+                <ul class="grid gap-3">
+                  <li v-for="tech in page" :key="tech.name">
+                    <TechSummaryCard
+                      :item="tech"
+                      :group-label="techGroupLabel(tech.group)"
+                      :years-label="$t('resume.techYearsTotal', { n: tech.years })"
+                    />
+                  </li>
+                </ul>
+              </template>
+            </ResumeItemSlider>
+          </div>
+        </div>
+      </ResumeCollapsibleSection>
     </ResumeCollapsibleSection>
 
     <ResumeCollapsibleSection
@@ -247,11 +285,13 @@
       <p class="max-w-3xl text-slate-600">{{ $t('resume.publicationsDescription') }}</p>
 
       <div class="mt-8 space-y-10">
-        <div v-for="group in resumeNewsGroups" :key="group.type">
-          <h3 class="text-lg font-semibold text-slate-900">
-            {{ $t(newsTypeHeadingKey[group.type]) }}
-          </h3>
-          <ul class="mt-4 space-y-3">
+        <ResumeCollapsibleSubsection
+          v-for="group in resumeNewsGroups"
+          :key="group.type"
+          :title="$t(newsTypeHeadingKey[group.type])"
+          :default-open="group.type !== 'youtube'"
+        >
+          <ul class="space-y-3">
             <li v-for="item in group.items" :key="item.id">
               <NewsListItem :item="item" />
             </li>
@@ -264,7 +304,7 @@
               })
             }}
           </p>
-        </div>
+        </ResumeCollapsibleSubsection>
       </div>
 
       <div class="no-print mt-8 flex flex-wrap gap-3">
@@ -294,6 +334,7 @@ import { computed, nextTick, provide, ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import ResumeCollapsibleSection from '@/components/resume/ResumeCollapsibleSection.vue'
+import ResumeCollapsibleSubsection from '@/components/resume/ResumeCollapsibleSubsection.vue'
 import ResumeItemSlider from '@/components/resume/ResumeItemSlider.vue'
 import ResumeCompanyCard from '@/components/resume/ResumeCompanyCard.vue'
 import LanguageLevelRow from '@/components/resume/LanguageLevelRow.vue'
@@ -303,6 +344,8 @@ import TechLevelFilters from '@/components/resume/TechLevelFilters.vue'
 import TechSummaryCard from '@/components/resume/TechSummaryCard.vue'
 import NewsListItem from '@/components/news/NewsListItem.vue'
 import { createResumePrintMode, resumePrintModeKey } from '@/composables/useResumePrint'
+import { createResumeSectionController, resumeSectionsKey } from '@/composables/useResumeSections'
+import { featuredTechNames } from '@/config/resume/companies'
 import {
   getResumeNewsGroups,
   type NewsType,
@@ -328,10 +371,12 @@ const TECH_PAGE_SIZE = 6
 const { t, locale, messages } = useI18n()
 
 const printMode = createResumePrintMode()
+const sectionController = createResumeSectionController()
 provide(resumePrintModeKey, printMode)
+provide(resumeSectionsKey, sectionController)
 
 const selectedTechGroups = ref<TechGroup[]>([...techGroupOrder])
-const selectedTechLevels = ref<TechLevel[]>([...techLevelOrder])
+const selectedTechLevels = ref<TechLevel[]>([3])
 
 const newsTypeHeadingKey: Record<NewsType, string> = {
   publication: 'resume.publicationsSectionMinibooks',
@@ -343,13 +388,30 @@ const resumeNewsGroups = computed(() => getResumeNewsGroups())
 
 const techSummary = computed(() => getTechSummary())
 
-const filteredTechSummary = computed(() =>
-  filterTechSummary(techSummary.value, selectedTechGroups.value, selectedTechLevels.value),
+const featuredTechSummary = computed(() =>
+  techSummary.value.filter((item) => featuredTechNames.has(item.name)),
 )
 
-const techPages = computed(() => {
+const otherTechSummary = computed(() =>
+  techSummary.value.filter((item) => !featuredTechNames.has(item.name)),
+)
+
+const filteredOtherTechSummary = computed(() =>
+  filterTechSummary(otherTechSummary.value, selectedTechGroups.value, selectedTechLevels.value),
+)
+
+const featuredTechPages = computed(() => {
   const pages: TechSummaryItem[][] = []
-  const items = filteredTechSummary.value
+  const items = featuredTechSummary.value
+  for (let i = 0; i < items.length; i += TECH_PAGE_SIZE) {
+    pages.push(items.slice(i, i + TECH_PAGE_SIZE))
+  }
+  return pages
+})
+
+const otherTechPages = computed(() => {
+  const pages: TechSummaryItem[][] = []
+  const items = filteredOtherTechSummary.value
   for (let i = 0; i < items.length; i += TECH_PAGE_SIZE) {
     pages.push(items.slice(i, i + TECH_PAGE_SIZE))
   }

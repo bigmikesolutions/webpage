@@ -40,6 +40,23 @@ function prev() {
 function next() {
   if (canNext.value) index.value += 1
 }
+
+const touchStartX = ref(0)
+const touchStartY = ref(0)
+
+function onTouchStart(e: TouchEvent) {
+  touchStartX.value = e.touches[0].clientX
+  touchStartY.value = e.touches[0].clientY
+}
+
+function onTouchEnd(e: TouchEvent) {
+  const dx = e.changedTouches[0].clientX - touchStartX.value
+  const dy = e.changedTouches[0].clientY - touchStartY.value
+  // Only treat as horizontal swipe if horizontal delta dominates
+  if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy)) return
+  if (dx < 0) next()
+  else prev()
+}
 </script>
 
 <template>
@@ -108,7 +125,11 @@ function next() {
       </button>
     </div>
 
-    <div :class="showAll ? desktopClass : undefined">
+    <div
+      :class="showAll ? desktopClass : undefined"
+      @touchstart.passive="onTouchStart"
+      @touchend.passive="onTouchEnd"
+    >
       <template v-for="(item, i) in items" :key="i">
         <div v-show="showAll || i === index">
           <slot :item="item" :index="i" />

@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { computed, inject, ref } from 'vue'
+import { computed, inject, onMounted, onUnmounted, ref } from 'vue'
 import { resumePrintModeKey } from '@/composables/useResumePrint'
+import { resumeSectionsKey } from '@/composables/useResumeSections'
+import ResumeSectionToggle from '@/components/resume/ResumeSectionToggle.vue'
 
 const props = withDefaults(
   defineProps<{
@@ -18,11 +20,26 @@ const props = withDefaults(
 
 const open = ref(props.defaultOpen)
 const printMode = inject(resumePrintModeKey, ref(false))
+const sections = inject(resumeSectionsKey, null)
 const isOpen = computed(() => open.value || printMode.value)
+
+function expand() {
+  open.value = true
+  sections?.notifyLayoutChange()
+}
 
 function toggle() {
   open.value = !open.value
+  sections?.notifyLayoutChange()
 }
+
+onMounted(() => {
+  sections?.register(props.id, expand)
+})
+
+onUnmounted(() => {
+  sections?.unregister(props.id)
+})
 </script>
 
 <template>
@@ -34,32 +51,23 @@ function toggle() {
     <div class="container mx-auto px-4 py-14 print:px-0 print:py-6">
       <button
         type="button"
-        class="flex w-full items-center justify-between gap-4 text-left print:pointer-events-none"
+        class="group flex w-full items-center justify-between gap-4 text-left transition print:pointer-events-none"
+        :class="
+          isOpen
+            ? 'py-1'
+            : 'rounded-xl border border-dashed border-brand-300 bg-brand-50/70 px-4 py-3 hover:border-brand-400 hover:bg-brand-50 sm:px-5 sm:py-4'
+        "
         :aria-expanded="isOpen"
         :aria-controls="`${id}-panel`"
         @click="toggle"
       >
-        <h2 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+        <h2
+          class="text-2xl font-bold tracking-tight sm:text-3xl"
+          :class="isOpen ? 'text-slate-900' : 'text-brand-900'"
+        >
           {{ title }}
         </h2>
-        <span
-          class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-white text-slate-600 shadow-sm print:hidden"
-          aria-hidden="true"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-4 w-4 transition-transform duration-200"
-            :class="isOpen ? 'rotate-180' : ''"
-          >
-            <path d="m6 9 6 6 6-6" />
-          </svg>
-        </span>
+        <ResumeSectionToggle :is-open="isOpen" size="lg" />
       </button>
 
       <div v-show="isOpen" :id="`${id}-panel`" class="mt-8 print:mt-4">

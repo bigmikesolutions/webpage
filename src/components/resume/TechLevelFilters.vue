@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { techLevelOrder, type TechLevel } from '@/config/resumeConfig'
-import TechLevelDots from '@/components/resume/TechLevelDots.vue'
 
 const props = defineProps<{
   selectedLevels: TechLevel[]
@@ -33,8 +32,7 @@ function toggle(level: TechLevel) {
       :title="levelLabel(level)"
       @click="toggle(level)"
     >
-      <TechLevelDots :level="level" />
-      <span class="hidden sm:inline">{{ levelLabel(level) }}</span>
+      <span>{{ levelLabel(level) }}</span>
     </button>
   </div>
 </template>

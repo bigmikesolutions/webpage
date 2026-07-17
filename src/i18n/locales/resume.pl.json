@@ -8,15 +8,17 @@
   "educationLabel": "Edukacja",
   "languagesLabel": "Języki",
   "techTitle": "Technologie",
-  "techDescription": "Podsumowanie technologii na podstawie stacków z firm. Poziom znajomości wynika z sumy lat (nakładające się role są scalane).",
+  "techDescription": "Podsumowanie technologii na podstawie stacków z firm. Lata doświadczenia wynikają z sumy lat (nakładające się role są scalane).",
+  "techFeaturedTitle": "Wybrane technologie",
+  "techOthersTitle": "Pozostałe",
   "techFilterLabel": "Filtruj grupy technologii",
-  "techLevelFilterLabel": "Filtruj poziom znajomości",
-  "techEmptyFilter": "Wybierz co najmniej jedną grupę i poziom, aby zobaczyć technologie.",
+  "techLevelFilterLabel": "Filtruj lata doświadczenia",
+  "techEmptyFilter": "Wybierz co najmniej jedną grupę i zakres lat doświadczenia, aby zobaczyć technologie.",
   "techYearsTotal": "Łącznie: {n} lat",
   "techLevels": {
-    "1": "Podstawowa znajomość",
-    "2": "Praktyczne doświadczenie",
-    "3": "Zaawansowane doświadczenie"
+    "1": "Mniej niż 2 lata",
+    "2": "2-5 lat",
+    "3": "Ponad 5 lat"
   },
   "publicationsTitle": "Publikacje",
   "publicationsDescription": "Minibooki, artykuły i materiały wideo — wybrane treści z BigMikeLabs.",
@@ -43,6 +45,8 @@
   "progressNav": "CV",
   "progressHide": "Ukryj nawigację",
   "progressShow": "Pokaż nawigację",
+  "sectionExpand": "Rozwiń",
+  "sectionCollapse": "Zwiń",
   "backHome": "Strona główna",
   "educationItems": {
     "pwrMsc": {
@@ -62,11 +66,6 @@
         "Rozwijałem i utrzymywałem usługi webowe w środowisku Volvo IT.",
         "Pracowałem ze stackiem .NET (C#, ASP) oraz integracją danych (SSIS).",
         "Wspierałem pracę z MS SQL Server oraz automatyzacją zadań poprzez skrypty VB."
-      ],
-      "outcomes": [
-        "Wsparłem rozwój i utrzymanie wewnętrznych aplikacji wykorzystywanych w organizacji.",
-        "Zdobyłem doświadczenie w pracy z procesami IT dużej organizacji enterprise.",
-        "Poznałem cykl życia aplikacji — od zmian rozwojowych po wdrożenia produkcyjne."
       ]
     },
     "volvoIt2006": {
@@ -74,10 +73,6 @@
       "highlights": [
         "Rozwijałem usługi webowe w środowisku Volvo IT.",
         "Pracowałem z technologiami .NET (C#, ASP) oraz MS SQL Server."
-      ],
-      "outcomes": [
-        "Zdobyłem pierwsze doświadczenie w tworzeniu oprogramowania dla środowiska enterprise.",
-        "Poznałem praktyki pracy z istniejącymi systemami biznesowymi."
       ]
     }
   },
@@ -85,14 +80,15 @@
     "shellRecharge": {
       "role": "Senior Software Engineer (Go)",
       "highlights": [
-        "Projektowałem i rozwijałem systemy backendowe dla operatora infrastruktury ładowania EV, wspierające integracje CPO poprzez protokoły OCPI, OCPP i BOCPP.",
-        "Przebudowałem warstwę API (GraphQL Federation, gRPC, REST), umożliwiając elastyczny dostęp do danych oraz szybszy rozwój funkcji produktowych.",
-        "Wspierałem migrację odpowiedzialności i danych do modelu single source of truth, ograniczając ryzyko niespójności w systemie."
+        "Implementowałem serwisy backendowe wspierające operacje Charging Point Operator (CPO).",
+        "Implementowałem proxy umożliwiające uniwersalny dostęp do danych, ukrywając złożoność protokołów BOCPP, OCPI i OCPP.",
+        "Przebudowałem warstwę API (GraphQL Federation, gRPC, REST), umożliwiając elastyczny i szybszy dostęp do danych.",
+        "Wspierałem migrację odpowiedzialności i danych do modelu Single Source of Truth, ograniczając ryzyko niespójności w systemie."
       ],
       "outcomes": [
-        "Uprościłem dostęp do danych dla zespołów produktowych poprzez spójną warstwę API.",
-        "Skróciłem czas rozwoju nowych integracji dzięki elastycznej architekturze API.",
-        "Przygotowałem fundament pod dalszy rozwój platformy obsługującej ekosystem EV."
+        "Uprościłem dostęp do całej platformy poprzez spójną warstwę API niezależną od źródła danych.",
+        "Umożliwiłem dostęp do danych w czasie rzeczywistym dla usług i integracji.",
+        "Zapoczątkowałem wykorzystanie Golanga w organizacji, wspierając jego wdrożenie oraz rozwój kompetencji zespołów."
       ]
     },
     "herolynx": {
@@ -104,20 +100,22 @@
       "outcomes": [
         "Stworzyłem i wdrożyłem platformę AR Flashbulb wspierającą proces sprzedaży.",
         "Zaprojektowałem i uruchomiłem Elepantry — platformę integrującą wielu dostawców usług chmurowych w jednym miejscu.",
-        "Zdobyłem doświadczenie w budowaniu produktów od koncepcji, przez rozwój, po komercjalizację."
+        "Doprowadziłem do sprzedaży firmy, zdobywając praktyczne doświadczenie w budowaniu produktów od koncepcji po komercjalizację."
       ]
     },
     "form3": {
       "role": "Full Stack Engineer",
       "highlights": [
         "Rozwijałem platformę płatności obsługującą brytyjskie systemy BACS i Faster Payments.",
-        "Projektowałem rozwiązania zwiększające niezawodność przetwarzania transakcji oraz odporność na awarie.",
-        "Projektowałem mechanizmy failure recovery zwiększające niezawodność przetwarzania płatności."
+        "Projektowałem i implementowałem mechanizmy failure recovery dla procesów przetwarzania transakcji.",
+        "Rozwijałem rozwiązania wspierające monitorowanie i obserwowalność systemu.",
+        "Tworzyłem narzędzia CLI wspierające pracę zespołów developerskich i operacyjnych."
       ],
       "outcomes": [
-        "Wsparłem utrzymanie ciągłości przetwarzania płatności krytycznych dla klientów Form3.",
-        "Ograniczyłem wpływ awarii poprzez lepszą obsługę scenariuszy recovery i monitorowanie systemu.",
-        "Ułatwiłem bezpieczny rozwój platformy płatniczej dzięki większej obserwowalności i stabilności."
+        "Zwiększyłem odporność platformy na awarie, wspierając ciągłość przetwarzania płatności.",
+        "Usprawniłem komunikację pomiędzy mikroserwisami, zwiększając przewidywalność przepływu transakcji.",
+        "Przyczyniłem się do wdrożenia Kubernetes i Cilium, wspierając rozwój nowoczesnej infrastruktury platformy.",
+        "Ułatwiłem pracę zespołów poprzez automatyzację powtarzalnych operacji developerskich i operacyjnych."
       ]
     },
     "huuugeGames": {
@@ -125,24 +123,26 @@
       "highlights": [
         "Zaprojektowałem i zbudowałem od podstaw centralną platformę gamingową stanowiącą fundament dla wielu gier.",
         "Wprowadziłem system transmisji wideo dla hostów przed rozpoczęciem gry (HLS).",
-        "Rozwijałem mechanizmy wykrywania i ograniczania nadużyć (anti-cheating)."
+        "Rozwijałem mechanizmy wykrywania nadużyć, zarządzania pokojami gry oraz dobierania graczy.",
+        "Pracowałem nad skalowalnością serwerów gier w architekturze P2P."
       ],
       "outcomes": [
         "Dostarczyłem skalowalną platformę umożliwiającą szybkie tworzenie i uruchamianie kolejnych gier.",
-        "Optymalizowałem wykorzystanie infrastruktury, wspierając efektywny rozwój platformy.",
-        "Przyspieszyłem rozwój nowych funkcji i eksperymentów produktowych dzięki wspólnym komponentom platformy."
+        "Umożliwiłem tworzenie nowych formatów gier opartych o model rozrywki z prowadzącym hostem.",
+        "Przyspieszyłem rozwój nowych funkcji i eksperymentów produktowych dzięki wspólnym komponentom platformy.",
+        "Optymalizowałem wykorzystanie infrastruktury, wspierając efektywny rozwój platformy."
       ]
     },
     "siili": {
       "role": "Senior Software Engineer",
       "highlights": [
-        "Dostarczałem rozwiązania software'owe dla klientów z wykorzystaniem JVM, Go oraz technologii cloud.",
-        "Projektowałem i rozwijałem systemy rozproszone oparte o mikroserwisy, komunikację asynchroniczną oraz chmurę (AWS, Azure).",
+        "Dostarczałem rozwiązania software'owe dla klientów z wykorzystaniem JVM, Go oraz technologii cloud (AWS, Azure).",
+        "Projektowałem i rozwijałem systemy rozproszone oparte o mikroserwisy, komunikację asynchroniczną oraz architekturę cloud-native.",
         "Automatyzowałem procesy dostarczania oprogramowania poprzez CI/CD, Infrastructure as Code i narzędzia automatyzacji."
       ],
       "outcomes": [
-        "Zaprojektowałem i wdrożyłem jeden z pierwszych systemów serverless do monitorowania pracy wind oraz wykrywania sytuacji wymagających interwencji.",
-        "Stworzyłem system zarządzania przepływem paczek w środowisku logistycznym wraz z mechanizmami obsługi powiadomień."
+        "Zaprojektowałem i wdrożyłem jeden z pierwszych systemów serverless w organizacji, wykorzystując wczesne podejście cloud-native do monitorowania pracy wind i wykrywania sytuacji wymagających interwencji.",
+        "Dostarczyłem system zarządzania przepływem paczek i komunikacją w środowisku logistycznym."
       ]
     },
     "creditSuisse": {
@@ -165,21 +165,20 @@
         "Budowałem oraz rozwijałem zespoły developerskie, wspierając je w podejmowaniu decyzji technicznych."
       ],
       "outcomes": [
-        "Zwiększyłem przewidywalność realizacji projektów poprzez lepsze podejście do estymacji i zarządzania zakresem.",
+        "Zmniejszyłem ryzyko realizacji projektów fixed price poprzez dokładniejsze estymacje, planowanie zakresu i wczesne identyfikowanie problemów.",
         "Przeprowadziłem migracje systemów ze starszych technologii do nowoczesnego stacku.",
-        "Budowałem długoterminowe relacje z klientami poprzez skuteczną współpracę techniczno-biznesową."
+        "Otrzymałem pozytywny feedback i wyróżnienia od klientów za wkład w realizację projektów."
       ]
     },
     "capgemini": {
       "role": "Software Engineer",
       "highlights": [
         "Rozwijałem Learning Management System (J2EE/Spring) — od analizy wymagań i zgłoszeń po wdrożenia produkcyjne.",
-        "Wspierałem projektowanie rozwiązań technicznych oraz podejmowanie decyzji dotyczących rozwoju systemu.",
         "Odpowiadałem za migracje danych oraz bezpieczne wdrażanie zmian na środowiska produkcyjne."
       ],
       "outcomes": [
-        "Dostarczałem funkcjonalności dla systemu LMS wykorzystywanego przez klienta.",
-        "Zapewniłem bezpieczne wdrażanie zmian poprzez kontrolowane migracje danych i release'y."
+        "Poprawiłem spójność danych w LMS poprzez usprawnienie procesów migracji, obsługi zmian i ujednolicenie logiki biznesowej.",
+        "Zmniejszyłem liczbę zgłoszeń użytkowników o około 30% poprzez poprawę stabilności i jakości systemu."
       ]
     },
     "nokia": {
@@ -190,9 +189,9 @@
         "Rozwijałem moduły BTS (Performance Management, Climate Control) w C/C++."
       ],
       "outcomes": [
-        "Skróciłem czas realizacji migracji z około 2500 do około 200 godzin.",
-        "Umożliwiłem dostosowanie narzędzia do potrzeb różnych operatorów (m.in. Claro, Comcel, Zain, UMC).",
-        "Ograniczyłem ryzyko utraty przychodów podczas migracji dzięki automatycznej walidacji i raportowaniu."
+        "Skróciłem czas procesu migracji z około 2500 do około 200 godzin dzięki automatyzacji i walidacji danych.",
+        "Stworzyłem rozwiązanie wielokrotnego użytku, które można było dostosować do potrzeb różnych operatorów (m.in. Claro, Comcel, Zain, UMC).",
+        "Zmniejszyłem ryzyko błędów podczas migracji poprzez automatyczną walidację, raportowanie i kontrolę poprawności danych."
       ]
     }
   }

@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { computed, nextTick, onMounted, onUnmounted, ref } from 'vue'
+import { computed, inject, nextTick, onMounted, onUnmounted, ref } from 'vue'
 import { resumeCompanies, resumeInternships } from '@/config/resumeConfig'
+import { resumeSectionsKey } from '@/composables/useResumeSections'
 
 export interface ProgressMarker {
   id: string
@@ -18,9 +19,10 @@ const props = defineProps<{
   showLabel: string
 }>()
 
-const open = ref(true)
+const open = ref(false)
 const activeId = ref('general')
 const progress = ref(0)
+const sections = inject(resumeSectionsKey, null)
 
 const markers = computed<ProgressMarker[]>(() => {
   const companyMarkers: ProgressMarker[] = resumeCompanies.map((company) => ({
@@ -84,16 +86,45 @@ function isReached(index: number): boolean {
   return index <= activeIndex.value
 }
 
-function scrollToMarker(marker: ProgressMarker) {
+function isMarkerMeasurable(el: HTMLElement): boolean {
+  if (!el.isConnected) return false
+  const style = window.getComputedStyle(el)
+  if (style.display === 'none' || style.visibility === 'hidden') return false
+  const rect = el.getBoundingClientRect()
+  return rect.width > 0 || rect.height > 0
+}
+
+function markerDocumentTop(el: HTMLElement): number | null {
+  if (!isMarkerMeasurable(el)) return null
+  return el.getBoundingClientRect().top + window.scrollY
+}
+
+function syncProgress() {
+  const last = Math.max(1, markers.value.length - 1)
+  const idx = markers.value.findIndex((m) => m.id === activeId.value)
+  progress.value = idx >= 0 ? idx / last : 0
+}
+
+let navLockUntil = 0
+
+async function scrollToMarker(marker: ProgressMarker) {
+  sections?.expandForTarget(marker.targetId)
+  await nextTick()
+  await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()))
+
   const el = document.getElementById(marker.targetId)
   if (!el) return
-  el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+
+  navLockUntil = Date.now() + 900
   activeId.value = marker.id
+  syncProgress()
+  el.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
 function updateFromScroll() {
+  if (Date.now() < navLockUntil) return
+
   const headerOffset = 100
-  // Probe near the top of the viewport so we track the section in view, not mid-page content.
   const probe = window.scrollY + headerOffset
 
   let current = markers.value[0]?.id ?? 'general'
@@ -101,21 +132,20 @@ function updateFromScroll() {
   for (const marker of markers.value) {
     const el = document.getElementById(marker.targetId)
     if (!el) continue
-    const top = el.getBoundingClientRect().top + window.scrollY
+    const top = markerDocumentTop(el)
+    if (top === null) continue
     if (top <= probe) {
       current = marker.id
     }
   }
 
   activeId.value = current
-
-  const last = Math.max(1, markers.value.length - 1)
-  const idx = markers.value.findIndex((m) => m.id === current)
-  progress.value = idx >= 0 ? idx / last : 0
+  syncProgress()
 }
 
 let resizeObserver: ResizeObserver | null = null
 let rafId = 0
+let unsubscribeLayout: (() => void) | undefined
 
 function scheduleUpdate() {
   cancelAnimationFrame(rafId)
@@ -127,6 +157,8 @@ onMounted(async () => {
   window.scrollTo(0, 0)
   activeId.value = 'general'
   progress.value = 0
+
+  unsubscribeLayout = sections?.onLayoutChange(scheduleUpdate)
 
   await nextTick()
   scheduleUpdate()
@@ -141,6 +173,7 @@ onMounted(async () => {
 })
 
 onUnmounted(() => {
+  unsubscribeLayout?.()
   cancelAnimationFrame(rafId)
   window.removeEventListener('scroll', updateFromScroll)
   window.removeEventListener('resize', updateFromScroll)
